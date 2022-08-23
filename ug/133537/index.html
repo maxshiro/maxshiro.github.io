@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>使用 Hexo 程序部署博客到githubpage上 - MAXshiro&#39;s Blog</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/maxshiro/maxshiro.github.io@main/img/logo.png" type="image/png" />
+    <meta name="description" content="本地程序部署环境Hexo程序使用node.js程序编写，因此需要现在环境机上部署node.js，git。  什么是 Node.js：一个运行javascript(JS)的环境。Hexo 是一个javascript(JS)语言的程序。一般 JS 运行在浏览器中，但是也有一种非浏览器环境也可以运行 JS。这个环境是Node.js   什么是 Git：一个版本控制软件。Hexo 博客源码由纯文本构成，管">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Hexo 程序部署博客到githubpage上">
+<meta property="og:url" content="http://maxshiroi.top/ug/133537/index.html">
+<meta property="og:site_name" content="MAXshiro&#39;s Blog">
+<meta property="og:description" content="本地程序部署环境Hexo程序使用node.js程序编写，因此需要现在环境机上部署node.js，git。  什么是 Node.js：一个运行javascript(JS)的环境。Hexo 是一个javascript(JS)语言的程序。一般 JS 运行在浏览器中，但是也有一种非浏览器环境也可以运行 JS。这个环境是Node.js   什么是 Git：一个版本控制软件。Hexo 博客源码由纯文本构成，管">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-17T05:35:37.000Z">
+<meta property="article:modified_time" content="2022-08-23T11:57:39.819Z">
+<meta property="article:author" content="maxshiro">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"
+    />
+    
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1661259038917">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1661259038917">
+    <link rel="stylesheet" href="/css/style.css?v=1661259038917">
+     
+    
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/maxshiro/maxshiro.github.io@main/img/bg.png)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="maxshiro" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/maxshiro/maxshiro.github.io@main/img/logo.png" alt="maxshiro"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="maxshiro">
+            <img src="https://cdn.jsdelivr.net/gh/maxshiro/maxshiro.github.io@main/img/logo.png" alt="maxshiro" alt="maxshiro">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>3</div>
+        <div><span>标签</span>2</div>
+        <div><span>分类</span>0</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:maxshiroi.top" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://jq.qq.com/?_wv=1027&k=5CfKHun" target="_blank" mdui-tooltip="{content: 'QQ群'}" style="color: rgb(249, 174, 8);background-color: rgba(249, 174, 8, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/9013801" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/maxshiro/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+    
+    
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE-docker-openwrt-router/" style="font-size: 10px;">树莓派,docker,openwrt,router</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 maxshiro
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
+              <img data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/maxshiro/maxshiro.github.io@main/img/bg.png" alt="使用 Hexo 程序部署博客到githubpage上" loading="lazy">
+              <h1>使用 Hexo 程序部署博客到githubpage上</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2022年04月17日</a>
+</div>
+
+      <h1 id="本地程序部署"><a href="#本地程序部署" class="headerlink" title="本地程序部署"></a>本地程序部署</h1><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>Hexo程序使用node.js程序编写，因此需要现在环境机上部署node.js，git。</p>
+<blockquote>
+<p><strong>什么是 Node.js</strong>：一个运行javascript(JS)的环境。Hexo 是一个javascript(JS)语言的程序。一般 JS 运行在浏览器中，但是也有一种非浏览器环境也可以运行 JS。这个环境是Node.js</p>
+</blockquote>
+<blockquote>
+<p><strong>什么是 Git</strong>：一个版本控制软件。Hexo 博客源码由纯文本构成，管理纯文本项目的最好办法之一就是使用Git。还记得 word 里面的历史记录和版本回退功能么？简单的来说，Git 就提供了类似功能，只不过更强大。</p>
+</blockquote>
+<blockquote>
+<p>本文章使用fedora系linux操作。</p>
+</blockquote>
+<h3 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h3><p>使用yum指令进行安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su</span><br><span class="line">yum install git-core</span><br></pre></td></tr></table></figure>
+<p>查看是否安装成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# git --version</span><br><span class="line">git version 1.8.3.1</span><br></pre></td></tr></table></figure>
+<h3 id="安装-node-js"><a href="#安装-node-js" class="headerlink" title="安装 node.js"></a>安装 node.js</h3><p>直接 yum 一把梭</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nodejs</span><br></pre></td></tr></table></figure>
+<p>然后查看版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# node -v</span><br><span class="line">v16.14.2</span><br></pre></td></tr></table></figure>
+<p>顺便看看npm版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# npm -v</span><br><span class="line">8.5.0</span><br></pre></td></tr></table></figure>
+<h2 id="配置本体"><a href="#配置本体" class="headerlink" title="配置本体"></a>配置本体</h2><h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><p>如果你没有使用加速等工具的话，这里建议将npm源改到淘宝：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>使用npm指令安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>看看安装好了没：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# hexo -v</span><br><span class="line">hexo-cli: 4.3.0</span><br><span class="line">os: linux 3.10.0-1160.31.1.el7.x86_64 CentOS Linux 7 (Core)</span><br><span class="line">node: 16.14.2</span><br><span class="line">...</span><br><span class="line">ngtcp2: 0.1.0-DEV</span><br><span class="line">nghttp3: 0.1.0-DEV</span><br></pre></td></tr></table></figure>
+<h3 id="安装server"><a href="#安装server" class="headerlink" title="安装server"></a>安装server</h3><p>如果你想在本地预览博客的话，可以安装下。其实装不装都无所谓。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo hexo-server</span><br></pre></td></tr></table></figure>
+<h3 id="安装推送插件"><a href="#安装推送插件" class="headerlink" title="安装推送插件"></a>安装推送插件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h3 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init [你的博客名字]</span><br><span class="line">cd [你的博客名字]</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果你已经备份过想要还原，则需要做到这一步。</p>
+</blockquote>
+<h2 id="备份还原"><a href="#备份还原" class="headerlink" title="备份还原"></a>备份还原</h2><p>博客部署完成后或是以后工作中难免需要更换环境，这里也简单说一下备份还原的流程。</p>
+<h3 id="本地备份还原"><a href="#本地备份还原" class="headerlink" title="本地备份还原"></a>本地备份还原</h3><p>本地备份还原是对主要文件自行压缩拷贝后导出，然后覆盖进行还原</p>
+<blockquote>
+<p>需要备份的文件列表如下</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">|-- .gitignore</span><br><span class="line">|-- _config.yml</span><br><span class="line">|-- package-lock.json</span><br><span class="line">|-- package.json</span><br><span class="line">|-- scaffolds</span><br><span class="line">|-- source</span><br><span class="line">`-- themes</span><br></pre></td></tr></table></figure>
+<p>将这些文件考出来后则备份完成。</p>
+<h3 id="可能会出现的问题"><a href="#可能会出现的问题" class="headerlink" title="可能会出现的问题"></a>可能会出现的问题</h3><p>如果当你完成还原，进行<code>hexo g</code>命令提示如下错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">root@LAPTOP-N4RDFRJ0:/mnt/d/Program/hexo/blog# npm install --save bulma-stylus</span><br><span class="line">npm ERR! code FETCH_ERROR</span><br><span class="line">npm ERR! errno FETCH_ERROR</span><br><span class="line">npm ERR! invalid json response body at https://registry.npmjs.org/browserslist reason: Unexpected end of JSON input</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     /root/.npm/_logs/2022-08-23T09_22_43_977Z-debug.log</span><br></pre></td></tr></table></figure>
+<p>执行这条命令即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置远端"><a href="#配置远端" class="headerlink" title="配置远端"></a>配置远端</h2><p>我将博客部署到了github上，所以你要先去github.com上注册一个账户。并创建一个仓库。</p>
+<h3 id="初始化-git"><a href="#初始化-git" class="headerlink" title="初始化 git"></a>初始化 git</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">init git</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果提示<code>Couldn&#39;t find an alternative telinit implementation to spawn.</code>不用管，直接下一步。</p>
+</blockquote>
+<h3 id="配置-ssh"><a href="#配置-ssh" class="headerlink" title="配置 ssh"></a>配置 ssh</h3><ol>
+<li>配置登录信息<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的git用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的git登录邮箱&quot;</span><br></pre></td></tr></table></figure></li>
+<li>生成ssh keygen<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的git登录邮箱&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果弹出了很多内容，直接进行一个回车跳过。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Enter file in which to save the key (/root/.ssh/id_rsa): </span><br><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">... // 直接回车跳过</span><br></pre></td></tr></table></figure></li>
+<li>复制密钥<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /root/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>将里面显示的所有内容复制。</p>
+</blockquote>
+</li>
+<li>登录github</li>
+</ol>
+<ul>
+<li>头像</li>
+<li>Settings</li>
+<li>SSH and GPG keys</li>
+<li>New SSH key</li>
+<li>将复制的内容粘贴到Keys框里</li>
+<li>Add SSH key</li>
+</ul>
+<ol start="5">
+<li>测试链接是否成功<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ssh -T git@github.com</span><br><span class="line">Hi maxshiro! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="生成博客"><a href="#生成博客" class="headerlink" title="生成博客"></a>生成博客</h2><p>上面已经生成好了基本博客，因此在这里只是生成和推送到githubpage</p>
+<ol>
+<li>测试本地生成博客<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 生成一篇文章</span><br><span class="line">hexo new &quot;文章名&quot;</span><br><span class="line"># 生成静态网页</span><br><span class="line">hexo g</span><br><span class="line"># 打开本地服务器</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+此时你可以打开 <code>[博客地址]:4000</code> 来查看效果了。<br>如果确认没问题，便可以继续操作。</li>
+</ol>
+<h2 id="配置推送"><a href="#配置推送" class="headerlink" title="配置推送"></a>配置推送</h2><p>下面是hexo博客的基本结构。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line"> ├── _config.yml # 网站配置信息</span><br><span class="line"> ├── package.json # 应用程序信息</span><br><span class="line"> ├── scaffolds # 模板文件夹</span><br><span class="line"> ├── source # 存放用户资源</span><br><span class="line"> |   ├── _drafts</span><br><span class="line"> |   └── _posts</span><br><span class="line"> └── themes # 主题文件夹</span><br></pre></td></tr></table></figure>
+<ol>
+<li>首先cd到当前目录<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure></li>
+<li>编辑配置文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi _config.yml</span><br></pre></td></tr></table></figure></li>
+<li>移动到 deploy 天机如下内容<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    reop: git@github.com:maxshiro/maxshiro.github.io.git #这个地址可以到你的repo那里获得。</span><br><span class="line">    branch: main #这个branch就是仓库的默认目录了。</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="推送博客"><a href="#推送博客" class="headerlink" title="推送博客"></a>推送博客</h2><p>已经测试并生成过博客了，所以可以直接推送。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 清理之前生成的文件</span><br><span class="line">hexo clean</span><br><span class="line"># 生成静态网页</span><br><span class="line">hexo g</span><br><span class="line"># 推送到github repo</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>此时你已经完成了hexo博客的基本配置。</p>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>maxshiro<br>
+        <strong>本文链接：</strong><a href="http://maxshiroi.top/ug/133537/" title="http:&#x2F;&#x2F;maxshiroi.top&#x2F;ug&#x2F;133537&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;maxshiroi.top&#x2F;ug&#x2F;133537&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/hexo/" rel="tag">hexo</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'maxshiro.github.io',
+        owner: 'maxshiro',
+        admin: 'maxshiro'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E7%A8%8B%E5%BA%8F%E9%83%A8%E7%BD%B2"><span class="toc-number">1.</span> <span class="toc-text">本地程序部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83"><span class="toc-number">1.1.</span> <span class="toc-text">环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-git"><span class="toc-number">1.1.1.</span> <span class="toc-text">安装 git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-node-js"><span class="toc-number">1.1.2.</span> <span class="toc-text">安装 node.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%9C%AC%E4%BD%93"><span class="toc-number">1.2.</span> <span class="toc-text">配置本体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo"><span class="toc-number">1.2.1.</span> <span class="toc-text">hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85server"><span class="toc-number">1.2.2.</span> <span class="toc-text">安装server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%8E%A8%E9%80%81%E6%8F%92%E4%BB%B6"><span class="toc-number">1.2.3.</span> <span class="toc-text">安装推送插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.2.4.</span> <span class="toc-text">创建博客</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E8%BF%98%E5%8E%9F"><span class="toc-number">1.3.</span> <span class="toc-text">备份还原</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%A4%87%E4%BB%BD%E8%BF%98%E5%8E%9F"><span class="toc-number">1.3.1.</span> <span class="toc-text">本地备份还原</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.3.2.</span> <span class="toc-text">可能会出现的问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%BF%9C%E7%AB%AF"><span class="toc-number">1.4.</span> <span class="toc-text">配置远端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96-git"><span class="toc-number">1.4.1.</span> <span class="toc-text">初始化 git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-ssh"><span class="toc-number">1.4.2.</span> <span class="toc-text">配置 ssh</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.5.</span> <span class="toc-text">生成博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%8E%A8%E9%80%81"><span class="toc-number">1.6.</span> <span class="toc-text">配置推送</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.7.</span> <span class="toc-text">推送博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">1.8.</span> <span class="toc-text">结语</span></a></li></ol></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1661259038922"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+</body>
+
+</html>
