@@ -18,6 +18,8 @@ tags:
 2. 点击 View all branches，然后点击右上角的 New branch。
 3. Branch name：backup，Branch source：master
 4. create branch。
+## 将backup分支切换为默认分支
+> 我也不知道为什么要这么做，但是不这么做最后一步就没法push了 :(
 ## 将repo clone到本地
 1. 直接在博客根目录下执行这个命令：
 ```
