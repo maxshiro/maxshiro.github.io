@@ -1,6 +1,7 @@
 ---
 title: 使用yuzu模拟器在Win10上玩MEGA39 ( 附MEGA39资源 )
 date: 2022-08-28 21:12:24
+password: 233
 cover: http://axro.top:85/i/2022/08/28/630b751847858.png
 tags:
 - switch
