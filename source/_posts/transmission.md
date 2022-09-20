@@ -1,7 +1,7 @@
 ---
 title: 在你的 linux nas 上安装一个种子下载器吧！
 date: 2022-08-29 00:28:53
-cover: http://axro.top:85/i/2022/08/29/630b980fd98b8.png
+cover: /img/transmission/20220920213753.png
 tags:
 - transmission
 - torrent
@@ -40,7 +40,7 @@ nano /etc/transmission-daemon/settings.json
 sudo systemctl start transmission-daemon
 ```
 4. 浏览器打开 127.0.0.1:9091 查看效果：
-![](http://axro.top:85/i/2022/08/29/630b9acf3f448.png)
+![](/img/transmission/20220920213841.png)  
 
 # 安装第三方主题
 下载并执行TWC中文界面安装脚本
@@ -54,4 +54,4 @@ bash install-tr-control-cn.sh
 << 2022-08-29 00:27:53 >> == 结束 ==
 ```
 弹出如上提示则安装成功，返回web界面刷新即可。
-![](http://axro.top:85/i/2022/08/29/630b980fd98b8.png)
+![](/img/transmission/20220920213753.png)

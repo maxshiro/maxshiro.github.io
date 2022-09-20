@@ -1,7 +1,7 @@
 ---
 title: Win11 安装 WSA 简易教程
 date: 2022-08-28 20:59:44
-cover: http://axro.top:85/i/2022/08/28/630b737e7e3ee.png
+cover: /img/wsa/20220920220132.png
 tags:
 - Android
 - Hyper-V
@@ -38,7 +38,7 @@ add-appxpackage "你下载文件的完整路径"
 add-appxpackage "D:\download\MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle"
 ```
 6. 等他跑完以后就会在开始菜单里出现 `Windows Subsystem for Android™` 点击打开是下面这个界面就说明安装成功了.
-[![233](https://axro.top/pic/001.png "233")](https://axro.top/pic/001.png "233")
+![](/img/wsa/20220920220234.png)  
 
 # 安装apk
 1. 点击文件后面的按钮会自动启动 WSA, 等打开后下面的 ip 地址会刷新. 此时我们将开发人员模式打开.

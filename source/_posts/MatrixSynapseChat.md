@@ -1,7 +1,7 @@
 ---
 title: Centos安装MatrixSynapseChat简易教程
 date: 2022-08-28 21:29:07
-cover: http://axro.top:85/i/2022/08/28/630b78b108dc9.png
+cover: /img/MatrixSynapseChat/20220920214137.png
 tags:
 - nextcloud
 - 聊天室

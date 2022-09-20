@@ -1,8 +1,8 @@
 ---
-title: 使用yuzu模拟器在Win10上玩MEGA39 ( 附MEGA39资源 )
+title: 使用yuzu模拟器玩动森 ( 附动森资源 )
 date: 2022-08-28 21:12:24
 password: 233
-cover: http://axro.top:85/i/2022/08/28/630b751847858.png
+cover: /img/ns/20220920215433.png
 tags:
 - switch
 - Project Diva
@@ -10,6 +10,7 @@ tags:
 - Mega39
 - emulater
 ---
+![](/img/ns/1.gif)
 # 引子
 > 好久没有关注过 switch 模拟器了.这几天突然想玩歌姬计划,想起来之前找到个 yuzu 模拟器,正好想试试看能不能跑 MEGA39 ,便有了下文
 # 配置要求
@@ -55,14 +56,13 @@ tags:
 
 2. 由于安装的时候会连接 Github 服务器下载文件, 因此强烈建议使用全局科学上网.
 3. 安装完成后直接启动, 提示缺少 key 文件, 选 OK :
-> ![](http://axro.top:85/i/2022/08/28/630b751847858.png)
+> ![](/img/ns/20220920215251.png)  
 
-4. 然后会跳出提示框问是否帮助改进 yuzu , 我们点 no.
-> ![](http://axro.top:85/i/2022/08/28/630b751847858.png)
+1. 然后会跳出提示框问是否帮助改进 yuzu , 我们点 no.
 
-5. 此时已经完成安装了模拟器本体, 不过想要正常运行游戏还需要做以下操作
-6. 执行工具栏中的 `文件` -> `Open yuzu Folder` 打开 yuzu 软件自动创建的目录, 然后 [点击这里](https://dl.axro.top/7d35 "点击这里") 下载 `prod.keys` 和 `title.keys` 这两个文件, 将下载的两个文件扔进 keys 文件夹内.
-7. 然后再次打开 yuzu 就不会再弹出刚才的对话框了.
+2. 此时已经完成安装了模拟器本体, 不过想要正常运行游戏还需要做以下操作
+3. 执行工具栏中的 `文件` -> `Open yuzu Folder` 打开 yuzu 软件自动创建的目录, 然后 [点击这里]( "点击这里") 下载 `prod.keys` 和 `title.keys` 这两个文件, 将下载的两个文件扔进 keys 文件夹内.
+4. 然后再次打开 yuzu 就不会再弹出刚才的对话框了.
 
 # 模拟器设置
 执行 `模拟(E)` -> `Configure...` 打开 yuzu 设置.  
@@ -74,8 +74,10 @@ tags:
 * 最后点击 OK 即可完成配置...
 
 # 下载游戏
-> 我发现<https://switch520.com/>这里的游戏下载没那么多门槛要会员什么什么的, 不过都是百度网盘, 建议整一个百度网盘会员.
+> 我发现[Switch520](https://xxxxx520.com/ "Switch520")这里的游戏下载没那么多门槛要会员什么什么的, 不过都是百度网盘, 建议整一个百度网盘会员.(现在有插件可以实现免会员高速下载，有空我再写写:P)
 >
-> 这里给出我自己上传的 MEGA39 游戏本体: [mega]( "mega")
+> 这里给出我自己上传的 动物森友会 游戏本体: [Sharepoint](https://maxshiro-my.sharepoint.com/:u:/g/personal/maxshiroi_maxshiro_onmicrosoft_com/EdqrL3oNrehIorBL3jIQsR8BSXwj1uJHlIWOLd2Vb_8cng?e=KUUaJR "Sharepoint")
+> 
+> 本来穿的是 mega39 但是出了点问题，我没办法把dlc整合进xci里，等有空了我再传。
 
 下载后解压拿到 xxx.xci 文件, 这就是游戏本体了. 将这个游戏本体放到任意文件夹内 (不要有中文) . 双击 yuzu 模拟器中间, 选择你放 xci 文件的那个文件夹打开, 然后你就会发现游戏已经加载出来了. 双击打开爽玩吧~

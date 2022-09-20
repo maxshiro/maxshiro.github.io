@@ -1,7 +1,7 @@
 ---
 title: 【VMware】解决新版本的VMware虚拟机无法正常在旧版本的Windows上安装VMware Tools
 date: 2022-08-25 12:46:00
-cover: http://axro.top:85/i/2022/08/25/6306ff09b8bcd.png
+cover: /img/vmwarebug/20220920220101.png
 tags: 
   - vmware
   - bug
@@ -9,7 +9,7 @@ tags:
 # 引言
 因为学习需要，要求安装`Windows server 2008 R2`。安装时一切正常，但是到了安装`VMware Tools`时，弹出了下列提示：
 
-![](vmwarebug/2022-08-25-16-11-10.png)
+![](/img/vmwarebug/20220920220101.png)  
 # 其后
 我尝试百度搜索了解决办法，导致这种情况的大概解释为：
 > 原来，微软更新了驱动程序的签名算法，从 2019 年初开始，逐步弃用SHA-1，改为SHA-2。个人推测新版的VMCI驱动用的是SHA-2签名，而`win7`不支持SHA-2签名，所以出现了这个问题。
