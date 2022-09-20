@@ -1,5 +1,12 @@
 ---
-title: autoscannerwin
+title: 解决windows资源管理器无法自动刷新等问题
 date: 2022-09-20 16:46:58
 tags:
+- win
+- explorer.exe
+- autorefresh
 ---
+> 有时候在使用资源管理器新建文件的时候发现无法自动刷新，每次都需要手动刷新才会出现。这同样也导致了chrome在保存文件时会卡住一段时间。
+
+# Solution
+其实解决方法很简单，关掉你映射的所有网络驱动器即可恢复。据说这是windows的一个bug，取消掉网络驱动器映射便解决了这个问题。
