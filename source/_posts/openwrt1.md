@@ -2,7 +2,7 @@
 title: 使用树莓派4B+Docker Openwrt实现旁路由
 date: 2022-04-26 20:56:45
 updated: 2022-08-23 20:56:45
-cover: /img/openwrt1/20220920215607.png
+cover: img/openwrt1/20220920215607.png
 tags: 
   - 树莓派
   - docker

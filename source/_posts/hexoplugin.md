@@ -1,7 +1,8 @@
 ---
 title: 部署完hexo后还应该准备哪些工作
 date: 2022-08-28 22:25:43
-cover: /img/hexoplugin/20220920213944.png
+sticky: true
+cover: img/hexoplugin/20220920213944.png
 tags: 
 - plugin
 - hexo
@@ -9,6 +10,8 @@ tags:
 ---
 # Intro
 上一回我们讲到了如何部署hexo到github上，并简单的向repo里推送了你的博客。这一回我们简单的来完善你的博客。
+# 0.shoka主题配置
+> [Click Me](https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/display/ 'Click Me')
 
 # 1.备份Hexo源文件到 Backup 分支
 由于种种原因我们总会更改自己的工作环境或者一顿操作猛如虎，将自己博客的源文件一通收拾，然后就没有然后了。

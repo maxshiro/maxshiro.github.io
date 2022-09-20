@@ -1,8 +1,9 @@
 ---
 title: 使用yuzu模拟器玩动森 ( 附动森资源 )
 date: 2022-08-28 21:12:24
+sticky: true
 password: 233
-cover: /img/ns/20220920215433.png
+cover: img/ns/20220920215433.png
 tags:
 - switch
 - Project Diva
