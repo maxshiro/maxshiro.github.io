@@ -25,15 +25,15 @@ tags:
 > 我也不知道为什么要这么做，但是不这么做最后一步就没法push了 :(
 ## 将repo clone到本地
 1. 直接在博客根目录下执行这个命令：
-```
+```bash bash
 git clone '你的repo'
 ```
 2. 将克隆过来repo里的`.git`文件夹拷贝到博客根目录。
-```
+```bash bash
 cp -r ./'你的repo' ./
 ```
 3. 依次执行以下指令
-```
+```bash bash
 // 保存所有文件到暂存区
 git add .
 // 提交变更
@@ -43,21 +43,21 @@ git push origin backup
 ```
 ## 报错
 可能会提示如下错误
-```
+```bash bash
 fatal: unable to access 'https://github.com/xxx/xxx.github.io.git/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
 ```
 执行下面的指令即可正常推送
-```
+```bash bash
 git config --global --unset http.proxy
 git config --global --unset git.proxy
 ```
 ## 还原
 1. 克隆backup分支到本地
-```
+```bash bash
 git clone -b backup https://github.com/maxshiro/maxshiro.github.io.git
 ```
 2. 安装依赖
-```
+```bash bash
 cnpm install
 ```
 
@@ -66,12 +66,12 @@ cnpm install
 * 这在wordpress，emlog或其他博客系统中都很容易实现，然而hexo除外。:(
 * 为了解决这个问题，我们需要安装“ hexo-blog-encrypt”扩展。
 ## 安装指令
-```
+```bash bash
 npm install hexo-blog-encrypt
 ```
 ## 快速使用
 将 password 标签添加到您的 Front-matter 里，就像这样：
-```
+```bash bash
 ---
 title: xxx
 date: 2022-08-26 17:34:59

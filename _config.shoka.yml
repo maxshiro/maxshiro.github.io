@@ -140,7 +140,7 @@ footer:
     color: "#ffc0cb"
   # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
   count: true
-  powered: true
+  powered: false
 
 post:
   # Dependencies: https://github.com/theme-next/hexo-symbols-count-time

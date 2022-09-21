@@ -44,18 +44,22 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight:
-  enable: false
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: true
-prismjs:
-  enable: false
-  preprocess: true
-  line_number: true
-  tab_replace: ''
+#highlight:
+#  enable: false
+#  line_number: false
+#  auto_detect: false
+#  tab_replace: ''
+#  wrap: true
+#  hljs: true
+#prismjs:
+#  enable: false
+#  preprocess: true
+#  line_number: true
+#  tab_replace: ''
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'default'
+  line_number: true    # default false
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -182,9 +186,3 @@ feed:
         enable: true
         template: "themes/shoka/layout/_alternate/json.ejs"
         output: "feed.json"
-
-
-# aplayer
-# npm install --save hexo-tag-aplayer
-aplayer:
-  meting: false
