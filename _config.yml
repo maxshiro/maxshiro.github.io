@@ -5,9 +5,9 @@
 # Site
 title: MAXshiro's Blog
 subtitle: 'A blog for learn.'
-description: 'A blog for learn.'
+description: 'Discover and Record the world.'
 keywords:
-author: maxshiro
+author: maxshiroi
 language: zh-CN
 timezone: ''
 
@@ -186,3 +186,21 @@ feed:
         enable: true
         template: "themes/shoka/layout/_alternate/json.ejs"
         output: "feed.json"
+
+plugins:
+  - hexo-algoliasearch
+
+algolia:
+  appId: V6C1FY0HT1 #Your appId
+  apiKey: 2600751118e5163c244b7ab30be62dbe #Your apiKey
+  adminApiKey: 198a5b695c7bb8aad71a07f3918a87b4 #Your adminApiKey
+  chunkSize: 5000
+  indexName: "shoka"
+  fields:
+    - title #必须配置
+    - path #必须配置
+    - categories #推荐配置
+    - content:strip:truncate,0,2000
+    - gallery
+    - photos
+    - tags

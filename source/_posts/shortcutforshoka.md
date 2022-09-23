@@ -1,7 +1,7 @@
 ---
 title: shortcutforshoka
 date: 2022-09-21 12:07:38
-hide: true
+hidden: true
 tags:
 - 短链
 - 测试
