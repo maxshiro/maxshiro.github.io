@@ -95,8 +95,8 @@ menu:
     archives: /archives/ || list-alt
     categories: /categories/ || th
     tags: /tags/ || tags
-  about: /about/ || user
-  friends: /flink/ || link-circle
+  about: /about || user
+  friends: /flink || link-circle
   etc: / || music
   
 
