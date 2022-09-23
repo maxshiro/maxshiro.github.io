@@ -1,0 +1,944 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog</title>
+    <subtitle>A blog for learn.</subtitle>
+    <icon>http://maxshiroi.top/images/favicon.ico</icon>
+    <link href="http://maxshiroi.top" />
+    <author>
+      <name>maxshiroi</name>
+    </author>
+    <updated>2022-09-23T07:53:04.734Z</updated>
+    <entry>
+        <id>http://maxshiroi.top/ug/155304/</id>
+        <title>Hello World</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/155304/"/>
+        <content type="html">&lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
+</content>
+        <category term="helloworld" scheme="http://maxshiroi.top/tags/helloworld/" />
+        <updated>2022-09-23T07:53:04.734Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/175233/</id>
+        <title>Linux入门学习0</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/175233/"/>
+        <content type="html">&lt;h1 id=&#34;linux系统目录结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#linux系统目录结构&#34;&gt;#&lt;/a&gt; linux 系统目录结构&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 linux 中，所有都是以文件的形式存储和管理的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;bin&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bin&#34;&gt;#&lt;/a&gt; /bin&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Binary 存放经常使用的命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sbin&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sbin&#34;&gt;#&lt;/a&gt; /sbin&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;super Binary 超级用户命令存放的目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;home&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#home&#34;&gt;#&lt;/a&gt; /home&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;root&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#root&#34;&gt;#&lt;/a&gt; /root&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统管理员目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;etc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#etc&#34;&gt;#&lt;/a&gt; /etc&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;管理系统配置文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;usr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#usr&#34;&gt;#&lt;/a&gt; /usr&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;类似于 windows 下 Programfiles 目录，&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;boot&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#boot&#34;&gt;#&lt;/a&gt; /boot&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;启动所使用的核心文件都会存放在这里。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;proc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#proc&#34;&gt;#&lt;/a&gt; /proc&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内存映射&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;srv&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#srv&#34;&gt;#&lt;/a&gt; /srv&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;services 的缩写，用于存放服务启动所需要的数据&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sys&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sys&#34;&gt;#&lt;/a&gt; /sys&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;tmp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tmp&#34;&gt;#&lt;/a&gt; /tmp&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;是 temporary (临时) 的缩写，存放临时 / 缓存文件，可当作回收站使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;dev&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dev&#34;&gt;#&lt;/a&gt; /dev&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;device 的缩写，类似于 windows 的设备管理器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mnt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mnt&#34;&gt;#&lt;/a&gt; /mnt&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;linux 用于挂载可移动设备（临时）的目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;opt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#opt&#34;&gt;#&lt;/a&gt; /opt&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;主机额外安装的软件存放的目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;var&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#var&#34;&gt;#&lt;/a&gt; /var&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;存放经常被修改的目录或文件，比如日志（*.log）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;lib&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lib&#34;&gt;#&lt;/a&gt; /lib&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;存放系统基本的动态链接库。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;权限数字意思详解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权限数字意思详解&#34;&gt;#&lt;/a&gt; 权限数字意思详解&lt;/h1&gt;
+&lt;p&gt;我们首先打开控制台在任意位置输入 ll, 就能看到当前文件夹下所有类型的信息。我们只取其中的前十位来进行结束.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;dr-xr-xr-x.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第一位&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一位&#34;&gt;#&lt;/a&gt; 第一位&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一位表示类型&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;d directory 表示目录&lt;/li&gt;
+&lt;li&gt;b block 块文件&lt;/li&gt;
+&lt;li&gt;c char 字符文件&lt;/li&gt;
+&lt;li&gt;- file 普通文件&lt;/li&gt;
+&lt;li&gt;l link 链接&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;后面九位&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后面九位&#34;&gt;#&lt;/a&gt; 后面九位&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后面九位表示了文件的类型，对应的位置如果是 &lt;code&gt;-&lt;/code&gt;  则表示没有对应的权限.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+    &lt;th&gt;
+        &lt;td colspan=&#34;3&#34;&gt;前三位&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;中间三位&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;后三位&lt;/td&gt;
+    &lt;/th&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td colspan=&#34;3&#34;&gt;创建者&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;同组用户&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;其他用户&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;r&lt;/td&gt;
+        &lt;td&gt;w&lt;/td&gt;
+        &lt;td&gt;x&lt;/td&gt;
+        &lt;td&gt;r&lt;/td&gt;
+        &lt;td&gt;w&lt;/td&gt;
+        &lt;td&gt;x&lt;/td&gt;
+        &lt;td&gt;r&lt;/td&gt;
+        &lt;td&gt;w&lt;/td&gt;
+        &lt;td&gt;x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;读&lt;/td&gt;
+        &lt;td&gt;写&lt;/td&gt;
+        &lt;td&gt;执行&lt;/td&gt;
+        &lt;td&gt;读&lt;/td&gt;
+        &lt;td&gt;写&lt;/td&gt;
+        &lt;td&gt;执行&lt;/td&gt;
+        &lt;td&gt;读&lt;/td&gt;
+        &lt;td&gt;写&lt;/td&gt;
+        &lt;td&gt;执行&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;下面来看一个实例:&lt;/p&gt;
+&lt;p&gt;如果一个文件的权限为 755, 则代表什么意思？&lt;/p&gt;
+&lt;p&gt;我们只需要把 755 按位转换为二进制，对应位为 0 则表示没有这个权限.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;7&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;111&lt;/td&gt;
+&lt;td&gt;101&lt;/td&gt;
+&lt;td&gt;101&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;用人的语言表述:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于创建者：可以读取，可以更改，可以执行.&lt;br /&gt;
+ 对于同组人员：可以读取，不能更改，可以执行.&lt;br /&gt;
+ 对于其他成员：可以读取，不能更改，可以执行.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="linux" scheme="http://maxshiroi.top/tags/linux/" />
+        <category term="目录" scheme="http://maxshiroi.top/tags/%E7%9B%AE%E5%BD%95/" />
+        <category term="指令" scheme="http://maxshiroi.top/tags/%E6%8C%87%E4%BB%A4/" />
+        <category term="权限" scheme="http://maxshiroi.top/tags/%E6%9D%83%E9%99%90/" />
+        <updated>2022-09-22T09:52:33.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/120738/</id>
+        <title>shortcutforshoka</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/120738/"/>
+        <content type="html">&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption&gt;&lt;span&gt;java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Scanner&lt;/span&gt; (System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 输入 Scan 之后，按下键盘 Alt + “/” 键，Eclipse 下自动补全。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println (in.nextLine ());&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println (&lt;span class=&#34;string&#34;&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt; + &lt;span class=&#34;string&#34;&gt;&amp;quot;world.&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;div class=&#34;media-container&#34;&gt;&lt;div class=&#34;player&#34; data-type=&#34;audio&#34; data-src=&#39;[{&#34;title&#34;:&#34;列表 1&#34;,&#34;list&#34;:[&#34;https://music.163.com/#/playlist?id=2943811283&#34;,&#34;https://music.163.com/#/playlist?id=2297706586&#34;]},{&#34;title&#34;:&#34;列表 2&#34;,&#34;list&#34;:[&#34;https://music.163.com/#/playlist?id=2031842656&#34;]}]&#39;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;原本用于日语汉字假名注音，但别的注音也可以。&lt;br /&gt;
+为了兼容性，采用 markdown-it-ruby 的基本格式： &lt;ruby&gt;文字&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;注音&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt; ，并且为了兼容表格，将分隔符由 | 换成了 ^ 。&lt;br /&gt;
+注音分隔基于 furigana-markdown-it 显示说明看这里&lt;/p&gt;
+&lt;p&gt;&lt;ruby&gt;取&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;と&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; り&lt;rt&gt;&lt;/rt&gt;返&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;かえ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; す&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	取とり返かえす&lt;br /&gt;
+&lt;ruby&gt;可愛&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;かわい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	可愛かわいい犬いぬ&lt;br /&gt;
+&lt;ruby&gt;可&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;か&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; 愛&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;わい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	可か愛わいい犬いぬ&lt;br /&gt;
+&lt;ruby&gt;アクセラレータ&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;accelerator&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	アクセラレータ accelerator&lt;br /&gt;
+&lt;ruby&gt;accelerator&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;アクセラレータ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	accelerator アクセラレータ&lt;br /&gt;
+&lt;ruby&gt;食&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;た&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; べる&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	食たべる&lt;br /&gt;
+&lt;ruby&gt;食べる&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;たべる&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	食べるたべる&lt;br /&gt;
+&lt;ruby&gt;あ&lt;rt&gt;●&lt;/rt&gt;い&lt;rt&gt;●&lt;/rt&gt;う&lt;rt&gt;●&lt;/rt&gt;え&lt;rt&gt;●&lt;/rt&gt;お&lt;rt&gt;●&lt;/rt&gt;&lt;/ruby&gt;	あ●い●う●え●お●&lt;br /&gt;
+&lt;ruby&gt;あ&lt;rt&gt;❤&lt;/rt&gt;い&lt;rt&gt;❤&lt;/rt&gt;う&lt;rt&gt;❤&lt;/rt&gt;え&lt;rt&gt;❤&lt;/rt&gt;お&lt;rt&gt;❤&lt;/rt&gt;&lt;/ruby&gt;	あ❤い❤う❤え❤お❤&lt;br /&gt;
+&lt;ruby&gt;常用账号&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;contact&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	常用账号 contact&lt;/p&gt;
+</content>
+        <category term="短链" scheme="http://maxshiroi.top/tags/%E7%9F%AD%E9%93%BE/" />
+        <category term="测试" scheme="http://maxshiroi.top/tags/%E6%B5%8B%E8%AF%95/" />
+        <updated>2022-09-21T04:07:38.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/164658/</id>
+        <title>解决windows资源管理器无法自动刷新等问题</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/164658/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;有时候在使用资源管理器新建文件的时候发现无法自动刷新，每次都需要手动刷新才会出现。这同样也导致了 chrome 在保存文件时会卡住一段时间。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;solution&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#solution&#34;&gt;#&lt;/a&gt; Solution&lt;/h1&gt;
+&lt;p&gt;其实解决方法很简单，关掉你映射的所有网络驱动器即可恢复。据说这是 windows 的一个 bug，取消掉网络驱动器映射便解决了这个问题。&lt;/p&gt;
+</content>
+        <category term="win" scheme="http://maxshiroi.top/tags/win/" />
+        <category term="explorer.exe" scheme="http://maxshiroi.top/tags/explorer-exe/" />
+        <category term="autorefresh" scheme="http://maxshiroi.top/tags/autorefresh/" />
+        <updated>2022-09-20T08:46:58.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/222828/</id>
+        <title>vmware安装好后配置centos网络</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/222828/"/>
+        <content type="html">&lt;h1 id=&#34;更改-ifcfg-ens33-文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更改-ifcfg-ens33-文件&#34;&gt;#&lt;/a&gt; 更改 ifcfg-ens33 文件&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编辑配置文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi /etc/sysconfig/network-scripts/ifcfg-ens33&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要添加 / 修改的地方&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;BOOTPROTO=static&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ONBOOT=yes&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;IPADDR=192.168.xx.xx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;NETMASK=255.255.255.0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;GATEWAY=192.168.204.2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;DNS1=8.8.8.8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;DNS2=114.114.114.114&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;编辑-resolvconf-文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编辑-resolvconf-文件&#34;&gt;#&lt;/a&gt; 编辑 resolv.conf 文件&lt;/h1&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi /etc/resolv.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;添加如下内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# Generated by NetworkManager&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;search localdomain&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nameserver 8.8.8.8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;重启网卡&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#重启网卡&#34;&gt;#&lt;/a&gt; 重启网卡&lt;/h1&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;service network restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <category term="network" scheme="http://maxshiroi.top/tags/network/" />
+        <category term="vmware" scheme="http://maxshiroi.top/tags/vmware/" />
+        <category term="centos" scheme="http://maxshiroi.top/tags/centos/" />
+        <category term="linux" scheme="http://maxshiroi.top/tags/linux/" />
+        <updated>2022-09-19T14:28:28.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/002853/</id>
+        <title>在你的 linux nas 上安装一个种子下载器吧！</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/002853/"/>
+        <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;Transmission 是一款流行的 BT 下载软件，比其他客户端使用更少的资源，守护程序非常适合服务器，并且可以通过桌面 GUI、Web 界面和终端程序进行远程控制，支持本地对等发现、完全加密、DHT、µTP、PEX 和 Magnet Link 等。&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h1&gt;
+&lt;p&gt;这有啥好说的，直接 apt 一把梭：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt install transmission-daemon&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;不过在更改配置前，建议先关一下服务，以防万一：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo systemctl stop transmission-daemon&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;transmission 的配置文件在  &lt;code&gt;/etc/transmission-daemon/settings.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;nano /etc/transmission-daemon/settings.json&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;主要需要看看下面这几项：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;download-dir&amp;quot;: &amp;quot;/home/pi/complete&amp;quot;, # 下载目录 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;incomplete-dir&amp;quot;: &amp;quot;/home/pi/incomplete&amp;quot;, # 下载未完成文件目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;rpc-authentication-required&amp;quot;: false, # 懒得配置密码直接把验证关掉。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;rpc-host-whitelist-enabled&amp;quot;: false,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;rpc-port&amp;quot;: 9091, # 默认 Web 访问端口，这个可以根据需要修改一下。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;rpc-whitelist-enabled&amp;quot;: false, # 白名单开关&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;utp-enabled&amp;quot;: true # 允许 Web 登录&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;修改完成后启动 daemon：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo systemctl start transmission-daemon&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;浏览器打开 127.0.0.1:9091 查看效果：&lt;br /&gt;
+&lt;img data-src=&#34;/img/transmission/20220920213841.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;安装第三方主题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装第三方主题&#34;&gt;#&lt;/a&gt; 安装第三方主题&lt;/h1&gt;
+&lt;p&gt;下载并执行 TWC 中文界面安装脚本&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bash install-tr-control-cn.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;按 数字 1 然后回车安装。&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;&amp;lt; 2022-08-29 00:27:53 &amp;gt;&amp;gt; 安装脚本执行完成。如遇到问题请查看：https://github.com/ronggang/transmission-web-control/wiki&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;&amp;lt; 2022-08-29 00:27:53 &amp;gt;&amp;gt; == 结束 ==&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;弹出如上提示则安装成功，返回 web 界面刷新即可。&lt;br /&gt;
+&lt;img data-src=&#34;/img/transmission/20220920213753.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="transmission" scheme="http://maxshiroi.top/tags/transmission/" />
+        <category term="torrent" scheme="http://maxshiroi.top/tags/torrent/" />
+        <category term="下载器" scheme="http://maxshiroi.top/tags/%E4%B8%8B%E8%BD%BD%E5%99%A8/" />
+        <category term="nas" scheme="http://maxshiroi.top/tags/nas/" />
+        <updated>2022-08-28T16:28:53.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/234236/</id>
+        <title>解决Windows直接访问WSL2路径并直接进行读写操作,权限不足的问题</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/234236/"/>
+        <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;初次安装 WSL Ubuntu 时，一般都会设置默认登录用户，当你通过 windows 访问该文件夹时，如果访问的 Ubuntu 目录的权限用户时你的默认用户，你可以对其进行修改。但是如果你访问的时 root 权限的用户，则会出现如权限不足，permission deny 报错。&lt;/p&gt;
+&lt;h1 id=&#34;solution&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#solution&#34;&gt;#&lt;/a&gt; Solution&lt;/h1&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\wangj\AppData\Local\Microsoft\WindowsApps\debian.exe config --default-user root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;修改完成后，记得重启 wsl：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --shutdown&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;10s 后，在执行 wsl 命令，然后再次测试，看是否可行。&lt;/p&gt;
+</content>
+        <category term="wsl" scheme="http://maxshiroi.top/tags/wsl/" />
+        <category term="权限不足" scheme="http://maxshiroi.top/tags/%E6%9D%83%E9%99%90%E4%B8%8D%E8%B6%B3/" />
+        <category term="vscode" scheme="http://maxshiroi.top/tags/vscode/" />
+        <updated>2022-08-28T15:42:36.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/222543/</id>
+        <title>部署完hexo后还应该准备哪些工作</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/222543/"/>
+        <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;上一回我们讲到了如何部署 hexo 到 github 上，并简单的向 repo 里推送了你的博客。这一回我们简单的来完善你的博客。&lt;/p&gt;
+&lt;h1 id=&#34;0shoka主题配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0shoka主题配置&#34;&gt;#&lt;/a&gt; 0.shoka 主题配置&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy9kaXNwbGF5Lw==&#34;&gt;Click Me&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;1备份hexo源文件到-backup-分支&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1备份hexo源文件到-backup-分支&#34;&gt;#&lt;/a&gt; 1. 备份 Hexo 源文件到 Backup 分支&lt;/h1&gt;
+&lt;p&gt;由于种种原因我们总会更改自己的工作环境或者一顿操作猛如虎，将自己博客的源文件一通收拾，然后就没有然后了。&lt;br /&gt;
+所以建议大家创建好博客记得把源文件也一同备份到 Github 上以防万一。&lt;/p&gt;
+&lt;h2 id=&#34;创建backup分支&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建backup分支&#34;&gt;#&lt;/a&gt; 创建 backup 分支&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;打开你 GitHub repo 的页面，点击左上角的分支选项。&lt;/li&gt;
+&lt;li&gt;点击 View all branches，然后点击右上角的 New branch。&lt;/li&gt;
+&lt;li&gt;Branch name：backup，Branch source：master&lt;/li&gt;
+&lt;li&gt;create branch。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;将backup分支切换为默认分支&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#将backup分支切换为默认分支&#34;&gt;#&lt;/a&gt; 将 backup 分支切换为默认分支&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我也不知道为什么要这么做，但是不这么做最后一步就没法 push 了 😦&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;将repo-clone到本地&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#将repo-clone到本地&#34;&gt;#&lt;/a&gt; 将 repo clone 到本地&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;直接在博客根目录下执行这个命令：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;你的repo&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;将克隆过来 repo 里的 &lt;code&gt;.git&lt;/code&gt;  文件夹拷贝到博客根目录。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cp&lt;/span&gt; -r ./&lt;span class=&#34;string&#34;&gt;&amp;#x27;你的repo&amp;#x27;&lt;/span&gt; ./&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;依次执行以下指令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 保存所有文件到暂存区&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 提交变更&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;#x27;Backup&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 推送到github，分支为Backup&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push origin backup&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;报错&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报错&#34;&gt;#&lt;/a&gt; 报错&lt;/h2&gt;
+&lt;p&gt;可能会提示如下错误&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;fatal: unable to access &lt;span class=&#34;string&#34;&gt;&amp;#x27;https://github.com/xxx/xxx.github.io.git/&amp;#x27;&lt;/span&gt;: GnuTLS recv error (-110): The TLS connection was non-properly terminated.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;执行下面的指令即可正常推送&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git config --global --&lt;span class=&#34;built_in&#34;&gt;unset&lt;/span&gt; http.proxy&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git config --global --&lt;span class=&#34;built_in&#34;&gt;unset&lt;/span&gt; git.proxy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;还原&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#还原&#34;&gt;#&lt;/a&gt; 还原&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;克隆 backup 分支到本地&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; -b backup https://github.com/maxshiro/maxshiro.github.io.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装依赖&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cnpm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;2-博客加密&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-博客加密&#34;&gt;#&lt;/a&gt; 2. 博客加密&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。&lt;/li&gt;
+&lt;li&gt;这在 wordpress，emlog 或其他博客系统中都很容易实现，然而 hexo 除外。😦&lt;/li&gt;
+&lt;li&gt;为了解决这个问题，我们需要安装 “hexo-blog-encrypt” 扩展。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装指令&#34;&gt;#&lt;/a&gt; 安装指令&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-blog-encrypt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;快速使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快速使用&#34;&gt;#&lt;/a&gt; 快速使用&lt;/h2&gt;
+&lt;p&gt;将 password 标签添加到您的 Front-matter 里，就像这样：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;title: xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;date&lt;/span&gt;: 2022-08-26 17:34:59&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;password: 233&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;tags: xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特性&#34;&gt;#&lt;/a&gt; 特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;一旦你输入了正确的密码，它就会被存储在本地浏览器的 localStorage 中。按个按钮，密码将会被清空。若博客中有脚本，它将被正确地执行。&lt;/li&gt;
+&lt;li&gt;支持按标签加密。&lt;/li&gt;
+&lt;li&gt;所有的核心功能都是由原生的 API 所提供的。在 Node.js 中，我们使用 Crypto。在浏览器中，我们使用 Web Crypto API。&lt;/li&gt;
+&lt;li&gt;PBKDF2，SHA256 被用作复制密钥，AES256-CBC 被用作加解密，我们还使用 HMAC 来验证密文的来源，并确保其纠正。&lt;/li&gt;
+&lt;li&gt;广泛地使用 Promise 来进行异步操作，从而确保线程不被杜塞。&lt;/li&gt;
+&lt;li&gt;过时的浏览器将无法正常显示，因此，请升级您的浏览器。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="plugin" scheme="http://maxshiroi.top/tags/plugin/" />
+        <category term="hexo" scheme="http://maxshiroi.top/tags/hexo/" />
+        <category term="backup" scheme="http://maxshiroi.top/tags/backup/" />
+        <updated>2022-08-28T14:25:43.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/212907/</id>
+        <title>Centos安装MatrixSynapseChat简易教程</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/212907/"/>
+        <content type="html">&lt;h2 id=&#34;先安装前置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#先安装前置&#34;&gt;#&lt;/a&gt; 先安装前置&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install libtiff-devel libjpeg-devel libzip-devel freetype-devel libwebp-devel libxml2-devel libxslt-devel libpq-devel python3-virtualenv libffi-devel openssl-devel python3-devel&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yum groupinstall &amp;quot;Development Tools&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;#&lt;/a&gt; 使用 root 账户接入您的 centos，找到合适的位置开始操作&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mkdir syn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;依次执行以下指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#依次执行以下指令&#34;&gt;#&lt;/a&gt; 依次执行以下指令&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;virtualenv -p python3 ./env &amp;amp;&amp;amp; source ./env/bin/activate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install --upgrade pip &amp;amp;&amp;amp; python3 -m pip install --upgrade setuptools &amp;amp;&amp;amp; python3 -m pip install psycopg2-binary&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install matrix-synapse                         //安装synapse&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install -U matrix-synapse                    //更新synapse&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;#&lt;/a&gt; 将下列指令拷贝到控制台执行，自动生成 homeserver.yaml&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;python3 -m synapse.app.homeserver \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --server-name im.axro.top \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --config-path homeserver.yaml \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --generate-config \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --report-stats=no&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;编辑生成homeserveryaml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编辑生成homeserveryaml&#34;&gt;#&lt;/a&gt; 编辑生成 &lt;code&gt;homeserver.yaml&lt;/code&gt;&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;enable_registration: true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;suppress_key_server_warning: true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bind_addresses: [&amp;#x27;::1&amp;#x27;, &amp;#x27;0.0.0.0&amp;#x27;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;启动关闭服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动关闭服务器&#34;&gt;#&lt;/a&gt; 启动 / 关闭服务器&lt;/h2&gt;
+&lt;h4 id=&#34;注意要先进入虚拟python环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意要先进入虚拟python环境&#34;&gt;#&lt;/a&gt; 注意要先进入虚拟 python 环境&lt;/h4&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;source ./env/bin/activate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;synctl start&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;synctl stop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;退出虚拟环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#退出虚拟环境&#34;&gt;#&lt;/a&gt; 退出虚拟环境&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;deactivate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;配置反代&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置反代&#34;&gt;#&lt;/a&gt; 配置反代&lt;/h2&gt;
+&lt;p&gt;进入宝塔面板新建静态网站，配置 ssl，配置反向代理地址为 &lt;code&gt;https://localhost:8008&lt;/code&gt; , 保存即可.&lt;/p&gt;
+</content>
+        <category term="nextcloud" scheme="http://maxshiroi.top/tags/nextcloud/" />
+        <category term="聊天室" scheme="http://maxshiroi.top/tags/%E8%81%8A%E5%A4%A9%E5%AE%A4/" />
+        <category term="python" scheme="http://maxshiroi.top/tags/python/" />
+        <updated>2022-08-28T13:29:07.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/211502/</id>
+        <title>解决linux下挂载其他linux硬盘的问题并创建smb局域网共享</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/211502/"/>
+        <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;之前用来当作小型服务器的笔记本终于被我给淘汰了。已经关机了好久。最近买了块 &lt;code&gt;SATA&lt;/code&gt;  硬盘盒，想要将这台笔记本内的数据备份出来并把硬盘用作其他用途。一切连接好后发现无法挂载，遂百度了一会查出了如下方法...&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;故障复现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#故障复现&#34;&gt;#&lt;/a&gt; 故障复现&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;连接 linux 系统，提示插入硬盘. &lt;code&gt;/dev&lt;/code&gt;  分区下出现硬盘编号&lt;/li&gt;
+&lt;li&gt;执行如下指令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mkdir backup&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mount /dev/sdc/ /backup/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;报错&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mount: unknown filesystem type &amp;#x27;LVM2_member&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;解决方法-debian系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法-debian系&#34;&gt;#&lt;/a&gt; 解决方法 //Debian 系&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;执行如下指令安装 lvm2 并扫描查看以挂载的磁盘&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get install lvm2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo vgscan&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;发现如下字样后找到对应的 &lt;code&gt;xxx&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Found volume group &amp;quot;xxx&amp;quot; using metadata type lvm2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;设为活动状态并查看可挂载的分区&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo vgchange -ay xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo lvs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;LV     VG   Attr   LSize  Origin Snap%  Move Log Copy%  Convert&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;data        xxx             -wi-a-              34.19G      &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;挂载对应分区&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo mount /dev/xxx/data/ /backup/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;至此已经解决了问题，如果你还想把这块硬盘里的数据共享出去，比如共享给局域网内的 windows 主机，那就接着看..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;设置smb&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设置smb&#34;&gt;#&lt;/a&gt; 设置 SMB&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;先更新一下&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装 Samba 服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get install samba samba-common&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;配置共享目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 新建目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo mkdir /home/db&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改目录权限&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo chmod 777 /home/db/ -R&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;添加账户&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要注意添加的账户需要是系统内已存在的账户&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 后面的pi为系统的用户名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo smbpasswd -a pi&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入两次密码后创建成功&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;创建系统账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// -m参数为添加/home/username目录,username更改为你要创建的用户名.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo useradd -m username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改账户密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 删除用户&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo userdel -r username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改登录zhanghu&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;su -username&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;配置 samba&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 建议先备份一下&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.bak&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 编辑&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo vim /etc/samba/smb.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在文件最后添加&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[database] &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    comment = 23333333  # 描述&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	path = /home/db/    # 目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	public = yes        # 是否允许guest用户访问&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	writable = yes      # 是否允许读写&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	workgroup = WORKGROUP  # 工作组&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;重启 samba 服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo service smbd restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后在 windows 里面映射就行了&lt;/p&gt;
+&lt;h1 id=&#34;借鉴摘抄&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#借鉴摘抄&#34;&gt;#&lt;/a&gt; 借鉴 (摘抄)&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L212cF9EYXduL2FydGljbGUvZGV0YWlscy8xMDU4NDc0ODU=&#34;&gt;ubuntu 20.04 安装配置 Samba 服务，Windows 和 linux 协同工作&lt;/span&gt;&lt;/p&gt;
+</content>
+        <category term="linux" scheme="http://maxshiroi.top/tags/linux/" />
+        <category term="运维" scheme="http://maxshiroi.top/tags/%E8%BF%90%E7%BB%B4/" />
+        <category term="smb" scheme="http://maxshiroi.top/tags/smb/" />
+        <updated>2022-08-28T13:15:02.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/211224/</id>
+        <title>使用yuzu模拟器玩动森 ( 附动森资源 )</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/211224/"/>
+        <content type="html">&lt;div class=&#34;hbe hbe-container&#34; id=&#34;hexo-blog-encrypt&#34; data-wpm=&#34;Oh, this is an invalid password. Check and try again, please.&#34; data-whm=&#34;OOPS, these decrypted content may changed, but you can still have a look.&#34;&gt;
+  &lt;script id=&#34;hbeData&#34; type=&#34;hbeData&#34; data-hmacdigest=&#34;55ce5d5da685aeb55b41422c0524b82d796a2b4c1015be84eaec992cbd0cd5d7&#34;&gt;d1899da7a748b25f56c1c726f82d5e172920c6c2206a41c0c120596bcab5484c95f1a1f0b20f6bac74b3a8012dd4d09370722c212ac9fc4434ca34461b049eb5f099a4f47457a0d4f5940a50a5d6349b7afc06d31b597e0b5b7a61b10073f011e62c2fcebbb2f551524a356fc784dcaaaa7f91be341284fc9d16c972615d90bbe81cd04e413d28c3a06459d08a8f9926ea0527c11d20c228ce1b63f41863a93d222db93d57ba960e847d3f3de9ff95101561e98f0cd258cc94818a56ace4a714a88cffff9268b3e6f6fa5d2a66ab7c00c16f4f257ffa6825f04595933cd28a9153bb02cb4cd211fc29f9e61f0fa9006c4a90c31537f4edb3789e3b09d26cb8c293770e9ecce362d967c1ae4adb9516c0f68fb4d98749801746a9137854b6a922409c82a2c22db50ec4ca9f80483b0717b81f02adaa298794d0540192ceb33785182c38468d20d65205790d918f82768ed7eafbc6ede98759cf448c73b106f7fa0967c6b0709a978fab2dbd8acc237351ad9aad09340a4be974218b65e2c96de340bac264b34c9aff43e407333dc28e8fd3d621738d59d3c8f43968b243ae1ad37451b8c6073eacb202bb754bb57ba9b7a95d035ca48284f11a795ad707afaf283b5d1de883bf20189d96aa5007c64ac6caf6d0970855f457fd51b4da42349333208eb75d60698a17ee8e2a93e67a1455beb5df2dd27c498cccd95753187175724ad0c5688d4a1e17428989f03728833a65827c20d6f4f115d1fdadbda2c3548801f1be0d3458c6fe936040845aa9f9ea13f73e71de772f8d1d1202f46bba626ade7c0e2442a4631cdbae53c6a530a358e4c497f9750eb04f4e531e406913c7a2ed9eeaa737328c7f1c3d3b4225f1025739d91aaab2af190daf0146a475c5172a88dc31d33f86ec2e18701be681ef000d6f65e1f6458c0970ab3438d7204fad58152cbc7787dcf22bde20e87ec17614aa8e485036314456072aa0d80c3b744e131bd2bdb3d5ccc476b6be4c774769e04738b9cb9ecf4ebb347d4a07a410f8c9853235ce89c06521cfdb7a7214d21eec92f1d855200d90d5f895369bb0743c60e965c733a89ae662a696961c1e571348de54d4b318b7391bc2daca5749c9ee077aac4c439b249628dd2af12135ad4e4f36186c40f4098443aa5201bf412c509ab0e194c5ffa1400b9f318c371d71dc1fb3ac43e1569f4756cf875be7a358b8c2b7b21d1526d55ab42c246435cd4ef469f219c2230b59928c9eb6faad2bebb062e65b0dbb026b6fdc9510c82a80f59f8898ece627524c617efddad0dea4a1634198b4c9a9ea39032596aa31945e049bc039c1f39cb06a7d07acb3b808603930388b2c891b3890b352e88deb9d325c0c1f7e66d39fcb62cf326fd0f872791ab2dcdead461f70f26de93a07566f8184ca81f5ef9e5e5659cb2bc6056f11721775b5d23b99931a530790b5c0ed0d9bb07a0515465aa5a0417a148e816b2d3eeccdd1011a9f0e9ec78044db7b896933b483a1ae6c0cdae97fd3e7125d0424a4fea6e1474c3ecadff90f29f0a76243e9e36f4d42faf2521fad65b9fa5c148890d999d895aac856c6093d1aec3ed250ccc2c7cf2a37272c6f071d5a249daae18971b08c23a403013a23b58df97897cc9c3aa1615eecc85009c0e5516d13f6610f727d7e08d7f851a5842768c69668b4e502f28a34157f40c45ce4ca6054108aad54bc9e170c44ce954e9bd752a1cfcd82232446ab2f103ef1a3ef4380417bd6d40ce9b8977a6ba6bee25f02bf24e09983e30b7ca837d22b7962da43ee3b26b528b41647e2cc58370a402277450001ae2b4d78922428172b5e71dbf88c96b81d1f6d7654417430bd86ef62a955b7cc1480c1a13a03300d197230910d09a0aba54638069b086b8ea55d565ff63a0c66592acd254485b4d24b72bc4886a0d0a8dcba8c3146453219056c10f2e0ab65ac9da95e17c1b463b2bb1826cfbcf808a1fe3c4af1214386559decc94266610b2e8b1478da0b728325a7635cb259d1f028b201db3c1e2e6ae0cc861211f1acaa5697d8ee16874cec6359dafe96246e5620dadd6dc82a5f5558b06694496fbeb8849bb6cb7fdf3083df00525cefb806e49b30ea3e2252e826d6b2d710ccf23b8937984f31a1e492e1a289ffce03bb76a0353a034604e9d4795db04f71716a642c31ba7b0d5be53048dc9072b1549de2f9ad62dce968cfac4d945d71291a6e8109d407ebc72edc886e6606b7acf210df98ed65dc545e1a02568d59c92faa64686ffc297eff67915c239c781ead19f8735a4985f340c4c4bb2b991d1e9679472d20c57a31512b6c2dc4336391c45b4cedf36b15e7c0e17ced337e2625e547174e742a428c1c9fbd97bb7878933fb5c30712a1b4d1f6149fd5c99f15d086c911f6fc08f01e828fab80013b1fb76af8cbaef70eb546729c8dabb87d0e1679957e4b0b496d473f693636edc45cdf1e5f5ed10848beb03d7ce37139d5ca9b2c58706d3db5d61e050a41df1fe745c1f56c601ff3317326f0d5b73b59083e0fb05616d347800b317f15a936a5f92b5add7693f8c2312d371f33ff0382d529ca5caa00ad1d0bfd55c8c03ce8bf05ac091c27c1189880980f157a72d411d3953b7add81a490bee2cf6819588e91c12277743434fb044b77514a30198ff719d99ba2bbace8286957792dbb57dc85ae5a1e41024271c6aabdef2e8a594091729831bfbd582b8f799a7ee7a60143d766efc3453b2ebf573525d047297fbd83ef4e250849af1c916820aca30e13a8b24a583c9b1cc9af92426b05f42469ba4e3cf83efe2067be3a5ed80b13869b28cdd6911d71b2600fbef7590d290035c83035792ce8a11c4963f29d103146e29b9c0cab6f2efd46aee8cd6798745386d02199d983f597da36485c64afa746ccd77b26d390160c6f6184deea7e8f8bb761d3d7e52aff7603aa8ec299db9c74acc04f016fa67810f854013bf9a6f6b41f443a3fb67296f1bd4b06d1de68180db28af2681bcc23dc6d95581e55ab876ce01a5073e89153dec5518c726ba747a3da424555a8e789fd9bd17f78ffc49667f1d31a724019c766bbdca7f3a9fdef97a17607a2571b88950501accb6b7fa0c50c5082f3ddbe467355084751ee723d4fe1ecd7ec57f05e470888591132798c9aa3372d58333d2215407edbddc96e8d50239d35ede4e3e2600c468895e67717c7ecee67c41a5456ff618d962ec7361ca0946518eb1b1c6acc541339613d4b3a9cb006056fea6f4f5cfd66a7a24b5619013f5951b9be3f54630f3856d1507e0281038dd2528b3bc0e2c7730af62f88f6f92fe32d48857ccbe8eb506d2c143320095f16e158ba5a55e9e9ab19bd05876f90f4887bd8d0c44ea26cb3e0ede7093df8341bd69867104bd9bf04538e9898767e43cc67691e40c97319b711ae56a48b86e788c3a93a8cf2083fa371543d50848181bc3a8aca6f1a95a3a133820d01b12a971b5320cd316f78e310f215450324026bc92e49767f80c413130304725aff135342fa6ebdb441790cd83e00091d4a8a8bfa1b8e254ae4fa5cc848861e2e752485553a7f373b17fb84f209c559900dc56f6b252fef0b00089ad51432c610819a1158740f66322434b018e60c4b7249fa9a9e595286b33dd9418ed51a76958efd982417fec876b1c30f48399a7368bcde62445d5f91d0ca29c456376e2ff7b610d6e043d02581fb812215744c4cfbcf9b6f5f4611a622d959a6ab0571a75185071fbe6355b034769fe42b088c30b8a988c4ae17ca2e2af25d93ba320b6b769e03016c4dd957212d91fa0570b84f71cb9a164339ddbc55c388a5751f5e1a0f15b11a93584d5ccd972e997f653c377b1eb3871900431d5ba69ab02fca855154aeeee62adb87ed6a2853d9ea043250d9486549633b25928ae7efaa170edc7114a8836422f3907e2523c7a9cc114468549dae1ed178c2e2c26f6efc575051d003711c21ec3900b340d5b13f33567c95d013f437523d7d531d563b838a794583f1b6ba26b1a7d08c3dd27c351b14264e1952f91f9a271b8b99fc7610230a43fdad95d6b681482c749ab211854aff53e35fc1d39c364931385156fd2a3cdaa4ad06fc74315beffdf1e770075ddc4b77f85f3d4ae64ad4092741b09fcbe7cacf078b879f0d3fd95d1991b1a85d2f7a3b37cf97ad15202acdd3a7db8e497585e54e7998bd70f60a5d608654da34316393850ba3e34553064098a69179ffa5305a3b1185b5a4a6f519ed2ff14346949d1c1eea30d10fc1ee8ee22293a7b095aab84a0bba3648d5c4bdfdecfd053410446f3f7fac298d50be3b454ec2d9e74f234ada2904e41e2f481146d662fef2ae0f3e1ff91c9fb24200ee6d3a4b00a659e7f960c688fa4320c0879c987837105b1f9d1ad68e1e067cf8c3912c2b104b3cdac811b9684a86a58dcf7086a4bfcf597f13c0399fc757d90a945c8e5dd17259fbf1bcf3ba8a4d73df1d6b609ebaf42366108ddea1bb159487dec6b0174615f5b48e756cd16b59880c6099eb573759a149e25f914ead2eb855bb298f18b129763b9a44592bb5a815d19b9bbecbae4a8cc1bd9370741a1fb3cdb91daba0207d94f206ce770917893f55a2e3657afe70bfb237c5ece15886ae386f5b3b6f79b23b4b53e3357c8b697e2cae8567306e8723ca84846132984abf9e40947bee86dd8402cc0aa428ab10775b96fb3245183496ecc32c5f72962d2ffacca62d07898cf8790c7f7ff567be22a439d958549653b3e7e7b5fdb5d353bab90b618c94822436cc18a470a33674f973e38db54e1dfe45842e179b4175ff47c6ac974a4a7c897c8afe0dd7dcbf3ddc764ed047866382852aedbcd973e38981a5367a0a5abee7e80d117cdde1a16d877253398bc365cce02110f83a95122650121ca236c4cef3eafaef75f059c3e0bbf05dfc49817332cf712354e353fec1b642ddc2fec6616ab9b787038d28d4453690f55327c87390cdb51ba1f37b49bffcdc4fb731dfd5aa43dfa1b5e2b6858eae5098b5434925c18df90533f230d7ce0f3953b35a4c479bd1bd07708a475039d564d0d1f0764e91f484f7de7b91630cfbc7d4b90c1bb2a47594a3a9a99a6397e73367e3ed419d873d05394554bf430fd813e5257c320491736bffea0bc462e816a46e9fb8da32164428ef8dfbc77b0039a8ce7dab95c9478399da9aa2028887504cd89c064dbace18a3b2854f94fbdeef62562b94defc2c9da730199e88364dc9bb94d8a7f3e113e62938e2ab4eb63466e281acc88586c4a426b425ed3378e5ae78c856f4e8c2059d52d3d8d5429ea3cee28ae622e8a6492f98d79051f4fd5436562c25d93c573dbe6e2e624d1f6926fd98623f85925fdd77ca8a4f93184b844f324431663fef19d439ec662496e479e63d8820379f85f8c0a7cccb06631b1e59da516c177d020e3b4f637f4d844050aa55a7e2efda64d0acf0d0befbafa329412c63a2b35f2794def8319fca65f76f7fdfba5c9d20b5df62ef1e014ffc3d414da986bcf82ac42835d6a99da27b0461d90b7e4538b3fb2bb401ba069a418b66cbac3e51fa53c79187b890cb87c2d70cc04fe050f218c1482f962ff62dea1350f90f9261c9da366552556347eb802f36d61071024a1e10428ced0921a55281d94cc3f01b7e2791510cf9d18156fb4a328aa1841ebf146110de3e197aaccb75351345b9013edf8fdf3e3652f1f034f07785124731c3073a55fc41b896fb00331f9e0bbc656350531ca1b110d8813db23cc459a305469852288916ca86e0f3d11de66609e110371ce5bc43cafb40fc4fec25e98a9e92767239f9d2362311c0583348b9fca03b0320f589112fb746907c4ba3eec417828268413c96a6dc7b4b06b2f400ce3be6f9dfca1377cdfdb6a03090e535b78d91eaeec27fc87834004234032cd2f24d46b8c45b68200ad5badf5e4cdc3ad08d7854f943f95c9633561b88079d8119f06be911817eb11d5f6e07415f70b13fd733ab2dc25ff0e587e7cfa187679a7e86dd781e91a83bff896cd45513959e1a31b40bedfbe459624de0c464f676fd53c1c2864a1aa23d4754c280eb951c15343727fa19bd94818c692ebdd7d31553b9b036966c48b2634368dc28f4a7a6550aa67a5de48cbbeeabf21a166a308be2324dceb3c302babade0e10788a2d26e287feb63698b5b2430d563b72650a6fa8dcdb140d10f0c690a34e5a2e91b762bfda16037777d67d653f87774949f2f9d6ea593fc125ed776401a172bc0dfc9a1ccd13edf1693c13a3737fe57a1b07fe341aa49fd413efe0049041a473b158445bad641f1e416fc6f170e52c6a1e04d8f114281ec04c8c4948e75635459e1cbb3df932a2e75cbeeecb51dc12996d56dd5aafe23cce7172dca722bb44cffa83c1c6d78408ca7726e409f492ba516a9ce20dcd9438e81063d485cafada61a5fceaaf109023baada45c004e3f3814314ca524eb2e0a9ea4875d0905152875572e3ad72281d75dfd445c1b9d9abd6ca790be2214fd4d4cbfa63754c4b951597cd38c7b58b3bc080e9d1cdcbd3e2a06f07107a165a9dc61dd63d45eef4b2771d96f442a67c4389c5718aa6ee64416559dd01f161e06014ef4fed5bc5e49353cf6d129f5992bfb76f737053e9f7413b43c5abadc7101da88a87efb35c3ad779b336a4a7dbe5b5062263cb2073e19bcf2273f0ae0c3a062f269799e533515450f9af80d0dd36fcaa481018b4a98d32e95d7d061a5a64b432cb8a83cf3f80d0837233de903d9cb2917838035ce0153838775582df9a61fdddace01207d1329a3af8a8328ed512fbdfd57efa6fe5644dadfce990df6ba38feb65259d73f38f5e7ba729f06715932edd9660615d0e62140d921ede54214a70e0617dd4e1bd8308a735a32669f7ce2e4bb1bdc7b94d4f1c5606e3a6d5870c3f515a550659d16d22df0fa710b3c60971db0059b3bdc296cdc239acbf0568bf2f52ce886860a66aa8c9c317f50b06a84e293425bb2c7d25f8db97397539c520d3f48450aa7f8bb32d027a5eb8334b9e9076366c73f682a55195f0dda8184bcee43b4eb9c2bb99760772df1fc8cf0ce9234cb4f60a6c905baef64456fa9a7e36e51370d4059501523f8c8e0df2a5fce4b54391ebc75d756cce235a66dc12914ce2dfbc486169382dd7437d0513011bdb60ca906f89da090f2a95b55ca1d89cac3dbb70e7bf5765be431e3d2e7a6764e9d21f6e2a631a42fdb6e1e0bb27112d2ed1d20f1f81920752447df5db7e46e0f8456ff80368e786dc87909f63c05d961d1ea622be18d6d1970c9a556b4bd691e0c7ec36d9125d0e7313f6844e07025f2e20e16a7bf69adc75072a6a4f3a14ae0ff030563d881f134331493a19b7c8a4c00d191d5fe07dc888238a1a03e144f21ac13ca991e5efcdbfc2c1aedd2b4837e38ef0534ef3d7805b05fdaa8b63ffc40ffcca21fdcc6b92b1fde3e280a9c5c6809bcf0eaf49801d6f0c193102c51233925a383a177fb5f18864b2fb1b4a3e6a0e67164dd9543217bbcd65d495f2b205a104a0a1e85ffeb2044ff9c53ea84547d019052de56e3bef4991d2c2a1f79df9451141f3e0f3aa23730fea386a87730e666b3dac3daf523a3595ff642f4455d24f675f5b77c6878732e2df5f9394510c4853082281e74e0fe565a4382150d7b9f67ed9766e114f96628171508149b080d85c8404177dadccce09c1a70718e2e74b734339e30a8867feaa313002a80de5dc803cb5d72829c3cd111eafb9573aec44c0cc6755f1bfc160f8d5e7e95c0dd39716eaf06e884faaf0b05ef574f52b6c714a9148d75cd2f94d662bfbe4d66a8c16a012c4abdef056488250b275294987b48cdefdcee53b16f9bd5990469bf5ace6cc5498b55d2d7162757839373055b92d0d88af5407627b3269fa8147fabd054b20b0d59fe97077fa42da8d0533445537d92b084c4fc847b5914e5dc69cb2f0b9f9de4d4a7fd373ca2abfdbe76ff3d2f2bb4874e407d97c2124dbb969515c7b0d653910ffb46fc9f0b7960ae51259672a0f855c409f2783ad2becaa1f99adea249304f4ccb421a996d986d9047d38dc8b5238caa4d4b7f40cff56ee4daed03dce4f5e81906ea63685824cafd278d35ab68f64b0db080f1ba81e207450932e64f47eda10c15e4d0fd9f8cfc2f05ebd23882e5f832cdb5f83c267a6c6edafb73f4dbff5e22f453f0aeece325d5197869b4c6853c2c8d130d9d66dcb1cb0159696be9526c55a14c2c54d89d5c1e80986c28f56a4e9bb645ffdde83fbe1f5dc56b9328feda621e570facc606f3e701a77cacfa1e89f3006529e2d852ec7f823bd7d0cd2e19decbf4229dd9008e2dd8987a567d6bd2f059a25c97234c38fb5dc7b55c138db2da09e3d7a79a5ef7f979fbd6f0c80ff5b3fb72de9b28be5eb3ba79fef04afdb3171da13420a8da19cdeb247a2036a05eecdd09debb17b53ab66b6712974e4f6ee0ee20e3d18418f070a99923e18de611223612b2b7863b02231e5fa764f67a6385d97aa287ea5a96b5bae5caf2f7c61dd5a03e6b1344a0c07bbf621ff4f0eaaff8ebe5329938c78574dd21&lt;/script&gt;
+  &lt;div class=&#34;hbe hbe-content&#34;&gt;
+    &lt;div class=&#34;hbe hbe-input hbe-input-default&#34;&gt;
+      &lt;input class=&#34;hbe hbe-input-field hbe-input-field-default&#34; type=&#34;password&#34; id=&#34;hbePass&#34;&gt;
+      &lt;label class=&#34;hbe hbe-input-label hbe-input-label-default&#34; for=&#34;hbePass&#34;&gt;
+        &lt;span class=&#34;hbe hbe-input-label-content hbe-input-label-content-default&#34;&gt;Hey, password is required here.&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script data-pjax src=&#34;/lib/hbe.js&#34;&gt;&lt;/script&gt;&lt;link href=&#34;/css/hbe.style.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&gt;</content>
+        <category term="switch" scheme="http://maxshiroi.top/tags/switch/" />
+        <category term="Project Diva" scheme="http://maxshiroi.top/tags/Project-Diva/" />
+        <category term="Miku" scheme="http://maxshiroi.top/tags/Miku/" />
+        <category term="Mega39" scheme="http://maxshiroi.top/tags/Mega39/" />
+        <category term="emulater" scheme="http://maxshiroi.top/tags/emulater/" />
+        <updated>2022-08-28T13:12:24.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/210724/</id>
+        <title>【虚拟Vocal】 Synthesize V 初代整合</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/210724/"/>
+        <content type="html">&lt;h1 id=&#34;软件介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件介绍&#34;&gt;#&lt;/a&gt; 软件介绍&lt;/h1&gt;
+&lt;p&gt;Synthesizer V 是 Dreamtonics 开发的系列歌声合成软件，它结合了强大的歌声合成引擎和直观灵活的用户界面，只需绘制旋律并注入歌词，即可轻松创作原创歌曲。&lt;/p&gt;
+&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;当你想要摆脱 Vocaloid 软件的支配，想要试试其他同类型的软件。您肯定会搜到这个软件。但是很不幸，当您点开官网查看售价，显然单个声库加 pro 版软件 899 的价格让您打了退堂鼓。&lt;br /&gt;
+  您只好把思路转向搜索 crack 版本软件。又很不幸，这个软件 crack 版的本体和声库都很难寻找。&lt;br /&gt;
+  在这里恭喜您找到了这篇文章。可万幸中的不幸就是，我也没有这个软件的 V2 破解版。但是我找到了 V1 的破解版，在此提供给大家。&lt;/p&gt;
+&lt;h1 id=&#34;关于软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关于软件&#34;&gt;#&lt;/a&gt; 关于软件&lt;/h1&gt;
+&lt;p&gt;软件的获取来源是 GitHUB 用户 &lt;code&gt;CJLU&lt;/code&gt;  的 &lt;code&gt;Synthesizer-V-FE&lt;/code&gt; , 版本为 1.8.0，所有功能正常使用。链接地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0NKTFUtc291cmNlL1N5bnRoZXNpemVyLVYtRkU=&#34;&gt;给特何不&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;关于声库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关于声库&#34;&gt;#&lt;/a&gt; 关于声库&lt;/h1&gt;
+&lt;p&gt;目前手头上只有这几个声库：&lt;/p&gt;
+&lt;h2 id=&#34;eng-英语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#eng-英语&#34;&gt;#&lt;/a&gt; Eng (英语)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;爱莲娜芙缇 (女)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;zh-中文&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zh-中文&#34;&gt;#&lt;/a&gt; Zh (中文)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;苍穹 (女)&lt;/li&gt;
+&lt;li&gt;赤羽 (女)&lt;/li&gt;
+&lt;li&gt;海伊 (女)&lt;/li&gt;
+&lt;li&gt;诗岸 (女)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;jp-日文&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jp-日文&#34;&gt;#&lt;/a&gt; JP (日文)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;闇音レンリ (女)&lt;/li&gt;
+&lt;li&gt;玄武 (男)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;下载地址-包含全部内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载地址-包含全部内容&#34;&gt;#&lt;/a&gt; 下载地址 （包含全部内容）&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;特殊原因暂不提供 😦&lt;br /&gt;
+(其实是文件丢了&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="Vocal" scheme="http://maxshiroi.top/tags/Vocal/" />
+        <category term="AI" scheme="http://maxshiroi.top/tags/AI/" />
+        <category term="歌声合成" scheme="http://maxshiroi.top/tags/%E6%AD%8C%E5%A3%B0%E5%90%88%E6%88%90/" />
+        <updated>2022-08-28T13:07:24.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/205944/</id>
+        <title>Win11 安装 WSA 简易教程</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/205944/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;微软终于在昨天上线了 WSA 的测试版本，此次只有美国地区上线了。因此如果你的 Win11 系统为美区的话，可以直接点击 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9zdG9yZS9wcm9kdWN0SWQvOVAzMzk1Vlg5MU5S&#34;&gt;这个链接&lt;/span&gt; 进行安装。如果非美区那就接着看步骤吧&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;bug 还是有很多，首先是 WSA 无法调用 GPU, 这就导致很多 3d 游戏会很卡，实测明日方舟帧数不到 20 帧。然后安装 WSA 要启用 Hyper-V 即微软的虚拟机平台，打开这个会导致无法再安装和使用其他安卓模拟器。和市面上大多数安卓模拟器相比，微软这个 WSA 是 ARM 翻译运行的，安卓版本更高 (Android 11), 可以运行 ARM 程序。与系统集成度更好 (虽然目前还没有实现 WSL 那样的文件访问) 而模拟器大多都为 Android x86 项目改的，因此最高只能到 Android 9.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你是想尝尝鲜，试试这个新功能那我还是推荐试一试。如果你主要想拿来打游戏，日常使用的话那还是更推荐安卓模拟器一些.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;开启虚拟化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开启虚拟化&#34;&gt;#&lt;/a&gt; 开启虚拟化&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PS: 如果之前你有禁用过 Hyper-V 的话记得使用管理员权限打开 Powershell 然后通过这个指令这个指令重新打开，不记得有没有那就跳过:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;bcdedit /set hypervisorlaunchtype auto&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;打开开始菜单，直接搜索控制面板，然后打开.&lt;/li&gt;
+&lt;li&gt;找到  &lt;code&gt;程序和功能&lt;/code&gt;  - &lt;code&gt;启用或关闭 Windows 功能&lt;/code&gt;  并点击打开，会弹出一个窗口.&lt;/li&gt;
+&lt;li&gt;在弹出窗口里面勾选  &lt;code&gt;Hyper-V&lt;/code&gt; 、 &lt;code&gt;Windows 虚拟机监控程序平台&lt;/code&gt; 、 &lt;code&gt;适用于 Linux 的 Windows 子系统&lt;/code&gt; 、 &lt;code&gt;虚拟机平台&lt;/code&gt;  这几项，然后点击确定。系统会自动查找更新并安装.&lt;/li&gt;
+&lt;li&gt;等待重启过后就可以进行下一步了.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;安装本体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装本体&#34;&gt;#&lt;/a&gt; 安装本体&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;首先复制上面那个链接.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zdG9yZS5yZy1hZGd1YXJkLm5ldC8=&#34;&gt;安装包抓包&lt;/span&gt;，点开这个网址，将第一步复制的链接粘贴到搜索框，右边选择  &lt;code&gt;slow&lt;/code&gt;  然后点对勾.&lt;/li&gt;
+&lt;li&gt;找到最下面名为  &lt;code&gt;MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle&lt;/code&gt;  的一项，注意大小为  &lt;code&gt;1.21GB&lt;/code&gt;  , 直接点击进行一个下载.&lt;/li&gt;
+&lt;li&gt;找到你下载的文件，然后右键  &lt;code&gt;开始按钮&lt;/code&gt;  选择  &lt;code&gt;Windows 终端 (管理员)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;然后会打开 Powershell 窗口，在里面输入指令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;add-appxpackage &amp;quot;你下载文件的完整路径&amp;quot; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# example&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;add-appxpackage &amp;quot;D:\download\MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;等他跑完以后就会在开始菜单里出现  &lt;code&gt;Windows Subsystem for Android™&lt;/code&gt;  点击打开是下面这个界面就说明安装成功了.&lt;br /&gt;
+&lt;img data-src=&#34;/img/wsa/20220920220234.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;安装apk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装apk&#34;&gt;#&lt;/a&gt; 安装 apk&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;点击文件后面的按钮会自动启动 WSA, 等打开后下面的 ip 地址会刷新。此时我们将开发人员模式打开.&lt;/li&gt;
+&lt;li&gt;安装 ADB, 下载 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9uYXMuYXhyby50b3AvaW5kZXgucGhwL3MvZnJZeENIZzdGZmFiTkVZ&#34;&gt;这个文件&lt;/span&gt; 然后解压到任意目录，然后打开解压出来的文件夹，名称为  &lt;code&gt;platform-tools&lt;/code&gt; .&lt;/li&gt;
+&lt;li&gt;按住 &lt;code&gt;Shift&lt;/code&gt;  键右击文件夹的空白处，选择 &lt;code&gt;显示更多选项&lt;/code&gt;  - &lt;code&gt;在此处打开 Powershell 窗口(s)&lt;/code&gt; , 然后在打开的窗口内依次输入以下指令:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;adb connect 127.0.0.1:58526 #这个 127.0.0.1:58526 为你的开发人员选项那一栏里显示的地址.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 第一次可能会失败, 再输入一次就可以了.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;adb install -r xxx.apk&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 这个指令为安装 apk, 将 xxx 替换为你要安装的 apk 文件名称.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;显示安装完成就会出现在你的开始菜单里，然后直接点击进行一个打开.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;qa&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#qa&#34;&gt;#&lt;/a&gt; Q&amp;amp;A&lt;/h1&gt;
+</content>
+        <category term="Android" scheme="http://maxshiroi.top/tags/Android/" />
+        <category term="Hyper-V" scheme="http://maxshiroi.top/tags/Hyper-V/" />
+        <category term="WSA" scheme="http://maxshiroi.top/tags/WSA/" />
+        <updated>2022-08-28T12:59:44.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/124600/</id>
+        <title>【VMware】解决新版本的VMware虚拟机无法正常在旧版本的Windows上安装VMware Tools</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/124600/"/>
+        <content type="html">&lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
+&lt;p&gt;因为学习需要，要求安装 &lt;code&gt;Windows server 2008 R2&lt;/code&gt; 。安装时一切正常，但是到了安装 &lt;code&gt;VMware Tools&lt;/code&gt;  时，弹出了下列提示：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/img/vmwarebug/20220920220101.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;其后&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其后&#34;&gt;#&lt;/a&gt; 其后&lt;/h1&gt;
+&lt;p&gt;我尝试百度搜索了解决办法，导致这种情况的大概解释为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原来，微软更新了驱动程序的签名算法，从 2019 年初开始，逐步弃用 SHA-1，改为 SHA-2。个人推测新版的 VMCI 驱动用的是 SHA-2 签名，而 &lt;code&gt;win7&lt;/code&gt;  不支持 SHA-2 签名，所以出现了这个问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;那么怎么办呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可以从 &lt;code&gt;Microsoft Update Catalog&lt;/code&gt;  下载 &lt;code&gt;KB4474419&lt;/code&gt;  和  &lt;code&gt;KB4490628&lt;/code&gt;  这两个补丁，然后安装到 &lt;code&gt;win7&lt;/code&gt;  虚拟机中。在没有成功安装 &lt;code&gt;VMware Tools&lt;/code&gt;  的情况下，传文件不太方便，可以用虚拟机里浏览器访问下载页面，然后直接在虚拟机里下载安装。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可是在 &lt;code&gt;winserver&lt;/code&gt;  虚拟机里很难进行操作更别说老旧的 IE 操作更不方便，而且 &lt;code&gt;windows server&lt;/code&gt;  的网络管理大家也都知道，会拦截所有地址。所以直到最后我也没法访问到微软的补丁界面。&lt;/p&gt;
+&lt;h1 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h1&gt;
+&lt;p&gt;我直接搜索了 &lt;code&gt;VMware Tools&lt;/code&gt; ，到其官网上找到了旧版本的 &lt;code&gt;Tools&lt;/code&gt;  镜像文件，随后直接对其进行一个挂载，这时直接弹出了自动运行窗口，进行一顿下一步下一步之后，成功将其安装到了虚拟机内。&lt;/p&gt;
+&lt;h1 id=&#34;旧版本下载地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#旧版本下载地址&#34;&gt;#&lt;/a&gt; 旧版本下载地址&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYWNrYWdlcy52bXdhcmUuY29tL3Rvb2xzL3JlbGVhc2VzLzEwLjMuNS93aW5kb3dzLw==&#34;&gt;点我去官网下载&lt;/span&gt;&lt;br /&gt;
+打开以后下载大小为 &lt;code&gt;114M&lt;/code&gt;  的映像文件，然后手动挂载到虚拟机上，便会自动运行。&lt;/p&gt;
+&lt;p&gt;转载需注明出处！&lt;/p&gt;
+</content>
+        <category term="vmware" scheme="http://maxshiroi.top/tags/vmware/" />
+        <category term="bug" scheme="http://maxshiroi.top/tags/bug/" />
+        <updated>2022-08-25T04:46:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/205645/</id>
+        <title>使用树莓派4B+Docker Openwrt实现旁路由</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/205645/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;普通路由器往往受限于硬体性能而缺乏很多功能。但是其拥有多网口和无线功能的支持相对较强。为了能实现更多实用功能并且利用上已经吃灰了很久的树莓派，打算用树莓派来当作旁路由.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;硬体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#硬体&#34;&gt;#&lt;/a&gt; 硬体&lt;/h1&gt;
+&lt;h2 id=&#34;路由&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由&#34;&gt;#&lt;/a&gt; 路由&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;我使用的是小米路由 3G (下面称为 &lt;code&gt;R3G&lt;/code&gt; ). 当时购买的是小米路由 4 版本，但是其缺乏很多功能。就比如说非常实用的 usb 接口。有了 usb 接口以后就可以愉快刷机了。所以我收到货就直接退货换了 R3G...&lt;/li&gt;
+&lt;li&gt;R3G 优点是有一个 usb3.0 的接口，所以可以直接拿它来挂载移动硬盘也是没问题的。还有 256M 的闪存。缺点是只有两个 RJ45LAN 口，一个 RJ45WAN 口足够家用。所以后来我又白嫖了我哥在外地买的一台 TPlink 五口交换机解决了网口不够的问题...&lt;/li&gt;
+&lt;li&gt;如果你和我一样拥有 R3G. 我建议刷写不死鸟 breed 搭配&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vcHQuY24ycXEuY29tL3BhZGF2YW4v&#34;&gt; hiboyhiboyhiboy&lt;/span&gt; 的固件，来实现更多功能...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;树莓派&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#树莓派&#34;&gt;#&lt;/a&gt; 树莓派&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;树莓派 4B 我购买的是 4G 内存版本。采用 5V3A,Type-C 供电接口，你甚至可以用一个充电宝和一根 Type-C 线来给树莓派供电。两个 MicroHDMI 接口支持 4K 视频输出。一个极为先进的 3.5mm 音频接口。四个 Type-A USB 接口，其中分为两个 usb2.0 协议，两个 USB3.0 协议。一个千兆 RJ45 网口。另外机器还自带 wifi 模块，就是别指望这个 wifi 信号有多好了...&lt;/li&gt;
+&lt;li&gt;我在购买时还一并购买了一张 32G 闪迪的 SD 卡，以及适用于 4B 的九层亚克力外壳。有一说一，这个外壳属实好看...&lt;/li&gt;
+&lt;li&gt;不过如果拿它刷 openwrt 只来当作路由器实在大材小用。所以我采用 OPENFANS 和&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5waWZhbi5vcmcuY24v&#34;&gt;树莓派爱好者基地&lt;/span&gt;联合编译的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29wZW5mYW5zLWNvbW11bml0eS1vZmZpY2FsL0RlYmlhbi1QaS1BYXJjaDY0&#34;&gt; Debian-Pi-Aarch64&lt;/span&gt; 来使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;软体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软体&#34;&gt;#&lt;/a&gt; 软体&lt;/h1&gt;
+&lt;h2 id=&#34;准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备&#34;&gt;#&lt;/a&gt; 准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;从上方给出的链接下载&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29wZW5mYW5zLWNvbW11bml0eS1vZmZpY2FsL0RlYmlhbi1QaS1BYXJjaDY0&#34;&gt; Debian-Pi-Aarch64&lt;/span&gt;, 我这里使用的是没有图形界面的增强版，即 &lt;code&gt;2021-06-11-OPENFANS-Debian-Buster-Aarch64-ext4-v2021-2.0-U6-Release.img.xz&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;百度搜索 Rufus, 下载到本地&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装-debian-pi-aarch64&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-debian-pi-aarch64&#34;&gt;#&lt;/a&gt; 安装 Debian-Pi-Aarch64&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将 SD 卡接入读卡器连接电脑。注意提前备份 SD 卡的数据，接下来的操作会清除 SD 卡内的全部数据.&lt;/li&gt;
+&lt;li&gt;打开 Rufus 软体，在 &lt;code&gt;设备&lt;/code&gt; 一栏内选择你的 SD 卡，在 &lt;code&gt;引导类型选择&lt;/code&gt; 栏里面单击后面的 &lt;code&gt;选择&lt;/code&gt; 按钮，选择你下载的 xz 文件&lt;/li&gt;
+&lt;li&gt;单击下面的 &lt;code&gt;开始&lt;/code&gt; 按钮即可开始刷写。大概三四分钟后即可刷写成功。请耐心等待...&lt;/li&gt;
+&lt;li&gt;刷写完成后在任务栏上将 SD 卡弹出，即可拔下读卡器。将 SD 卡插入树莓派里面即可.&lt;/li&gt;
+&lt;li&gt;将树莓派的 LAN 口与路由器的 LAN 口连接，为树莓派接入电源。此时树莓派会自行重启三次左右，以完成基本配置。此时可以喝杯咖啡等待三分钟左右.&lt;/li&gt;
+&lt;li&gt;电脑登入路由器控制页面，查找树莓派的 ip, 我这里查到的是 &lt;code&gt;192.168.0.90&lt;/code&gt; , 接下来的教程将以这个地址为准...&lt;/li&gt;
+&lt;li&gt;如果您使用的是 Win10 系统，那么可以直接按下 &lt;code&gt;Windows徽标键&lt;/code&gt;  + &lt;code&gt;R&lt;/code&gt; , 输入 &lt;code&gt;CMD&lt;/code&gt;  指令单击回车来打开 &lt;code&gt;CMD&lt;/code&gt; , 使用 &lt;code&gt;SSH&lt;/code&gt;  的方式连入树莓派。当然你也可以使用其他第三方软件来实现.&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;ssh -p 22 pi@192.168.0.90&lt;/code&gt;  指令来接入树莓派，如果没有出错的话接下来会弹出提示，输入 &lt;code&gt;yes&lt;/code&gt;  并按下回车即可。当你看见 password 时，直接输入默认密码 &lt;code&gt;raspberry&lt;/code&gt; , 按下回车即可连入树莓派.&lt;/li&gt;
+&lt;li&gt;更新一下就可以正常使用了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;配置-debian-pi-aarch64&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置-debian-pi-aarch64&#34;&gt;#&lt;/a&gt; 配置 Debian-Pi-Aarch64&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;如果自己会配置那么这步可以跳过了&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可以参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vb3BlbmZhbnMtY29tbXVuaXR5L0RlYmlhbi1QaS1BYXJjaDY0IzMlRTQlQkQlQkYlRTclOTQlQTglRTglQUYlQjQlRTYlOTglOEU=&#34;&gt;这里&lt;/span&gt;来配置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;切换账户&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#切换账户&#34;&gt;#&lt;/a&gt; 切换账户&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;su&lt;/code&gt;  或者 &lt;code&gt;sudo -i&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;更改账户的密码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更改账户的密码&#34;&gt;#&lt;/a&gt; 更改账户的密码&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 使用下面指令来更改pi用户的密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 重复输入两次即可&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd pi&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 使用这个指令来更改root账户的密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;挂载smb硬盘&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#挂载smb硬盘&#34;&gt;#&lt;/a&gt; 挂载 smb 硬盘&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mkdir db&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mount -o username=xxx,password=xxx,dir_mode=0777,file_mode=0777 //192.168.0.15/database /db&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;安装-openwrt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-openwrt&#34;&gt;#&lt;/a&gt; 安装 Openwrt&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在安装之前首先开启 docker 服务并设置开机自动启动&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;启用和运行 Docker 服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 开机自动启动Docker服务&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl enable docker.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 启动Docker服务&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl start docker.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;######&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 停止Docker服务&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl stop docker.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 禁止Docker服务开机启动&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl disable docker.service&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;打开网卡混杂模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo ip link set eth0 promisc on&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;创建网络&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 macnet &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 &lt;code&gt;sudo ifconfig&lt;/code&gt;  命令查看树莓派 &lt;code&gt;eth0&lt;/code&gt;  网卡的参数来更改&lt;br /&gt;
+ &lt;code&gt;--subnet&lt;/code&gt;  参数改为树莓派所处网段&lt;br /&gt;
+ &lt;code&gt;--gateway&lt;/code&gt;  参数改为树莓派所处网段的网关&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 &lt;code&gt;docker network ls&lt;/code&gt;  查看创建好的网络&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;拉取 Openwrt 镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker pull registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;执行 &lt;code&gt;docker images&lt;/code&gt;  命令查看现存镜像&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;创建并启动容器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run --restart always --name openwrt -d --network macnet --privileged registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest /sbin/init &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;--restart always&lt;/code&gt;  参数表示容器退出时始终重启，使服务尽量保持始终可用；&lt;br /&gt;
+ &lt;code&gt;--name openwrt&lt;/code&gt;  参数定义了容器的名称；&lt;br /&gt;
+ &lt;code&gt;-d&lt;/code&gt;  参数定义使容器运行在 &lt;code&gt;Daemon&lt;/code&gt;  模式；&lt;br /&gt;
+ &lt;code&gt;--network macnet&lt;/code&gt;  参数定义将容器加入 &lt;code&gt;maxnet&lt;/code&gt;  网络；&lt;br /&gt;
+ &lt;code&gt;--privileged&lt;/code&gt;  参数定义容器运行在特权模式下；&lt;br /&gt;
+ &lt;code&gt;registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest&lt;/code&gt;  为 Docker 镜像名，因容器托管在阿里云 Docker 镜像仓库内，所以在镜像名中含有阿里云仓库信息；&lt;br /&gt;
+ &lt;code&gt;/sbin/init&lt;/code&gt;  定义容器启动后执行的命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;可以使用 &lt;code&gt;docker ps -a&lt;/code&gt;  命令查看当前运行的容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;若容器运行信息 &lt;code&gt;STATUS&lt;/code&gt;  列为 &lt;code&gt;UP&lt;/code&gt;  状态，则说明容器运行正常。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;进入容器并修改相关参数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker exec -it openwrt bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;编辑 &lt;code&gt;OpenWrt&lt;/code&gt;  的网络配置文件：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;nano /etc/config/network&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;更改 LAN 口设置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;config interface &amp;#x27;lan&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option type &amp;#x27;bridge&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option ifname &amp;#x27;eth0&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option proto &amp;#x27;static&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option ipaddr &amp;#x27;192.168.0.2&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option netmask &amp;#x27;255.255.255.0&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option ip6assign &amp;#x27;60&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option gateway &amp;#x27;192.168.0.1&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option broadcast &amp;#x27;192.168.0.255&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option dns &amp;#x27;192.168.0.1&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;option ipaddr&lt;/code&gt;  为 OpenWrt 的 IP 地址，可以根据自己喜好修改，我这里定义为了 &lt;code&gt;192.168.0.2&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;重启网络&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/etc/init.d/network restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;进入控制面板&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;打开电脑的浏览器，使用自己定义的地址进入。我这里是 &lt;code&gt;192.168.0.2&lt;/code&gt; &lt;br /&gt;
+ 用户名: &lt;code&gt;root&lt;/code&gt; &lt;br /&gt;
+ 密码: &lt;code&gt;password&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;关闭 DHCP 服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 &amp;quot;网络 - 接口 - Lan - 修改&amp;quot; 界面中，勾选下方的 &amp;quot;忽略此接口 (不在此接口提供 DHCP 服务)&amp;quot;, 并 &amp;quot;保存 &amp;amp; 应用&amp;quot;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;修复宿主机网络&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修复宿主机网络&#34;&gt;#&lt;/a&gt; 修复宿主机网络&lt;/h2&gt;
+&lt;p&gt;OpenWrt 容器运行后，宿主机内可能无法正常连接外部网络，需要修改宿主机的 &lt;code&gt;/etc/network/interfaces&lt;/code&gt;  文件以修复：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;备份并编辑文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cp /etc/network/interfaces /etc/network/interfaces.bak # 备份文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nano /etc/network/interfaces # 编辑文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;向文件末尾添加&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;auto eth0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;iface eth0 inet manual&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;auto macvlan&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;iface macvlan inet static&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  address 192.168.0.90&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  netmask 255.255.255.0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  gateway 192.168.0.1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  dns-nameservers 192.168.0.1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  pre-up ip link add macvlan link eth0 type macvlan mode bridge&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  post-down ip link del macvlan link eth0 type macvlan mode bridge&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;修改后重启树莓派，之后树莓派的局域网 IP 地址将会固定为 &lt;code&gt;/etc/network/interfaces&lt;/code&gt;  文件中 &lt;code&gt;address&lt;/code&gt;  参数中的地址.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;鸣谢摘抄&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#鸣谢摘抄&#34;&gt;#&lt;/a&gt; 鸣谢 (摘抄)&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tbGFwcC5jbi8zNzYuaHRtbA==&#34;&gt;在 Docker 中运行 OpenWrt 旁路网关&lt;/span&gt;&lt;/p&gt;
+</content>
+        <category term="树莓派" scheme="http://maxshiroi.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" />
+        <category term="docker" scheme="http://maxshiroi.top/tags/docker/" />
+        <category term="openwrt" scheme="http://maxshiroi.top/tags/openwrt/" />
+        <category term="router" scheme="http://maxshiroi.top/tags/router/" />
+        <updated>2022-04-26T12:56:45.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/133537/</id>
+        <title>使用 Hexo 程序部署博客到githubpage上</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/133537/"/>
+        <content type="html">&lt;h1 id=&#34;本地程序部署&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地程序部署&#34;&gt;#&lt;/a&gt; 本地程序部署&lt;/h1&gt;
+&lt;h2 id=&#34;环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境&#34;&gt;#&lt;/a&gt; 环境&lt;/h2&gt;
+&lt;p&gt;Hexo 程序使用 node.js 程序编写，因此需要现在环境机上部署 node.js，git。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;什么是 Node.js&lt;/strong&gt;：一个运行 javascript (JS) 的环境。Hexo 是一个 javascript (JS) 语言的程序。一般 JS 运行在浏览器中，但是也有一种非浏览器环境也可以运行 JS。这个环境是 Node.js&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;什么是 Git&lt;/strong&gt;：一个版本控制软件。Hexo 博客源码由纯文本构成，管理纯文本项目的最好办法之一就是使用 Git。还记得 word 里面的历史记录和版本回退功能么？简单的来说，Git 就提供了类似功能，只不过更强大。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文章使用 fedora 系 linux 操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;安装-git&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-git&#34;&gt;#&lt;/a&gt; 安装 git&lt;/h3&gt;
+&lt;p&gt;使用 yum 指令进行安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;su&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yum install git-core&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;查看是否安装成功：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]# git --version&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git version 1.8.3.1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;安装-nodejs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-nodejs&#34;&gt;#&lt;/a&gt; 安装 node.js&lt;/h3&gt;
+&lt;p&gt;直接 yum 一把梭&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install nodejs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后查看版本：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]# node -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;v16.14.2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;顺便看看 npm 版本：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]# npm -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8.5.0&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;配置本体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置本体&#34;&gt;#&lt;/a&gt; 配置本体&lt;/h2&gt;
+&lt;h3 id=&#34;hexo&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo&#34;&gt;#&lt;/a&gt; hexo&lt;/h3&gt;
+&lt;p&gt;如果你没有使用加速等工具的话，这里建议将 npm 源改到淘宝：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm config set registry http://registry.npm.taobao.org&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用 npm 指令安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;看看安装好了没：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]# hexo -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo-cli: 4.3.0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;os: linux 3.10.0-1160.31.1.el7.x86_64 CentOS Linux 7 (Core)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;node: 16.14.2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ngtcp2: 0.1.0-DEV&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nghttp3: 0.1.0-DEV&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;安装server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装server&#34;&gt;#&lt;/a&gt; 安装 server&lt;/h3&gt;
+&lt;p&gt;如果你想在本地预览博客的话，可以安装下。其实装不装都无所谓。&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo hexo-server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;安装推送插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装推送插件&#34;&gt;#&lt;/a&gt; 安装推送插件&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-deployer-git --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;创建博客&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建博客&#34;&gt;#&lt;/a&gt; 创建博客&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo init [你的博客名字]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd [你的博客名字]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你已经备份过想要还原，则需要做到这一步。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;备份还原&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#备份还原&#34;&gt;#&lt;/a&gt; 备份还原&lt;/h2&gt;
+&lt;p&gt;博客部署完成后或是以后工作中难免需要更换环境，这里也简单说一下备份还原的流程。&lt;/p&gt;
+&lt;h3 id=&#34;本地备份还原&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地备份还原&#34;&gt;#&lt;/a&gt; 本地备份还原&lt;/h3&gt;
+&lt;p&gt;本地备份还原是对主要文件自行压缩拷贝后导出，然后覆盖进行还原&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要备份的文件列表如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- .gitignore&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- _config.yml&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- package-lock.json&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- package.json&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- scaffolds&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- source&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;`-- themes&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;将这些文件考出来后则备份完成。&lt;/p&gt;
+&lt;h3 id=&#34;可能会出现的问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可能会出现的问题&#34;&gt;#&lt;/a&gt; 可能会出现的问题&lt;/h3&gt;
+&lt;p&gt;如果当你完成还原，进行 &lt;code&gt;hexo g&lt;/code&gt;  命令提示如下错误：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;root@LAPTOP-N4RDFRJ0:/mnt/d/Program/hexo/blog# npm install --save bulma-stylus&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm ERR! code FETCH_ERROR&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm ERR! errno FETCH_ERROR&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm ERR! invalid json response body at https://registry.npmjs.org/browserslist reason: Unexpected end of JSON input&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm ERR! A complete log of this run can be found in:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm ERR!     /root/.npm/_logs/2022-08-23T09_22_43_977Z-debug.log&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;执行这条命令即可：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm cache clean --force&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;配置远端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置远端&#34;&gt;#&lt;/a&gt; 配置远端&lt;/h2&gt;
+&lt;p&gt;我将博客部署到了 github 上，所以你要先去 github.com 上注册一个账户。并创建一个仓库。&lt;/p&gt;
+&lt;h3 id=&#34;初始化-git&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#初始化-git&#34;&gt;#&lt;/a&gt; 初始化 git&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;init git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果提示 &lt;code&gt;Couldn&#39;t find an alternative telinit implementation to spawn.&lt;/code&gt;  不用管，直接下一步。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;配置-ssh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置-ssh&#34;&gt;#&lt;/a&gt; 配置 ssh&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;配置登录信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git config --global user.name &amp;quot;你的git用户名&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git config --global user.email &amp;quot;你的git登录邮箱&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;生成 ssh keygen&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ssh-keygen -t rsa -C &amp;quot;你的git登录邮箱&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果弹出了很多内容，直接进行一个回车跳过。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Enter file in which to save the key (/root/.ssh/id_rsa): &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Enter passphrase (empty for no passphrase):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Enter same passphrase again:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;... // 直接回车跳过&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;复制密钥&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi /root/.ssh/id_rsa.pub&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将里面显示的所有内容复制。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;登录 github&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;头像&lt;/li&gt;
+&lt;li&gt;Settings&lt;/li&gt;
+&lt;li&gt;SSH and GPG keys&lt;/li&gt;
+&lt;li&gt;New SSH key&lt;/li&gt;
+&lt;li&gt;将复制的内容粘贴到 Keys 框里&lt;/li&gt;
+&lt;li&gt;Add SSH key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;测试链接是否成功&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]# ssh -T git@github.com&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Hi maxshiro! You&amp;#x27;ve successfully authenticated, but GitHub does not provide shell access.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;生成博客&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生成博客&#34;&gt;#&lt;/a&gt; 生成博客&lt;/h2&gt;
+&lt;p&gt;上面已经生成好了基本博客，因此在这里只是生成和推送到 githubpage&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;测试本地生成博客&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 生成一篇文章&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo new &amp;quot;文章名&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 生成静态网页&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 打开本地服务器&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此时你可以打开  &lt;code&gt;[博客地址]:4000&lt;/code&gt;  来查看效果了。&lt;br /&gt;
+如果确认没问题，便可以继续操作。&lt;/p&gt;
+&lt;h2 id=&#34;配置推送&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置推送&#34;&gt;#&lt;/a&gt; 配置推送&lt;/h2&gt;
+&lt;p&gt;下面是 hexo 博客的基本结构。&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ├── _config.yml # 网站配置信息&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ├── package.json # 应用程序信息&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ├── scaffolds # 模板文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ├── source # 存放用户资源&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; |   ├── _drafts&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; |   └── _posts&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; └── themes # 主题文件夹&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;首先 cd 到当前目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd blog&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;编辑配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi _config.yml&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;移动到 deploy 天机如下内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;deploy:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    type: git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    reop: git@github.com:maxshiro/maxshiro.github.io.git #这个地址可以到你的repo那里获得。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    branch: main #这个branch就是仓库的默认目录了。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;推送博客&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#推送博客&#34;&gt;#&lt;/a&gt; 推送博客&lt;/h2&gt;
+&lt;p&gt;已经测试并生成过博客了，所以可以直接推送。&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 清理之前生成的文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 生成静态网页&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 推送到github repo&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;结语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结语&#34;&gt;#&lt;/a&gt; 结语&lt;/h2&gt;
+&lt;p&gt;此时你已经完成了 hexo 博客的基本配置。&lt;/p&gt;
+</content>
+        <category term="hexo" scheme="http://maxshiroi.top/tags/hexo/" />
+        <category term="guide" scheme="http://maxshiroi.top/tags/guide/" />
+        <updated>2022-04-17T05:35:37.000Z</updated>
+    </entry>
+</feed>
