@@ -13,6 +13,8 @@ title:
   category_in: 「％s」に分類された記事
   tag_in: タグ "％s"の記事
   archive_in: 「％s」で公開された記事
+  friends: 好友
+  etc: etc.
 
 menu:
   home: ホーム

@@ -13,6 +13,7 @@ title:
   category_in: Posted in category "%s"
   tag_in: Posted with tag "%s"
   archive_in: Posted on "%s"
+  etc: etc.
 
 menu:
   home: Home
@@ -22,6 +23,7 @@ menu:
   tags: Tags
   about: About
   search: Search
+  friends: friends
 
 sidebar:
   overview: Overview

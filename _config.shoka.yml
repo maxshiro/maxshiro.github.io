@@ -96,7 +96,8 @@ menu:
     categories: /categories/ || th
     tags: /tags/ || tags
   about: /about/ || user
-  etc.: / || music
+  friends: /flink/ || link-circle
+  etc: / || music
   
 
 # Social Links
