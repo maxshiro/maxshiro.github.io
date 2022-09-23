@@ -11,9 +11,9 @@ cover:
   image: img/flink/20220923165653.png
   color: "#39C5BB"
 
-- site: 锦鲤大王的沙漏
+- site: 壳中呓语
   owner: 殼中文王
-  url: https://trav.one
+  url: https://blog.trav.one
   desc: 对易逝的珍爱，大概是人对自然的叛逆.
   image: img/flink/20220923183634.png
   color: "#dd0000"
