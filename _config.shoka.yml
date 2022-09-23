@@ -105,7 +105,7 @@ menu:
 # Value before `||` delimiter is the target permalink,
 # secend value is the name of Font icon.
 social:
-  github: https://github.com/maxshiro/ || github || "#191717"
+  #github: https://github.com/maxshiro/ || github || "#191717"
   #google: https://plus.google.com/yourname || google
   twitter: https://twitter.com/maxshiroer || twitter || "#00aff0"
   #zhihu: https://www.zhihu.com/people/yourname || zhihu || "#1e88e5"
