@@ -10,8 +10,58 @@
         </author>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 10 Oct 2022 08:52:48 +0800</pubDate>
-        <lastBuildDate>Mon, 10 Oct 2022 08:52:48 +0800</lastBuildDate>
+        <pubDate>Sun, 16 Oct 2022 21:19:32 +0800</pubDate>
+        <lastBuildDate>Sun, 16 Oct 2022 21:19:32 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/211932/</guid>
+            <title>在centos中部署后端程序。</title>
+            <link>http://maxshiroi.top/ug/211932/</link>
+            <category term="linux" scheme="http://maxshiroi.top/tags/linux/" />
+            <category term="centos" scheme="http://maxshiroi.top/tags/centos/" />
+            <category term="web" scheme="http://maxshiroi.top/tags/web/" />
+            <category term="nginx" scheme="http://maxshiroi.top/tags/nginx/" />
+            <category term="mysql" scheme="http://maxshiroi.top/tags/mysql/" />
+            <pubDate>Sun, 16 Oct 2022 21:19:32 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实部署很简单，重要的地方在于部署时出现差错后该如何进行处理。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;nginx的安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nginx的安装&#34;&gt;#&lt;/a&gt; Nginx 的安装&lt;/h1&gt;
+&lt;p&gt;使用源码编译安装：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;访问&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9uZ2lueC5vcmcvZW4vZG93bmxvYWQuaHRtbA==&#34;&gt; Nginx&lt;/span&gt; 官网，复制最新版本链接。wget 到本地目录。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;/img/WebBackcreat1/20221016212408.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget https://nginx.org/download/nginx-1.23.1.tar.gz ~/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;解压出来。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;tar -zxvf nginx-1.23.1.tar.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 如果这里是 *.tar.bz2 的话则使用 -jxvf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装编译所需要的前置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;进入解压出来的文件夹，编译安装。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; nginx-1.23.1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;./configure&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;make&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;make install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;执行 nginx&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; /usr/local/nginx/sbin&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;./nginx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;建议在执行前先使用 ps -aux | grep 80 查看是否有端口占用 80。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;写入系统服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;systemctl &lt;span class=&#34;built_in&#34;&gt;enable&lt;/span&gt; nginx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl status nginx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl start nginx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;mysql-的安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql-的安装&#34;&gt;#&lt;/a&gt; Mysql 的安装&lt;/h1&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget https://dev.mysql.com/get/mysql80-community-release-el7-7.noarch.rpm&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yum -y localinstall mysql80-community-release-el7-7.noarch.rpm&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yum -y install mysql-community-server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 到日志中找到临时密码，然后使用这条命令登录。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mysql -u root -p&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://maxshiroi.top/ug/085248/</guid>
             <title>Upload-Labs-Linux</title>
@@ -269,10 +319,10 @@
             <guid isPermalink="true">http://maxshiroi.top/ug/222828/</guid>
             <title>vmware安装好后配置centos网络</title>
             <link>http://maxshiroi.top/ug/222828/</link>
+            <category term="linux" scheme="http://maxshiroi.top/tags/linux/" />
+            <category term="centos" scheme="http://maxshiroi.top/tags/centos/" />
             <category term="network" scheme="http://maxshiroi.top/tags/network/" />
             <category term="vmware" scheme="http://maxshiroi.top/tags/vmware/" />
-            <category term="centos" scheme="http://maxshiroi.top/tags/centos/" />
-            <category term="linux" scheme="http://maxshiroi.top/tags/linux/" />
             <pubDate>Mon, 19 Sep 2022 22:28:28 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;更改-ifcfg-ens33-文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更改-ifcfg-ens33-文件&#34;&gt;#&lt;/a&gt; 更改 ifcfg-ens33 文件&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -356,8 +406,8 @@
             <guid isPermalink="true">http://maxshiroi.top/ug/222543/</guid>
             <title>部署完hexo后还应该准备哪些工作</title>
             <link>http://maxshiroi.top/ug/222543/</link>
-            <category term="plugin" scheme="http://maxshiroi.top/tags/plugin/" />
             <category term="hexo" scheme="http://maxshiroi.top/tags/hexo/" />
+            <category term="plugin" scheme="http://maxshiroi.top/tags/plugin/" />
             <category term="backup" scheme="http://maxshiroi.top/tags/backup/" />
             <pubDate>Sun, 28 Aug 2022 22:25:43 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
