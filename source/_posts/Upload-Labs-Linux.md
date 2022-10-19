@@ -1,6 +1,7 @@
 ---
-title: Upload-Labs-Linux
+title: CTF：Upload-Labs-Linux
 date: 2022-10-10 08:52:48
+cover: img/Upload-Labs-Linux/20221010085420.png
 tags:
 - ctf
 - buuctf

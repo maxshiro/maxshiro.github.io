@@ -117,7 +117,7 @@ password:
 ```
 
 6. 修改密码
-```
+```bash bash
 // 切换到系统库
 use mysql;
 // 更新root用户密码
@@ -127,7 +127,7 @@ exit;
 ```
 
 7. 重启mysql服务
-```
+```bash bash
 service mysqld restart
 ```
 > 重启后就可以正常使用mysql了。
