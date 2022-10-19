@@ -1,7 +1,7 @@
 ---
 title: 在centos中部署后端程序。
 date: 2022-10-16 21:19:32
-cover: /img/WebBackcreat1/20221016212408.png
+cover: img/WebBackcreat1/20221016212408.png
 tags:
 - linux
 - centos
@@ -34,24 +34,76 @@ cd nginx-1.23.1
 make
 make install
 ```
-5. 执行nginx
+5. nginx的启动和关闭
 ```bash bash
 cd /usr/local/nginx/sbin
+// 启动nginx
 ./nginx
+// 关闭nginx
+./nginx -s stop
+// 关闭防火墙
+systemctl stop firewalld
 ```
-> 建议在执行前先使用ps -aux | grep 80查看是否有端口占用80。
-6. 写入系统服务
+6. 创建目录
 ```bash bash
-systemctl enable nginx
-systemctl status nginx
-systemctl start nginx
+mkdir /var/temp/nginx -p
 ```
+> 建议在执行前先使用netstat -aux | grep 80查看是否有端口占用80。
+
+7. 开机自启
+    1. 编辑文件
+    ```bash bash
+    cd /lib/systemd/system/
+    vim nginx.service
+    ```
+    2. 添加内容
+    ```bash bash
+    [Unit] 
+    Description=nginx 
+    service After=network.target 
+    [Service] 
+    Type=forking 
+    ExecStart=/usr/local/nginx/sbin/nginx 
+    ExecReload=/usr/local/nginx/sbin/nginx -s reload ExecStop=/usr/local/nginx/sbin/nginx -s quit PrivateTmp=true 
+    [Install] 
+    WantedBy=multi-user.target
+    // 解释
+    [Unit]:服务的说明
+    Description:描述服务
+    After:描述服务类别
+    [Service]服务运行参数的设置
+    Type=forking是后台运行的形式
+    ExecStart为服务的具体运行命令
+    ExecReload为重启命令
+    ExecStop为停止命令
+    PrivateTmp=True表示给服务分配独立的临时空间
+    注意：[Service]的启动、重启、停止命令全部要求使用绝对路径
+    [Install]运行级别下服务安装的相关设置，可设置为多用户，即系统运行级别为3
+    ```
+    3. 保存退出
+    4. 启动
+    ```bash bash
+    systemctl start nginx.service
+    systemctl enable nginx.service
+    systemctl status nginx.service
+    ```
+8. 233
 # Mysql 的安装
+1. 先安装wget `yum install wget`。
+2. 下载并安装mysql。
 ```bash bash
 wget https://dev.mysql.com/get/mysql80-community-release-el7-7.noarch.rpm
 yum -y localinstall mysql80-community-release-el7-7.noarch.rpm
 yum -y install mysql-community-server
 ```
+3. 启动mysql
+```bash bash
+// 启动mysql
+systemctl start mysqld
+// 写入开机启动
+systemctl enable mysqld
+```
+4. 登录mysql
 ```bash bash
 // 到日志中找到临时密码，然后使用这条命令登录。
 mysql -u root -p
