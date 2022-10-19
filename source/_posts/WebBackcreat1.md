@@ -50,7 +50,7 @@ mkdir /var/temp/nginx -p
 ```
 > 建议在执行前先使用netstat -aux | grep 80查看是否有端口占用80。
 
-7. 开机自启
+7. 开机自启 *还没写完
     1. 编辑文件
     ```bash bash
     cd /lib/systemd/system/
@@ -103,8 +103,31 @@ systemctl start mysqld
 // 写入开机启动
 systemctl enable mysqld
 ```
-4. 登录mysql
+4. 查找日志并找到临时密码。
 ```bash bash
-// 到日志中找到临时密码，然后使用这条命令登录。
-mysql -u root -p
+vi /var/log/mysqld.log
 ```
+> ![](/img/WebBackcreat1/20221019082932.png)  
+
+5. 登录mysql
+```bash bash
+mysql -u root -p
+// 密码则为查找到的临时密码。
+password:
+```
+
+6. 修改密码
+```
+// 切换到系统库
+use mysql;
+// 更新root用户密码
+update user set password=password('aaaaaa') where user=root;
+// 退出
+exit;
+```
+
+7. 重启mysql服务
+```
+service mysqld restart
+```
+> 重启后就可以正常使用mysql了。
