@@ -10,8 +10,76 @@
         </author>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 19 Oct 2022 10:16:22 +0800</pubDate>
-        <lastBuildDate>Wed, 19 Oct 2022 10:16:22 +0800</lastBuildDate>
+        <pubDate>Wed, 02 Nov 2022 20:44:17 +0800</pubDate>
+        <lastBuildDate>Wed, 02 Nov 2022 20:44:17 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/204417/</guid>
+            <title>在Debian系linux上通过apt的方式安装plex媒体中心</title>
+            <link>http://maxshiroi.top/ug/204417/</link>
+            <category term="media center" scheme="http://maxshiroi.top/tags/media-center/" />
+            <category term="plex" scheme="http://maxshiroi.top/tags/plex/" />
+            <category term="emby" scheme="http://maxshiroi.top/tags/emby/" />
+            <category term="jellyfin" scheme="http://maxshiroi.top/tags/jellyfin/" />
+            <category term="视频" scheme="http://maxshiroi.top/tags/%E8%A7%86%E9%A2%91/" />
+            <category term="音乐" scheme="http://maxshiroi.top/tags/%E9%9F%B3%E4%B9%90/" />
+            <pubDate>Wed, 02 Nov 2022 20:44:17 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;plex 是一个包含订阅制的个人媒体中心，可以在你的智能设备：Phone / Android TV / Windows / MAC OS 等在线使用专用的客户端来浏览你存储在 nas 上的影片。&lt;br /&gt;
+&lt;img data-src=&#34;/img/linuxplexguide/20221102204637.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+如果你付费订阅则会支持更多的功能如在线硬解码 / 使用 dashboard 来控制设备 / 使用 plexamp 来播放音乐。当然免费的功能已经足够我们使用。&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;首先更新&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装 apt-transport-https 包&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要将 Plex 包安装到树莓派上，需要添加官方的 Plex 包仓库。这个包允许 “apt” 包管理器通过 Plex 仓库使用的 “https” 协议来检索包。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt install apt-transport-https&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;把 Plex 仓库添加到 apt 源&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;echo&lt;/span&gt; deb https://downloads.plex.tv/repo/deb public main | sudo &lt;span class=&#34;built_in&#34;&gt;tee&lt;/span&gt; /etc/apt/sources.list.d/plexmediaserver.list&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;再次更新&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt update&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;一行命令安装 Plex&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt install plexmediaserver&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;使用plex&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用plex&#34;&gt;#&lt;/a&gt; 使用 Plex&lt;/h1&gt;
+&lt;p&gt;打开  &lt;code&gt;Your IP:32400/web&lt;/code&gt;  来登录并配置你自己的 Plex 服务器&lt;/p&gt;
+&lt;h2 id=&#34;在安卓设备上安装plex和plexamp软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在安卓设备上安装plex和plexamp软件&#34;&gt;#&lt;/a&gt; 在安卓设备上安装 plex 和 plexamp 软件。&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不保证时效性，若失效请自行查找。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;plex 软件开心版&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcGttb2R5LmlvL2FwcHMvcGxleA==&#34;&gt;点我下载&lt;/span&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/linuxplexguide/image.png.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;plexamp 软件开心版&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bS5tb2JpbGlzbS5tZS92aWV3dG9waWMucGhwP2Y9MTMzMiZhbXA7dD00OTcwMDkz&#34;&gt;点我下载&lt;/span&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/linuxplexguide/20221102210820.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;symfonium 这个没开心版，但是界面好看。&lt;br /&gt;
+&lt;img data-src=&#34;/img/linuxplexguide/20221102210737.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/linuxplexguide/20221102210803.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装wangyiyun插件来自动匹配音乐封面和歌词&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装wangyiyun插件来自动匹配音乐封面和歌词&#34;&gt;#&lt;/a&gt; 安装 Wangyiyun 插件来自动匹配音乐封面和歌词。&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 git clone 下载。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/timmy0209/WangYiYun.bundle.git /usr/lib/plexmediaserver/Resources/Plug-ins-f4cdfea9c/WangYiYun.bundle&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;重启 plex&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;systemctl restart plexmediaserver&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;直接在音乐源里勾选 wangyiyun 即可。&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://maxshiroi.top/ug/101622/</guid>
             <title>解决mysql第一次安装后改密码的各种问题</title>
@@ -540,8 +608,8 @@ usermod -g GID 组名&lt;/p&gt;
             <guid isPermalink="true">http://maxshiroi.top/ug/222543/</guid>
             <title>部署完hexo后还应该准备哪些工作</title>
             <link>http://maxshiroi.top/ug/222543/</link>
-            <category term="hexo" scheme="http://maxshiroi.top/tags/hexo/" />
             <category term="plugin" scheme="http://maxshiroi.top/tags/plugin/" />
+            <category term="hexo" scheme="http://maxshiroi.top/tags/hexo/" />
             <category term="backup" scheme="http://maxshiroi.top/tags/backup/" />
             <pubDate>Sun, 28 Aug 2022 22:25:43 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
@@ -1109,141 +1177,6 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;鸣谢摘抄&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#鸣谢摘抄&#34;&gt;#&lt;/a&gt; 鸣谢 (摘抄)&lt;/h1&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tbGFwcC5jbi8zNzYuaHRtbA==&#34;&gt;在 Docker 中运行 OpenWrt 旁路网关&lt;/span&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/133537/</guid>
-            <title>使用 Hexo 程序部署博客到githubpage上</title>
-            <link>http://maxshiroi.top/ug/133537/</link>
-            <category term="hexo" scheme="http://maxshiroi.top/tags/hexo/" />
-            <category term="guide" scheme="http://maxshiroi.top/tags/guide/" />
-            <pubDate>Sun, 17 Apr 2022 13:35:37 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;本地程序部署&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地程序部署&#34;&gt;#&lt;/a&gt; 本地程序部署&lt;/h1&gt;
-&lt;h2 id=&#34;环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境&#34;&gt;#&lt;/a&gt; 环境&lt;/h2&gt;
-&lt;p&gt;Hexo 程序使用 node.js 程序编写，因此需要现在环境机上部署 node.js，git。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;什么是 Node.js&lt;/strong&gt;：一个运行 javascript (JS) 的环境。Hexo 是一个 javascript (JS) 语言的程序。一般 JS 运行在浏览器中，但是也有一种非浏览器环境也可以运行 JS。这个环境是 Node.js&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;什么是 Git&lt;/strong&gt;：一个版本控制软件。Hexo 博客源码由纯文本构成，管理纯文本项目的最好办法之一就是使用 Git。还记得 word 里面的历史记录和版本回退功能么？简单的来说，Git 就提供了类似功能，只不过更强大。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本文章使用 fedora 系 linux 操作。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;安装-git&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-git&#34;&gt;#&lt;/a&gt; 安装 git&lt;/h3&gt;
-&lt;p&gt;使用 yum 指令进行安装：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;su&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yum install git-core&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;查看是否安装成功：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]# git --version&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git version 1.8.3.1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;安装-nodejs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-nodejs&#34;&gt;#&lt;/a&gt; 安装 node.js&lt;/h3&gt;
-&lt;p&gt;直接 yum 一把梭&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install nodejs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;然后查看版本：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]# node -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;v16.14.2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;顺便看看 npm 版本：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]# npm -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8.5.0&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;配置本体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置本体&#34;&gt;#&lt;/a&gt; 配置本体&lt;/h2&gt;
-&lt;h3 id=&#34;hexo&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo&#34;&gt;#&lt;/a&gt; hexo&lt;/h3&gt;
-&lt;p&gt;如果你没有使用加速等工具的话，这里建议将 npm 源改到淘宝：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm config set registry http://registry.npm.taobao.org&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;使用 npm 指令安装：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;看看安装好了没：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]# hexo -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo-cli: 4.3.0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;os: linux 3.10.0-1160.31.1.el7.x86_64 CentOS Linux 7 (Core)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;node: 16.14.2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ngtcp2: 0.1.0-DEV&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nghttp3: 0.1.0-DEV&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;安装server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装server&#34;&gt;#&lt;/a&gt; 安装 server&lt;/h3&gt;
-&lt;p&gt;如果你想在本地预览博客的话，可以安装下。其实装不装都无所谓。&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo hexo-server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;安装推送插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装推送插件&#34;&gt;#&lt;/a&gt; 安装推送插件&lt;/h3&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-deployer-git --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;创建博客&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建博客&#34;&gt;#&lt;/a&gt; 创建博客&lt;/h3&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo init [你的博客名字]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd [你的博客名字]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果你已经备份过想要还原，则需要做到这一步。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;备份还原&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#备份还原&#34;&gt;#&lt;/a&gt; 备份还原&lt;/h2&gt;
-&lt;p&gt;博客部署完成后或是以后工作中难免需要更换环境，这里也简单说一下备份还原的流程。&lt;/p&gt;
-&lt;h3 id=&#34;本地备份还原&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地备份还原&#34;&gt;#&lt;/a&gt; 本地备份还原&lt;/h3&gt;
-&lt;p&gt;本地备份还原是对主要文件自行压缩拷贝后导出，然后覆盖进行还原&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;需要备份的文件列表如下&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- .gitignore&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- _config.yml&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- package-lock.json&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- package.json&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- scaffolds&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;|-- source&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;`-- themes&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;将这些文件考出来后则备份完成。&lt;/p&gt;
-&lt;h3 id=&#34;可能会出现的问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可能会出现的问题&#34;&gt;#&lt;/a&gt; 可能会出现的问题&lt;/h3&gt;
-&lt;p&gt;如果当你完成还原，进行 &lt;code&gt;hexo g&lt;/code&gt;  命令提示如下错误：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;root@LAPTOP-N4RDFRJ0:/mnt/d/Program/hexo/blog# npm install --save bulma-stylus&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm ERR! code FETCH_ERROR&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm ERR! errno FETCH_ERROR&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm ERR! invalid json response body at https://registry.npmjs.org/browserslist reason: Unexpected end of JSON input&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm ERR! A complete log of this run can be found in:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm ERR!     /root/.npm/_logs/2022-08-23T09_22_43_977Z-debug.log&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;执行这条命令即可：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm cache clean --force&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;配置远端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置远端&#34;&gt;#&lt;/a&gt; 配置远端&lt;/h2&gt;
-&lt;p&gt;我将博客部署到了 github 上，所以你要先去 github.com 上注册一个账户。并创建一个仓库。&lt;/p&gt;
-&lt;h3 id=&#34;初始化-git&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#初始化-git&#34;&gt;#&lt;/a&gt; 初始化 git&lt;/h3&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;init git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果提示 &lt;code&gt;Couldn&#39;t find an alternative telinit implementation to spawn.&lt;/code&gt;  不用管，直接下一步。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;配置-ssh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置-ssh&#34;&gt;#&lt;/a&gt; 配置 ssh&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;配置登录信息&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git config --global user.name &amp;quot;你的git用户名&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git config --global user.email &amp;quot;你的git登录邮箱&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;生成 ssh keygen&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ssh-keygen -t rsa -C &amp;quot;你的git登录邮箱&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果弹出了很多内容，直接进行一个回车跳过。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Enter file in which to save the key (/root/.ssh/id_rsa): &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Enter passphrase (empty for no passphrase):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Enter same passphrase again:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;... // 直接回车跳过&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;复制密钥&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi /root/.ssh/id_rsa.pub&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;将里面显示的所有内容复制。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;登录 github&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;头像&lt;/li&gt;
-&lt;li&gt;Settings&lt;/li&gt;
-&lt;li&gt;SSH and GPG keys&lt;/li&gt;
-&lt;li&gt;New SSH key&lt;/li&gt;
-&lt;li&gt;将复制的内容粘贴到 Keys 框里&lt;/li&gt;
-&lt;li&gt;Add SSH key&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;测试链接是否成功&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]# ssh -T git@github.com&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Hi maxshiro! You&amp;#x27;ve successfully authenticated, but GitHub does not provide shell access.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;生成博客&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生成博客&#34;&gt;#&lt;/a&gt; 生成博客&lt;/h2&gt;
-&lt;p&gt;上面已经生成好了基本博客，因此在这里只是生成和推送到 githubpage&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;测试本地生成博客&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 生成一篇文章&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo new &amp;quot;文章名&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 生成静态网页&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 打开本地服务器&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;此时你可以打开  &lt;code&gt;[博客地址]:4000&lt;/code&gt;  来查看效果了。&lt;br /&gt;
-如果确认没问题，便可以继续操作。&lt;/p&gt;
-&lt;h2 id=&#34;配置推送&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置推送&#34;&gt;#&lt;/a&gt; 配置推送&lt;/h2&gt;
-&lt;p&gt;下面是 hexo 博客的基本结构。&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ├── _config.yml # 网站配置信息&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ├── package.json # 应用程序信息&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ├── scaffolds # 模板文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ├── source # 存放用户资源&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; |   ├── _drafts&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; |   └── _posts&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; └── themes # 主题文件夹&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol&gt;
-&lt;li&gt;首先 cd 到当前目录&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd blog&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;编辑配置文件&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi _config.yml&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;移动到 deploy 天机如下内容&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;deploy:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    type: git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    reop: git@github.com:maxshiro/maxshiro.github.io.git #这个地址可以到你的repo那里获得。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    branch: main #这个branch就是仓库的默认目录了。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;推送博客&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#推送博客&#34;&gt;#&lt;/a&gt; 推送博客&lt;/h2&gt;
-&lt;p&gt;已经测试并生成过博客了，所以可以直接推送。&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 清理之前生成的文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 生成静态网页&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 推送到github repo&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;结语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结语&#34;&gt;#&lt;/a&gt; 结语&lt;/h2&gt;
-&lt;p&gt;此时你已经完成了 hexo 博客的基本配置。&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
