@@ -791,17 +791,22 @@ usermod -g GID 组名&lt;/p&gt;
     </entry>
     <entry>
         <id>http://maxshiroi.top/ug/211224/</id>
-        <title>使用yuzu模拟器玩动森 ( 附动森资源 )</title>
+        <title>Switch模拟器的安装使用以及游戏文件获取和处理。</title>
         <link rel="alternate" href="http://maxshiroi.top/ug/211224/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;/img/ns/1.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h1 id=&#34;引子&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引子&#34;&gt;#&lt;/a&gt; 引子&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;p&gt;好久没有关注过 switch 模拟器了。这几天突然想玩歌姬计划，想起来之前找到个 yuzu 模拟器，正好想试试看能不能跑 MEGA39 , 便有了下文&lt;/p&gt;
+&lt;p&gt;本篇文章起源于之前我想玩 mega39 而写，现在我对这些内容有了新的理解，再次进行更改记录。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Ryujinx 和 yuzu 模拟器任选一个即可。如果游戏运行有问题再尝试另外一个&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;配置要求&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置要求&#34;&gt;#&lt;/a&gt; 配置要求&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;ryujinx&lt;/code&gt;  和  &lt;code&gt;yuzu&lt;/code&gt;  都适用。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;软体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软体&#34;&gt;#&lt;/a&gt; 软体:&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;建议运行 Windows 10 1803 或较新版本以获得最佳性能。这里仅列出 Win10 64 位 要求.&lt;/p&gt;
+&lt;p&gt;如果你要在 linux 下使用则建议您找找其他的教程，我目前还没有使用 linux 的机器。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr /&gt;
 &lt;blockquote&gt;
@@ -841,7 +846,20 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;li&gt;最小集成显卡内存: 12GB&lt;/li&gt;
 &lt;li&gt;推荐: 16GB&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;下载安装本体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载安装本体&#34;&gt;#&lt;/a&gt; 下载安装本体&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h1 id=&#34;安装前&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装前&#34;&gt;#&lt;/a&gt; 安装前&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你已经有了 Switch 则可以提取自己的。我就不具体写教程了。可以看看 Ryujinx 官方提供的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;prod.key 导出:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1J5dWppbngvUnl1amlueC93aWtpL0tleXM=&#34;&gt;https://github.com/Ryujinx/Ryujinx/wiki/Keys&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;固件导出:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1J5dWppbngvUnl1amlueC93aWtpL0Zpcm13YXJlLUR1bXBpbmctR3VpZGUtKGhibWVudS0mYW1wOy1Hb2xkbGVhZik=&#34;&gt;https://github.com/Ryujinx/Ryujinx/wiki/Firmware-Dumping-Guide-(hbmenu-&amp;amp;-Goldleaf)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;下载安装-yuzu-软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载安装-yuzu-软件&#34;&gt;#&lt;/a&gt; 下载安装 yuzu 软件。&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;下列操作建议在科学上网环境下进行.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -878,13 +896,39 @@ yuzu EA 版本还支持多人联机的功能，但是需要你使用梯子才可
 &lt;p&gt;然后再次打开 yuzu 就不会再弹出刚才的对话框了.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;模拟器设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模拟器设置&#34;&gt;#&lt;/a&gt; 模拟器设置&lt;/h1&gt;
+&lt;h1 id=&#34;下载安装-ryujinx-软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载安装-ryujinx-软件&#34;&gt;#&lt;/a&gt; 下载安装 Ryujinx 软件&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;同样下列操作建议在科学上网环境下进行.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yeXVqaW54Lm9yZy8=&#34;&gt;https://ryujinx.org/&lt;/span&gt; ，选择上方 Download 下载最新编译版本解压。并运行软体.
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1J5dWppbngvUnl1amlueC9hY3Rpb25z&#34;&gt;Action&lt;/span&gt; 如果你有能力可以直接到 Ryujin 模拟器 github 获取最新测试版的编译版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;打开 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kYXJ0aHN0ZXJuaWUubmV0L3N3aXRjaC1maXJtd2FyZXMv&#34;&gt;https://darthsternie.net/switch-firmwares/&lt;/span&gt; ，下载最新的固件到本地备用。&lt;/li&gt;
+&lt;li&gt;在模拟器最上方依次点击 &lt;code&gt;File&lt;/code&gt;  →  &lt;code&gt;Open Ryujinx Folder&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;进入 system 文件夹，在下方的链接里找到 key 文件夹，下载  &lt;code&gt;prod.keys&lt;/code&gt;  文件扔进 keys 文件夹内.&lt;/li&gt;
+&lt;li&gt;在模拟器最上方依次点击  &lt;code&gt;Tools&lt;/code&gt;  →  &lt;code&gt;Install Firmware&lt;/code&gt;  →  &lt;code&gt;Install a firmware from XCI or ZIP&lt;/code&gt; , 选择刚才下载的固件文件点击  &lt;code&gt;open&lt;/code&gt; 。
+&lt;ol&gt;
+&lt;li&gt;若出现报错，如下图所示，是因为  &lt;code&gt;prod.keys&lt;/code&gt;  文件与  &lt;code&gt;Firmware&lt;/code&gt;  不匹配，prod.keys 文件要与 Firmware 匹配才可以安装成功，因此你若想安装新的 firmware，则需要你自己去找对应的 prod.keys
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;/img/ns/20221107165255.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;添加游戏目录，依次点击  &lt;code&gt;Options&lt;/code&gt;  →  &lt;code&gt;Settings&lt;/code&gt;  ，打开设置，在  &lt;code&gt;General&lt;/code&gt;  选项卡，点击  &lt;code&gt;Add&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在弹出的窗口中选择你的游戏目录，然后点击右下角的  &lt;code&gt;Add&lt;/code&gt; ，然后点击 &lt;code&gt;Save&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h1 id=&#34;模拟器设置yuzu和ryujinx部分内容通用有区别我会标注出来&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模拟器设置yuzu和ryujinx部分内容通用有区别我会标注出来&#34;&gt;#&lt;/a&gt; 模拟器设置（yuzu 和 ryujinx 部分内容通用，有区别我会标注出来）&lt;/h1&gt;
 &lt;p&gt;执行  &lt;code&gt;模拟(E)&lt;/code&gt;  -&amp;gt;  &lt;code&gt;Configure...&lt;/code&gt;  打开 yuzu 设置.&lt;/p&gt;
 &lt;h2 id=&#34;通用选单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通用选单&#34;&gt;#&lt;/a&gt; 通用选单&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;勾选  &lt;code&gt;多核 CPU 仿真&lt;/code&gt;  可在一定程度上改进性能.&lt;/li&gt;
-&lt;li&gt;运行速度限制 更改到 100% 可解决某些游戏没有帧数限制导致游戏速度异常。&lt;/li&gt;
 &lt;li&gt;Interface 下第一项（interface language）可以更改显示语言，建议先把这个改为中文。&lt;/li&gt;
+&lt;li&gt;勾选  &lt;code&gt;多核 CPU 仿真&lt;/code&gt;  可在一定程度上改进性能.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;运行速度限制&lt;/code&gt;  更改到 100% 可解决某些游戏没有帧数限制导致游戏速度异常。&lt;/li&gt;
 &lt;li&gt;网络选单下可以填写你注册 yuzu 网站后的令牌以此来进行联机。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;系统选单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统选单&#34;&gt;#&lt;/a&gt; 系统选单&lt;/h2&gt;
@@ -895,26 +939,60 @@ yuzu EA 版本还支持多人联机的功能，但是需要你使用梯子才可
 &lt;/ul&gt;
 &lt;h2 id=&#34;图形选单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#图形选单&#34;&gt;#&lt;/a&gt; 图形选单&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;图形 API 任意选择，N 卡选 Vulkan 有时候也更好。&lt;/li&gt;
-&lt;li&gt;如果你的设备是笔记本，那你需要更改设备为自己的独立显卡。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;API&lt;/code&gt;  任意选择，N 卡选 Vulkan 有时候也更好。&lt;/li&gt;
+&lt;li&gt;如果你的设备是笔记本，那你需要更改  &lt;code&gt;设备&lt;/code&gt;  为自己的独立显卡。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;控制选单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#控制选单&#34;&gt;#&lt;/a&gt; 控制选单&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;输入设备内可以选择自己的手柄 / 控制器。唯一需要注意的是 switch 按键的 ab/xy 按键是反过来的，建议游玩的时候别看手柄。&lt;/li&gt;
-&lt;li&gt;最后点击 OK 即可完成配置...&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;输入设备&lt;/code&gt;  内可以选择自己的手柄 / 控制器。唯一需要注意的是 switch 按键的 ab/xy 按键是反过来的，建议游玩的时候别看手柄。&lt;/li&gt;
+&lt;li&gt;最后点击  &lt;code&gt;OK&lt;/code&gt;  即可完成配置...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;下载游戏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载游戏&#34;&gt;#&lt;/a&gt; 下载游戏&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我发现&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94eHh4eDUyMC5jb20v&#34;&gt; Switch520&lt;/span&gt; 这里的游戏下载没那么多门槛要会员什么什么的，不过都是百度网盘，建议整一个百度网盘会员.(现在有插件可以实现免会员高速下载，有空我再写写：P)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;文中提到的文件可以到这个链接：&lt;strong&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tYXhzaGlyby1teS5zaGFyZXBvaW50LmNvbS86ZjovZy9wZXJzb25hbC9tYXhzaGlyb2lfbWF4c2hpcm9fb25taWNyb3NvZnRfY29tL0VsNFgwQ1Z6LVRCS3FPMGtfLV9CV1JjQnQ0dVQ3VGYtZ1ZKdHJLZFBoYnlQNUE/ZT1JVWxxZGY=&#34;&gt;Sharepoint&lt;/span&gt;&lt;/strong&gt; 里面下载获取。&lt;/p&gt;
-&lt;p&gt;下载后解压拿到 xxx.xci 文件，这就是游戏本体了。将这个游戏本体放到任意文件夹内 (不要有中文) . 双击 yuzu 模拟器中间，选择你放 xci 文件的那个文件夹打开，然后你就会发现游戏已经加载出来了。双击打开爽玩吧～&lt;/p&gt;
+&lt;p&gt;下载 xxx.xci 文件，这就是游戏本体了。将这个游戏本体放到任意文件夹内 (不要有中文) . 双击 yuzu 模拟器中间，选择你放 xci 文件的那个文件夹打开，然后你就会发现游戏已经加载出来了。双击打开爽玩吧～&lt;/p&gt;
+&lt;h1 id=&#34;处理-switch-游戏文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#处理-switch-游戏文件&#34;&gt;#&lt;/a&gt; 处理 Switch 游戏文件&lt;/h1&gt;
+&lt;p&gt;switch 可以下载到的文件有很多种，因此有些时候我们下载得到的文件并不是 xci 或者 nsp 这样的可执行文件。这种时候就需要自己转换游戏文件格式。&lt;/p&gt;
+&lt;h2 id=&#34;常见的几种格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的几种格式&#34;&gt;#&lt;/a&gt; 常见的几种格式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;xci&lt;/code&gt; ：可以理解 XCI 文件直接从卡带提取的文件，而 XCI 整合版（整合了游戏升级补丁 + DLC 的版本是最方便的 推荐下载）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;xcz&lt;/code&gt; : 是 xci 压缩后的文件，需要转换为 xci 才可以正常使用。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nsp&lt;/code&gt; : nsp 相当于正版系统数字游戏，nsp 没有整合版，当您看到文件名称有  &lt;code&gt;000&lt;/code&gt;  或者  &lt;code&gt;v0&lt;/code&gt;  说明是本体。而文件名中带有  &lt;code&gt;Updata&lt;/code&gt;  的则为升级补丁，带有  &lt;code&gt;DLC&lt;/code&gt;  字样则为扩展游戏内容的额外内容。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nsz&lt;/code&gt; : 有些 DLC 或者升级补丁会打包为 nsz 文件，打包的时候可以忽略，如果是游戏文件则您需要转换为 nsp 文件才可以运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;四种格式之间转换&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四种格式之间转换&#34;&gt;#&lt;/a&gt; 四种格式之间转换。&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 NSCB 软件进行打包等操作，我获取到的适配 15.0.0 版本的。这软件有时效性，因此如果不能正常使用则需要更新。&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d2IubGFuem91bS5jb20vaVZsOWYwZHc2c3Zn&#34;&gt;NSCB&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;emusak-ui-软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#emusak-ui-软件&#34;&gt;#&lt;/a&gt; EmuSAK UI 软件&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用此软件可以更方便的管理你电脑上现有的模拟器以及游戏，还可以获取最新的 prod.key 等文件。&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0NhcGl0YWluZUpTcGFycm93L2VtdXNhay11aQ==&#34;&gt;https://github.com/CapitaineJSparrow/emusak-ui&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;EmuSAK UI 功能一览：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加并管理电脑上的多个 switch 模拟器 (单机或者联机版 ryujinx)&lt;/li&gt;
+&lt;li&gt;找到并列出电脑中的 switch 游戏&lt;/li&gt;
+&lt;li&gt;展示本地着色器缓存 &amp;amp; emusak 在线着色器缓存 (如果本地缓存较少可以下载在线缓存)&lt;/li&gt;
+&lt;li&gt;更新固件&lt;/li&gt;
+&lt;li&gt;更新 prod keys 密钥&lt;/li&gt;
+&lt;li&gt;给下载游戏存档&lt;/li&gt;
+&lt;li&gt;下载着色器缓存&lt;/li&gt;
+&lt;li&gt;下载 mod 模组&lt;/li&gt;
+&lt;li&gt;一键分享电脑中的着色器缓存 (shader cache)&lt;/li&gt;
+&lt;/ul&gt;
 </content>
         <category term="switch" scheme="http://maxshiroi.top/tags/switch/" />
+        <category term="animal crossing" scheme="http://maxshiroi.top/tags/animal-crossing/" />
         <category term="Project Diva" scheme="http://maxshiroi.top/tags/Project-Diva/" />
         <category term="Miku" scheme="http://maxshiroi.top/tags/Miku/" />
         <category term="Mega39" scheme="http://maxshiroi.top/tags/Mega39/" />
         <category term="emulater" scheme="http://maxshiroi.top/tags/emulater/" />
+        <category term="yuzu" scheme="http://maxshiroi.top/tags/yuzu/" />
+        <category term="ryujinx" scheme="http://maxshiroi.top/tags/ryujinx/" />
         <updated>2022-08-28T13:12:24.000Z</updated>
     </entry>
     <entry>
