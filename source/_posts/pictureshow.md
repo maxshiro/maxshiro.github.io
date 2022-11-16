@@ -6,6 +6,15 @@ tags:
 - pic
 - img
 ---
+# 随机色图API
+> 0.05%的几率刷到r18
+
+![](https://iw233.cn/API/Random.php "随机色图")
+{.gallery data-height="480"}
+## api地址：
+```bash bash
+https://iw233.cn/API/Random.php
+```
 # 多来点色图
 ![](/img/pictureshow/20221116154554.png "女人")  
 ![](/img/pictureshow/20221116154625.png "女人")  
