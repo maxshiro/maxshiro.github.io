@@ -109,7 +109,7 @@ theme: shoka
 deploy:
   type: git
   repo: git@github.com:maxshiro/maxshiro.github.io.git
-  branch: master
+  branch: main
 
 # Markdown renderer
 markdown:
