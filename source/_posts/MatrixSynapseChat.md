@@ -8,24 +8,24 @@ tags:
 - python
 ---
 ## 先安装前置
-```
+```bash bash
 yum install libtiff-devel libjpeg-devel libzip-devel freetype-devel libwebp-devel libxml2-devel libxslt-devel libpq-devel python3-virtualenv libffi-devel openssl-devel python3-devel
 yum groupinstall "Development Tools"
 ```
 
 ## 使用root账户接入您的centos，找到合适的位置开始操作
-```
+```bash bash
 mkdir syn
 ```
 ### 依次执行以下指令
-```
+```bash bash
 virtualenv -p python3 ./env && source ./env/bin/activate
 python3 -m pip install --upgrade pip && python3 -m pip install --upgrade setuptools && python3 -m pip install psycopg2-binary
 python3 -m pip install matrix-synapse                         //安装synapse
 python3 -m pip install -U matrix-synapse                    //更新synapse
 ```
 ## 将下列指令拷贝到控制台执行，自动生成homeserver.yaml
-```
+```bash bash
 python3 -m synapse.app.homeserver \
     --server-name im.axro.top \
     --config-path homeserver.yaml \
@@ -34,21 +34,21 @@ python3 -m synapse.app.homeserver \
 ```
 
 ## 编辑生成`homeserver.yaml`
-```
+```bash bash
 enable_registration: true
 suppress_key_server_warning: true
 bind_addresses: ['::1', '0.0.0.0']
 ```
 ## 启动/关闭服务器
 #### 注意要先进入虚拟python环境
-```
+```bash bash
 source ./env/bin/activate
 
 synctl start
 synctl stop
 ```
 ## 退出虚拟环境
-```
+```bash bash
 deactivate
 ```
 

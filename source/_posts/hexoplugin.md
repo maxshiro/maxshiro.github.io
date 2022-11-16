@@ -117,7 +117,7 @@ tags: xxx
 ## 通过github page
 1. 撰写博客
 2. 保存到github。
-```
+```bash bash
 // 保存所有文件到暂存区
 git add .
 // 提交变更
@@ -126,7 +126,7 @@ git commit -m 'Backup'
 git push origin backup
 ```
 3. 生成并提交网页。
-```
+```bash bash
 // 生成静态网页
 hexo g
 // 生成目录文件
@@ -141,7 +141,7 @@ hexo d
 ## 通过vercel.com
 1. 撰写博客
 2. 保存到github。
-```
+```bash bash
 // 保存所有文件到暂存区
 git add .
 // 提交变更
