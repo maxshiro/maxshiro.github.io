@@ -90,15 +90,17 @@ tags: xxx
 # 博客加速
 > 于2022年11月测试vercel.app已经被墙了，但是还可以通过自备域名的方式。
 
-使用Vercel加速Hexo博客访问速度
+使用Vercel加速Hexo博客访问速度。
+该方法适用于已经使用我的方法将博客源文件备份到了github的。
 ## 步骤
 1. 打开vercel.com,这个域名没有被墙。登陆的时候选择github方式。
    ![](/img/hexoplugin/20221116141135.png)  
 2. 创建新项目，选择 git 仓库中已存在的项目，然后选Deploy。
 3. 创建完成后就可以通过 `你项目名称.vercel.app` 访问了。但是目前vercel.app已经被墙了，所以还需要在设置里添加自己的域名。
 4. 切换到自己的域名控制台里添加一条cname记录，指向这个地址 `cname-china.vercel-dns.com` 。
-5. 然后就可以访问了。
-
-## 问题
-更新速度肯定没有github默认的快。当你推送之后，github大概在一分钟之内就有变化。
-具体使用方式我也在研究，暂时不推荐把这个当作默认。并且效果并非有githubpage好。
+5. 将Git Branch里的内容改为存放自己博客备份的分支，比如我的就是backup分支。同时也可以将分配给你的二级域名也改成这个分支。
+   ![](/img/hexoplugin/20221116144428.png)  
+6. 切换到 Git 项目，将 Production Branch 也更改为 backup 分支。
+   ![](/img/hexoplugin/20221116144502.png)  
+7. 此时如果你的 backup 分支如果有更新，那么 vercel 会自动克隆你的源文件然后编译更新cache。
+8. 使用这种方法独立于github page。只有当你hexo d 之后源博客才会更新。
