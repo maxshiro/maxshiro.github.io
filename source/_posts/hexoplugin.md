@@ -87,10 +87,11 @@ tags: xxx
 * 广泛地使用Promise来进行异步操作，从而确保线程不被杜塞。
 * 过时的浏览器将无法正常显示，因此，请升级您的浏览器。
 
-# 博客加速
+# 3. 博客加速
 > 于2022年11月测试vercel.app已经被墙了，但是还可以通过自备域名的方式。
 
 使用Vercel加速Hexo博客访问速度。
+如果你想让您的博客更快的更新，那么可以采取这种方法的同时，也可以加速你的博客。
 该方法适用于已经使用我的方法将博客源文件备份到了github的。
 ## 步骤
 1. 打开vercel.com,这个域名没有被墙。登陆的时候选择github方式。
@@ -103,4 +104,49 @@ tags: xxx
 6. 切换到 Git 项目，将 Production Branch 也更改为 backup 分支。
    ![](/img/hexoplugin/20221116144502.png)  
 7. 此时如果你的 backup 分支如果有更新，那么 vercel 会自动克隆你的源文件然后编译更新cache。
-8. 使用这种方法独立于github page。只有当你hexo d 之后源博客才会更新。
+8. 使用这种方法独立于github page。只有当你 hexo d 之后源博客才会更新。
+## 保护博客源码内容
+如果你认为这种方式要更好一些，当然你也可以选择直接关掉github page并将仓库设置为private，这样别人就无法轻易获取您博客的源代码了。
+
+# 写作流程
+## 第一次使用
+1. 安装nodejs，git，hexo，npm
+2. git clone 仓库链接
+3. cd到目录然后 cnpm install
+4. 撰写博客
+## 通过github page
+1. 撰写博客
+2. 保存到github。
+```
+// 保存所有文件到暂存区
+git add .
+// 提交变更
+git commit -m 'Backup'
+// 推送到github，分支为Backup
+git push origin backup
+```
+3. 生成并提交网页。
+```
+// 生成静态网页
+hexo g
+// 生成目录文件
+hexo algolia
+// 打开本地服务器预览
+hexo s
+// 提交到github page
+hexo d
+```
+4. 等待网页更新。
+
+## 通过vercel.com
+1. 撰写博客
+2. 保存到github。
+```
+// 保存所有文件到暂存区
+git add .
+// 提交变更
+git commit -m 'Backup'
+// 推送到github，分支为Backup
+git push origin backup
+```
+3. 等待网页更新。
