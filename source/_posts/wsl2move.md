@@ -115,9 +115,9 @@ DiskPart successfully selected the virtual disk file.
 # bug
 ```cmd cmd
 ERROR: Wsl/Service/CreateInstance/ERROR_FILE_NOT_FOUND
-```cmd cmd
-打开命令行，在命令行中输入
 ```
+打开命令行，在命令行中输入
+```cmd cmd
 wsl.exe --list --all
 wsl.exe --unregister xxx
 ```
