@@ -89,11 +89,11 @@ wsl --help
    wsl --export kali-linux D:\kali
    ```
 4. 卸载分发版或虚拟机（如果是要重装系统或换机器安装，这一步可以省略，但是要将上一步导出的文件保存好）
-   ```
+   ```cmd cmd
    wsl --unregister kali-linux
    ```
 5. 导入新的分发版或虚拟机：
-   ```
+   ```cmd cmd
    wsl --import kali-linux D:\wsl\kali D:\kali
    ```
 
@@ -113,9 +113,9 @@ DiskPart successfully selected the virtual disk file.
 3. 输入 `compact vdisk` 来压缩。
 
 # bug
-```
+```cmd cmd
 ERROR: Wsl/Service/CreateInstance/ERROR_FILE_NOT_FOUND
-```
+```cmd cmd
 打开命令行，在命令行中输入
 ```
 wsl.exe --list --all
@@ -123,5 +123,5 @@ wsl.exe --unregister xxx
 ```
 
 # 摘抄
-![WSL2迁移方法](https://blog.csdn.net/zhys2007/article/details/110958577)
-![解决Win10子系统的Ubuntu被删除后，重新安装出现找不到系统路径](https://blog.csdn.net/y17854117512/article/details/119214442?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-119214442-blog-110900591.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-119214442-blog-110900591.pc_relevant_default&utm_relevant_index=1)
+[WSL2迁移方法](https://blog.csdn.net/zhys2007/article/details/110958577)
+[解决Win10子系统的Ubuntu被删除后，重新安装出现找不到系统路径](https://blog.csdn.net/y17854117512/article/details/119214442?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-119214442-blog-110900591.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-119214442-blog-110900591.pc_relevant_default&utm_relevant_index=1)
