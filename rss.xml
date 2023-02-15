@@ -10,8 +10,229 @@
         </author>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 02 Nov 2022 20:44:17 +0800</pubDate>
-        <lastBuildDate>Wed, 02 Nov 2022 20:44:17 +0800</lastBuildDate>
+        <pubDate>Sat, 14 Jan 2023 17:41:37 +0800</pubDate>
+        <lastBuildDate>Sat, 14 Jan 2023 17:41:37 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/174137/</guid>
+            <title>vmwarewin7shrink</title>
+            <link>http://maxshiroi.top/ug/174137/</link>
+            <category term="vmware" scheme="http://maxshiroi.top/tags/vmware/" />
+            <category term="win7" scheme="http://maxshiroi.top/tags/win7/" />
+            <category term="capacity" scheme="http://maxshiroi.top/tags/capacity/" />
+            <category term="shrink" scheme="http://maxshiroi.top/tags/shrink/" />
+            <pubDate>Sat, 14 Jan 2023 17:41:37 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;通常在我们创建虚拟机时往往并不清楚需要多少空间，等到后期才会发现分配了很多空间实际上用不到。这时候就要想办法缩小虚拟机所占用的空间了。&lt;br /&gt;
+根据我这次缩小空间的经历，我十分不推荐使用快照功能。因为这会让你虚拟机当前处在快照模式，与原来的文件关系不大（就是处理起来更麻烦了。）。&lt;br /&gt;
+如果你像我一样只是用 vmware 来存放如企鹅，钉钉，腾讯会议，微信这种垃圾的话，那么可以参照我的方法。&lt;/p&gt;
+&lt;h1 id=&#34;缩小空间占用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缩小空间占用&#34;&gt;#&lt;/a&gt; 缩小空间占用。&lt;/h1&gt;
+&lt;h2 id=&#34;0首先查看磁盘类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0首先查看磁盘类型&#34;&gt;#&lt;/a&gt; 0. 首先查看磁盘类型&lt;/h2&gt;
+&lt;p&gt;使用文本编辑器打开虚拟机根目录下的 xxx.vmdk 文件，查看 # Extent description 下面的内容第三块是否为 SPARSE 。不是则需要进行转换。如下图：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s001.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s002.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s003.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s004.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s005.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 4521984 SPARSE &amp;quot;Windows 7 x64-cl1-s006.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果你在创建虚拟机选择的是动态分配磁盘文件并拆分成多个的话这里就是 SPARSE。&lt;/p&gt;
+&lt;h2 id=&#34;1确保没有快照&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1确保没有快照&#34;&gt;#&lt;/a&gt; 1. 确保没有快照&lt;/h2&gt;
+&lt;p&gt;确保虚拟机内没有快照。虚拟机目录下只有一个 xxx.vmdk 以及从属的 s00x.vmdk。如果有快照没法处理，则可以执行克隆操作到其他盘进行处理。&lt;/p&gt;
+&lt;h2 id=&#34;2尽可能缩小虚拟机内部所占用的空间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2尽可能缩小虚拟机内部所占用的空间&#34;&gt;#&lt;/a&gt; 2. 尽可能缩小虚拟机内部所占用的空间&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NvdXRDb2Rlcy9hcnRpY2xlL2RldGFpbHMvMTA0OTc1Nzgz&#34;&gt;【Win10 C 盘压缩卷问题解答】：无法将卷压缩到超出任何不可移动的文件所在点&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;进入虚拟机，进行以下处理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关闭休眠功能 *&lt;/li&gt;
+&lt;li&gt;关闭虚拟内存并删除虚拟内存文件 *&lt;/li&gt;
+&lt;li&gt;虚拟机内进行空间整理，磁盘清理&lt;/li&gt;
+&lt;li&gt;处理其他文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意后面带星号的处理完成所有步骤后要重新打开。不然可能会影响性能。&lt;/p&gt;
+&lt;p&gt;此时你需要确定你缩小后的 c 盘空间大小，这也决定着后面动态磁盘缩小的操作。我确定缩小后的空间为 22GiB。&lt;/p&gt;
+&lt;h2 id=&#34;3-重启到pe系统使用diskgenius缩小c盘空间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-重启到pe系统使用diskgenius缩小c盘空间&#34;&gt;#&lt;/a&gt; 3. 重启到 pe 系统使用 Diskgenius 缩小 c 盘空间。&lt;/h2&gt;
+&lt;h3 id=&#34;使用微pe制作iso文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用微pe制作iso文件&#34;&gt;#&lt;/a&gt; 使用微 pe 制作 iso 文件&lt;/h3&gt;
+&lt;h3 id=&#34;添加硬件cddvd设备使用创建的iso文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#添加硬件cddvd设备使用创建的iso文件&#34;&gt;#&lt;/a&gt; 添加硬件 CD/DVD 设备，使用创建的 iso 文件。&lt;/h3&gt;
+&lt;h3 id=&#34;vmware设置光驱启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vmware设置光驱启动&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N5ZjQ0Mi9hcnRpY2xlL2RldGFpbHMvNTA2NzgzMg==&#34;&gt;VMWare 设置光驱启动&lt;/span&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;4-减小vmware虚拟机虚拟磁盘大小&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-减小vmware虚拟机虚拟磁盘大小&#34;&gt;#&lt;/a&gt; 4. 减小 VMware 虚拟机虚拟磁盘大小&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此处内容来自：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hheVBpbkYvYXJ0aWNsZS9kZXRhaWxzLzEwODI1MjYzMQ==&#34;&gt;减小 VMware 虚拟机虚拟磁盘大小&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在 VMware 里虚拟机的所有编号了的  &lt;code&gt;.*s001.*.vmdk&lt;/code&gt;  片段虚拟磁盘文件是虚拟化的虚拟机最大空间（Maximum Size)，就比如我的 Win7 虚拟机的 Maximum Size 是 40GiB（1GiB=1024MiB，1GB=1000MB），虚拟机生成了  &lt;code&gt;.*s001~s011.vmdk&lt;/code&gt;  共 11 个虚拟机磁盘文件 vmdk，该虚拟机的 &amp;quot;Windows 7 x64-cl1.vmdk&amp;quot; 中详实记录了这 11 个 vmdk 文件（从而进行各分片虚拟磁盘文件的按名索引）：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# Extent description&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s001.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s002.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s003.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s004.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s005.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s006.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s007.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s008.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s009.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s010.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 655360 SPARSE &amp;quot;Windows 7 x64-cl1-s011.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;vmdk 文件的 &amp;quot;8323072&amp;quot; 数字表示簇，2 簇 = 1KiB，则这 11 个 vmdk 文件对应了 ((10×8323072)/2/1024/1024)+(655360/2/1024/1024)=10×3.96875GiB+0.3125Gib=40GiB，刚好。&lt;/p&gt;
+&lt;p&gt;我们所要做的就是通过改变这里的文件个数从而达到缩小 vmdk 磁盘大小的目的。&lt;br /&gt;
+已知 40GiB 对应的簇大小为 10×8323072+655360=83886080。即一个 G 的簇大小为 2097152 (/2=1048576)。&lt;br /&gt;
+我们确定一下自己压缩后的大小。就比如我要压缩到 22G，得出簇的总大小为 2097152×22=46137344，这个数可以拆为五个 8323072 加上一个 46137344-(8323072×5)=4521984。即 (8323072×5)+4521984=46137344。&lt;br /&gt;
+因此上面的文件就可以改成下面这样：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# Extent description&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s001.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s002.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s003.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s004.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &amp;quot;Windows 7 x64-cl1-s005.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 4521984 SPARSE &amp;quot;Windows 7 x64-cl1-s006.vmdk&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;记得备份 &amp;quot;Windows 7 x64-cl1.vmdk&amp;quot;，处理完成保存即可。&lt;/p&gt;
+&lt;h2 id=&#34;5重新启动虚拟机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5重新启动虚拟机&#34;&gt;#&lt;/a&gt; 5. 重新启动虚拟机&lt;/h2&gt;
+&lt;p&gt;此时你会发现虚拟机的磁盘大小已经变成 22G 了。教程结束。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/082913/</guid>
+            <title>WSL2迁移以及空间回收。</title>
+            <link>http://maxshiroi.top/ug/082913/</link>
+            <category term="linux" scheme="http://maxshiroi.top/tags/linux/" />
+            <category term="wsl2" scheme="http://maxshiroi.top/tags/wsl2/" />
+            <category term="Hyper-v" scheme="http://maxshiroi.top/tags/Hyper-v/" />
+            <pubDate>Sat, 19 Nov 2022 08:29:13 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;../img/wsl2move/20221119083153.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;如果你按照正常方式在设置里移动 wsl 的话就会发现报错，本篇文章向您介绍如何正确迁移以及回收空间。&lt;/p&gt;
+&lt;h1 id=&#34;移动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#移动&#34;&gt;#&lt;/a&gt; 移动&lt;/h1&gt;
+&lt;p&gt;在 Windows 的 PowerShell 中输入:&lt;/p&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --&lt;span class=&#34;built_in&#34;&gt;help&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可以看到关于这个命令的使用帮助说明：&lt;/p&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;用法: wsl.exe [参数] [选项...] [命令行]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;用于运行 Linux 二进制文件的参数:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    如果未提供命令行，wsl.exe 将启动默认的 shell。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --exec, -e &amp;lt;命令行&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        执行指定的命令而不使用默认的 Linux shell。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        按原样传递剩余的命令行。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;选项:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --distribution, -d &amp;lt;分发版&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        运行指定的分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --user, -u &amp;lt;用户名&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        以指定用户身份运行。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;用于管理适用于 Linux 的 Windows 子系统的参数:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --export &amp;lt;分发版&amp;gt; &amp;lt;文件名&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        将分发导出到 tar 文件。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        对于标准输出，文件名可以是 -。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --import &amp;lt;分发版&amp;gt; &amp;lt;安装位置&amp;gt; &amp;lt;文件名&amp;gt; [选项]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        将指定的 tar 文件作为新分发进行导入。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        对于标准输入，文件名可以是 -。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        选项:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            --version &amp;lt;版本&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                指定用于新分发的版本。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --list, -l [选项]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        列出分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        选项:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            --all&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                列出所有分发，包括当前正在&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                安装或卸载的分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            --running&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                只列出当前正在运行的分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            --quiet, -q&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                只显示分发名称。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            --verbose, -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                显示有关所有分发的详细信息。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --&lt;span class=&#34;built_in&#34;&gt;set&lt;/span&gt;-default, -s &amp;lt;分发版&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        将分发设置为默认值。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --&lt;span class=&#34;built_in&#34;&gt;set&lt;/span&gt;-default-version &amp;lt;版本&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        更改新分发的默认安装版本。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --&lt;span class=&#34;built_in&#34;&gt;set&lt;/span&gt;-version &amp;lt;分发版&amp;gt; &amp;lt;版本&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        更改指定分发的版本。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --shutdown&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        立即终止所有正在运行的分发和 WSL &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; 轻型工具虚拟机。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --terminate, -t &amp;lt;分发版&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        终止指定的分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --unregister &amp;lt;分发版&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        注销分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --&lt;span class=&#34;built_in&#34;&gt;help&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        显示用法信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这里我们使用到 export 、unregister 和 import 几个选项就可以实现迁移。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;终止正在运行的分发或虚拟机：&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --shutdown&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;查看已安装的 wsl 名称：&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl.exe --list --all&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;适用于 Linux 的 Windows 子系统分发:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Debian (默认)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;kali-linux&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Ubuntu&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;对需要迁移的分发或虚拟机导出（我要迁移 kali-linux）：&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --export kali-linux D:\kali&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;卸载分发版或虚拟机（如果是要重装系统或换机器安装，这一步可以省略，但是要将上一步导出的文件保存好）&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --unregister kali-linux&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;导入新的分发版或虚拟机：&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --import kali-linux D:\wsl\kali D:\kali&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;压缩&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#压缩&#34;&gt;#&lt;/a&gt; 压缩&lt;/h1&gt;
+&lt;p&gt;等待导入后你会发现移动的其实是 vhdx 文件，那么就可以对这个文件进行回收空间。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;以管理员身份运行 cmd，输入 diskpart 命令按回车。&lt;/li&gt;
+&lt;li&gt;使用以下命令选择你的 userdata.vhdx&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;select vdisk file = &amp;quot;D:\wsl\ext4.vhdx&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果提示&lt;/p&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;DiskPart successfully selected the virtual disk file.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;就说明成功了。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;输入  &lt;code&gt;compact vdisk&lt;/code&gt;  来压缩。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;bug&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bug&#34;&gt;#&lt;/a&gt; bug&lt;/h1&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;ERROR: &lt;span class=&#34;title&#34;&gt;Wsl&lt;/span&gt;/&lt;span class=&#34;title&#34;&gt;Service&lt;/span&gt;/&lt;span class=&#34;title&#34;&gt;CreateInstance&lt;/span&gt;/&lt;span class=&#34;title&#34;&gt;ERROR_FILE_NOT_FOUND&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;打开命令行，在命令行中输入&lt;/p&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl.exe --list --all&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wsl.exe --unregister xxx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;摘抄&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#摘抄&#34;&gt;#&lt;/a&gt; 摘抄&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3poeXMyMDA3L2FydGljbGUvZGV0YWlscy8xMTA5NTg1Nzc=&#34;&gt;WSL2 迁移方法&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3kxNzg1NDExNzUxMi9hcnRpY2xlL2RldGFpbHMvMTE5MjE0NDQyP3NwbT0xMDAxLjIxMDEuMzAwMS42NjYxLjEmYW1wO3V0bV9tZWRpdW09ZGlzdHJpYnV0ZS5wY19yZWxldmFudF90MC5ub25lLXRhc2stYmxvZy0yJTdFZGVmYXVsdCU3RUNUUkxJU1QlN0VkZWZhdWx0LTEtMTE5MjE0NDQyLWJsb2ctMTEwOTAwNTkxLnBjX3JlbGV2YW50X2RlZmF1bHQmYW1wO2RlcHRoXzEtdXRtX3NvdXJjZT1kaXN0cmlidXRlLnBjX3JlbGV2YW50X3QwLm5vbmUtdGFzay1ibG9nLTIlN0VkZWZhdWx0JTdFQ1RSTElTVCU3RWRlZmF1bHQtMS0xMTkyMTQ0NDItYmxvZy0xMTA5MDA1OTEucGNfcmVsZXZhbnRfZGVmYXVsdCZhbXA7dXRtX3JlbGV2YW50X2luZGV4PTE=&#34;&gt;解决 Win10 子系统的 Ubuntu 被删除后，重新安装出现找不到系统路径&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/204350/</guid>
+            <title>通过diskpart工具压缩userdata.vhdx来解决磁盘占用过多问题</title>
+            <link>http://maxshiroi.top/ug/204350/</link>
+            <category term="wsa" scheme="http://maxshiroi.top/tags/wsa/" />
+            <category term="vhd" scheme="http://maxshiroi.top/tags/vhd/" />
+            <category term="vhdx" scheme="http://maxshiroi.top/tags/vhdx/" />
+            <category term="diskpart" scheme="http://maxshiroi.top/tags/diskpart/" />
+            <pubDate>Fri, 18 Nov 2022 20:43:50 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;当你安装了 WSA 后随着你的使用，你会发现占用的空间越来越大。即使你把不需要的安卓程序卸载了之后，却依然满满的霸占着你的 C 盘。你只能眼睁睁地看他慢慢变大却无能为力。当然本篇文章的目的就是帮你解决这个问题。&lt;/p&gt;
+&lt;h1 id=&#34;移动wsa到其他盘符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#移动wsa到其他盘符&#34;&gt;#&lt;/a&gt; 移动 WSA 到其他盘符&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你利用你聪明的头脑打开了百度并使用灵巧的双手在搜索框里输入 WSA 磁盘空间过大。很快你便看到了一种解决方式.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;打开设置 - 程序 - 已安装的程序，找到 WSA&lt;br /&gt;
+&lt;img data-src=&#34;/img/Windowssubsystemforandroidcompression/20221118205416.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;点击后面三个点选择移动。&lt;br /&gt;
+稍等一会就会帮你把 WSA 移动到对应的盘符了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;使用diskpart工具压缩&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用diskpart工具压缩&#34;&gt;#&lt;/a&gt; 使用 diskpart 工具压缩&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;以管理员身份运行 cmd，输入 diskpart 命令按回车。&lt;/li&gt;
+&lt;li&gt;使用以下命令选择你的 userdata.vhdx&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;select vdisk file = &amp;quot;D:\WpSystem\S-&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;-&lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;-&lt;span class=&#34;number&#34;&gt;21&lt;/span&gt;-&lt;span class=&#34;number&#34;&gt;3846526574&lt;/span&gt;-&lt;span class=&#34;number&#34;&gt;1502088438&lt;/span&gt;-&lt;span class=&#34;number&#34;&gt;2560978845&lt;/span&gt;-&lt;span class=&#34;number&#34;&gt;1001&lt;/span&gt;\AppData\Local\Packages\MicrosoftCorporationII.WindowsSubsystemForAndroid_8wekyb3d8bbwe\LocalCache\userdata.vhdx&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果提示&lt;/p&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;DiskPart successfully selected the virtual disk file.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;就说明成功了。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;输入  &lt;code&gt;compact vdisk&lt;/code&gt;  来压缩。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;DiskPart has encountered an error: The specified file is encrypted and the user does not have the ability to decrypt it.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;See the System Event Log for more information.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这个就说明你没有权限压缩这个文件。&lt;br /&gt;
+为了解决这个问题我百度了一晚上，最后发现，只要你把这个文件复制走，就会提示&lt;br /&gt;
+&lt;img data-src=&#34;/img/Windowssubsystemforandroidcompression/20221118210314.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+这里选择是，然后就会复制走。&lt;br /&gt;
+这个时候你再看你复制的文件就会发现上面的小黄锁已经不见了。&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;重新选择 userdata.vhdx 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;select vdisk file = &amp;quot;D:\userdata.vhdx&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;重新输入命令  &lt;code&gt;compact vdisk&lt;/code&gt;  进行压缩，如果出现下面的提示那就说明压缩成功了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;DISKPART&amp;gt; &lt;span class=&#34;built_in&#34;&gt;compact&lt;/span&gt; vdisk&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;number&#34;&gt;100&lt;/span&gt; percent completed&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;DiskPart successfully compacted the virtual disk file.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;DISKPART&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此时再看你复制出来的文件，就会发现大小缩小了很多，压缩成功了。&lt;br /&gt;
+接着只需要剪切拷贝出来的文件，替换掉原来的文件就可以了。&lt;/p&gt;
+&lt;h1 id=&#34;成果&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#成果&#34;&gt;#&lt;/a&gt; 成果&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;压缩前：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;/img/Windowssubsystemforandroidcompression/20221118204548.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;压缩后：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;/img/Windowssubsystemforandroidcompression/20221118210939.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/152935/</guid>
+            <title>随机图片API</title>
+            <link>http://maxshiroi.top/ug/152935/</link>
+            <category term="pic" scheme="http://maxshiroi.top/tags/pic/" />
+            <category term="img" scheme="http://maxshiroi.top/tags/img/" />
+            <category term="api" scheme="http://maxshiroi.top/tags/api/" />
+            <category term="random" scheme="http://maxshiroi.top/tags/random/" />
+            <category term="wallpaper" scheme="http://maxshiroi.top/tags/wallpaper/" />
+            <pubDate>Wed, 16 Nov 2022 15:29:35 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;随机图片api&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#随机图片api&#34;&gt;#&lt;/a&gt; 随机图片 API&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;都有时效性，失效不管 233&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;二次元&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二次元&#34;&gt;#&lt;/a&gt; 二次元&lt;/h2&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;480&#34;&gt;&lt;img data-src=&#34;https://iw233.cn/API/Random.php&#34; alt=&#34;&#34; title=&#34;https://iw233.cn/API/Random.php&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://api.paugram.com/wallpaper&#34; alt=&#34;&#34; title=&#34;https://api.paugram.com/wallpaper&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://www.dmoe.cc/random.php&#34; alt=&#34;&#34; title=&#34;https://www.dmoe.cc/random.php&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://api.mtyqx.cn/api/random.php&#34; alt=&#34;&#34; title=&#34;https://api.mtyqx.cn/api/random.php&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://api.yimian.xyz/img?type=moe&#34; alt=&#34;&#34; title=&#34;https://api.yimian.xyz/img?type=moe&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://api.ixiaowai.cn/api/api.php&#34; alt=&#34;&#34; title=&#34;https://api.ixiaowai.cn/api/api.php&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;三次元&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三次元&#34;&gt;#&lt;/a&gt; 三次元&lt;/h2&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;480&#34;&gt;&lt;img data-src=&#34;https://api.btstu.cn/sjbz/api.php&#34; alt=&#34;&#34; title=&#34;https://api.btstu.cn/sjbz/api.php&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://api.paugram.com/bing/&#34; alt=&#34;必应每日壁纸&#34; title=&#34;https://api.paugram.com/bing/&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://api.ixiaowai.cn/gqapi/gqapi.php&#34; alt=&#34;&#34; title=&#34;https://api.ixiaowai.cn/gqapi/gqapi.php&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;menhara酱&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#menhara酱&#34;&gt;#&lt;/a&gt; menhara 酱&lt;/h2&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;480&#34;&gt;&lt;img data-src=&#34;https://api.ixiaowai.cn/mcapi/mcapi.php&#34; alt=&#34;&#34; title=&#34;https://api.ixiaowai.cn/mcapi/mcapi.php&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;eeedog&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#eeedog&#34;&gt;#&lt;/a&gt; eeedog&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这个有点复杂建议自己去看看&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZWVlLmRvZy90ZWNoL3JhbmQtcGljLWFwaS5odG1s&#34;&gt; eeedog&lt;/span&gt; 我随意放一个随机图床&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;480&#34;&gt;&lt;img data-src=&#34;https://api.yimian.xyz/img?type=imgbed&#34; alt=&#34;&#34; title=&#34;https://api.yimian.xyz/img?type=imgbed&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1 id=&#34;本地&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地&#34;&gt;#&lt;/a&gt; 本地&lt;/h1&gt;
+&lt;p class=&#34;gallery&#34;&gt;&lt;img data-src=&#34;/img/pictureshow/20221116154554.png&#34; alt=&#34;&#34; title=&#34;女人&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154625.png&#34; alt=&#34;&#34; title=&#34;女人&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154652.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154713.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154721.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154729.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154737.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154746.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154914.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154922.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154928.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154935.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154945.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116154953.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116155005.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116155015.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116155023.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/img/pictureshow/20221116155031.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://maxshiroi.top/ug/204417/</guid>
             <title>在Debian系linux上通过apt的方式安装plex媒体中心</title>
@@ -530,19 +751,19 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;编辑配置文件&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi /etc/sysconfig/network-scripts/ifcfg-ens33&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi /etc/sysconfig/network-scripts/ifcfg-ens33&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;需要添加 / 修改的地方&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;BOOTPROTO=static&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ONBOOT=yes&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;IPADDR=192.168.xx.xx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;NETMASK=255.255.255.0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;GATEWAY=192.168.204.2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;DNS1=8.8.8.8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;DNS2=114.114.114.114&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;BOOTPROTO=static&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ONBOOT=&lt;span class=&#34;built_in&#34;&gt;yes&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;IPADDR=192.168.xx.xx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;NETMASK=255.255.255.0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;GATEWAY=192.168.204.2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;DNS1=8.8.8.8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;DNS2=114.114.114.114&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&#34;编辑-resolvconf-文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编辑-resolvconf-文件&#34;&gt;#&lt;/a&gt; 编辑 resolv.conf 文件&lt;/h1&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi /etc/resolv.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi /etc/resolv.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;添加如下内容&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# Generated by NetworkManager&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;search localdomain&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nameserver 8.8.8.8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# Generated by NetworkManager&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;search localdomain&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nameserver 8.8.8.8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&#34;重启网卡&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#重启网卡&#34;&gt;#&lt;/a&gt; 重启网卡&lt;/h1&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;service network restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;service network restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
  ]]></description>
         </item>
         <item>
@@ -558,31 +779,31 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;p&gt;Transmission 是一款流行的 BT 下载软件，比其他客户端使用更少的资源，守护程序非常适合服务器，并且可以通过桌面 GUI、Web 界面和终端程序进行远程控制，支持本地对等发现、完全加密、DHT、µTP、PEX 和 Magnet Link 等。&lt;/p&gt;
 &lt;h1 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h1&gt;
 &lt;p&gt;这有啥好说的，直接 apt 一把梭：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt install transmission-daemon&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt install transmission-daemon&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;不过在更改配置前，建议先关一下服务，以防万一：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo systemctl stop transmission-daemon&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo systemctl stop transmission-daemon&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;transmission 的配置文件在  &lt;code&gt;/etc/transmission-daemon/settings.json&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;nano /etc/transmission-daemon/settings.json&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;nano /etc/transmission-daemon/settings.json&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;主要需要看看下面这几项：&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;download-dir&amp;quot;: &amp;quot;/home/pi/complete&amp;quot;, # 下载目录 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;incomplete-dir&amp;quot;: &amp;quot;/home/pi/incomplete&amp;quot;, # 下载未完成文件目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;rpc-authentication-required&amp;quot;: false, # 懒得配置密码直接把验证关掉。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;rpc-host-whitelist-enabled&amp;quot;: false,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;rpc-port&amp;quot;: 9091, # 默认 Web 访问端口，这个可以根据需要修改一下。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;rpc-whitelist-enabled&amp;quot;: false, # 白名单开关&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;utp-enabled&amp;quot;: true # 允许 Web 登录&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;&amp;quot;download-dir&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;/home/pi/complete&amp;quot;&lt;/span&gt;, &lt;span class=&#34;comment&#34;&gt;# 下载目录 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;&amp;quot;incomplete-dir&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;/home/pi/incomplete&amp;quot;&lt;/span&gt;, &lt;span class=&#34;comment&#34;&gt;# 下载未完成文件目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;&amp;quot;rpc-authentication-required&amp;quot;&lt;/span&gt;: &lt;span class=&#34;literal&#34;&gt;false&lt;/span&gt;, &lt;span class=&#34;comment&#34;&gt;# 懒得配置密码直接把验证关掉。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;&amp;quot;rpc-host-whitelist-enabled&amp;quot;&lt;/span&gt;: &lt;span class=&#34;literal&#34;&gt;false&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;&amp;quot;rpc-port&amp;quot;&lt;/span&gt;: 9091, &lt;span class=&#34;comment&#34;&gt;# 默认 Web 访问端口，这个可以根据需要修改一下。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;&amp;quot;rpc-whitelist-enabled&amp;quot;&lt;/span&gt;: &lt;span class=&#34;literal&#34;&gt;false&lt;/span&gt;, &lt;span class=&#34;comment&#34;&gt;# 白名单开关&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;&amp;quot;utp-enabled&amp;quot;&lt;/span&gt;: &lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;# 允许 Web 登录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;修改完成后启动 daemon：&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo systemctl start transmission-daemon&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo systemctl start transmission-daemon&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;浏览器打开 127.0.0.1:9091 查看效果：&lt;br /&gt;
 &lt;img data-src=&#34;/img/transmission/20220920213841.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;安装第三方主题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装第三方主题&#34;&gt;#&lt;/a&gt; 安装第三方主题&lt;/h1&gt;
 &lt;p&gt;下载并执行 TWC 中文界面安装脚本&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bash install-tr-control-cn.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bash install-tr-control-cn.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;按 数字 1 然后回车安装。&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;&amp;lt; 2022-08-29 00:27:53 &amp;gt;&amp;gt; 安装脚本执行完成。如遇到问题请查看：https://github.com/ronggang/transmission-web-control/wiki&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;&amp;lt; 2022-08-29 00:27:53 &amp;gt;&amp;gt; == 结束 ==&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;&amp;lt; &lt;span class=&#34;string&#34;&gt;2022-08-29 00:27:53 &amp;gt;&amp;gt; 安装脚本执行完成。如遇到问题请查看：https://github.com/ronggang/transmission-web-control/wiki&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;&amp;lt;&amp;lt; 2022&lt;/span&gt;-08-29 00:27:53 &amp;gt;&amp;gt; == 结束 ==&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;弹出如上提示则安装成功，返回 web 界面刷新即可。&lt;br /&gt;
 &lt;img data-src=&#34;/img/transmission/20220920213753.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
  ]]></description>
@@ -598,9 +819,9 @@ usermod -g GID 组名&lt;/p&gt;
             <description><![CDATA[ &lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
 &lt;p&gt;初次安装 WSL Ubuntu 时，一般都会设置默认登录用户，当你通过 windows 访问该文件夹时，如果访问的 Ubuntu 目录的权限用户时你的默认用户，你可以对其进行修改。但是如果你访问的时 root 权限的用户，则会出现如权限不足，permission deny 报错。&lt;/p&gt;
 &lt;h1 id=&#34;solution&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#solution&#34;&gt;#&lt;/a&gt; Solution&lt;/h1&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\wangj\AppData\Local\Microsoft\WindowsApps\debian.exe config --default-user root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\wangj\AppData\Local\Microsoft\WindowsApps\debian.exe config --default-user root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;修改完成后，记得重启 wsl：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --shutdown&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --shutdown&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;10s 后，在执行 wsl 命令，然后再次测试，看是否可行。&lt;/p&gt;
  ]]></description>
         </item>
@@ -679,11 +900,13 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;li&gt;广泛地使用 Promise 来进行异步操作，从而确保线程不被杜塞。&lt;/li&gt;
 &lt;li&gt;过时的浏览器将无法正常显示，因此，请升级您的浏览器。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;博客加速&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#博客加速&#34;&gt;#&lt;/a&gt; 博客加速&lt;/h1&gt;
+&lt;h1 id=&#34;3-博客加速&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-博客加速&#34;&gt;#&lt;/a&gt; 3. 博客加速&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;于 2022 年 11 月测试 vercel.app 已经被墙了，但是还可以通过自备域名的方式。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;使用 Vercel 加速 Hexo 博客访问速度&lt;/p&gt;
+&lt;p&gt;使用 Vercel 加速 Hexo 博客访问速度。&lt;br /&gt;
+如果你想让您的博客更快的更新，那么可以采取这种方法的同时，也可以加速你的博客。&lt;br /&gt;
+该方法适用于已经使用我的方法将博客源文件备份到了 github 的。&lt;/p&gt;
 &lt;h2 id=&#34;步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤&#34;&gt;#&lt;/a&gt; 步骤&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS12ZXJjZWwtb2kybHMzdC5jb20=&#34;&gt;打开 vercel.com&lt;/span&gt;, 这个域名没有被墙。登陆的时候选择 github 方式。&lt;br /&gt;
@@ -691,10 +914,45 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;li&gt;创建新项目，选择 git 仓库中已存在的项目，然后选 Deploy。&lt;/li&gt;
 &lt;li&gt;创建完成后就可以通过  &lt;code&gt;你项目名称.vercel.app&lt;/code&gt;  访问了。但是目前 vercel.app 已经被墙了，所以还需要在设置里添加自己的域名。&lt;/li&gt;
 &lt;li&gt;切换到自己的域名控制台里添加一条 cname 记录，指向这个地址  &lt;code&gt;cname-china.vercel-dns.com&lt;/code&gt;  。&lt;/li&gt;
-&lt;li&gt;然后就可以访问了。&lt;/li&gt;
+&lt;li&gt;将 Git Branch 里的内容改为存放自己博客备份的分支，比如我的就是 backup 分支。同时也可以将分配给你的二级域名也改成这个分支。&lt;br /&gt;
+&lt;img data-src=&#34;/img/hexoplugin/20221116144428.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;切换到 Git 项目，将 Production Branch 也更改为 backup 分支。&lt;br /&gt;
+&lt;img data-src=&#34;/img/hexoplugin/20221116144502.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;此时如果你的 backup 分支如果有更新，那么 vercel 会自动克隆你的源文件然后编译更新 cache。&lt;/li&gt;
+&lt;li&gt;使用这种方法独立于 github page。只有当你 hexo d 之后源博客才会更新。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h2&gt;
-&lt;p&gt;更新速度肯定没有 github 默认的快。当你推送之后，github 大概在一分钟之内就有变化，&lt;/p&gt;
+&lt;h2 id=&#34;保护博客源码内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#保护博客源码内容&#34;&gt;#&lt;/a&gt; 保护博客源码内容&lt;/h2&gt;
+&lt;p&gt;如果你认为这种方式要更好一些，当然你也可以选择直接关掉 github page 并将仓库设置为 private，这样别人就无法轻易获取您博客的源代码了。&lt;/p&gt;
+&lt;h1 id=&#34;写作流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写作流程&#34;&gt;#&lt;/a&gt; 写作流程&lt;/h1&gt;
+&lt;h2 id=&#34;第一次使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一次使用&#34;&gt;#&lt;/a&gt; 第一次使用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 nodejs，git，hexo，npm&lt;/li&gt;
+&lt;li&gt;git clone 仓库链接&lt;/li&gt;
+&lt;li&gt;cd 到目录然后 cnpm install&lt;/li&gt;
+&lt;li&gt;撰写博客&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;通过github-page&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通过github-page&#34;&gt;#&lt;/a&gt; 通过 github page&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;撰写博客&lt;/li&gt;
+&lt;li&gt;保存到 github。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 保存所有文件到暂存区&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 提交变更&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;#x27;Backup&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 推送到github，分支为Backup&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push origin backup&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;生成并提交网页。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 生成静态网页&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 生成目录文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo algolia&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 打开本地服务器预览&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo s&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 提交到github page&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;等待网页更新。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;通过vercelcom&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通过vercelcom&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS12ZXJjZWwtMnUzc2R1LmNvbQ==&#34;&gt;通过 vercel.com&lt;/span&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;撰写博客&lt;/li&gt;
+&lt;li&gt;保存到 github。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 保存所有文件到暂存区&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 提交变更&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;#x27;Backup&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 推送到github，分支为Backup&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push origin backup&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;等待网页更新。&lt;/li&gt;
+&lt;/ol&gt;
  ]]></description>
         </item>
         <item>
@@ -706,20 +964,20 @@ usermod -g GID 组名&lt;/p&gt;
             <category term="python" scheme="http://maxshiroi.top/tags/python/" />
             <pubDate>Sun, 28 Aug 2022 21:29:07 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;先安装前置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#先安装前置&#34;&gt;#&lt;/a&gt; 先安装前置&lt;/h2&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install libtiff-devel libjpeg-devel libzip-devel freetype-devel libwebp-devel libxml2-devel libxslt-devel libpq-devel python3-virtualenv libffi-devel openssl-devel python3-devel&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yum groupinstall &amp;quot;Development Tools&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install libtiff-devel libjpeg-devel libzip-devel freetype-devel libwebp-devel libxml2-devel libxslt-devel libpq-devel python3-virtualenv libffi-devel openssl-devel python3-devel&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yum groupinstall &lt;span class=&#34;string&#34;&gt;&amp;quot;Development Tools&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;#&lt;/a&gt; 使用 root 账户接入您的 centos，找到合适的位置开始操作&lt;/h2&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mkdir syn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; syn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;依次执行以下指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#依次执行以下指令&#34;&gt;#&lt;/a&gt; 依次执行以下指令&lt;/h3&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;virtualenv -p python3 ./env &amp;amp;&amp;amp; source ./env/bin/activate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install --upgrade pip &amp;amp;&amp;amp; python3 -m pip install --upgrade setuptools &amp;amp;&amp;amp; python3 -m pip install psycopg2-binary&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install matrix-synapse                         //安装synapse&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install -U matrix-synapse                    //更新synapse&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;virtualenv -p python3 ./env &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ./env/bin/activate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install --upgrade pip &amp;amp;&amp;amp; python3 -m pip install --upgrade setuptools &amp;amp;&amp;amp; python3 -m pip install psycopg2-binary&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install matrix-synapse                         //安装synapse&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install -U matrix-synapse                    //更新synapse&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;#&lt;/a&gt; 将下列指令拷贝到控制台执行，自动生成 homeserver.yaml&lt;/h2&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;python3 -m synapse.app.homeserver \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --server-name im.axro.top \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --config-path homeserver.yaml \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --generate-config \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --report-stats=no&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;python3 -m synapse.app.homeserver \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --server-name im.axro.top \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --config-path homeserver.yaml \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --generate-config \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --report-stats=no&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;编辑生成homeserveryaml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编辑生成homeserveryaml&#34;&gt;#&lt;/a&gt; 编辑生成 &lt;code&gt;homeserver.yaml&lt;/code&gt;&lt;/h2&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;enable_registration: true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;suppress_key_server_warning: true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bind_addresses: [&amp;#x27;::1&amp;#x27;, &amp;#x27;0.0.0.0&amp;#x27;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;enable_registration: &lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;suppress_key_server_warning: &lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bind_addresses: [&lt;span class=&#34;string&#34;&gt;&amp;#x27;::1&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;0.0.0.0&amp;#x27;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;启动关闭服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动关闭服务器&#34;&gt;#&lt;/a&gt; 启动 / 关闭服务器&lt;/h2&gt;
 &lt;h4 id=&#34;注意要先进入虚拟python环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意要先进入虚拟python环境&#34;&gt;#&lt;/a&gt; 注意要先进入虚拟 python 环境&lt;/h4&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;source ./env/bin/activate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;synctl start&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;synctl stop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ./env/bin/activate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;synctl start&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;synctl stop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;退出虚拟环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#退出虚拟环境&#34;&gt;#&lt;/a&gt; 退出虚拟环境&lt;/h2&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;deactivate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;deactivate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;配置反代&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置反代&#34;&gt;#&lt;/a&gt; 配置反代&lt;/h2&gt;
 &lt;p&gt;进入宝塔面板新建静态网站，配置 ssl，配置反向代理地址为 &lt;code&gt;https://localhost:8008&lt;/code&gt; , 保存即可.&lt;/p&gt;
  ]]></description>
@@ -741,26 +999,26 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;li&gt;连接 linux 系统，提示插入硬盘. &lt;code&gt;/dev&lt;/code&gt;  分区下出现硬盘编号&lt;/li&gt;
 &lt;li&gt;执行如下指令&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mkdir backup&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mount /dev/sdc/ /backup/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; /&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; backup&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mount /dev/sdc/ /backup/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;报错&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mount: unknown filesystem type &amp;#x27;LVM2_member&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mount: unknown filesystem &lt;span class=&#34;built_in&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;LVM2_member&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&#34;解决方法-debian系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法-debian系&#34;&gt;#&lt;/a&gt; 解决方法 //Debian 系&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;执行如下指令安装 lvm2 并扫描查看以挂载的磁盘&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get install lvm2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo vgscan&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get install lvm2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo vgscan&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;发现如下字样后找到对应的 &lt;code&gt;xxx&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Found volume group &amp;quot;xxx&amp;quot; using metadata type lvm2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Found volume group &lt;span class=&#34;string&#34;&gt;&amp;quot;xxx&amp;quot;&lt;/span&gt; using metadata &lt;span class=&#34;built_in&#34;&gt;type&lt;/span&gt; lvm2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;设为活动状态并查看可挂载的分区&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo vgchange -ay xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo lvs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;LV     VG   Attr   LSize  Origin Snap%  Move Log Copy%  Convert&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;data        xxx             -wi-a-              34.19G      &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo vgchange -ay xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo lvs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;LV     VG   Attr   LSize  Origin Snap%  Move Log Copy%  Convert&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;data        xxx             -wi-a-              34.19G      &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;挂载对应分区&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo mount /dev/xxx/data/ /backup/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo mount /dev/xxx/data/ /backup/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;至此已经解决了问题，如果你还想把这块硬盘里的数据共享出去，比如共享给局域网内的 windows 主机，那就接着看..&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -768,41 +1026,41 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;先更新一下&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;安装 Samba 服务&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get install samba samba-common&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get install samba samba-common&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;配置共享目录&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 新建目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo mkdir /home/db&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改目录权限&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo chmod 777 /home/db/ -R&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 新建目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo &lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; /home/db&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改目录权限&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo &lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; 777 /home/db/ -R&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;添加账户&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;要注意添加的账户需要是系统内已存在的账户&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 后面的pi为系统的用户名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo smbpasswd -a pi&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 后面的pi为系统的用户名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo smbpasswd -a pi&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;输入两次密码后创建成功&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;创建系统账户&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// -m参数为添加/home/username目录,username更改为你要创建的用户名.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo useradd -m username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改账户密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 删除用户&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo userdel -r username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改登录zhanghu&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;su -username&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// -m参数为添加/home/username目录,username更改为你要创建的用户名.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo useradd -m username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改账户密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 删除用户&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo userdel -r username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改登录zhanghu&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;su -username&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;配置 samba&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 建议先备份一下&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.bak&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 编辑&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo vim /etc/samba/smb.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 建议先备份一下&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo &lt;span class=&#34;built_in&#34;&gt;cp&lt;/span&gt; /etc/samba/smb.conf /etc/samba/smb.conf.bak&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 编辑&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo vim /etc/samba/smb.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在文件最后添加&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[database] &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    comment = 23333333  # 描述&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	path = /home/db/    # 目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	public = yes        # 是否允许guest用户访问&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	writable = yes      # 是否允许读写&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	workgroup = WORKGROUP  # 工作组&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[database] &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    comment = 23333333  &lt;span class=&#34;comment&#34;&gt;# 描述&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	path = /home/db/    &lt;span class=&#34;comment&#34;&gt;# 目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	public = &lt;span class=&#34;built_in&#34;&gt;yes&lt;/span&gt;        &lt;span class=&#34;comment&#34;&gt;# 是否允许guest用户访问&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	writable = &lt;span class=&#34;built_in&#34;&gt;yes&lt;/span&gt;      &lt;span class=&#34;comment&#34;&gt;# 是否允许读写&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	workgroup = WORKGROUP  &lt;span class=&#34;comment&#34;&gt;# 工作组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;6&#34;&gt;
 &lt;li&gt;重启 samba 服务&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo service smbd restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo service smbd restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;然后在 windows 里面映射就行了&lt;/p&gt;
 &lt;h1 id=&#34;借鉴摘抄&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#借鉴摘抄&#34;&gt;#&lt;/a&gt; 借鉴 (摘抄)&lt;/h1&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L212cF9EYXduL2FydGljbGUvZGV0YWlscy8xMDU4NDc0ODU=&#34;&gt;ubuntu 20.04 安装配置 Samba 服务，Windows 和 linux 协同工作&lt;/span&gt;&lt;/p&gt;
@@ -1012,285 +1270,6 @@ yuzu EA 版本还支持多人联机的功能，但是需要你使用梯子才可
 &lt;li&gt;下载 mod 模组&lt;/li&gt;
 &lt;li&gt;一键分享电脑中的着色器缓存 (shader cache)&lt;/li&gt;
 &lt;/ul&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/210724/</guid>
-            <title>【虚拟Vocal】 Synthesize V 初代整合</title>
-            <link>http://maxshiroi.top/ug/210724/</link>
-            <category term="Vocal" scheme="http://maxshiroi.top/tags/Vocal/" />
-            <category term="AI" scheme="http://maxshiroi.top/tags/AI/" />
-            <category term="歌声合成" scheme="http://maxshiroi.top/tags/%E6%AD%8C%E5%A3%B0%E5%90%88%E6%88%90/" />
-            <pubDate>Sun, 28 Aug 2022 21:07:24 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;软件介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件介绍&#34;&gt;#&lt;/a&gt; 软件介绍&lt;/h1&gt;
-&lt;p&gt;Synthesizer V 是 Dreamtonics 开发的系列歌声合成软件，它结合了强大的歌声合成引擎和直观灵活的用户界面，只需绘制旋律并注入歌词，即可轻松创作原创歌曲。&lt;/p&gt;
-&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
-&lt;p&gt;当你想要摆脱 Vocaloid 软件的支配，想要试试其他同类型的软件。您肯定会搜到这个软件。但是很不幸，当您点开官网查看售价，显然单个声库加 pro 版软件 899 的价格让您打了退堂鼓。&lt;br /&gt;
-  您只好把思路转向搜索 crack 版本软件。又很不幸，这个软件 crack 版的本体和声库都很难寻找。&lt;br /&gt;
-  在这里恭喜您找到了这篇文章。可万幸中的不幸就是，我也没有这个软件的 V2 破解版。但是我找到了 V1 的破解版，在此提供给大家。&lt;/p&gt;
-&lt;h1 id=&#34;关于软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关于软件&#34;&gt;#&lt;/a&gt; 关于软件&lt;/h1&gt;
-&lt;p&gt;软件的获取来源是 GitHUB 用户 &lt;code&gt;CJLU&lt;/code&gt;  的 &lt;code&gt;Synthesizer-V-FE&lt;/code&gt; , 版本为 1.8.0，所有功能正常使用。链接地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0NKTFUtc291cmNlL1N5bnRoZXNpemVyLVYtRkU=&#34;&gt;给特何不&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;关于声库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关于声库&#34;&gt;#&lt;/a&gt; 关于声库&lt;/h1&gt;
-&lt;p&gt;目前手头上只有这几个声库：&lt;/p&gt;
-&lt;h2 id=&#34;eng-英语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#eng-英语&#34;&gt;#&lt;/a&gt; Eng (英语)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;爱莲娜芙缇 (女)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;zh-中文&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zh-中文&#34;&gt;#&lt;/a&gt; Zh (中文)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;苍穹 (女)&lt;/li&gt;
-&lt;li&gt;赤羽 (女)&lt;/li&gt;
-&lt;li&gt;海伊 (女)&lt;/li&gt;
-&lt;li&gt;诗岸 (女)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;jp-日文&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jp-日文&#34;&gt;#&lt;/a&gt; JP (日文)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;闇音レンリ (女)&lt;/li&gt;
-&lt;li&gt;玄武 (男)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;下载地址-包含全部内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载地址-包含全部内容&#34;&gt;#&lt;/a&gt; 下载地址 （包含全部内容）&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;特殊原因暂不提供 😦&lt;br /&gt;
-(其实是文件丢了&lt;/p&gt;
-&lt;/blockquote&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/205944/</guid>
-            <title>Win11 安装 WSA 简易教程</title>
-            <link>http://maxshiroi.top/ug/205944/</link>
-            <category term="Android" scheme="http://maxshiroi.top/tags/Android/" />
-            <category term="Hyper-V" scheme="http://maxshiroi.top/tags/Hyper-V/" />
-            <category term="WSA" scheme="http://maxshiroi.top/tags/WSA/" />
-            <pubDate>Sun, 28 Aug 2022 20:59:44 +0800</pubDate>
-            <description><![CDATA[ &lt;blockquote&gt;
-&lt;p&gt;微软终于在昨天上线了 WSA 的测试版本，此次只有美国地区上线了。因此如果你的 Win11 系统为美区的话，可以直接点击 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9zdG9yZS9wcm9kdWN0SWQvOVAzMzk1Vlg5MU5S&#34;&gt;这个链接&lt;/span&gt; 进行安装。如果非美区那就接着看步骤吧&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;bug 还是有很多，首先是 WSA 无法调用 GPU, 这就导致很多 3d 游戏会很卡，实测明日方舟帧数不到 20 帧。然后安装 WSA 要启用 Hyper-V 即微软的虚拟机平台，打开这个会导致无法再安装和使用其他安卓模拟器。和市面上大多数安卓模拟器相比，微软这个 WSA 是 ARM 翻译运行的，安卓版本更高 (Android 11), 可以运行 ARM 程序。与系统集成度更好 (虽然目前还没有实现 WSL 那样的文件访问) 而模拟器大多都为 Android x86 项目改的，因此最高只能到 Android 9.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果你是想尝尝鲜，试试这个新功能那我还是推荐试一试。如果你主要想拿来打游戏，日常使用的话那还是更推荐安卓模拟器一些.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;开启虚拟化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开启虚拟化&#34;&gt;#&lt;/a&gt; 开启虚拟化&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;PS: 如果之前你有禁用过 Hyper-V 的话记得使用管理员权限打开 Powershell 然后通过这个指令这个指令重新打开，不记得有没有那就跳过:&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;bcdedit /set hypervisorlaunchtype auto&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol&gt;
-&lt;li&gt;打开开始菜单，直接搜索控制面板，然后打开.&lt;/li&gt;
-&lt;li&gt;找到  &lt;code&gt;程序和功能&lt;/code&gt;  - &lt;code&gt;启用或关闭 Windows 功能&lt;/code&gt;  并点击打开，会弹出一个窗口.&lt;/li&gt;
-&lt;li&gt;在弹出窗口里面勾选  &lt;code&gt;Hyper-V&lt;/code&gt; 、 &lt;code&gt;Windows 虚拟机监控程序平台&lt;/code&gt; 、 &lt;code&gt;适用于 Linux 的 Windows 子系统&lt;/code&gt; 、 &lt;code&gt;虚拟机平台&lt;/code&gt;  这几项，然后点击确定。系统会自动查找更新并安装.&lt;/li&gt;
-&lt;li&gt;等待重启过后就可以进行下一步了.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;安装本体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装本体&#34;&gt;#&lt;/a&gt; 安装本体&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;首先复制上面那个链接.&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zdG9yZS5yZy1hZGd1YXJkLm5ldC8=&#34;&gt;安装包抓包&lt;/span&gt;，点开这个网址，将第一步复制的链接粘贴到搜索框，右边选择  &lt;code&gt;slow&lt;/code&gt;  然后点对勾.&lt;/li&gt;
-&lt;li&gt;找到最下面名为  &lt;code&gt;MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle&lt;/code&gt;  的一项，注意大小为  &lt;code&gt;1.21GB&lt;/code&gt;  , 直接点击进行一个下载.&lt;/li&gt;
-&lt;li&gt;找到你下载的文件，然后右键  &lt;code&gt;开始按钮&lt;/code&gt;  选择  &lt;code&gt;Windows 终端 (管理员)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;然后会打开 Powershell 窗口，在里面输入指令&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;add-appxpackage &amp;quot;你下载文件的完整路径&amp;quot; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# example&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;add-appxpackage &amp;quot;D:\download\MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;等他跑完以后就会在开始菜单里出现  &lt;code&gt;Windows Subsystem for Android™&lt;/code&gt;  点击打开是下面这个界面就说明安装成功了.&lt;br /&gt;
-&lt;img data-src=&#34;/img/wsa/20220920220234.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;安装apk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装apk&#34;&gt;#&lt;/a&gt; 安装 apk&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;点击文件后面的按钮会自动启动 WSA, 等打开后下面的 ip 地址会刷新。此时我们将开发人员模式打开.&lt;/li&gt;
-&lt;li&gt;安装 ADB, 下载 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9uYXMuYXhyby50b3AvaW5kZXgucGhwL3MvZnJZeENIZzdGZmFiTkVZ&#34;&gt;这个文件&lt;/span&gt; 然后解压到任意目录，然后打开解压出来的文件夹，名称为  &lt;code&gt;platform-tools&lt;/code&gt; .&lt;/li&gt;
-&lt;li&gt;按住 &lt;code&gt;Shift&lt;/code&gt;  键右击文件夹的空白处，选择 &lt;code&gt;显示更多选项&lt;/code&gt;  - &lt;code&gt;在此处打开 Powershell 窗口(s)&lt;/code&gt; , 然后在打开的窗口内依次输入以下指令:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;adb connect 127.0.0.1:58526 #这个 127.0.0.1:58526 为你的开发人员选项那一栏里显示的地址.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 第一次可能会失败, 再输入一次就可以了.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;adb install -r xxx.apk&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 这个指令为安装 apk, 将 xxx 替换为你要安装的 apk 文件名称.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;显示安装完成就会出现在你的开始菜单里，然后直接点击进行一个打开.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;qa&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#qa&#34;&gt;#&lt;/a&gt; Q&amp;amp;A&lt;/h1&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/124600/</guid>
-            <title>【VMware】解决新版本的VMware虚拟机无法正常在旧版本的Windows上安装VMware Tools</title>
-            <link>http://maxshiroi.top/ug/124600/</link>
-            <category term="vmware" scheme="http://maxshiroi.top/tags/vmware/" />
-            <category term="bug" scheme="http://maxshiroi.top/tags/bug/" />
-            <pubDate>Thu, 25 Aug 2022 12:46:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
-&lt;p&gt;因为学习需要，要求安装 &lt;code&gt;Windows server 2008 R2&lt;/code&gt; 。安装时一切正常，但是到了安装 &lt;code&gt;VMware Tools&lt;/code&gt;  时，弹出了下列提示：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/img/vmwarebug/20220920220101.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;其后&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其后&#34;&gt;#&lt;/a&gt; 其后&lt;/h1&gt;
-&lt;p&gt;我尝试百度搜索了解决办法，导致这种情况的大概解释为：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;原来，微软更新了驱动程序的签名算法，从 2019 年初开始，逐步弃用 SHA-1，改为 SHA-2。个人推测新版的 VMCI 驱动用的是 SHA-2 签名，而 &lt;code&gt;win7&lt;/code&gt;  不支持 SHA-2 签名，所以出现了这个问题。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;那么怎么办呢？&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;可以从 &lt;code&gt;Microsoft Update Catalog&lt;/code&gt;  下载 &lt;code&gt;KB4474419&lt;/code&gt;  和  &lt;code&gt;KB4490628&lt;/code&gt;  这两个补丁，然后安装到 &lt;code&gt;win7&lt;/code&gt;  虚拟机中。在没有成功安装 &lt;code&gt;VMware Tools&lt;/code&gt;  的情况下，传文件不太方便，可以用虚拟机里浏览器访问下载页面，然后直接在虚拟机里下载安装。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;可是在 &lt;code&gt;winserver&lt;/code&gt;  虚拟机里很难进行操作更别说老旧的 IE 操作更不方便，而且 &lt;code&gt;windows server&lt;/code&gt;  的网络管理大家也都知道，会拦截所有地址。所以直到最后我也没法访问到微软的补丁界面。&lt;/p&gt;
-&lt;h1 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h1&gt;
-&lt;p&gt;我直接搜索了 &lt;code&gt;VMware Tools&lt;/code&gt; ，到其官网上找到了旧版本的 &lt;code&gt;Tools&lt;/code&gt;  镜像文件，随后直接对其进行一个挂载，这时直接弹出了自动运行窗口，进行一顿下一步下一步之后，成功将其安装到了虚拟机内。&lt;/p&gt;
-&lt;h1 id=&#34;旧版本下载地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#旧版本下载地址&#34;&gt;#&lt;/a&gt; 旧版本下载地址&lt;/h1&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYWNrYWdlcy52bXdhcmUuY29tL3Rvb2xzL3JlbGVhc2VzLzEwLjMuNS93aW5kb3dzLw==&#34;&gt;点我去官网下载&lt;/span&gt;&lt;br /&gt;
-打开以后下载大小为 &lt;code&gt;114M&lt;/code&gt;  的映像文件，然后手动挂载到虚拟机上，便会自动运行。&lt;/p&gt;
-&lt;p&gt;转载需注明出处！&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/205645/</guid>
-            <title>使用树莓派4B+Docker Openwrt实现旁路由</title>
-            <link>http://maxshiroi.top/ug/205645/</link>
-            <category term="树莓派" scheme="http://maxshiroi.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" />
-            <category term="docker" scheme="http://maxshiroi.top/tags/docker/" />
-            <category term="openwrt" scheme="http://maxshiroi.top/tags/openwrt/" />
-            <category term="router" scheme="http://maxshiroi.top/tags/router/" />
-            <pubDate>Tue, 26 Apr 2022 20:56:45 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;普通路由器往往受限于硬体性能而缺乏很多功能。但是其拥有多网口和无线功能的支持相对较强。为了能实现更多实用功能并且利用上已经吃灰了很久的树莓派，打算用树莓派来当作旁路由.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;硬体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#硬体&#34;&gt;#&lt;/a&gt; 硬体&lt;/h1&gt;
-&lt;h2 id=&#34;路由&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由&#34;&gt;#&lt;/a&gt; 路由&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;我使用的是小米路由 3G (下面称为 &lt;code&gt;R3G&lt;/code&gt; ). 当时购买的是小米路由 4 版本，但是其缺乏很多功能。就比如说非常实用的 usb 接口。有了 usb 接口以后就可以愉快刷机了。所以我收到货就直接退货换了 R3G...&lt;/li&gt;
-&lt;li&gt;R3G 优点是有一个 usb3.0 的接口，所以可以直接拿它来挂载移动硬盘也是没问题的。还有 256M 的闪存。缺点是只有两个 RJ45LAN 口，一个 RJ45WAN 口足够家用。所以后来我又白嫖了我哥在外地买的一台 TPlink 五口交换机解决了网口不够的问题...&lt;/li&gt;
-&lt;li&gt;如果你和我一样拥有 R3G. 我建议刷写不死鸟 breed 搭配&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vcHQuY24ycXEuY29tL3BhZGF2YW4v&#34;&gt; hiboyhiboyhiboy&lt;/span&gt; 的固件，来实现更多功能...&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;树莓派&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#树莓派&#34;&gt;#&lt;/a&gt; 树莓派&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;树莓派 4B 我购买的是 4G 内存版本。采用 5V3A,Type-C 供电接口，你甚至可以用一个充电宝和一根 Type-C 线来给树莓派供电。两个 MicroHDMI 接口支持 4K 视频输出。一个极为先进的 3.5mm 音频接口。四个 Type-A USB 接口，其中分为两个 usb2.0 协议，两个 USB3.0 协议。一个千兆 RJ45 网口。另外机器还自带 wifi 模块，就是别指望这个 wifi 信号有多好了...&lt;/li&gt;
-&lt;li&gt;我在购买时还一并购买了一张 32G 闪迪的 SD 卡，以及适用于 4B 的九层亚克力外壳。有一说一，这个外壳属实好看...&lt;/li&gt;
-&lt;li&gt;不过如果拿它刷 openwrt 只来当作路由器实在大材小用。所以我采用 OPENFANS 和&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5waWZhbi5vcmcuY24v&#34;&gt;树莓派爱好者基地&lt;/span&gt;联合编译的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29wZW5mYW5zLWNvbW11bml0eS1vZmZpY2FsL0RlYmlhbi1QaS1BYXJjaDY0&#34;&gt; Debian-Pi-Aarch64&lt;/span&gt; 来使用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;软体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软体&#34;&gt;#&lt;/a&gt; 软体&lt;/h1&gt;
-&lt;h2 id=&#34;准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备&#34;&gt;#&lt;/a&gt; 准备&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;从上方给出的链接下载&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29wZW5mYW5zLWNvbW11bml0eS1vZmZpY2FsL0RlYmlhbi1QaS1BYXJjaDY0&#34;&gt; Debian-Pi-Aarch64&lt;/span&gt;, 我这里使用的是没有图形界面的增强版，即 &lt;code&gt;2021-06-11-OPENFANS-Debian-Buster-Aarch64-ext4-v2021-2.0-U6-Release.img.xz&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;百度搜索 Rufus, 下载到本地&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;安装-debian-pi-aarch64&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-debian-pi-aarch64&#34;&gt;#&lt;/a&gt; 安装 Debian-Pi-Aarch64&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;将 SD 卡接入读卡器连接电脑。注意提前备份 SD 卡的数据，接下来的操作会清除 SD 卡内的全部数据.&lt;/li&gt;
-&lt;li&gt;打开 Rufus 软体，在 &lt;code&gt;设备&lt;/code&gt; 一栏内选择你的 SD 卡，在 &lt;code&gt;引导类型选择&lt;/code&gt; 栏里面单击后面的 &lt;code&gt;选择&lt;/code&gt; 按钮，选择你下载的 xz 文件&lt;/li&gt;
-&lt;li&gt;单击下面的 &lt;code&gt;开始&lt;/code&gt; 按钮即可开始刷写。大概三四分钟后即可刷写成功。请耐心等待...&lt;/li&gt;
-&lt;li&gt;刷写完成后在任务栏上将 SD 卡弹出，即可拔下读卡器。将 SD 卡插入树莓派里面即可.&lt;/li&gt;
-&lt;li&gt;将树莓派的 LAN 口与路由器的 LAN 口连接，为树莓派接入电源。此时树莓派会自行重启三次左右，以完成基本配置。此时可以喝杯咖啡等待三分钟左右.&lt;/li&gt;
-&lt;li&gt;电脑登入路由器控制页面，查找树莓派的 ip, 我这里查到的是 &lt;code&gt;192.168.0.90&lt;/code&gt; , 接下来的教程将以这个地址为准...&lt;/li&gt;
-&lt;li&gt;如果您使用的是 Win10 系统，那么可以直接按下 &lt;code&gt;Windows徽标键&lt;/code&gt;  + &lt;code&gt;R&lt;/code&gt; , 输入 &lt;code&gt;CMD&lt;/code&gt;  指令单击回车来打开 &lt;code&gt;CMD&lt;/code&gt; , 使用 &lt;code&gt;SSH&lt;/code&gt;  的方式连入树莓派。当然你也可以使用其他第三方软件来实现.&lt;/li&gt;
-&lt;li&gt;使用 &lt;code&gt;ssh -p 22 pi@192.168.0.90&lt;/code&gt;  指令来接入树莓派，如果没有出错的话接下来会弹出提示，输入 &lt;code&gt;yes&lt;/code&gt;  并按下回车即可。当你看见 password 时，直接输入默认密码 &lt;code&gt;raspberry&lt;/code&gt; , 按下回车即可连入树莓派.&lt;/li&gt;
-&lt;li&gt;更新一下就可以正常使用了&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;配置-debian-pi-aarch64&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置-debian-pi-aarch64&#34;&gt;#&lt;/a&gt; 配置 Debian-Pi-Aarch64&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;如果自己会配置那么这步可以跳过了&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;可以参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vb3BlbmZhbnMtY29tbXVuaXR5L0RlYmlhbi1QaS1BYXJjaDY0IzMlRTQlQkQlQkYlRTclOTQlQTglRTglQUYlQjQlRTYlOTglOEU=&#34;&gt;这里&lt;/span&gt;来配置&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;切换账户&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#切换账户&#34;&gt;#&lt;/a&gt; 切换账户&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;su&lt;/code&gt;  或者 &lt;code&gt;sudo -i&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;更改账户的密码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更改账户的密码&#34;&gt;#&lt;/a&gt; 更改账户的密码&lt;/h3&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 使用下面指令来更改pi用户的密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 重复输入两次即可&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd pi&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 使用这个指令来更改root账户的密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;挂载smb硬盘&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#挂载smb硬盘&#34;&gt;#&lt;/a&gt; 挂载 smb 硬盘&lt;/h3&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mkdir db&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mount -o username=xxx,password=xxx,dir_mode=0777,file_mode=0777 //192.168.0.15/database /db&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;安装-openwrt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-openwrt&#34;&gt;#&lt;/a&gt; 安装 Openwrt&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在安装之前首先开启 docker 服务并设置开机自动启动&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;启用和运行 Docker 服务&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 开机自动启动Docker服务&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl enable docker.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 启动Docker服务&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl start docker.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;######&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 停止Docker服务&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl stop docker.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 禁止Docker服务开机启动&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl disable docker.service&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol&gt;
-&lt;li&gt;打开网卡混杂模式&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo ip link set eth0 promisc on&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;创建网络&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 macnet &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用 &lt;code&gt;sudo ifconfig&lt;/code&gt;  命令查看树莓派 &lt;code&gt;eth0&lt;/code&gt;  网卡的参数来更改&lt;br /&gt;
- &lt;code&gt;--subnet&lt;/code&gt;  参数改为树莓派所处网段&lt;br /&gt;
- &lt;code&gt;--gateway&lt;/code&gt;  参数改为树莓派所处网段的网关&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;使用 &lt;code&gt;docker network ls&lt;/code&gt;  查看创建好的网络&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;拉取 Openwrt 镜像&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker pull registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;执行 &lt;code&gt;docker images&lt;/code&gt;  命令查看现存镜像&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;创建并启动容器&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run --restart always --name openwrt -d --network macnet --privileged registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest /sbin/init &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;--restart always&lt;/code&gt;  参数表示容器退出时始终重启，使服务尽量保持始终可用；&lt;br /&gt;
- &lt;code&gt;--name openwrt&lt;/code&gt;  参数定义了容器的名称；&lt;br /&gt;
- &lt;code&gt;-d&lt;/code&gt;  参数定义使容器运行在 &lt;code&gt;Daemon&lt;/code&gt;  模式；&lt;br /&gt;
- &lt;code&gt;--network macnet&lt;/code&gt;  参数定义将容器加入 &lt;code&gt;maxnet&lt;/code&gt;  网络；&lt;br /&gt;
- &lt;code&gt;--privileged&lt;/code&gt;  参数定义容器运行在特权模式下；&lt;br /&gt;
- &lt;code&gt;registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest&lt;/code&gt;  为 Docker 镜像名，因容器托管在阿里云 Docker 镜像仓库内，所以在镜像名中含有阿里云仓库信息；&lt;br /&gt;
- &lt;code&gt;/sbin/init&lt;/code&gt;  定义容器启动后执行的命令。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;可以使用 &lt;code&gt;docker ps -a&lt;/code&gt;  命令查看当前运行的容器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;若容器运行信息 &lt;code&gt;STATUS&lt;/code&gt;  列为 &lt;code&gt;UP&lt;/code&gt;  状态，则说明容器运行正常。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;进入容器并修改相关参数&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker exec -it openwrt bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;编辑 &lt;code&gt;OpenWrt&lt;/code&gt;  的网络配置文件：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;nano /etc/config/network&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;更改 LAN 口设置&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;config interface &amp;#x27;lan&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option type &amp;#x27;bridge&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option ifname &amp;#x27;eth0&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option proto &amp;#x27;static&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option ipaddr &amp;#x27;192.168.0.2&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option netmask &amp;#x27;255.255.255.0&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option ip6assign &amp;#x27;60&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option gateway &amp;#x27;192.168.0.1&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option broadcast &amp;#x27;192.168.0.255&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option dns &amp;#x27;192.168.0.1&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;option ipaddr&lt;/code&gt;  为 OpenWrt 的 IP 地址，可以根据自己喜好修改，我这里定义为了 &lt;code&gt;192.168.0.2&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;重启网络&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/etc/init.d/network restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;进入控制面板&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;打开电脑的浏览器，使用自己定义的地址进入。我这里是 &lt;code&gt;192.168.0.2&lt;/code&gt; &lt;br /&gt;
- 用户名: &lt;code&gt;root&lt;/code&gt; &lt;br /&gt;
- 密码: &lt;code&gt;password&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;关闭 DHCP 服务&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在 &amp;quot;网络 - 接口 - Lan - 修改&amp;quot; 界面中，勾选下方的 &amp;quot;忽略此接口 (不在此接口提供 DHCP 服务)&amp;quot;, 并 &amp;quot;保存 &amp;amp; 应用&amp;quot;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;修复宿主机网络&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修复宿主机网络&#34;&gt;#&lt;/a&gt; 修复宿主机网络&lt;/h2&gt;
-&lt;p&gt;OpenWrt 容器运行后，宿主机内可能无法正常连接外部网络，需要修改宿主机的 &lt;code&gt;/etc/network/interfaces&lt;/code&gt;  文件以修复：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;备份并编辑文件&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cp /etc/network/interfaces /etc/network/interfaces.bak # 备份文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nano /etc/network/interfaces # 编辑文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;向文件末尾添加&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;auto eth0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;iface eth0 inet manual&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;auto macvlan&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;iface macvlan inet static&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  address 192.168.0.90&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  netmask 255.255.255.0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  gateway 192.168.0.1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  dns-nameservers 192.168.0.1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  pre-up ip link add macvlan link eth0 type macvlan mode bridge&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  post-down ip link del macvlan link eth0 type macvlan mode bridge&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;修改后重启树莓派，之后树莓派的局域网 IP 地址将会固定为 &lt;code&gt;/etc/network/interfaces&lt;/code&gt;  文件中 &lt;code&gt;address&lt;/code&gt;  参数中的地址.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;鸣谢摘抄&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#鸣谢摘抄&#34;&gt;#&lt;/a&gt; 鸣谢 (摘抄)&lt;/h1&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tbGFwcC5jbi8zNzYuaHRtbA==&#34;&gt;在 Docker 中运行 OpenWrt 旁路网关&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
