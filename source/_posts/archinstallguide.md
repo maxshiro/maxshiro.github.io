@@ -91,12 +91,14 @@ umount /mnt
 reboot 
 ```
 # 安装后
-```
+```bash bash
 // 配置网络，再次联网
 // 输入nmtui 选择 “Activate a connection” 回车进入，选择你需要的网络，连接后back返回即可
 // 安装 openssh
 pacman -S openssh
+systemctl enable sshd
 systemctl start sshd
+systemctl status sshd
 // 查看ip
 ip -brief address / addr
 // 修改ssh配置允许root连接
@@ -108,4 +110,74 @@ PermitRootLogin yes
 systemctl restart sshd
 // 使用ssh连接
 ssh -o StrictHostKeyChecking=no root@192.168.204.130
+// 更新
+pacman -Syu
+useradd axro
+vi /etc/passwd
+---
+
+```
+# 美化终端
+```zsh zsh
+// 安装zsh，高亮，补全
+sudo pacman -S zsh
+sudo pacman -S zsh-autosuggestions
+sudo pacman -S zsh-syntax-highlighting
+// 安装git
+sudo pacman -S git
+// 使用以下命令配置zsh
+autoload -Uz zsh-newuser-install
+zsh-newuser-install -f
+// 查看是否生成.zshrc
+ls -a
+// 安装oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+// 在.zshrc中加入以下插件
+vim .zshrc
+---
+ZSH_THEME="dieter"
+alias vi=vim
+alias ll='ls -l'
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+:wq
+// 刷新终端
+source .zshrc
+// 安装neofetch
+sudo pacman -S neofetch
+---
+11:18:08 axro@axro-arch ~ neofetch
+                   -`                    axro@axro-arch
+                  .o+`                   --------------
+                 `ooo/                   OS: Arch Linux x86_64
+                `+oooo:                  Host: VMware20,1 None
+               `+oooooo:                 Kernel: 6.2.2-arch1-1
+               -+oooooo+:                Uptime: 20 mins
+             `/:-:++oooo+:               Packages: 182 (pacman)
+            `/++++/+++++++:              Shell: zsh 5.9
+           `/++++++++++++++:             Resolution: 1280x800
+          `/+++ooooooooooooo/`           Terminal: /dev/pts/0
+         ./ooosssso++osssssso+`          CPU: 11th Gen Intel i7-11800H (1) @ 2.304GHz
+        .oossssso-````/ossssss+`         GPU: 00:0f.0 VMware SVGA II Adapter
+       -osssssso.      :ssssssso.        Memory: 209MiB / 3883MiB
+      :osssssss/        osssso+++.
+     /ossssssss/        +ssssooo/-
+   `/ossssso+/:-        -:/+osssso+-
+  `+sso+:-`                 `.-/+oso:
+ `++:.                           `-/+/
+ .`                                 `/
+
+11:21:14 axro@axro-arch ~
+```
+# 安装桌面环境
+```
+// 安装xorg-server，xorg-xinit
+sudo pacman -S xorg-server xorg-xinit
+// 安装显卡驱动
+sudo pacman -S xf86-video-vesa
+// 安装plasma
+sudo pacman -S pacman-meta konsole dolphin
+sudo pacman -S kde-applications-meta sddm
+// 启动kde plasma
+sudo systemctl start sddm.service
 ```
