@@ -7,7 +7,6 @@ tags:
 - hexo
 - guide
 ---
-# 本地程序部署
 # 环境
 Hexo程序使用node.js程序编写，因此需要现在环境机上部署node.js，git只用来推送。
 > **什么是 Node.js**：一个运行javascript(JS)的环境。Hexo 是一个javascript(JS)语言的程序。一般 JS 运行在浏览器中，但是也有一种非浏览器环境也可以运行 JS。这个环境是Node.js
