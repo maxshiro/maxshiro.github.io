@@ -217,3 +217,55 @@ sudo reboot
 ### 详细请参考 
 [wiki.archlinuxcn.org](https://wiki.archlinuxcn.org/wiki/VMware/%E5%AE%89%E8%A3%85_Arch_Linux_%E4%B8%BA%E8%99%9A%E6%8B%9F%E6%9C%BA)
 这里不多赘述。
+## 安装中文输入法
+```zsh zsh
+// 安装fcitx5
+sudo pacman -S fcitx5-im fcitx5-chinese-addons  fcitx5-rime fcitx5-configtool
+// 编辑配置文件
+vi /etc/environment
+---
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+
+// 重启，gnome和kde会自动配置
+reboot
+```
+
+## 安装yay工具并安装linuxqq
+```zsh zsh
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+```
+
+## 编写rc.local
+```
+vi /usr/lib/systemd/system/rc-local.service
+---
+#/usr/lib/systemd/system/rc-local.service
+[Unit]
+Description="写下描述" 
+
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start #在这里你可以看到开机执行脚本的位置
+TimeoutSec=0
+StandardInput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target
+
+vi /etc/rc.local
+---
+#/bin/bash
+sudo pacman -Syu
+exit 0
+
+chmod 777 /etc/rc.local
+systemctl enable rc.local.service
+```
