@@ -10,8 +10,71 @@
         </author>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 14 Jan 2023 17:41:37 +0800</pubDate>
-        <lastBuildDate>Sat, 14 Jan 2023 17:41:37 +0800</lastBuildDate>
+        <pubDate>Tue, 07 Mar 2023 10:03:53 +0800</pubDate>
+        <lastBuildDate>Tue, 07 Mar 2023 10:03:53 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/100353/</guid>
+            <title>dvwa安装指引</title>
+            <link>http://maxshiroi.top/ug/100353/</link>
+            <category term="linux" scheme="http://maxshiroi.top/tags/linux/" />
+            <category term="mysql" scheme="http://maxshiroi.top/tags/mysql/" />
+            <category term="kali" scheme="http://maxshiroi.top/tags/kali/" />
+            <category term="dvwa" scheme="http://maxshiroi.top/tags/dvwa/" />
+            <category term="fedora" scheme="http://maxshiroi.top/tags/fedora/" />
+            <pubDate>Tue, 07 Mar 2023 10:03:53 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;启动nginx&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动nginx&#34;&gt;#&lt;/a&gt; 启动 nginx&lt;/h1&gt;
+&lt;h2 id=&#34;service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;#&lt;/a&gt; service nginx start&lt;br /&gt;
+cd /var/www/html&lt;br /&gt;
+vim hello.html&lt;/h2&gt;
+&lt;p&gt;Helloworld!&lt;br /&gt;
+// 访问虚拟机地址。&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; create database dvwa;&lt;br /&gt;
+Query OK, 1 row affected (0.00 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; create user dvwa@localhost identified by &#39;p@ssw0rd&#39;;&lt;br /&gt;
+Query OK, 0 rows affected (0.01 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; grant all on dvwa.* to dvwa@localhost;&lt;br /&gt;
+Query OK, 0 rows affected (0.01 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; flush privileges;&lt;br /&gt;
+Query OK, 0 rows affected (0.00 sec)&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/140206/</guid>
+            <title>Arch安装使用指导</title>
+            <link>http://maxshiroi.top/ug/140206/</link>
+            <category term="linux" scheme="http://maxshiroi.top/tags/linux/" />
+            <category term="arch" scheme="http://maxshiroi.top/tags/arch/" />
+            <category term="pacman" scheme="http://maxshiroi.top/tags/pacman/" />
+            <pubDate>Fri, 24 Feb 2023 14:02:06 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前期准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前期准备&#34;&gt;#&lt;/a&gt; 前期准备&lt;/h1&gt;
+&lt;p&gt;在创建好虚拟机后，需要打开虚拟机设置，将  &lt;code&gt;firmware type&lt;/code&gt;  更改为  &lt;code&gt;efi&lt;/code&gt; ，以便后续操作。&lt;/p&gt;
+&lt;h1 id=&#34;检查网络设置和-ssh-连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查网络设置和-ssh-连接&#34;&gt;#&lt;/a&gt; 检查网络设置和 SSH 连接&lt;/h1&gt;
+&lt;p&gt;以下是检查网络设置和 SSH 连接的操作步骤：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;figcaption&gt;&lt;span&gt;zsh&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 检查系统启动方式&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ls /sys/firmware/efi/efivars&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 检查网络是否通畅&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ping baidu.com&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 更改密码并远程连接&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;passwd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 查看 IP 地址&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ip addr&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;使用ssh连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用ssh连接&#34;&gt;#&lt;/a&gt; 使用 ssh 连接&lt;/h1&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ssh -p &lt;span class=&#34;number&#34;&gt;22&lt;/span&gt; root@&lt;span class=&#34;number&#34;&gt;192&lt;/span&gt;.&lt;span class=&#34;number&#34;&gt;168&lt;/span&gt;.&lt;span class=&#34;number&#34;&gt;204&lt;/span&gt;.&lt;span class=&#34;number&#34;&gt;130&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;分区挂载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分区挂载&#34;&gt;#&lt;/a&gt; 分区挂载&lt;/h1&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;figcaption&gt;&lt;span&gt;zsh&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 查看已存在的硬盘&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;lsblk&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 使用cfdisk创建分区&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cfdisk /dev/nvme0n1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 创建如下三个&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Device           Start      End  Sectors  Size Type&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/dev/nvme0n1p1    2048  1026047  1024000  500M EFI System&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/dev/nvme0n1p2 1026048  9414655  8388608    4G Linux swap&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/dev/nvme0n1p3 9414656 83884031 74469376 35.5G Linux filesystem&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 分别格式化&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 格式化EFI启动分区为fat32格式&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mkfs.fat -F32 /dev/nvme0n1p1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 格式化根目录为xfs文件系统&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mkfs.xfs -f /dev/nvme0n1p3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 格式化swap文件系统&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mkswap /dev/nvme0n1p2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;swapon /dev/nvme0n1p2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 挂载&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 挂载根分区到mnt&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mount /dev/nvme0n1p3 /mnt&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 新建EFI分区并挂载&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mkdir -p /mnt/boot/EFI&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mount /dev/nvme0n1p1 /mnt/boot/EFI&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h1&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;figcaption&gt;&lt;span&gt;zsh&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 使用下面命令下载并安装系统&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pacstrap -i /mnt base base-devel vim linux linux-firmware&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 生成 fstab 文件并检查&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cat /mnt/etc/fstab&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 切换系统目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;arch-chroot /mnt&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 更改时区，设置UTC&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hwclock --systohc --utc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 更改local并生成locale信息&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim /etc/locale.gen&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 找到合适的地区去掉前面的#&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;locale-gen&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 将语言信息写入locale.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;echo LANG=en_GB.UTF-8 &amp;gt; /etc/locale.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 配置网络&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim /etc/hostname&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;----&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;archlinux&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 直接写入自己的主机名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim /etc/hosts&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;----&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;127.0.0.1   localhost&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;::1         localhost&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;127.0.1.1   archlinux.localdomain archlinux&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# archlinux就是自己的主机名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 安装相关包&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pacman -S grub efibootmgr efivar networkmanager intel-ucode&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 配置grub&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;grub-install /dev/sda&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;grub-mkconfig -o /boot/grub/grub.cfg&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 激活并启用NetworkManager&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl enable NetworkManager&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 更改密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;passwd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 卸载挂载，重启&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;exit&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;umount /mnt/boot/EFI&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;umount /mnt&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;reboot &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;安装后&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装后&#34;&gt;#&lt;/a&gt; 安装后&lt;/h1&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 配置网络，再次联网&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 输入nmtui 选择 “Activate a connection” 回车进入，选择你需要的网络，连接后back返回即可&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装 openssh&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pacman -S openssh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl &lt;span class=&#34;built_in&#34;&gt;enable&lt;/span&gt; sshd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl start sshd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl status sshd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 查看ip&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ip -brief address / addr&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 修改ssh配置允许root连接&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim /etc/ssh/sshd_config&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;----&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 将下列的语句值改为yes&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;PermitRootLogin &lt;span class=&#34;built_in&#34;&gt;yes&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 重启ssh&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl restart sshd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 使用ssh连接&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ssh -o StrictHostKeyChecking=no root@192.168.204.130&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 更新&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pacman -Syu&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;useradd axro&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vi /etc/passwd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;优化终端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优化终端&#34;&gt;#&lt;/a&gt; 优化终端&lt;/h1&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;figcaption&gt;&lt;span&gt;zsh&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 安装zsh，高亮，补全&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S zsh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S zsh-autosuggestions&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S zsh-syntax-highlighting&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 安装git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 使用以下命令配置zsh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;autoload -Uz zsh-newuser-install&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;zsh-newuser-install -f&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 查看是否生成.zshrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ls -a&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 安装oh my zsh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sh -c &amp;quot;$(curl -fsSL https:#raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 在.zshrc中加入以下插件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim .zshrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ZSH_THEME=&amp;quot;dieter&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;alias vi=vim&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;alias ll=&amp;#x27;ls -l&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;:wq&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 刷新终端&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;source .zshrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 安装neofetch&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S neofetch&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11:18:08 axro@axro-arch ~ neofetch&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                   -`                    axro@axro-arch&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                  .o+`                   --------------&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                 `ooo/                   OS: Arch Linux x86_64&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                `+oooo:                  Host: VMware20,1 None&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;               `+oooooo:                 Kernel: 6.2.2-arch1-1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;               -+oooooo+:                Uptime: 20 mins&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;             `/:-:++oooo+:               Packages: 182 (pacman)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            `/++++/+++++++:              Shell: zsh 5.9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           `/++++++++++++++:             Resolution: 1280x800&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          `/+++ooooooooooooo/`           Terminal: /dev/pts/0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;         ./ooosssso++osssssso+`          CPU: 11th Gen Intel i7-11800H (1) @ 2.304GHz&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .oossssso-````/ossssss+`         GPU: 00:0f.0 VMware SVGA II Adapter&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       -osssssso.      :ssssssso.        Memory: 209MiB / 3883MiB&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      :osssssss/        osssso+++.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     /ossssssss/        +ssssooo/-&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   `/ossssso+/:-        -:/+osssso+-&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  `+sso+:-`                 `.-/+oso:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; `++:.                           `-/+/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; .`                                 `/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11:21:14 axro@axro-arch ~&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;安装桌面环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装桌面环境&#34;&gt;#&lt;/a&gt; 安装桌面环境&lt;/h1&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;figcaption&gt;&lt;span&gt;zsh&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 安装xorg-server，xorg-xinit&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S xorg-server xorg-xinit&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 安装显卡驱动&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S xf86-video-vesa # 这里使用的是vmware，请自行找适合自己机器的显卡驱动&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 安装plasma&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S pacman-meta konsole dolphin&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S kde-applications-meta sddm&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 启动kde plasma&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo systemctl start sddm.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 安装字体，更改中文&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S noto-fonts-cjk wqy-microhei&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 安装火狐浏览器&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S firefox&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 使用如下命令打开和关闭网卡&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ifconfig ens160 down/up&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;vmware安装vmwaretools-实现窗口分辨率自适应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vmware安装vmwaretools-实现窗口分辨率自适应&#34;&gt;#&lt;/a&gt; vmware 安装 vmwaretools 实现窗口分辨率自适应。&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;figcaption&gt;&lt;span&gt;zsh&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -Sy gtkmm gtkmm3 net-tools open-vm-tools xf86-video-vmware xf86-input-vmmouse&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo systemctl enable vmtoolsd.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo systemctl enable vmware-vmblock-fuse.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo reboot&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;详细请参考&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#详细请参考&#34;&gt;#&lt;/a&gt; 详细请参考&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aWtpLmFyY2hsaW51eGNuLm9yZy93aWtpL1ZNd2FyZS8lRTUlQUUlODklRTglQTMlODVfQXJjaF9MaW51eF8lRTQlQjglQkElRTglOTklOUElRTYlOEIlOUYlRTYlOUMlQkE=&#34;&gt;wiki.archlinuxcn.org&lt;/span&gt;&lt;br /&gt;
+ 这里不多赘述。&lt;/p&gt;
+&lt;h2 id=&#34;安装中文输入法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装中文输入法&#34;&gt;#&lt;/a&gt; 安装中文输入法&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;figcaption&gt;&lt;span&gt;zsh&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 安装fcitx5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -S fcitx5-im fcitx5-chinese-addons  fcitx5-rime fcitx5-configtool&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 编辑配置文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vi /etc/environment&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;GTK_IM_MODULE=fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;QT_IM_MODULE=fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;XMODIFIERS=@im=fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;SDL_IM_MODULE=fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 重启，gnome和kde会自动配置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;reboot&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;安装yay工具并安装linuxqq&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装yay工具并安装linuxqq&#34;&gt;#&lt;/a&gt; 安装 yay 工具并安装 linuxqq&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;figcaption&gt;&lt;span&gt;zsh&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git clone https://aur.archlinux.org/yay.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd yay&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;makepkg -si&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;编写rclocal&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编写rclocal&#34;&gt;#&lt;/a&gt; 编写 rc.local&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi /usr/lib/systemd/system/rc-local.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#/usr/lib/systemd/system/rc-local.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[Unit]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Description=&amp;quot;写下描述&amp;quot; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[Service]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Type=forking&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ExecStart=/etc/rc.local start #在这里你可以看到开机执行脚本的位置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;TimeoutSec=0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;StandardInput=tty&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RemainAfterExit=yes&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;SysVStartPriority=99&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[Install]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;WantedBy=multi-user.target&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vi /etc/rc.local&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo pacman -Syu&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;exit 0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chmod 777 /etc/rc.local&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl enable rc.local.service&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://maxshiroi.top/ug/174137/</guid>
             <title>vmwarewin7shrink</title>
@@ -42,10 +105,13 @@
 &lt;li&gt;虚拟机内进行空间整理，磁盘清理&lt;/li&gt;
 &lt;li&gt;处理其他文件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;注意后面带星号的处理完成所有步骤后要重新打开。不然可能会影响性能。&lt;/p&gt;
+&lt;p&gt;注意后面带星号的处理完成所有步骤后要重新打开 (建议)，不然可能会影响性能。&lt;/p&gt;
 &lt;p&gt;此时你需要确定你缩小后的 c 盘空间大小，这也决定着后面动态磁盘缩小的操作。我确定缩小后的空间为 22GiB。&lt;/p&gt;
 &lt;h2 id=&#34;3-重启到pe系统使用diskgenius缩小c盘空间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-重启到pe系统使用diskgenius缩小c盘空间&#34;&gt;#&lt;/a&gt; 3. 重启到 pe 系统使用 Diskgenius 缩小 c 盘空间。&lt;/h2&gt;
 &lt;h3 id=&#34;使用微pe制作iso文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用微pe制作iso文件&#34;&gt;#&lt;/a&gt; 使用微 pe 制作 iso 文件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h3 id=&#34;添加硬件cddvd设备使用创建的iso文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#添加硬件cddvd设备使用创建的iso文件&#34;&gt;#&lt;/a&gt; 添加硬件 CD/DVD 设备，使用创建的 iso 文件。&lt;/h3&gt;
 &lt;h3 id=&#34;vmware设置光驱启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vmware设置光驱启动&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N5ZjQ0Mi9hcnRpY2xlL2RldGFpbHMvNTA2NzgzMg==&#34;&gt;VMWare 设置光驱启动&lt;/span&gt;&lt;/h3&gt;
 &lt;h2 id=&#34;4-减小vmware虚拟机虚拟磁盘大小&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-减小vmware虚拟机虚拟磁盘大小&#34;&gt;#&lt;/a&gt; 4. 减小 VMware 虚拟机虚拟磁盘大小&lt;/h2&gt;
@@ -980,296 +1046,6 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;deactivate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;配置反代&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置反代&#34;&gt;#&lt;/a&gt; 配置反代&lt;/h2&gt;
 &lt;p&gt;进入宝塔面板新建静态网站，配置 ssl，配置反向代理地址为 &lt;code&gt;https://localhost:8008&lt;/code&gt; , 保存即可.&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/211502/</guid>
-            <title>解决linux下挂载其他linux硬盘的问题并创建smb局域网共享</title>
-            <link>http://maxshiroi.top/ug/211502/</link>
-            <category term="linux" scheme="http://maxshiroi.top/tags/linux/" />
-            <category term="运维" scheme="http://maxshiroi.top/tags/%E8%BF%90%E7%BB%B4/" />
-            <category term="smb" scheme="http://maxshiroi.top/tags/smb/" />
-            <pubDate>Sun, 28 Aug 2022 21:15:02 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;之前用来当作小型服务器的笔记本终于被我给淘汰了。已经关机了好久。最近买了块 &lt;code&gt;SATA&lt;/code&gt;  硬盘盒，想要将这台笔记本内的数据备份出来并把硬盘用作其他用途。一切连接好后发现无法挂载，遂百度了一会查出了如下方法...&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;故障复现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#故障复现&#34;&gt;#&lt;/a&gt; 故障复现&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;连接 linux 系统，提示插入硬盘. &lt;code&gt;/dev&lt;/code&gt;  分区下出现硬盘编号&lt;/li&gt;
-&lt;li&gt;执行如下指令&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; /&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; backup&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mount /dev/sdc/ /backup/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;报错&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mount: unknown filesystem &lt;span class=&#34;built_in&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;LVM2_member&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&#34;解决方法-debian系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法-debian系&#34;&gt;#&lt;/a&gt; 解决方法 //Debian 系&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;执行如下指令安装 lvm2 并扫描查看以挂载的磁盘&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get install lvm2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo vgscan&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;发现如下字样后找到对应的 &lt;code&gt;xxx&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Found volume group &lt;span class=&#34;string&#34;&gt;&amp;quot;xxx&amp;quot;&lt;/span&gt; using metadata &lt;span class=&#34;built_in&#34;&gt;type&lt;/span&gt; lvm2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;设为活动状态并查看可挂载的分区&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo vgchange -ay xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo lvs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;LV     VG   Attr   LSize  Origin Snap%  Move Log Copy%  Convert&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;data        xxx             -wi-a-              34.19G      &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;挂载对应分区&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo mount /dev/xxx/data/ /backup/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;至此已经解决了问题，如果你还想把这块硬盘里的数据共享出去，比如共享给局域网内的 windows 主机，那就接着看..&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;设置smb&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设置smb&#34;&gt;#&lt;/a&gt; 设置 SMB&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;先更新一下&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;安装 Samba 服务&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get install samba samba-common&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;配置共享目录&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 新建目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo &lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; /home/db&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改目录权限&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo &lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; 777 /home/db/ -R&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;添加账户&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;要注意添加的账户需要是系统内已存在的账户&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 后面的pi为系统的用户名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo smbpasswd -a pi&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入两次密码后创建成功&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;创建系统账户&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// -m参数为添加/home/username目录,username更改为你要创建的用户名.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo useradd -m username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改账户密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 删除用户&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo userdel -r username&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改登录zhanghu&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;su -username&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;配置 samba&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 建议先备份一下&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo &lt;span class=&#34;built_in&#34;&gt;cp&lt;/span&gt; /etc/samba/smb.conf /etc/samba/smb.conf.bak&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 编辑&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo vim /etc/samba/smb.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在文件最后添加&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[database] &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    comment = 23333333  &lt;span class=&#34;comment&#34;&gt;# 描述&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	path = /home/db/    &lt;span class=&#34;comment&#34;&gt;# 目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	public = &lt;span class=&#34;built_in&#34;&gt;yes&lt;/span&gt;        &lt;span class=&#34;comment&#34;&gt;# 是否允许guest用户访问&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	writable = &lt;span class=&#34;built_in&#34;&gt;yes&lt;/span&gt;      &lt;span class=&#34;comment&#34;&gt;# 是否允许读写&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	workgroup = WORKGROUP  &lt;span class=&#34;comment&#34;&gt;# 工作组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;重启 samba 服务&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo service smbd restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;然后在 windows 里面映射就行了&lt;/p&gt;
-&lt;h1 id=&#34;借鉴摘抄&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#借鉴摘抄&#34;&gt;#&lt;/a&gt; 借鉴 (摘抄)&lt;/h1&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L212cF9EYXduL2FydGljbGUvZGV0YWlscy8xMDU4NDc0ODU=&#34;&gt;ubuntu 20.04 安装配置 Samba 服务，Windows 和 linux 协同工作&lt;/span&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/211224/</guid>
-            <title>Switch模拟器的安装使用以及游戏文件获取和处理。</title>
-            <link>http://maxshiroi.top/ug/211224/</link>
-            <category term="switch" scheme="http://maxshiroi.top/tags/switch/" />
-            <category term="animal crossing" scheme="http://maxshiroi.top/tags/animal-crossing/" />
-            <category term="Project Diva" scheme="http://maxshiroi.top/tags/Project-Diva/" />
-            <category term="Miku" scheme="http://maxshiroi.top/tags/Miku/" />
-            <category term="Mega39" scheme="http://maxshiroi.top/tags/Mega39/" />
-            <category term="emulater" scheme="http://maxshiroi.top/tags/emulater/" />
-            <category term="yuzu" scheme="http://maxshiroi.top/tags/yuzu/" />
-            <category term="ryujinx" scheme="http://maxshiroi.top/tags/ryujinx/" />
-            <pubDate>Sun, 28 Aug 2022 21:12:24 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;/img/ns/1.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;引子&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引子&#34;&gt;#&lt;/a&gt; 引子&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本篇文章起源于之前我想玩 mega39 而写，现在我对这些内容有了新的理解，再次进行更改记录。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Ryujinx 和 yuzu 模拟器任选一个即可。如果游戏运行有问题再尝试另外一个&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&#34;配置要求&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置要求&#34;&gt;#&lt;/a&gt; 配置要求&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;ryujinx&lt;/code&gt;  和  &lt;code&gt;yuzu&lt;/code&gt;  都适用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;软体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软体&#34;&gt;#&lt;/a&gt; 软体:&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;建议运行 Windows 10 1803 或较新版本以获得最佳性能。这里仅列出 Win10 64 位 要求.&lt;/p&gt;
-&lt;p&gt;如果你要在 linux 下使用则建议您找找其他的教程，我目前还没有使用 linux 的机器。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;blockquote&gt;
-&lt;p&gt;硬体要求适用于所有 Switch 游戏.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;cpu&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cpu&#34;&gt;#&lt;/a&gt; CPU:&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;任何支持 FMA 指令集的 x86_64 CPU。 建议使用 6 个或更多线程。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;最小: Intel Core i5-4430 / AMD Ryzen 3 1200&lt;/li&gt;
-&lt;li&gt;推荐: Intel Core i5-10400 / AMD Ryzen 5 3600&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;专用显示卡&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#专用显示卡&#34;&gt;#&lt;/a&gt; 专用显示卡:&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;必须使用 OpenGL 4.6 或 Vulkan 1.1 兼容硬件和驱动程序。 推荐使用支持半浮点以及 4GB 显示内存。&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;大多数游戏都可以在 Fermi 系列（400 系列）或更高版本的 Nvidia GPU 上运行，但强烈建议至少使用 Pascal（1000 系列）。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;最小: NVIDIA GeForce GT 1030 2GB / AMD Radeon RX 550 2GB&lt;/li&gt;
-&lt;li&gt;推荐: NVIDIA GeForce GTX 1650 4GB / AMD Radeon RX Vega 56 8GB&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;集成显示卡&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#集成显示卡&#34;&gt;#&lt;/a&gt; 集成显示卡:&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;集成显卡的性能表现很差。 独立显卡能够在所有场景中产生更好的效果。 这里列出 iGPU 支持。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;最小: Intel HD Graphics 520 / AMD Radeon Vega 3&lt;/li&gt;
-&lt;li&gt;推荐: Intel UHD Graphics 750 / AMD Radeon Vega 7&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;内存&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内存&#34;&gt;#&lt;/a&gt; 内存:&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;因为集成 GPU 调用内存作为显存 (VRAM)，所以在此配置中的内存要求要高些。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;最小专用显卡内存: 8GB&lt;/li&gt;
-&lt;li&gt;最小集成显卡内存: 12GB&lt;/li&gt;
-&lt;li&gt;推荐: 16GB&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h1 id=&#34;安装前&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装前&#34;&gt;#&lt;/a&gt; 安装前&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果你已经有了 Switch 则可以提取自己的。我就不具体写教程了。可以看看 Ryujinx 官方提供的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;prod.key 导出:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1J5dWppbngvUnl1amlueC93aWtpL0tleXM=&#34;&gt;https://github.com/Ryujinx/Ryujinx/wiki/Keys&lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;固件导出:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1J5dWppbngvUnl1amlueC93aWtpL0Zpcm13YXJlLUR1bXBpbmctR3VpZGUtKGhibWVudS0mYW1wOy1Hb2xkbGVhZik=&#34;&gt;https://github.com/Ryujinx/Ryujinx/wiki/Firmware-Dumping-Guide-(hbmenu-&amp;amp;-Goldleaf)&lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;下载安装-yuzu-软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载安装-yuzu-软件&#34;&gt;#&lt;/a&gt; 下载安装 yuzu 软件。&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;下列操作建议在科学上网环境下进行.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;去 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly95dXp1LWVtdS5vcmcv&#34;&gt;https://yuzu-emu.org/&lt;/span&gt; 下载最新的 yuzu 模拟器。并运行软体.
-&lt;blockquote&gt;
-&lt;p&gt;我在下方的链接里也放了捐赠版也就是 EA，但是版本不会经常更新。如果安装出现问题可以试试。&lt;br /&gt;
-yuzu EA 版本还支持多人联机的功能，但是需要你使用梯子才可以比较好的使用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;yuzu Early Access 这个版本是只有捐赠用户才可以使用，如果条件支持可以去支持一波.&lt;/li&gt;
-&lt;li&gt;普通版本已经足够使用.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;由于安装的时候会连接 Github 服务器下载文件，因此强烈建议使用全局科学上网.&lt;/li&gt;
-&lt;li&gt;安装完成后直接启动，提示缺少 key 文件，选 OK :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img data-src=&#34;/img/ns/20220920215251.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;然后会跳出提示框问是否帮助改进 yuzu , 我们点 no.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;此时已经完成安装了模拟器本体，不过想要正常运行游戏还需要做以下操作&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;执行工具栏中的  &lt;code&gt;文件&lt;/code&gt;  -&amp;gt;  &lt;code&gt;Open yuzu Folder&lt;/code&gt;  打开 yuzu 软件自动创建的目录，然后在下方的链接里找到 key 文件夹，下载  &lt;code&gt;prod.keys&lt;/code&gt;  文件扔进 keys 文件夹内.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;然后再次打开 yuzu 就不会再弹出刚才的对话框了.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;下载安装-ryujinx-软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载安装-ryujinx-软件&#34;&gt;#&lt;/a&gt; 下载安装 Ryujinx 软件&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;同样下列操作建议在科学上网环境下进行.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;打开 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yeXVqaW54Lm9yZy8=&#34;&gt;https://ryujinx.org/&lt;/span&gt; ，选择上方 Download 下载最新编译版本解压。并运行软体.
-&lt;blockquote&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1J5dWppbngvUnl1amlueC9hY3Rpb25z&#34;&gt;Action&lt;/span&gt; 如果你有能力可以直接到 Ryujin 模拟器 github 获取最新测试版的编译版本。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;打开 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kYXJ0aHN0ZXJuaWUubmV0L3N3aXRjaC1maXJtd2FyZXMv&#34;&gt;https://darthsternie.net/switch-firmwares/&lt;/span&gt; ，下载最新的固件到本地备用。&lt;/li&gt;
-&lt;li&gt;在模拟器最上方依次点击 &lt;code&gt;File&lt;/code&gt;  →  &lt;code&gt;Open Ryujinx Folder&lt;/code&gt; 。&lt;/li&gt;
-&lt;li&gt;进入 system 文件夹，在下方的链接里找到 key 文件夹，下载  &lt;code&gt;prod.keys&lt;/code&gt;  文件扔进 keys 文件夹内.&lt;/li&gt;
-&lt;li&gt;在模拟器最上方依次点击  &lt;code&gt;Tools&lt;/code&gt;  →  &lt;code&gt;Install Firmware&lt;/code&gt;  →  &lt;code&gt;Install a firmware from XCI or ZIP&lt;/code&gt; , 选择刚才下载的固件文件点击  &lt;code&gt;open&lt;/code&gt; 。
-&lt;ol&gt;
-&lt;li&gt;若出现报错，如下图所示，是因为  &lt;code&gt;prod.keys&lt;/code&gt;  文件与  &lt;code&gt;Firmware&lt;/code&gt;  不匹配，prod.keys 文件要与 Firmware 匹配才可以安装成功，因此你若想安装新的 firmware，则需要你自己去找对应的 prod.keys
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img data-src=&#34;/img/ns/20221107165255.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;添加游戏目录，依次点击  &lt;code&gt;Options&lt;/code&gt;  →  &lt;code&gt;Settings&lt;/code&gt;  ，打开设置，在  &lt;code&gt;General&lt;/code&gt;  选项卡，点击  &lt;code&gt;Add&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;在弹出的窗口中选择你的游戏目录，然后点击右下角的  &lt;code&gt;Add&lt;/code&gt; ，然后点击 &lt;code&gt;Save&lt;/code&gt; 。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h1 id=&#34;模拟器设置yuzu和ryujinx部分内容通用有区别我会标注出来&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模拟器设置yuzu和ryujinx部分内容通用有区别我会标注出来&#34;&gt;#&lt;/a&gt; 模拟器设置（yuzu 和 ryujinx 部分内容通用，有区别我会标注出来）&lt;/h1&gt;
-&lt;p&gt;执行  &lt;code&gt;模拟(E)&lt;/code&gt;  -&amp;gt;  &lt;code&gt;Configure...&lt;/code&gt;  打开 yuzu 设置.&lt;/p&gt;
-&lt;h2 id=&#34;通用选单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通用选单&#34;&gt;#&lt;/a&gt; 通用选单&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Interface 下第一项（interface language）可以更改显示语言，建议先把这个改为中文。&lt;/li&gt;
-&lt;li&gt;勾选  &lt;code&gt;多核 CPU 仿真&lt;/code&gt;  可在一定程度上改进性能.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;运行速度限制&lt;/code&gt;  更改到 100% 可解决某些游戏没有帧数限制导致游戏速度异常。&lt;/li&gt;
-&lt;li&gt;网络选单下可以填写你注册 yuzu 网站后的令牌以此来进行联机。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;系统选单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统选单&#34;&gt;#&lt;/a&gt; 系统选单&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;在 系统 选单，系统 选项卡，系统设置 框架内根据需要设置  &lt;code&gt;语言&lt;/code&gt; ， &lt;code&gt;地区&lt;/code&gt;  和  &lt;code&gt;时区&lt;/code&gt; ，这里推荐  &lt;code&gt;中文&lt;/code&gt; ， &lt;code&gt;中国&lt;/code&gt; ， &lt;code&gt;中文&lt;/code&gt;  不然默认语言看不懂 (&lt;/li&gt;
-&lt;li&gt;配置选项卡可以更改个人信息但是没什么用。&lt;/li&gt;
-&lt;li&gt;网络选项卡若要使用联机服务则需要选择一种连接方式，通常是以太网或者 WLAN。这取决于你当前使用什么方式上网。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;图形选单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#图形选单&#34;&gt;#&lt;/a&gt; 图形选单&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;API&lt;/code&gt;  任意选择，N 卡选 Vulkan 有时候也更好。&lt;/li&gt;
-&lt;li&gt;如果你的设备是笔记本，那你需要更改  &lt;code&gt;设备&lt;/code&gt;  为自己的独立显卡。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;控制选单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#控制选单&#34;&gt;#&lt;/a&gt; 控制选单&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;输入设备&lt;/code&gt;  内可以选择自己的手柄 / 控制器。唯一需要注意的是 switch 按键的 ab/xy 按键是反过来的，建议游玩的时候别看手柄。&lt;/li&gt;
-&lt;li&gt;最后点击  &lt;code&gt;OK&lt;/code&gt;  即可完成配置...&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;下载游戏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载游戏&#34;&gt;#&lt;/a&gt; 下载游戏&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我发现&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94eHh4eDUyMC5jb20v&#34;&gt; Switch520&lt;/span&gt; 这里的游戏下载没那么多门槛要会员什么什么的，不过都是百度网盘，建议整一个百度网盘会员.(现在有插件可以实现免会员高速下载，有空我再写写：P)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;文中提到的文件可以到这个链接：&lt;strong&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tYXhzaGlyby1teS5zaGFyZXBvaW50LmNvbS86ZjovZy9wZXJzb25hbC9tYXhzaGlyb2lfbWF4c2hpcm9fb25taWNyb3NvZnRfY29tL0VsNFgwQ1Z6LVRCS3FPMGtfLV9CV1JjQnQ0dVQ3VGYtZ1ZKdHJLZFBoYnlQNUE/ZT1JVWxxZGY=&#34;&gt;Sharepoint&lt;/span&gt;&lt;/strong&gt; 里面下载获取。&lt;/p&gt;
-&lt;p&gt;下载 xxx.xci 文件，这就是游戏本体了。将这个游戏本体放到任意文件夹内 (不要有中文) . 双击 yuzu 模拟器中间，选择你放 xci 文件的那个文件夹打开，然后你就会发现游戏已经加载出来了。双击打开爽玩吧～&lt;/p&gt;
-&lt;h1 id=&#34;处理-switch-游戏文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#处理-switch-游戏文件&#34;&gt;#&lt;/a&gt; 处理 Switch 游戏文件&lt;/h1&gt;
-&lt;p&gt;switch 可以下载到的文件有很多种，因此有些时候我们下载得到的文件并不是 xci 或者 nsp 这样的可执行文件。这种时候就需要自己转换游戏文件格式。&lt;/p&gt;
-&lt;h2 id=&#34;常见的几种格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的几种格式&#34;&gt;#&lt;/a&gt; 常见的几种格式&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;xci&lt;/code&gt; ：可以理解 XCI 文件直接从卡带提取的文件，而 XCI 整合版（整合了游戏升级补丁 + DLC 的版本是最方便的 推荐下载）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;xcz&lt;/code&gt; : 是 xci 压缩后的文件，需要转换为 xci 才可以正常使用。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;nsp&lt;/code&gt; : nsp 相当于正版系统数字游戏，nsp 没有整合版，当您看到文件名称有  &lt;code&gt;000&lt;/code&gt;  或者  &lt;code&gt;v0&lt;/code&gt;  说明是本体。而文件名中带有  &lt;code&gt;Updata&lt;/code&gt;  的则为升级补丁，带有  &lt;code&gt;DLC&lt;/code&gt;  字样则为扩展游戏内容的额外内容。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;nsz&lt;/code&gt; : 有些 DLC 或者升级补丁会打包为 nsz 文件，打包的时候可以忽略，如果是游戏文件则您需要转换为 nsp 文件才可以运行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;四种格式之间转换&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四种格式之间转换&#34;&gt;#&lt;/a&gt; 四种格式之间转换。&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用 NSCB 软件进行打包等操作，我获取到的适配 15.0.0 版本的。这软件有时效性，因此如果不能正常使用则需要更新。&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d2IubGFuem91bS5jb20vaVZsOWYwZHc2c3Zn&#34;&gt;NSCB&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;emusak-ui-软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#emusak-ui-软件&#34;&gt;#&lt;/a&gt; EmuSAK UI 软件&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用此软件可以更方便的管理你电脑上现有的模拟器以及游戏，还可以获取最新的 prod.key 等文件。&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0NhcGl0YWluZUpTcGFycm93L2VtdXNhay11aQ==&#34;&gt;https://github.com/CapitaineJSparrow/emusak-ui&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;EmuSAK UI 功能一览：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;添加并管理电脑上的多个 switch 模拟器 (单机或者联机版 ryujinx)&lt;/li&gt;
-&lt;li&gt;找到并列出电脑中的 switch 游戏&lt;/li&gt;
-&lt;li&gt;展示本地着色器缓存 &amp;amp; emusak 在线着色器缓存 (如果本地缓存较少可以下载在线缓存)&lt;/li&gt;
-&lt;li&gt;更新固件&lt;/li&gt;
-&lt;li&gt;更新 prod keys 密钥&lt;/li&gt;
-&lt;li&gt;给下载游戏存档&lt;/li&gt;
-&lt;li&gt;下载着色器缓存&lt;/li&gt;
-&lt;li&gt;下载 mod 模组&lt;/li&gt;
-&lt;li&gt;一键分享电脑中的着色器缓存 (shader cache)&lt;/li&gt;
-&lt;/ul&gt;
  ]]></description>
         </item>
     </channel>
