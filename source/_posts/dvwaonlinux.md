@@ -16,6 +16,15 @@ vim hello.html
 Helloworld!
 // 访问虚拟机地址。
 
+```bash bash
+[root@fedora axro]# cd /usr/share/nginx/html/
+[root@fedora html]# git clone https://github.com/digininja/DVWA.git
+[root@fedora html]# cd DVWA/config
+[root@fedora config]# cp config.inc.php.dist config.inc.php
+[root@fedora config]# vi config.inc.php
+mysql -u root -p
+create database DVWA;
+```
 
 mysql> create database dvwa;
 Query OK, 1 row affected (0.00 sec)
