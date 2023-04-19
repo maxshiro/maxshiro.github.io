@@ -13,31 +13,31 @@ tags:
 # 故障复现
 1. 连接linux系统,提示插入硬盘.`/dev`分区下出现硬盘编号
 2. 执行如下指令
-```bash bash
+```bash
 cd /
 mkdir backup
 mount /dev/sdc/ /backup/
 ```
 报错
-```bash bash
+```bash
 mount: unknown filesystem type 'LVM2_member'
 ```
 
 # 解决方法 //Debian系
 
 1. 执行如下指令安装lvm2并扫描查看以挂载的磁盘
-```bash bash
+```bash
 sudo apt-get install lvm2
 sudo vgscan
 ```
 2. 发现如下字样后找到对应的`xxx`
-```bash bash
+```bash
 Found volume group "xxx" using metadata type lvm2
 ```
 
 3. 设为活动状态并查看可挂载的分区
 
-```bash bash
+```bash
 sudo vgchange -ay xxx
 sudo lvs
 LV     VG   Attr   LSize  Origin Snap%  Move Log Copy%  Convert
@@ -45,7 +45,7 @@ data        xxx             -wi-a-              34.19G
 ```
 
 4. 挂载对应分区
-```bash bash
+```bash
 sudo mount /dev/xxx/data/ /backup/
 ```
 
@@ -55,17 +55,17 @@ sudo mount /dev/xxx/data/ /backup/
 
 1. 先更新一下
 
-```bash bash
+```bash
 sudo apt-get update && sudo apt-get upgrade
 ```
 
 2. 安装Samba服务
-```bash bash
+```bash
 sudo apt-get install samba samba-common
 ```
 
 3. 配置共享目录
-```bash bash
+```bash
 // 新建目录
 sudo mkdir /home/db
 // 更改目录权限
@@ -74,14 +74,14 @@ sudo chmod 777 /home/db/ -R
 
 4. 添加账户
 > 要注意添加的账户需要是系统内已存在的账户
-```bash bash
+```bash
 // 后面的pi为系统的用户名
 sudo smbpasswd -a pi
 ```
 > 输入两次密码后创建成功
 
 * 创建系统账户
-```bash bash
+```bash
 // -m参数为添加/home/username目录,username更改为你要创建的用户名.
 sudo useradd -m username
 // 更改账户密码
@@ -93,7 +93,7 @@ su -username
 ```
 
 5. 配置samba
-```bash bash
+```bash
 // 建议先备份一下
 sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.bak
 // 编辑
@@ -101,7 +101,7 @@ sudo vim /etc/samba/smb.conf
 ```
 > 在文件最后添加
 
-```bash bash
+```bash
 [database] 
     comment = 23333333  # 描述
 	path = /home/db/    # 目录
@@ -111,7 +111,7 @@ sudo vim /etc/samba/smb.conf
 ```
 
 6. 重启samba服务
-```bash bash
+```bash
 sudo service smbd restart
 ```
 

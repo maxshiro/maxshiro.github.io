@@ -15,7 +15,7 @@ Scanner in = new Scanner (System.in);
 System.out.println (in.nextLine ());
 System.out.println ("Hello" + "world.");
 ```
-
+```
 {% media audio %}
 - title: 列表 1
   list:
@@ -25,7 +25,7 @@ System.out.println ("Hello" + "world.");
   list:
     - https://music.163.com/#/playlist?id=2031842656
 {% endmedia %}
-
+```
 原本用于日语汉字假名注音，但别的注音也可以。
 为了兼容性，采用 markdown-it-ruby 的基本格式： {文字^注音} ，并且为了兼容表格，将分隔符由 | 换成了 ^ 。
 注音分隔基于 furigana-markdown-it 显示说明看这里

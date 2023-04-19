@@ -44,18 +44,18 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-#highlight:
-#  enable: false
-#  line_number: false
-#  auto_detect: false
-#  tab_replace: ''
-#  wrap: true
-#  hljs: true
-#prismjs:
-#  enable: false
-#  preprocess: true
-#  line_number: true
-#  tab_replace: ''
+highlight:
+ enable: false
+ line_number: false
+ auto_detect: false
+ tab_replace: ''
+ wrap: true
+ hljs: true
+prismjs:
+ enable: true
+ preprocess: true
+ line_number: true
+ tab_replace: ''
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
   theme: 'default'
@@ -102,7 +102,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: shoka
+theme: matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -112,95 +112,95 @@ deploy:
   branch: main
 
 # Markdown renderer
-markdown:
-  render:
-    html: true
-    xhtmlOut: true
-    breaks: true
-    linkify: true
-    typographer:
-    quotes: '""'''
-  plugins:
-    - plugin:
-        name: markdown-it-toc-and-anchor
-        enable: true
-        options: # 文章目录以及锚点应用的 class 名称，shoka 主题必须设置成这样
-          tocClassName: 'toc'
-          anchorClassName: 'anchor'
-    - plugin:
-        name: markdown-it-multimd-table
-        enable: true
-        options:
-          multiline: true
-          rowspan: true
-          headerless: true
-    - plugin:
-        name: ./markdown-it-furigana
-        enable: true
-        options:
-          fallbackParens: "()"
-    - plugin:
-        name: ./markdown-it-spoiler
-        enable: true
-        options:
-          title: "你知道得太多了"
+# markdown:
+#   render:
+#     html: true
+#     xhtmlOut: true
+#     breaks: true
+#     linkify: true
+#     typographer:
+#     quotes: '""'''
+#   plugins:
+#     - plugin:
+#         name: markdown-it-toc-and-anchor
+#         enable: true
+#         options: # 文章目录以及锚点应用的 class 名称，shoka 主题必须设置成这样
+#           tocClassName: 'toc'
+#           anchorClassName: 'anchor'
+#     - plugin:
+#         name: markdown-it-multimd-table
+#         enable: true
+#         options:
+#           multiline: true
+#           rowspan: true
+#           headerless: true
+#     - plugin:
+#         name: ./markdown-it-furigana
+#         enable: true
+#         options:
+#           fallbackParens: "()"
+#     - plugin:
+#         name: ./markdown-it-spoiler
+#         enable: true
+#         options:
+#           title: "你知道得太多了"
 
-minify:
-  html:
-    enable: true
-    exclude: # 排除 hexo-feed 用到的模板文件
-      - '**/json.ejs'
-      - '**/atom.ejs'
-      - '**/rss.ejs'
-  css:
-    enable: true
-    exclude:
-      - '**/*.min.css'
-  js:
-    enable: true
-    mangle:
-      toplevel: true
-    output:
-    compress:
-    exclude:
-      - '**/*.min.js'
+# minify:
+#   html:
+#     enable: true
+#     exclude: # 排除 hexo-feed 用到的模板文件
+#       - '**/json.ejs'
+#       - '**/atom.ejs'
+#       - '**/rss.ejs'
+#   css:
+#     enable: true
+#     exclude:
+#       - '**/*.min.css'
+#   js:
+#     enable: true
+#     mangle:
+#       toplevel: true
+#     output:
+#     compress:
+#     exclude:
+#       - '**/*.min.js'
 
-autoprefixer:
-  exclude:
-    - '*.min.css'
+# autoprefixer:
+#   exclude:
+#     - '*.min.css'
 
-feed:
-    limit: 20
-    order_by: "-date"
-    tag_dir: false
-    category_dir: false
-    rss:
-        enable: true
-        template: "themes/shoka/layout/_alternate/rss.ejs"
-        output: "rss.xml"
-    atom:
-        enable: true
-        template: "themes/shoka/layout/_alternate/atom.ejs"
-        output: "atom.xml"
-    jsonFeed:
-        enable: true
-        template: "themes/shoka/layout/_alternate/json.ejs"
-        output: "feed.json"
+# feed:
+#     limit: 20
+#     order_by: "-date"
+#     tag_dir: false
+#     category_dir: false
+#     rss:
+#         enable: true
+#         template: "themes/shoka/layout/_alternate/rss.ejs"
+#         output: "rss.xml"
+#     atom:
+#         enable: true
+#         template: "themes/shoka/layout/_alternate/atom.ejs"
+#         output: "atom.xml"
+#     jsonFeed:
+#         enable: true
+#         template: "themes/shoka/layout/_alternate/json.ejs"
+#         output: "feed.json"
 
-plugins:
-  - hexo-algoliasearch
+# plugins:
+#   - hexo-algoliasearch
 
-algolia:
-  appId: V6C1FY0HT1 #Your appId
-  apiKey: 2600751118e5163c244b7ab30be62dbe #Your apiKey
-  adminApiKey: 198a5b695c7bb8aad71a07f3918a87b4 #Your adminApiKey
-  chunkSize: 5000
-  indexName: "shoka"
-  fields:
-    - title #必须配置
-    - path #必须配置
-    - categories #推荐配置
-    - content:strip:truncate,0,2000
-    - gallery
-    - photos
-    - tags
+# algolia:
+#   appId: V6C1FY0HT1 #Your appId
+#   apiKey: 2600751118e5163c244b7ab30be62dbe #Your apiKey
+#   adminApiKey: 198a5b695c7bb8aad71a07f3918a87b4 #Your adminApiKey
+#   chunkSize: 5000
+#   indexName: "shoka"
+#   fields:
+#     - title #必须配置
+#     - path #必须配置
+#     - categories #推荐配置
+#     - content:strip:truncate,0,2000
+#     - gallery
+#     - photos
+#     - tags

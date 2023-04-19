@@ -37,7 +37,7 @@ tags:
 7. 如果您使用的是Win10系统,那么可以直接按下`Windows徽标键`+`R`,输入`CMD`指令单击回车来打开`CMD`,使用`SSH`的方式连入树莓派.当然你也可以使用其他第三方软件来实现.
 8. 使用`ssh -p 22 pi@192.168.0.90`指令来接入树莓派,如果没有出错的话接下来会弹出提示,输入`yes`并按下回车即可.当你看见password时,直接输入默认密码`raspberry`,按下回车即可连入树莓派.
 9. 更新一下就可以正常使用了
-```bash bash
+```bash
 sudo apt-get update && sudo apt-get upgrade
 ```
 ## 配置 Debian-Pi-Aarch64
@@ -49,7 +49,7 @@ sudo apt-get update && sudo apt-get upgrade
 ### 切换账户
 `su`或者`sudo -i`
 ### 更改账户的密码
-```bash bash
+```bash
 // 使用下面指令来更改pi用户的密码
 // 重复输入两次即可
 sudo passwd pi
@@ -58,7 +58,7 @@ sudo passwd pi
 sudo passwd root
 ```
 ### 挂载smb硬盘
-```bash bash
+```bash
 cd /
 mkdir db
 mount -o username=xxx,password=xxx,dir_mode=0777,file_mode=0777 //192.168.0.15/database /db
@@ -67,7 +67,7 @@ mount -o username=xxx,password=xxx,dir_mode=0777,file_mode=0777 //192.168.0.15/d
 > 在安装之前首先开启docker服务并设置开机自动启动
 
 * 启用和运行Docker服务
-```bash bash
+```bash
 // 开机自动启动Docker服务
 systemctl enable docker.service
 
@@ -83,11 +83,11 @@ systemctl stop docker.service
 systemctl disable docker.service
 ```
 1. 打开网卡混杂模式
-```bash bash
+```bash
 sudo ip link set eth0 promisc on
 ```
 2. 创建网络
-```bash bash
+```bash
 docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 macnet 
 ```
 > 使用`sudo ifconfig`命令查看树莓派`eth0`网卡的参数来更改
@@ -97,14 +97,14 @@ docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -
 * 使用`docker network ls`查看创建好的网络
 
 3. 拉取Openwrt镜像
-```bash bash
+```bash
 docker pull registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest 
 ```
 
 * 执行`docker images`命令查看现存镜像
 
 4. 创建并启动容器
-```bash bash
+```bash
 docker run --restart always --name openwrt -d --network macnet --privileged registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest /sbin/init 
 ```
 > `--restart always`参数表示容器退出时始终重启，使服务尽量保持始终可用；
@@ -119,15 +119,15 @@ docker run --restart always --name openwrt -d --network macnet --privileged regi
 > 若容器运行信息`STATUS`列为`UP`状态，则说明容器运行正常。
 
 5. 进入容器并修改相关参数
-```bash bash
+```bash
 docker exec -it openwrt bash
 ```
 * 编辑`OpenWrt`的网络配置文件：
-```bash bash
+```bash
 nano /etc/config/network
 ```
 * 更改LAN口设置
-```bash bash
+```bash
 config interface 'lan'
         option type 'bridge'
         option ifname 'eth0'
@@ -142,7 +142,7 @@ config interface 'lan'
 > `option ipaddr`为 OpenWrt 的 IP 地址,可以根据自己喜好修改,我这里定义为了`192.168.0.2`
 
 * 重启网络
-```bash bash
+```bash
 /etc/init.d/network restart
 ```
 
@@ -157,12 +157,12 @@ config interface 'lan'
 ## 修复宿主机网络
 OpenWrt 容器运行后,宿主机内可能无法正常连接外部网络,需要修改宿主机的`/etc/network/interfaces`文件以修复：
 1. 备份并编辑文件
-```bash bash
+```bash
 cp /etc/network/interfaces /etc/network/interfaces.bak # 备份文件
 nano /etc/network/interfaces # 编辑文件
 ```
 2. 向文件末尾添加
-```bash bash
+```bash
 auto eth0
 iface eth0 inet manual
 

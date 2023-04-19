@@ -16,7 +16,7 @@ tags:
 # 开启虚拟化
 
 > PS: 如果之前你有禁用过 Hyper-V 的话记得使用管理员权限打开 Powershell 然后通过这个指令这个指令重新打开, 不记得有没有那就跳过:
-```bash bash
+```bash
 bcdedit /set hypervisorlaunchtype auto
 ```
 
@@ -32,7 +32,7 @@ bcdedit /set hypervisorlaunchtype auto
 3. 找到最下面名为 `MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle` 的一项, 注意大小为 `1.21GB` , 直接点击进行一个下载.
 4. 找到你下载的文件, 然后右键 `开始按钮` 选择 `Windows 终端 (管理员)`
 5. 然后会打开 Powershell 窗口, 在里面输入指令
-```bash bash
+```bash
 add-appxpackage "你下载文件的完整路径" 
 # example
 add-appxpackage "D:\download\MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle"
@@ -44,7 +44,7 @@ add-appxpackage "D:\download\MicrosoftCorporationII.WindowsSubsystemForAndroid_1
 1. 点击文件后面的按钮会自动启动 WSA, 等打开后下面的 ip 地址会刷新. 此时我们将开发人员模式打开.
 2. 安装 ADB, 下载 [这个文件](https://nas.axro.top/index.php/s/frYxCHg7FfabNEY "这个文件") 然后解压到任意目录, 然后打开解压出来的文件夹, 名称为 `platform-tools`.
 3. 按住`Shift`键右击文件夹的空白处, 选择`显示更多选项`-`在此处打开 Powershell 窗口(s)`, 然后在打开的窗口内依次输入以下指令:
-```bash bash
+```bash
 adb connect 127.0.0.1:58526 #这个 127.0.0.1:58526 为你的开发人员选项那一栏里显示的地址.
 # 第一次可能会失败, 再输入一次就可以了.
 adb install -r xxx.apk

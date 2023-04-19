@@ -15,27 +15,27 @@ tags:
 使用源码编译安装：
 1. 访问[Nginx](https://nginx.org/en/download.html)官网，复制最新版本链接。wget到本地目录。
 > ![](/img/WebBackcreat1/20221016212408.png)  
-```bash bash
+```bash
 wget https://nginx.org/download/nginx-1.23.1.tar.gz ~/
 ```
 2. 解压出来。
-```bash bash
+```bash
 tar -zxvf nginx-1.23.1.tar.gz
 // 如果这里是 *.tar.bz2 的话则使用 -jxvf
 ```
 3. 安装编译所需要的前置。
-```bash bash
+```bash
 yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel
 ```
 4. 进入解压出来的文件夹，编译安装。
-```bash bash
+```bash
 cd nginx-1.23.1
 ./configure
 make
 make install
 ```
 5. nginx的启动和关闭
-```bash bash
+```bash
 cd /usr/local/nginx/sbin
 // 启动nginx
 ./nginx
@@ -45,19 +45,19 @@ cd /usr/local/nginx/sbin
 systemctl stop firewalld
 ```
 6. 创建目录
-```bash bash
+```bash
 mkdir /var/temp/nginx -p
 ```
 > 建议在执行前先使用netstat -aux | grep 80查看是否有端口占用80。
 
 7. 开机自启 *还没写完
     1. 编辑文件
-    ```bash bash
+    ```bash
     cd /lib/systemd/system/
     vim nginx.service
     ```
     2. 添加内容
-    ```bash bash
+    ```bash
     [Unit] 
     Description=nginx 
     service After=network.target 
@@ -82,7 +82,7 @@ mkdir /var/temp/nginx -p
     ```
     3. 保存退出
     4. 启动
-    ```bash bash
+    ```bash
     systemctl start nginx.service
     systemctl enable nginx.service
     systemctl status nginx.service
@@ -90,7 +90,7 @@ mkdir /var/temp/nginx -p
 8. 233
 
 # 编译安装 apache
-```bash bash
+```bash
 yum update
 
 yum install -y gcc-c++
@@ -189,26 +189,26 @@ echo "<?php phpinfo(); ?>" > index.php
 # Mysql 的安装
 1. 先安装wget `yum install wget`。
 2. 下载并安装mysql。
-```bash bash
+```bash
 wget https://dev.mysql.com/get/mysql80-community-release-el7-7.noarch.rpm
 yum -y localinstall mysql80-community-release-el7-7.noarch.rpm
 yum -y install mysql-community-server
 ```
 1. 启动mysql
-```bash bash
+```bash
 // 启动mysql
 systemctl start mysqld
 // 写入开机启动
 systemctl enable mysqld
 ```
 1. 查找日志并找到临时密码。
-```bash bash
+```bash
 vi /var/log/mysqld.log
 ```
 > ![](/img/WebBackcreat1/20221019082932.png)  
 
 1. 登录mysql
-```bash bash
+```bash
 mysql -u root -p
 // 密码则为查找到的临时密码。
 password:
@@ -218,13 +218,13 @@ password:
 > 后面专门说这傻逼mysql改密码。
 
 1. 重启mysql服务
-```bash bash
+```bash
 service mysqld restart
 ```
 > 重启后就可以正常使用mysql了。
 
 # httpd/php安装
-```bash bash
+```bash
 sudo yum update && sudo yum upgrade
 systemctl status httpd
 sudo yum install httpd
@@ -243,7 +243,7 @@ localhost/test.php
 出现php信息就成功了。
 
 # 安装pma
-```bash bash
+```bash
 wget https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.zip
 unzip phpMyAdmin-5.2.1-all-languages.zip
 mv phpMyAdmin-5.2.1-all-languages pma

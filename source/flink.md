@@ -3,6 +3,7 @@ title: 我的朋（p）友（y）
 comment: false
 cover: 
 ---
+```
 {% links %}
 - site: 某水文牛马指定食槽
   owner: 大碴子
@@ -18,3 +19,4 @@ cover:
   image: img/flink/20220923183634.png
   color: "#dd0000"
 {% endlinks %}
+```

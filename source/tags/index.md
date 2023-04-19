@@ -1,4 +1,6 @@
 ---
 title: tags
-date: 2022-09-20 22:42:20
+date: 2018-09-30 18:23:38
+type: "tags"
+layout: "tags"
 ---

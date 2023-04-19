@@ -16,7 +16,7 @@ vim hello.html
 Helloworld!
 // 访问虚拟机地址。
 
-```bash bash
+```bash
 [root@fedora axro]# cd /usr/share/nginx/html/
 [root@fedora html]# git clone https://github.com/digininja/DVWA.git
 [root@fedora html]# cd DVWA/config
