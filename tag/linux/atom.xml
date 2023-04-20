@@ -1,0 +1,1066 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog • Posts by &#34;linux&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2023-03-07T02:03:53.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="docker" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/ug/100353/</id>
+        <title>dvwa安装指引</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/100353/"/>
+        <content type="html">&lt;h1 id=&#34;启动nginx&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启动nginx&#34;&gt;#&lt;/a&gt; 启动 nginx&lt;/h1&gt;
+&lt;h2 id=&#34;service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;#&lt;/a&gt; service nginx start&lt;br&gt;
+cd /var/www/html&lt;br&gt;
+vim hello.html&lt;/h2&gt;
+&lt;p&gt;Helloworld!&lt;br&gt;
+// 访问虚拟机地址。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@fedora axro]# cd /usr/share/nginx/html/
+[root@fedora html]# git clone https://github.com/digininja/DVWA.git
+[root@fedora html]# cd DVWA/config
+[root@fedora config]# cp config.inc.php.dist config.inc.php
+[root@fedora config]# vi config.inc.php
+mysql -u root -p
+create database DVWA;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;mysql&amp;gt; create database dvwa;&lt;br&gt;
+Query OK, 1 row affected (0.00 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; create user dvwa@localhost identified by ‘p@ssw0rd’;&lt;br&gt;
+Query OK, 0 rows affected (0.01 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; grant all on dvwa.* to dvwa@localhost;&lt;br&gt;
+Query OK, 0 rows affected (0.01 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; flush privileges;&lt;br&gt;
+Query OK, 0 rows affected (0.00 sec)&lt;/p&gt;
+</content>
+        <category term="linux" />
+        <category term="mysql" />
+        <category term="kali" />
+        <category term="dvwa" />
+        <category term="fedora" />
+        <updated>2023-03-07T02:03:53.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/140206/</id>
+        <title>Arch安装使用指导</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/140206/"/>
+        <content type="html">&lt;h1 id=&#34;前期准备&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前期准备&#34;&gt;#&lt;/a&gt; 前期准备&lt;/h1&gt;
+&lt;p&gt;在创建好虚拟机后，需要打开虚拟机设置，将  &lt;code&gt;firmware type&lt;/code&gt;  更改为  &lt;code&gt;efi&lt;/code&gt; ，以便后续操作。&lt;/p&gt;
+&lt;h1 id=&#34;检查网络设置和-ssh-连接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#检查网络设置和-ssh-连接&#34;&gt;#&lt;/a&gt; 检查网络设置和 SSH 连接&lt;/h1&gt;
+&lt;p&gt;以下是检查网络设置和 SSH 连接的操作步骤：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-zsh&#34; data-language=&#34;zsh&#34;&gt;&lt;code class=&#34;language-zsh&#34;&gt;# 检查系统启动方式
+ls /sys/firmware/efi/efivars
+
+# 检查网络是否通畅
+ping baidu.com
+
+# 更改密码并远程连接
+passwd
+
+# 查看 IP 地址
+ip addr&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;使用ssh连接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用ssh连接&#34;&gt;#&lt;/a&gt; 使用 ssh 连接&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;ssh -p 22 root@192.168.204.130&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;分区挂载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分区挂载&#34;&gt;#&lt;/a&gt; 分区挂载&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-zsh&#34; data-language=&#34;zsh&#34;&gt;&lt;code class=&#34;language-zsh&#34;&gt;# 查看已存在的硬盘
+lsblk
+# 使用cfdisk创建分区
+cfdisk /dev/nvme0n1
+# 创建如下三个
+Device           Start      End  Sectors  Size Type
+/dev/nvme0n1p1    2048  1026047  1024000  500M EFI System
+/dev/nvme0n1p2 1026048  9414655  8388608    4G Linux swap
+/dev/nvme0n1p3 9414656 83884031 74469376 35.5G Linux filesystem
+# 分别格式化
+# 格式化EFI启动分区为fat32格式
+mkfs.fat -F32 /dev/nvme0n1p1
+# 格式化根目录为xfs文件系统
+mkfs.xfs -f /dev/nvme0n1p3
+# 格式化swap文件系统
+mkswap /dev/nvme0n1p2
+swapon /dev/nvme0n1p2
+# 挂载
+# 挂载根分区到mnt
+mount /dev/nvme0n1p3 /mnt
+# 新建EFI分区并挂载
+mkdir -p /mnt/boot/EFI
+mount /dev/nvme0n1p1 /mnt/boot/EFI&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-zsh&#34; data-language=&#34;zsh&#34;&gt;&lt;code class=&#34;language-zsh&#34;&gt;# 使用下面命令下载并安装系统
+pacstrap -i /mnt base base-devel vim linux linux-firmware
+# 生成 fstab 文件并检查
+genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
+cat /mnt/etc/fstab
+# 切换系统目录
+arch-chroot /mnt
+# 更改时区，设置UTC
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock --systohc --utc
+# 更改local并生成locale信息
+vim /etc/locale.gen
+# 找到合适的地区去掉前面的#
+locale-gen
+# 将语言信息写入locale.conf
+echo LANG=en_GB.UTF-8 &amp;gt; /etc/locale.conf
+# 配置网络
+vim /etc/hostname
+----
+archlinux
+# 直接写入自己的主机名
+vim /etc/hosts
+----
+127.0.0.1   localhost
+::1         localhost
+127.0.1.1   archlinux.localdomain archlinux
+# archlinux就是自己的主机名
+# 安装相关包
+pacman -S grub efibootmgr efivar networkmanager intel-ucode
+# 配置grub
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+# 激活并启用NetworkManager
+systemctl enable NetworkManager
+# 更改密码
+passwd
+# 卸载挂载，重启
+exit
+umount /mnt/boot/EFI
+umount /mnt
+reboot &lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;安装后&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装后&#34;&gt;#&lt;/a&gt; 安装后&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;# 配置网络，再次联网
+# 输入nmtui 选择 “Activate a connection” 回车进入，选择你需要的网络，连接后back返回即可
+# 安装 openssh
+pacman -S openssh
+systemctl enable sshd
+systemctl start sshd
+systemctl status sshd
+# 查看ip
+ip -brief address / addr
+# 修改ssh配置允许root连接
+vim /etc/ssh/sshd_config
+----
+# 将下列的语句值改为yes
+PermitRootLogin yes
+# 重启ssh
+systemctl restart sshd
+# 使用ssh连接
+ssh -o StrictHostKeyChecking=no root@192.168.204.130
+# 更新
+pacman -Syu
+useradd axro
+vi /etc/passwd
+---&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;优化终端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优化终端&#34;&gt;#&lt;/a&gt; 优化终端&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-zsh&#34; data-language=&#34;zsh&#34;&gt;&lt;code class=&#34;language-zsh&#34;&gt;# 安装zsh，高亮，补全
+sudo pacman -S zsh
+sudo pacman -S zsh-autosuggestions
+sudo pacman -S zsh-syntax-highlighting
+# 安装git
+sudo pacman -S git
+# 使用以下命令配置zsh
+autoload -Uz zsh-newuser-install
+zsh-newuser-install -f
+# 查看是否生成.zshrc
+ls -a
+# 安装oh my zsh
+sh -c &#34;$(curl -fsSL https:#raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&#34;
+# 在.zshrc中加入以下插件
+vim .zshrc
+---
+ZSH_THEME=&#34;dieter&#34;
+alias vi=vim
+alias ll=&#39;ls -l&#39;
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+:wq
+# 刷新终端
+source .zshrc
+# 安装neofetch
+sudo pacman -S neofetch
+---
+11:18:08 axro@axro-arch ~ neofetch
+                   -`                    axro@axro-arch
+                  .o+`                   --------------
+                 `ooo/                   OS: Arch Linux x86_64
+                `+oooo:                  Host: VMware20,1 None
+               `+oooooo:                 Kernel: 6.2.2-arch1-1
+               -+oooooo+:                Uptime: 20 mins
+             `/:-:++oooo+:               Packages: 182 (pacman)
+            `/++++/+++++++:              Shell: zsh 5.9
+           `/++++++++++++++:             Resolution: 1280x800
+          `/+++ooooooooooooo/`           Terminal: /dev/pts/0
+         ./ooosssso++osssssso+`          CPU: 11th Gen Intel i7-11800H (1) @ 2.304GHz
+        .oossssso-````/ossssss+`         GPU: 00:0f.0 VMware SVGA II Adapter
+       -osssssso.      :ssssssso.        Memory: 209MiB / 3883MiB
+      :osssssss/        osssso+++.
+     /ossssssss/        +ssssooo/-
+   `/ossssso+/:-        -:/+osssso+-
+  `+sso+:-`                 `.-/+oso:
+ `++:.                           `-/+/
+ .`                                 `/
+
+11:21:14 axro@axro-arch ~&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;安装桌面环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装桌面环境&#34;&gt;#&lt;/a&gt; 安装桌面环境&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-zsh&#34; data-language=&#34;zsh&#34;&gt;&lt;code class=&#34;language-zsh&#34;&gt;# 安装xorg-server，xorg-xinit
+sudo pacman -S xorg-server xorg-xinit
+# 安装显卡驱动
+sudo pacman -S xf86-video-vesa # 这里使用的是vmware，请自行找适合自己机器的显卡驱动
+# 安装plasma
+sudo pacman -S pacman-meta konsole dolphin
+sudo pacman -S kde-applications-meta sddm
+# 启动kde plasma
+sudo systemctl start sddm.service
+# 安装字体，更改中文
+sudo pacman -S noto-fonts-cjk wqy-microhei
+# 安装火狐浏览器
+sudo pacman -S firefox
+# 使用如下命令打开和关闭网卡
+ifconfig ens160 down/up&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;vmware安装vmwaretools-实现窗口分辨率自适应&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vmware安装vmwaretools-实现窗口分辨率自适应&#34;&gt;#&lt;/a&gt; vmware 安装 vmwaretools 实现窗口分辨率自适应。&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-zsh&#34; data-language=&#34;zsh&#34;&gt;&lt;code class=&#34;language-zsh&#34;&gt;# 安装
+sudo pacman -Sy gtkmm gtkmm3 net-tools open-vm-tools xf86-video-vmware xf86-input-vmmouse
+sudo systemctl enable vmtoolsd.service
+sudo systemctl enable vmware-vmblock-fuse.service
+sudo reboot&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;详细请参考&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#详细请参考&#34;&gt;#&lt;/a&gt; 详细请参考&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://wiki.archlinuxcn.org/wiki/VMware/%E5%AE%89%E8%A3%85_Arch_Linux_%E4%B8%BA%E8%99%9A%E6%8B%9F%E6%9C%BA&#34;&gt;wiki.archlinuxcn.org&lt;/a&gt;&lt;br&gt;
+ 这里不多赘述。&lt;/p&gt;
+&lt;h2 id=&#34;安装中文输入法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装中文输入法&#34;&gt;#&lt;/a&gt; 安装中文输入法&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-zsh&#34; data-language=&#34;zsh&#34;&gt;&lt;code class=&#34;language-zsh&#34;&gt;// 安装fcitx5
+sudo pacman -S fcitx5-im fcitx5-chinese-addons  fcitx5-rime fcitx5-configtool
+// 编辑配置文件
+vi /etc/environment
+---
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+
+// 重启，gnome和kde会自动配置
+reboot&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;安装yay工具并安装linuxqq&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装yay工具并安装linuxqq&#34;&gt;#&lt;/a&gt; 安装 yay 工具并安装 linuxqq&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-zsh&#34; data-language=&#34;zsh&#34;&gt;&lt;code class=&#34;language-zsh&#34;&gt;git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;编写rclocal&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编写rclocal&#34;&gt;#&lt;/a&gt; 编写 rc.local&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;vi /usr/lib/systemd/system/rc-local.service
+---
+#/usr/lib/systemd/system/rc-local.service
+[Unit]
+Description=&#34;写下描述&#34; 
+
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start #在这里你可以看到开机执行脚本的位置
+TimeoutSec=0
+StandardInput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target
+
+vi /etc/rc.local
+---
+#/bin/bash
+sudo pacman -Syu
+exit 0
+
+chmod 777 /etc/rc.local
+systemctl enable rc.local.service&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</content>
+        <category term="linux" />
+        <category term="arch" />
+        <category term="pacman" />
+        <updated>2023-02-24T06:02:06.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/082913/</id>
+        <title>WSL2迁移以及空间回收。</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/082913/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;../img/wsl2move/20221119083153.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;如果你按照正常方式在设置里移动 wsl 的话就会发现报错，本篇文章向您介绍如何正确迁移以及回收空间。&lt;/p&gt;
+&lt;h1 id=&#34;移动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#移动&#34;&gt;#&lt;/a&gt; 移动&lt;/h1&gt;
+&lt;p&gt;在 Windows 的 PowerShell 中输入:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --help&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以看到关于这个命令的使用帮助说明：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;用法: wsl.exe [参数] [选项...] [命令行]
+ 
+用于运行 Linux 二进制文件的参数:
+ 
+    如果未提供命令行，wsl.exe 将启动默认的 shell。
+    --exec, -e &amp;lt;命令行&amp;gt;
+        执行指定的命令而不使用默认的 Linux shell。
+    --
+        按原样传递剩余的命令行。
+选项:
+    --distribution, -d &amp;lt;分发版&amp;gt;
+        运行指定的分发。
+    --user, -u &amp;lt;用户名&amp;gt;
+        以指定用户身份运行。
+用于管理适用于 Linux 的 Windows 子系统的参数:
+ 
+    --export &amp;lt;分发版&amp;gt; &amp;lt;文件名&amp;gt;
+        将分发导出到 tar 文件。
+        对于标准输出，文件名可以是 -。
+    --import &amp;lt;分发版&amp;gt; &amp;lt;安装位置&amp;gt; &amp;lt;文件名&amp;gt; [选项]
+        将指定的 tar 文件作为新分发进行导入。
+        对于标准输入，文件名可以是 -。
+        选项:
+            --version &amp;lt;版本&amp;gt;
+                指定用于新分发的版本。
+    --list, -l [选项]
+        列出分发。
+        选项:
+            --all
+                列出所有分发，包括当前正在
+                安装或卸载的分发。
+            --running
+                只列出当前正在运行的分发。
+            --quiet, -q
+                只显示分发名称。
+            --verbose, -v
+                显示有关所有分发的详细信息。
+    --set-default, -s &amp;lt;分发版&amp;gt;
+        将分发设置为默认值。
+    --set-default-version &amp;lt;版本&amp;gt;
+        更改新分发的默认安装版本。
+    --set-version &amp;lt;分发版&amp;gt; &amp;lt;版本&amp;gt;
+        更改指定分发的版本。
+    --shutdown
+        立即终止所有正在运行的分发和 WSL 2 轻型工具虚拟机。
+    --terminate, -t &amp;lt;分发版&amp;gt;
+        终止指定的分发。
+    --unregister &amp;lt;分发版&amp;gt;
+        注销分发。
+    --help
+        显示用法信息。&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里我们使用到 export 、unregister 和 import 几个选项就可以实现迁移。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;终止正在运行的分发或虚拟机：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --shutdown&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;查看已安装的 wsl 名称：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl.exe --list --all&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;适用于 Linux 的 Windows 子系统分发:
+Debian (默认)
+kali-linux
+Ubuntu&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;对需要迁移的分发或虚拟机导出（我要迁移 kali-linux）：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --export kali-linux D:\kali&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;卸载分发版或虚拟机（如果是要重装系统或换机器安装，这一步可以省略，但是要将上一步导出的文件保存好）&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --unregister kali-linux&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;导入新的分发版或虚拟机：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --import kali-linux D:\wsl\kali D:\kali&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;压缩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#压缩&#34;&gt;#&lt;/a&gt; 压缩&lt;/h1&gt;
+&lt;p&gt;等待导入后你会发现移动的其实是 vhdx 文件，那么就可以对这个文件进行回收空间。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;以管理员身份运行 cmd，输入 diskpart 命令按回车。&lt;/li&gt;
+&lt;li&gt;使用以下命令选择你的 userdata.vhdx&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;select vdisk file = &#34;D:\wsl\ext4.vhdx&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果提示&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;DiskPart successfully selected the virtual disk file.&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;就说明成功了。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;输入  &lt;code&gt;compact vdisk&lt;/code&gt;  来压缩。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;bug&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bug&#34;&gt;#&lt;/a&gt; bug&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;ERROR: Wsl/Service/CreateInstance/ERROR_FILE_NOT_FOUND&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;打开命令行，在命令行中输入&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl.exe --list --all
+wsl.exe --unregister xxx&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;摘抄&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#摘抄&#34;&gt;#&lt;/a&gt; 摘抄&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/zhys2007/article/details/110958577&#34;&gt;WSL2 迁移方法&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/y17854117512/article/details/119214442?spm=1001.2101.3001.6661.1&amp;amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-119214442-blog-110900591.pc_relevant_default&amp;amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-119214442-blog-110900591.pc_relevant_default&amp;amp;utm_relevant_index=1&#34;&gt;解决 Win10 子系统的 Ubuntu 被删除后，重新安装出现找不到系统路径&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="linux" />
+        <category term="wsl2" />
+        <category term="Hyper-v" />
+        <updated>2022-11-19T00:29:13.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/101622/</id>
+        <title>解决mysql第一次安装后改密码的各种问题</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/101622/"/>
+        <content type="html">&lt;h1 id=&#34;如何重置mysql密码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#如何重置mysql密码&#34;&gt;#&lt;/a&gt; 如何重置 mysql 密码？&lt;/h1&gt;
+&lt;p&gt;按照提示，alter user。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/img/WebBackcreat1/20221019100609.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+哈哈快乐报错。&lt;/p&gt;
+&lt;p&gt;更改密码复杂度。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;set global validate_password_policy=0;
+set global validate_password_length=1;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;提示：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;ERROR 1193 (HY000): Unknown system variable &#39;validate_password_policy&#39;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;很快乐。&lt;/p&gt;
+&lt;p&gt;那就先查看密码规范：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;SHOW VARIABLES LIKE &#39;validate_password%&#39;;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;提示：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;套娃呢是吧。&lt;/p&gt;
+&lt;p&gt;解决方法：&lt;br&gt;
+重置一个和随机密码差不多的就可以了：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;qazWsx&amp;gt;+&amp;amp;3ed&#39;;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;已经提示成功了：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;mysql&amp;gt; ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;qazWsx&amp;gt;+&amp;amp;3ed&#39;;
+Query OK, 0 rows affected (0.02 sec)&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;更改密码复杂度：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;set global validate_password.policy=0;
+set global validate_password.length=6;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改密码并退出：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
+exit&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后就可以愉快重启登陆了：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;systemctl restart mysqld
+mysql -u root -p&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="linux" />
+        <category term="mysql" />
+        <category term="passwd" />
+        <updated>2022-10-19T02:16:22.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/211932/</id>
+        <title>在centos中部署后端程序。</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/211932/"/>
+        <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实部署很简单，重要的地方在于部署时出现差错后该如何进行处理。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;nginx的安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nginx的安装&#34;&gt;#&lt;/a&gt; Nginx 的安装&lt;/h1&gt;
+&lt;p&gt;使用源码编译安装：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;访问&lt;a href=&#34;https://nginx.org/en/download.html&#34;&gt; Nginx&lt;/a&gt; 官网，复制最新版本链接。wget 到本地目录。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;/img/WebBackcreat1/20221016212408.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://nginx.org/download/nginx-1.23.1.tar.gz ~/&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;解压出来。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;tar -zxvf nginx-1.23.1.tar.gz
+// 如果这里是 *.tar.bz2 的话则使用 -jxvf&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装编译所需要的前置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;进入解压出来的文件夹，编译安装。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;cd nginx-1.23.1
+./configure
+make
+make install&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;nginx 的启动和关闭&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /usr/local/nginx/sbin
+// 启动nginx
+./nginx
+// 关闭nginx
+./nginx -s stop
+// 关闭防火墙
+systemctl stop firewalld&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;创建目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir /var/temp/nginx -p&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;建议在执行前先使用 netstat -aux | grep 80 查看是否有端口占用 80。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;开机自启 * 还没写完
+&lt;ol&gt;
+&lt;li&gt;编辑文件&lt;/li&gt;
+&lt;/ol&gt;
+ &lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /lib/systemd/system/
+vim nginx.service&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;添加内容&lt;/li&gt;
+&lt;/ol&gt;
+ &lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;[Unit] 
+Description=nginx 
+service After=network.target 
+[Service] 
+Type=forking 
+ExecStart=/usr/local/nginx/sbin/nginx 
+ExecReload=/usr/local/nginx/sbin/nginx -s reload ExecStop=/usr/local/nginx/sbin/nginx -s quit PrivateTmp=true 
+[Install] 
+WantedBy=multi-user.target
+// 解释
+[Unit]:服务的说明
+Description:描述服务
+After:描述服务类别
+[Service]服务运行参数的设置
+Type=forking是后台运行的形式
+ExecStart为服务的具体运行命令
+ExecReload为重启命令
+ExecStop为停止命令
+PrivateTmp=True表示给服务分配独立的临时空间
+注意：[Service]的启动、重启、停止命令全部要求使用绝对路径
+[Install]运行级别下服务安装的相关设置，可设置为多用户，即系统运行级别为3&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;保存退出&lt;/li&gt;
+&lt;li&gt;启动&lt;/li&gt;
+&lt;/ol&gt;
+ &lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;systemctl start nginx.service
+systemctl enable nginx.service
+systemctl status nginx.service&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;233&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;编译安装-apache&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编译安装-apache&#34;&gt;#&lt;/a&gt; 编译安装 apache&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;yum update
+
+yum install -y gcc-c++
+yum install -y expat-devel pcre-devel
+
+wget https://mirrors.tuna.tsinghua.edu.cn/apache/apr/apr-1.6.5.tar.gz
+tar -zxvf apr-1.6.5.tar.gz
+cd apr-1.6.5
+./configure --prefix=/usr/local/apr
+make &amp;amp;&amp;amp; make install
+
+wget https://dlcdn.apache.org//apr/apr-util-1.6.3.tar.gz
+tar -zxvf apr-util-1.6.3.tar.gz
+cd apr-util
+./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr/bin/apr-1-config
+make &amp;amp;&amp;amp; make install
+
+wget https://nchc.dl.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz
+tar -zxvf pcre-8.45.tar.gz
+cd pcre-8.45
+./configure --prefix=/usr/local/pcre --with-apr=/usr/local/apr/bin/apr-1-config
+make &amp;amp;&amp;amp; make install
+
+wget https://mirrors.aliyun.com/apache/httpd/httpd-2.4.57.tar.gz
+tar -zxvf httpd-2.4.57.tar.gz
+cd httpd-2.4.57
+./configure --prefix=/usr/local/httpd --with-pcre=/usr/local/pcre --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util
+cp /usr/local/httpd/bin/apachectl /etc/init.d/httpd
+
+echo -e &#39;\nexport PATH=/usr/local/apache/bin:/usr/local/apache/lib:$PATH\n&#39; &amp;gt;&amp;gt; /etc/profile &amp;amp;&amp;amp; source /etc/profile
+
+echo &#34;#chkconfig:2345 64 36&#34; &amp;gt; /etc/rc.d/init.d/httpd
+
+chkconfig --add httpd
+chkconfig httpd on
+
+vim /usr/local/apache/conf/httpd.conf
+unsharp #ServerName www.example.com:80
+
+systemctl start httpd
+firewall-cmd --add-port=80/tcp
+firewall-cmd --add-port=443/tcp
+#systemctl stop firewalld
+#systemctl disable firewalld
+
+
+
+
+php
+yum -y install epel-release
+yum update
+yum -y install php-mcrypt libmcrypt libmcrypt-devel  autoconf  freetype gd jpegsrc libmcrypt libpng libpng-devel libjpeg libxml2 libxml2-devel zlib curl curl-devel openssl openssl-devel sqlite-devel
+
+yum -y install http://down.24kplus.com/linux/oniguruma/oniguruma-6.7.0-1.el7.x86_64.rpm
+yum -y install http://down.24kplus.com/linux/oniguruma/oniguruma-devel-6.7.0-1.el7.x86_64.rpm
+
+wget https://www.php.net/distributions/php-8.2.5.tar.gz
+tar -zxvf php-8.2.5.tar.gz
+cd php-8.2.5
+./configure --prefix=/usr/local/php8/ --with-config-file-path=/usr/local/php8/etc/ --with-apxs2=/usr/local/httpd/bin/apxs --enable-mbstring --with-curl -with-gd --enable-fpm --enable-mysqlnd --with-pdo-mysql=mysqlnd --with-mysqli=mysqlnd
+make &amp;amp;&amp;amp; make install
+
+
+echo -e  &#39;\nexport PATH=/usr/local/php8/bin:/usr/local/php8/sbin:$PATH\n&#39; &amp;gt;&amp;gt; /etc/profile &amp;amp;&amp;amp; source /etc/profile
+
+php-fpm -t
+
+出现如下提示则正常：
+[18-Apr-2023 10:12:57] NOTICE: configuration file /usr/local/php8/etc/php-fpm.conf test is successful
+
+使用如下命令启动php
+/etc/init.d/php-fpm
+关闭
+pkill php-fpm
+
+vi /usr/local/httpd/conf/httpd.conf
+
+1、查看是否已经添加了，如果没有在loadModule处添加 ，正确安装后，应该已经有了
+LoadModule php7_module modules/libphp7.so 
+2、 在&amp;lt;IfModule dir_module&amp;gt;模块添加index.php
+&amp;lt;IfModule dir_module&amp;gt;    
+DirectoryIndex index.html index.php
+&amp;lt;/IfModule&amp;gt; 
+3、找到：
+AddType  application/x-compress .Z
+AddType application/x-gzip .gz .tgz
+添加如下内容
+AddType application/x-httpd-php-source .phps
+AddType application/x-httpd-php .php
+
+systemctl restart httpd
+cd /usr/local/httpd/htdocs/
+echo &#34;&amp;lt;?php phpinfo(); ?&amp;gt;&#34; &amp;gt; index.php&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;mysql-的安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mysql-的安装&#34;&gt;#&lt;/a&gt; Mysql 的安装&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;先安装 wget  &lt;code&gt;yum install wget&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;下载并安装 mysql。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://dev.mysql.com/get/mysql80-community-release-el7-7.noarch.rpm
+yum -y localinstall mysql80-community-release-el7-7.noarch.rpm
+yum -y install mysql-community-server&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;启动 mysql&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// 启动mysql
+systemctl start mysqld
+// 写入开机启动
+systemctl enable mysqld&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;查找日志并找到临时密码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /var/log/mysqld.log&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;/img/WebBackcreat1/20221019082932.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;登录 mysql&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;mysql -u root -p
+// 密码则为查找到的临时密码。
+password:&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;修改密码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后面专门说这傻逼 mysql 改密码。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;重启 mysql 服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;service mysqld restart&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重启后就可以正常使用 mysql 了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;httpdphp安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#httpdphp安装&#34;&gt;#&lt;/a&gt; httpd/php 安装&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo yum update &amp;amp;&amp;amp; sudo yum upgrade
+systemctl status httpd
+sudo yum install httpd
+systemctl start httpd
+service mysql start
+yum install php php-devel
+cd /var/www/html/
+vi test.php
+------
+&amp;lt;?php phpinfo();?&amp;gt;
+------
+systemctl stop firewalld&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;打开浏览器访问&lt;br&gt;
+ localhost/test.php&lt;br&gt;
+ 出现 php 信息就成功了。&lt;/p&gt;
+&lt;h1 id=&#34;安装pma&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装pma&#34;&gt;#&lt;/a&gt; 安装 pma&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.zip
+unzip phpMyAdmin-5.2.1-all-languages.zip
+mv phpMyAdmin-5.2.1-all-languages pma
+yum install php-mysqli
+cd pma
+cp config.sample.inc.php config.inc.php&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;打开浏览器访问&lt;br&gt;
+ localhost/pma&lt;br&gt;
+ 提示登陆就成功了。&lt;/p&gt;
+</content>
+        <category term="linux" />
+        <category term="centos" />
+        <category term="web" />
+        <category term="nginx" />
+        <category term="mysql" />
+        <updated>2022-10-16T13:19:32.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/175233/</id>
+        <title>Linux入门学习0</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/175233/"/>
+        <content type="html">&lt;h1 id=&#34;linux系统目录结构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux系统目录结构&#34;&gt;#&lt;/a&gt; linux 系统目录结构&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 linux 中，所有都是以文件的形式存储和管理的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;bin&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bin&#34;&gt;#&lt;/a&gt; /bin&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Binary 存放经常使用的命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sbin&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sbin&#34;&gt;#&lt;/a&gt; /sbin&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;super Binary 超级用户命令存放的目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;home&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#home&#34;&gt;#&lt;/a&gt; /home&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;root&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#root&#34;&gt;#&lt;/a&gt; /root&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统管理员目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;etc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#etc&#34;&gt;#&lt;/a&gt; /etc&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;管理系统配置文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;usr&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#usr&#34;&gt;#&lt;/a&gt; /usr&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;类似于 windows 下 Programfiles 目录，&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;boot&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#boot&#34;&gt;#&lt;/a&gt; /boot&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;启动所使用的核心文件都会存放在这里。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;proc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#proc&#34;&gt;#&lt;/a&gt; /proc&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内存映射&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;srv&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#srv&#34;&gt;#&lt;/a&gt; /srv&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;services 的缩写，用于存放服务启动所需要的数据&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sys&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sys&#34;&gt;#&lt;/a&gt; /sys&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;tmp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tmp&#34;&gt;#&lt;/a&gt; /tmp&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;是 temporary (临时) 的缩写，存放临时 / 缓存文件，可当作回收站使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;dev&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#dev&#34;&gt;#&lt;/a&gt; /dev&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;device 的缩写，类似于 windows 的设备管理器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mnt&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mnt&#34;&gt;#&lt;/a&gt; /mnt&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;linux 用于挂载可移动设备（临时）的目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;opt&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#opt&#34;&gt;#&lt;/a&gt; /opt&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;主机额外安装的软件存放的目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;var&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#var&#34;&gt;#&lt;/a&gt; /var&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;存放经常被修改的目录或文件，比如日志（*.log）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;lib&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#lib&#34;&gt;#&lt;/a&gt; /lib&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;存放系统基本的动态链接库。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;权限数字意思详解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#权限数字意思详解&#34;&gt;#&lt;/a&gt; 权限数字意思详解&lt;/h1&gt;
+&lt;p&gt;我们首先打开控制台在任意位置输入 ll, 就能看到当前文件夹下所有类型的信息。我们只取其中的前十位来进行结束.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;dr-xr-xr-x.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第一位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一位&#34;&gt;#&lt;/a&gt; 第一位&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一位表示类型&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;d directory 表示目录&lt;/li&gt;
+&lt;li&gt;b block 块文件&lt;/li&gt;
+&lt;li&gt;c char 字符文件&lt;/li&gt;
+&lt;li&gt;- file 普通文件&lt;/li&gt;
+&lt;li&gt;l link 链接&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;后面九位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后面九位&#34;&gt;#&lt;/a&gt; 后面九位&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后面九位表示了文件的类型，对应的位置如果是 &lt;code&gt;-&lt;/code&gt;  则表示没有对应的权限.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+    &lt;tbody&gt;&lt;tr&gt;&lt;th&gt;
+        &lt;/th&gt;&lt;td colspan=&#34;3&#34;&gt;前三位&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;中间三位&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;后三位&lt;/td&gt;
+    
+    &lt;/tr&gt;&lt;tr align=&#34;center&#34;&gt;
+        &lt;td colspan=&#34;3&#34;&gt;创建者&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;同组用户&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;其他用户&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;r&lt;/td&gt;
+        &lt;td&gt;w&lt;/td&gt;
+        &lt;td&gt;x&lt;/td&gt;
+        &lt;td&gt;r&lt;/td&gt;
+        &lt;td&gt;w&lt;/td&gt;
+        &lt;td&gt;x&lt;/td&gt;
+        &lt;td&gt;r&lt;/td&gt;
+        &lt;td&gt;w&lt;/td&gt;
+        &lt;td&gt;x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;读&lt;/td&gt;
+        &lt;td&gt;写&lt;/td&gt;
+        &lt;td&gt;执行&lt;/td&gt;
+        &lt;td&gt;读&lt;/td&gt;
+        &lt;td&gt;写&lt;/td&gt;
+        &lt;td&gt;执行&lt;/td&gt;
+        &lt;td&gt;读&lt;/td&gt;
+        &lt;td&gt;写&lt;/td&gt;
+        &lt;td&gt;执行&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;下面来看一个实例:&lt;/p&gt;
+&lt;p&gt;如果一个文件的权限为 755, 则代表什么意思？&lt;/p&gt;
+&lt;p&gt;我们只需要把 755 按位转换为二进制，对应位为 0 则表示没有这个权限.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;7&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;111&lt;/td&gt;
+&lt;td&gt;101&lt;/td&gt;
+&lt;td&gt;101&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;用人的语言表述:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于创建者：可以读取，可以更改，可以执行.&lt;br&gt;
+ 对于同组人员：可以读取，不能更改，可以执行.&lt;br&gt;
+ 对于其他成员：可以读取，不能更改，可以执行.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="linux" />
+        <category term="目录" />
+        <category term="指令" />
+        <category term="权限" />
+        <updated>2022-09-22T09:52:33.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/222828/</id>
+        <title>vmware安装好后配置centos网络</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/222828/"/>
+        <content type="html">&lt;h1 id=&#34;更改-ifcfg-ens33-文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#更改-ifcfg-ens33-文件&#34;&gt;#&lt;/a&gt; 更改 ifcfg-ens33 文件&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编辑配置文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /etc/sysconfig/network-scripts/ifcfg-ens33&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要添加 / 修改的地方&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;BOOTPROTO=static
+ONBOOT=yes
+IPADDR=192.168.xx.xx
+NETMASK=255.255.255.0
+GATEWAY=192.168.204.2
+DNS1=8.8.8.8
+DNS2=114.114.114.114&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;编辑-resolvconf-文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编辑-resolvconf-文件&#34;&gt;#&lt;/a&gt; 编辑 resolv.conf 文件&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /etc/resolv.conf&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;添加如下内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;# Generated by NetworkManager
+search localdomain
+nameserver 8.8.8.8&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;重启网卡&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#重启网卡&#34;&gt;#&lt;/a&gt; 重启网卡&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;service network restart&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="linux" />
+        <category term="centos" />
+        <category term="network" />
+        <category term="vmware" />
+        <updated>2022-09-19T14:28:28.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/211502/</id>
+        <title>解决linux下挂载其他linux硬盘的问题并创建smb局域网共享</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/211502/"/>
+        <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;之前用来当作小型服务器的笔记本终于被我给淘汰了。已经关机了好久。最近买了块 &lt;code&gt;SATA&lt;/code&gt;  硬盘盒，想要将这台笔记本内的数据备份出来并把硬盘用作其他用途。一切连接好后发现无法挂载，遂百度了一会查出了如下方法…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;故障复现&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#故障复现&#34;&gt;#&lt;/a&gt; 故障复现&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;连接 linux 系统，提示插入硬盘. &lt;code&gt;/dev&lt;/code&gt;  分区下出现硬盘编号&lt;/li&gt;
+&lt;li&gt;执行如下指令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /
+mkdir backup
+mount /dev/sdc/ /backup/&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;报错&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;mount: unknown filesystem type &#39;LVM2_member&#39;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;解决方法-debian系&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法-debian系&#34;&gt;#&lt;/a&gt; 解决方法 //Debian 系&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;执行如下指令安装 lvm2 并扫描查看以挂载的磁盘&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install lvm2
+sudo vgscan&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;发现如下字样后找到对应的 &lt;code&gt;xxx&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;Found volume group &#34;xxx&#34; using metadata type lvm2&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;设为活动状态并查看可挂载的分区&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo vgchange -ay xxx
+sudo lvs
+LV     VG   Attr   LSize  Origin Snap%  Move Log Copy%  Convert
+data        xxx             -wi-a-              34.19G      &lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;挂载对应分区&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo mount /dev/xxx/data/ /backup/&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;至此已经解决了问题，如果你还想把这块硬盘里的数据共享出去，比如共享给局域网内的 windows 主机，那就接着看…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;设置smb&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置smb&#34;&gt;#&lt;/a&gt; 设置 SMB&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;先更新一下&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装 Samba 服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install samba samba-common&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;配置共享目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// 新建目录
+sudo mkdir /home/db
+// 更改目录权限
+sudo chmod 777 /home/db/ -R&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;添加账户&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要注意添加的账户需要是系统内已存在的账户&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// 后面的pi为系统的用户名
+sudo smbpasswd -a pi&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入两次密码后创建成功&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;创建系统账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// -m参数为添加/home/username目录,username更改为你要创建的用户名.
+sudo useradd -m username
+// 更改账户密码
+sudo passwd username
+// 删除用户
+sudo userdel -r username
+// 更改登录zhanghu
+su -username&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;配置 samba&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// 建议先备份一下
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.bak
+// 编辑
+sudo vim /etc/samba/smb.conf&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在文件最后添加&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;[database] 
+    comment = 23333333  # 描述
+	path = /home/db/    # 目录
+	public = yes        # 是否允许guest用户访问
+	writable = yes      # 是否允许读写
+	workgroup = WORKGROUP  # 工作组&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;重启 samba 服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service smbd restart&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后在 windows 里面映射就行了&lt;/p&gt;
+&lt;h1 id=&#34;借鉴摘抄&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#借鉴摘抄&#34;&gt;#&lt;/a&gt; 借鉴 (摘抄)&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/mvp_Dawn/article/details/105847485&#34; title=&#34;ubuntu 20.04 安装配置Samba服务，Windows 和 linux协同工作&#34;&gt;ubuntu 20.04 安装配置 Samba 服务，Windows 和 linux 协同工作&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="linux" />
+        <category term="运维" />
+        <category term="smb" />
+        <updated>2022-08-28T13:15:02.000Z</updated>
+    </entry>
+</feed>

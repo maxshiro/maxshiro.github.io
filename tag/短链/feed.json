@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MAXshiro's Blog • All posts by \"短链\" tag",
+    "description": "Discover and Record the world.",
+    "home_page_url": "http://maxshiroi.top",
+    "items": [
+        {
+            "id": "http://maxshiroi.top/ug/120738/",
+            "url": "http://maxshiroi.top/ug/120738/",
+            "title": "shortcutforshoka",
+            "date_published": "2022-09-21T04:07:38.000Z",
+            "content_html": "<pre class=\"line-numbers language-java\" data-language=\"java\"><div class=\"caption\"><span>java</span></div><code class=\"language-java\">import java.util.Scanner;\n...\nScanner in = new Scanner (System.in);\n// 输入 Scan 之后，按下键盘 Alt + “/” 键，Eclipse 下自动补全。\nSystem.out.println (in.nextLine ());\nSystem.out.println (\"Hello\" + \"world.\");<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>\n<pre class=\"line-numbers language-none\"><code class=\"language-none\">{% media audio %}\n- title: 列表 1\n  list:\n    - https://music.163.com/#/playlist?id=2943811283\n    - https://music.163.com/#/playlist?id=2297706586\n- title: 列表 2\n  list:\n    - https://music.163.com/#/playlist?id=2031842656\n{% endmedia %}<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>\n<p>原本用于日语汉字假名注音，但别的注音也可以。<br>\n为了兼容性，采用 markdown-it-ruby 的基本格式： <ruby>文字<rp>【</rp><rt>注音</rt><rp>】</rp></ruby> ，并且为了兼容表格，将分隔符由 | 换成了 ^ 。<br>\n注音分隔基于 furigana-markdown-it 显示说明看这里</p>\n<p><ruby>取<rp>【</rp><rt>と</rt><rp>】</rp>り<rt></rt>返<rp>【</rp><rt>かえ</rt><rp>】</rp>す<rt></rt></ruby>\t取とり返かえす<br>\n<ruby>可愛<rp>【</rp><rt>かわい</rt><rp>】</rp>い<rt></rt>犬<rp>【</rp><rt>いぬ</rt><rp>】</rp></ruby>\t可愛かわいい犬いぬ<br>\n<ruby>可<rp>【</rp><rt>か</rt><rp>】</rp>愛<rp>【</rp><rt>わい</rt><rp>】</rp>い<rt></rt>犬<rp>【</rp><rt>いぬ</rt><rp>】</rp></ruby>\t可か愛わいい犬いぬ<br>\n<ruby>アクセラレータ<rp>【</rp><rt>accelerator</rt><rp>】</rp></ruby>\tアクセラレータ accelerator<br>\n<ruby>accelerator<rp>【</rp><rt>アクセラレータ</rt><rp>】</rp></ruby>\taccelerator アクセラレータ<br>\n<ruby>食<rp>【</rp><rt>た</rt><rp>】</rp>べる<rt></rt></ruby>\t食たべる<br>\n<ruby>食べる<rp>【</rp><rt>たべる</rt><rp>】</rp></ruby>\t食べるたべる<br>\n<ruby>あ<rt>●</rt>い<rt>●</rt>う<rt>●</rt>え<rt>●</rt>お<rt>●</rt></ruby>\tあ●い●う●え●お●<br>\n<ruby>あ<rt>❤</rt>い<rt>❤</rt>う<rt>❤</rt>え<rt>❤</rt>お<rt>❤</rt></ruby>\tあ❤い❤う❤え❤お❤<br>\n<ruby>常用账号<rp>【</rp><rt>contact</rt><rp>】</rp></ruby>\t常用账号 contact</p>\n",
+            "tags": [
+                "短链",
+                "测试"
+            ]
+        }
+    ]
+}

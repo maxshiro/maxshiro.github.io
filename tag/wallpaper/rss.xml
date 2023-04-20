@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>MAXshiro&#39;s Blog • Posts by &#34;wallpaper&#34; tag</title>
+        <link>http://maxshiroi.top</link>
+        <description>Discover and Record the world.</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 16 Nov 2022 15:29:35 +0800</pubDate>
+        <lastBuildDate>Wed, 16 Nov 2022 15:29:35 +0800</lastBuildDate>
+        <category>nextcloud</category>
+        <category>聊天室</category>
+        <category>python</category>
+        <category>ctf</category>
+        <category>buuctf</category>
+        <category>antsword</category>
+        <category>linux</category>
+        <category>centos</category>
+        <category>web</category>
+        <category>nginx</category>
+        <category>mysql</category>
+        <category>wsa</category>
+        <category>vhd</category>
+        <category>vhdx</category>
+        <category>diskpart</category>
+        <category>arch</category>
+        <category>pacman</category>
+        <category>win</category>
+        <category>explorer.exe</category>
+        <category>autorefresh</category>
+        <category>network</category>
+        <category>vmware</category>
+        <category>kali</category>
+        <category>dvwa</category>
+        <category>fedora</category>
+        <category>helloworld</category>
+        <category>plugin</category>
+        <category>hexo</category>
+        <category>backup</category>
+        <category>guide</category>
+        <category>目录</category>
+        <category>指令</category>
+        <category>权限</category>
+        <category>media center</category>
+        <category>plex</category>
+        <category>emby</category>
+        <category>jellyfin</category>
+        <category>视频</category>
+        <category>音乐</category>
+        <category>运维</category>
+        <category>smb</category>
+        <category>passwd</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>树莓派</category>
+        <category>docker</category>
+        <category>openwrt</category>
+        <category>router</category>
+        <category>pic</category>
+        <category>img</category>
+        <category>api</category>
+        <category>random</category>
+        <category>wallpaper</category>
+        <category>短链</category>
+        <category>测试</category>
+        <category>Vocal</category>
+        <category>AI</category>
+        <category>歌声合成</category>
+        <category>transmission</category>
+        <category>torrent</category>
+        <category>下载器</category>
+        <category>nas</category>
+        <category>bug</category>
+        <category>win7</category>
+        <category>capacity</category>
+        <category>shrink</category>
+        <category>Android</category>
+        <category>Hyper-V</category>
+        <category>WSA</category>
+        <category>wsl2</category>
+        <category>Hyper-v</category>
+        <category>wsl</category>
+        <category>权限不足</category>
+        <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/152935/</guid>
+            <title>随机图片API</title>
+            <link>http://maxshiroi.top/ug/152935/</link>
+            <category>pic</category>
+            <category>img</category>
+            <category>api</category>
+            <category>random</category>
+            <category>wallpaper</category>
+            <pubDate>Wed, 16 Nov 2022 15:29:35 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;随机图片api&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#随机图片api&#34;&gt;#&lt;/a&gt; 随机图片 API&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;都有时效性，失效不管 233&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;二次元&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二次元&#34;&gt;#&lt;/a&gt; 二次元&lt;/h2&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;480&#34;&gt;&lt;img src=&#34;https://iw233.cn/API/Random.php&#34; alt=&#34;&#34; title=&#34;https://iw233.cn/API/Random.php&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://api.paugram.com/wallpaper&#34; alt=&#34;&#34; title=&#34;https://api.paugram.com/wallpaper&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://www.dmoe.cc/random.php&#34; alt=&#34;&#34; title=&#34;https://www.dmoe.cc/random.php&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://api.mtyqx.cn/api/random.php&#34; alt=&#34;&#34; title=&#34;https://api.mtyqx.cn/api/random.php&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://api.yimian.xyz/img?type=moe&#34; alt=&#34;&#34; title=&#34;https://api.yimian.xyz/img?type=moe&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://api.ixiaowai.cn/api/api.php&#34; alt=&#34;&#34; title=&#34;https://api.ixiaowai.cn/api/api.php&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;三次元&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三次元&#34;&gt;#&lt;/a&gt; 三次元&lt;/h2&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;480&#34;&gt;&lt;img src=&#34;https://api.btstu.cn/sjbz/api.php&#34; alt=&#34;&#34; title=&#34;https://api.btstu.cn/sjbz/api.php&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://api.paugram.com/bing/&#34; alt=&#34;必应每日壁纸&#34; title=&#34;https://api.paugram.com/bing/&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://api.ixiaowai.cn/gqapi/gqapi.php&#34; alt=&#34;&#34; title=&#34;https://api.ixiaowai.cn/gqapi/gqapi.php&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;menhara酱&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#menhara酱&#34;&gt;#&lt;/a&gt; menhara 酱&lt;/h2&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;480&#34;&gt;&lt;img src=&#34;https://api.ixiaowai.cn/mcapi/mcapi.php&#34; alt=&#34;&#34; title=&#34;https://api.ixiaowai.cn/mcapi/mcapi.php&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;eeedog&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#eeedog&#34;&gt;#&lt;/a&gt; eeedog&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这个有点复杂建议自己去看看&lt;br&gt;
+&lt;a href=&#34;https://www.eee.dog/tech/rand-pic-api.html&#34;&gt; eeedog&lt;/a&gt; 我随意放一个随机图床&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;480&#34;&gt;&lt;img src=&#34;https://api.yimian.xyz/img?type=imgbed&#34; alt=&#34;&#34; title=&#34;https://api.yimian.xyz/img?type=imgbed&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;本地&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#本地&#34;&gt;#&lt;/a&gt; 本地&lt;/h1&gt;
+&lt;p class=&#34;gallery&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154554.png&#34; alt=&#34;&#34; title=&#34;女人&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154625.png&#34; alt=&#34;&#34; title=&#34;女人&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154652.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154713.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154721.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154729.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154737.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154746.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154914.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154922.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154928.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154935.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154945.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116154953.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116155005.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116155015.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116155023.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;/img/pictureshow/20221116155031.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

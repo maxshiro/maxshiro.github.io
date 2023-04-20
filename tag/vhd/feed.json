@@ -1,0 +1,21 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MAXshiro's Blog • All posts by \"vhd\" tag",
+    "description": "Discover and Record the world.",
+    "home_page_url": "http://maxshiroi.top",
+    "items": [
+        {
+            "id": "http://maxshiroi.top/ug/204350/",
+            "url": "http://maxshiroi.top/ug/204350/",
+            "title": "通过diskpart工具压缩userdata.vhdx来解决磁盘占用过多问题",
+            "date_published": "2022-11-18T12:43:50.000Z",
+            "content_html": "<h1 id=\"intro\"><a class=\"markdownIt-Anchor\" href=\"#intro\">#</a> Intro</h1>\n<p>当你安装了 WSA 后随着你的使用，你会发现占用的空间越来越大。即使你把不需要的安卓程序卸载了之后，却依然满满的霸占着你的 C 盘。你只能眼睁睁地看他慢慢变大却无能为力。当然本篇文章的目的就是帮你解决这个问题。</p>\n<h1 id=\"移动wsa到其他盘符\"><a class=\"markdownIt-Anchor\" href=\"#移动wsa到其他盘符\">#</a> 移动 WSA 到其他盘符</h1>\n<blockquote>\n<p>你利用你聪明的头脑打开了百度并使用灵巧的双手在搜索框里输入 WSA 磁盘空间过大。很快你便看到了一种解决方式.</p>\n</blockquote>\n<ol>\n<li>打开设置 - 程序 - 已安装的程序，找到 WSA<br>\n<img src=\"/img/Windowssubsystemforandroidcompression/20221118205416.png\" alt=\"\"></li>\n<li>点击后面三个点选择移动。<br>\n稍等一会就会帮你把 WSA 移动到对应的盘符了。</li>\n</ol>\n<h1 id=\"使用diskpart工具压缩\"><a class=\"markdownIt-Anchor\" href=\"#使用diskpart工具压缩\">#</a> 使用 diskpart 工具压缩</h1>\n<ol>\n<li>以管理员身份运行 cmd，输入 diskpart 命令按回车。</li>\n<li>使用以下命令选择你的 userdata.vhdx</li>\n</ol>\n<pre class=\"line-numbers language-cmd\" data-language=\"cmd\"><div class=\"caption\"><span>cmd</span></div><code class=\"language-cmd\">select vdisk file = \"D:\\WpSystem\\S-1-5-21-3846526574-1502088438-2560978845-1001\\AppData\\Local\\Packages\\MicrosoftCorporationII.WindowsSubsystemForAndroid_8wekyb3d8bbwe\\LocalCache\\userdata.vhdx\"<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<p>如果提示</p>\n<pre class=\"line-numbers language-cmd\" data-language=\"cmd\"><div class=\"caption\"><span>cmd</span></div><code class=\"language-cmd\">DiskPart successfully selected the virtual disk file.<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<p>就说明成功了。</p>\n<ol start=\"3\">\n<li>输入  <code>compact vdisk</code>  来压缩。</li>\n</ol>\n<pre class=\"line-numbers language-none\"><code class=\"language-none\">DiskPart has encountered an error: The specified file is encrypted and the user does not have the ability to decrypt it.\nSee the System Event Log for more information.<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span></span></code></pre>\n<p>这个就说明你没有权限压缩这个文件。<br>\n为了解决这个问题我百度了一晚上，最后发现，只要你把这个文件复制走，就会提示<br>\n<img src=\"/img/Windowssubsystemforandroidcompression/20221118210314.png\" alt=\"\"><br>\n这里选择是，然后就会复制走。<br>\n这个时候你再看你复制的文件就会发现上面的小黄锁已经不见了。</p>\n<ol start=\"4\">\n<li>重新选择 userdata.vhdx 文件</li>\n</ol>\n<pre class=\"line-numbers language-cmd\" data-language=\"cmd\"><div class=\"caption\"><span>cmd</span></div><code class=\"language-cmd\">select vdisk file = \"D:\\userdata.vhdx\"<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<ol start=\"5\">\n<li>重新输入命令  <code>compact vdisk</code>  进行压缩，如果出现下面的提示那就说明压缩成功了。</li>\n</ol>\n<pre class=\"line-numbers language-cmd\" data-language=\"cmd\"><div class=\"caption\"><span>cmd</span></div><code class=\"language-cmd\">DISKPART&gt; compact vdisk\n\n  100 percent completed\n\nDiskPart successfully compacted the virtual disk file.\n\nDISKPART&gt;<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>\n<p>此时再看你复制出来的文件，就会发现大小缩小了很多，压缩成功了。<br>\n接着只需要剪切拷贝出来的文件，替换掉原来的文件就可以了。</p>\n<h1 id=\"成果\"><a class=\"markdownIt-Anchor\" href=\"#成果\">#</a> 成果</h1>\n<p><strong>压缩前：</strong></p>\n<blockquote>\n<p><img src=\"/img/Windowssubsystemforandroidcompression/20221118204548.png\" alt=\"\"></p>\n</blockquote>\n<p><strong>压缩后：</strong></p>\n<blockquote>\n<p><img src=\"/img/Windowssubsystemforandroidcompression/20221118210939.png\" alt=\"\"></p>\n</blockquote>\n",
+            "tags": [
+                "wsa",
+                "vhd",
+                "vhdx",
+                "diskpart"
+            ]
+        }
+    ]
+}

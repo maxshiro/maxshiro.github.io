@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>MAXshiro&#39;s Blog • Posts by &#34;guide&#34; tag</title>
+        <link>http://maxshiroi.top</link>
+        <description>Discover and Record the world.</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 17 Apr 2022 13:35:37 +0800</pubDate>
+        <lastBuildDate>Sun, 17 Apr 2022 13:35:37 +0800</lastBuildDate>
+        <category>nextcloud</category>
+        <category>聊天室</category>
+        <category>python</category>
+        <category>ctf</category>
+        <category>buuctf</category>
+        <category>antsword</category>
+        <category>linux</category>
+        <category>centos</category>
+        <category>web</category>
+        <category>nginx</category>
+        <category>mysql</category>
+        <category>wsa</category>
+        <category>vhd</category>
+        <category>vhdx</category>
+        <category>diskpart</category>
+        <category>arch</category>
+        <category>pacman</category>
+        <category>win</category>
+        <category>explorer.exe</category>
+        <category>autorefresh</category>
+        <category>network</category>
+        <category>vmware</category>
+        <category>kali</category>
+        <category>dvwa</category>
+        <category>fedora</category>
+        <category>helloworld</category>
+        <category>plugin</category>
+        <category>hexo</category>
+        <category>backup</category>
+        <category>guide</category>
+        <category>目录</category>
+        <category>指令</category>
+        <category>权限</category>
+        <category>media center</category>
+        <category>plex</category>
+        <category>emby</category>
+        <category>jellyfin</category>
+        <category>视频</category>
+        <category>音乐</category>
+        <category>运维</category>
+        <category>smb</category>
+        <category>passwd</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>树莓派</category>
+        <category>docker</category>
+        <category>openwrt</category>
+        <category>router</category>
+        <category>pic</category>
+        <category>img</category>
+        <category>api</category>
+        <category>random</category>
+        <category>wallpaper</category>
+        <category>短链</category>
+        <category>测试</category>
+        <category>Vocal</category>
+        <category>AI</category>
+        <category>歌声合成</category>
+        <category>transmission</category>
+        <category>torrent</category>
+        <category>下载器</category>
+        <category>nas</category>
+        <category>bug</category>
+        <category>win7</category>
+        <category>capacity</category>
+        <category>shrink</category>
+        <category>Android</category>
+        <category>Hyper-V</category>
+        <category>WSA</category>
+        <category>wsl2</category>
+        <category>Hyper-v</category>
+        <category>wsl</category>
+        <category>权限不足</category>
+        <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/133537/</guid>
+            <title>使用 Hexo 程序部署博客到githubpage上</title>
+            <link>http://maxshiroi.top/ug/133537/</link>
+            <category>hexo</category>
+            <category>guide</category>
+            <pubDate>Sun, 17 Apr 2022 13:35:37 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#环境&#34;&gt;#&lt;/a&gt; 环境&lt;/h1&gt;
+&lt;p&gt;Hexo 程序使用 node.js 程序编写，因此需要现在环境机上部署 node.js，git 只用来推送。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;什么是 Node.js&lt;/strong&gt;：一个运行 javascript (JS) 的环境。Hexo 是一个 javascript (JS) 语言的程序。一般 JS 运行在浏览器中，但是也有一种非浏览器环境也可以运行 JS。这个环境是 Node.js&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;什么是 Git&lt;/strong&gt;：一个版本控制软件。Hexo 博客源码由纯文本构成，管理纯文本项目的最好办法之一就是使用 Git。还记得 word 里面的历史记录和版本回退功能么？简单的来说，Git 就提供了类似功能，只不过更强大。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文章使用 fedora 系 linux 操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;安装-git&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装-git&#34;&gt;#&lt;/a&gt; 安装 git&lt;/h2&gt;
+&lt;p&gt;使用 yum 指令进行安装：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;su
+yum install git-core # 坏习惯，请减少使用root用户&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查看是否安装成功：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@localhost ~]# git --version
+git version 1.8.3.1&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;安装-nodejs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装-nodejs&#34;&gt;#&lt;/a&gt; 安装 node.js&lt;/h2&gt;
+&lt;p&gt;直接 yum 一把梭&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install nodejs&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后查看版本：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@localhost ~]# node -v
+v16.14.2&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;顺便看看 npm 版本：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@localhost ~]# npm -v
+8.5.0&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;配置本体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置本体&#34;&gt;#&lt;/a&gt; 配置本体&lt;/h1&gt;
+&lt;h2 id=&#34;hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo&#34;&gt;#&lt;/a&gt; hexo&lt;/h2&gt;
+&lt;p&gt;如果你没有使用加速等工具的话，这里建议将 npm 源改到淘宝：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;npm config set registry http://registry.npm.taobao.org&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用 npm 指令安装：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install -g hexo-cli&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;看看安装好了没：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@localhost ~]# hexo -v
+hexo-cli: 4.3.0
+os: linux 3.10.0-1160.31.1.el7.x86_64 CentOS Linux 7 (Core)
+node: 16.14.2
+...
+ngtcp2: 0.1.0-DEV
+nghttp3: 0.1.0-DEV&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;安装server&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装server&#34;&gt;#&lt;/a&gt; 安装 server&lt;/h2&gt;
+&lt;p&gt;如果你想在本地预览博客的话，可以安装下。其实装不装都无所谓。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install hexo hexo-server&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;安装推送插件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装推送插件&#34;&gt;#&lt;/a&gt; 安装推送插件&lt;/h2&gt;
+&lt;p&gt;这个推送插件是后面要推送到 &lt;code&gt;github page&lt;/code&gt;  上要使用的插件。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install hexo-deployer-git --save&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;创建博客&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建博客&#34;&gt;#&lt;/a&gt; 创建博客&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;hexo init [你的博客名字]
+cd [你的博客名字]
+npm install&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你已经备份过想要还原，则只需要做到这一步就已经可以了。但是如果想要推送还需要再看下面的配置 git 项。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本地预览博客&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#本地预览博客&#34;&gt;#&lt;/a&gt; 本地预览博客&lt;/h1&gt;
+&lt;p&gt;上面已经生成好了基本博客，可以使用 &lt;code&gt;ls&lt;/code&gt;  命令查看下是否正确生成了文件&lt;br&gt;
+下面是 hexo 博客的基本结构。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;.
+ ├── _config.yml # 网站配置信息
+ ├── package.json # 应用程序信息
+ ├── scaffolds # 模板文件夹
+ ├── node_modules # 生成博客后编译出来的文件。主要看这个是否生成成功了。
+ ├── source # 存放用户资源
+ |   ├── _drafts
+ |   └── _posts
+ └── themes # 主题文件夹&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果确认没什么问题便可以进行生成步骤了。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;测试本地生成博客&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;# 生成一篇文章，注意要在blog的目录下。
+hexo new &#34;文章名&#34;
+# 生成静态网页
+hexo g
+# 打开本地服务器
+hexo s&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;此时你可以打开  &lt;code&gt;[博客地址]:4000&lt;/code&gt;  来查看效果了。&lt;br&gt;
+如果确认没问题，便可以继续操作。&lt;/p&gt;
+&lt;h1 id=&#34;备份还原&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#备份还原&#34;&gt;#&lt;/a&gt; 备份还原&lt;/h1&gt;
+&lt;p&gt;博客部署完成后或是以后工作中难免需要更换环境，这里也简单说一下备份还原的流程。&lt;/p&gt;
+&lt;h2 id=&#34;本地备份还原&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#本地备份还原&#34;&gt;#&lt;/a&gt; 本地备份还原&lt;/h2&gt;
+&lt;p&gt;本地备份还原是对主要文件自行压缩拷贝后导出，然后覆盖进行还原&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要备份的文件列表如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;.
+|-- .gitignore
+|-- _config.yml
+|-- package-lock.json
+|-- package.json
+|-- scaffolds
+|-- source
+`-- themes&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;将这些文件考出来后则备份完成。&lt;/p&gt;
+&lt;h2 id=&#34;可能会出现的问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可能会出现的问题&#34;&gt;#&lt;/a&gt; 可能会出现的问题&lt;/h2&gt;
+&lt;p&gt;如果当你完成还原，进行 &lt;code&gt;hexo g&lt;/code&gt;  命令提示如下错误：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;root@LAPTOP-N4RDFRJ0:/mnt/d/Program/hexo/blog# npm install --save bulma-stylus
+npm ERR! code FETCH_ERROR
+npm ERR! errno FETCH_ERROR
+npm ERR! invalid json response body at https://registry.npmjs.org/browserslist reason: Unexpected end of JSON input
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2022-08-23T09_22_43_977Z-debug.log&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;执行这条命令即可：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;npm cache clean --force&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;配置远端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置远端&#34;&gt;#&lt;/a&gt; 配置远端&lt;/h1&gt;
+&lt;p&gt;我将博客部署到了 github 上，所以你要先去 github.com 上注册一个账户。并创建一个仓库。&lt;/p&gt;
+&lt;h2 id=&#34;初始化-git&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#初始化-git&#34;&gt;#&lt;/a&gt; 初始化 git&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;init git&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果提示 &lt;code&gt;Couldn&#39;t find an alternative telinit implementation to spawn.&lt;/code&gt;  不用管，直接下一步。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;配置-ssh&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-ssh&#34;&gt;#&lt;/a&gt; 配置 ssh&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;配置登录信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --global user.name &#34;你的git用户名&#34;
+git config --global user.email &#34;你的git登录邮箱&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;生成 ssh keygen&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -t rsa -C &#34;你的git登录邮箱&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果弹出了很多内容，直接进行一个回车跳过。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+... // 直接回车跳过&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;复制密钥&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /root/.ssh/id_rsa.pub&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将里面显示的所有内容复制。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;登录 github&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;头像&lt;/li&gt;
+&lt;li&gt;Settings&lt;/li&gt;
+&lt;li&gt;SSH and GPG keys&lt;/li&gt;
+&lt;li&gt;New SSH key&lt;/li&gt;
+&lt;li&gt;将复制的内容粘贴到 Keys 框里&lt;/li&gt;
+&lt;li&gt;Add SSH key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;测试链接是否成功&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@localhost ~]# ssh -T git@github.com
+Hi maxshiro! You&#39;ve successfully authenticated, but GitHub does not provide shell access.&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;配置推送&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置推送&#34;&gt;#&lt;/a&gt; 配置推送&lt;/h1&gt;
+&lt;p&gt;配置完 git 之后便可以配置 hexo 博客的推送地址了，下面以我的为例。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先 cd 到当前目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;cd blog&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;编辑配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;vi _config.yml&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;移动到 deploy 天机如下内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;deploy:
+    type: git
+    reop: git@github.com:maxshiro/maxshiro.github.io.git #这个地址可以到你的repo那里获得。
+    branch: main #这个branch就是仓库的默认目录了。&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;推送博客&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#推送博客&#34;&gt;#&lt;/a&gt; 推送博客&lt;/h1&gt;
+&lt;p&gt;已经测试并生成过博客了，所以可以直接推送。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;# 清理之前生成的文件
+hexo clean
+# 生成静态网页
+hexo g
+# 推送到github repo
+hexo d&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;结语&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#结语&#34;&gt;#&lt;/a&gt; 结语&lt;/h1&gt;
+&lt;p&gt;此时你已经完成了 hexo 博客的基本配置。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

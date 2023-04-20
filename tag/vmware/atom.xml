@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog • Posts by &#34;vmware&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2023-01-14T09:41:37.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="docker" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/ug/174137/</id>
+        <title>vmwarewin7shrink</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/174137/"/>
+        <content type="html">&lt;p&gt;通常在我们创建虚拟机时往往并不清楚需要多少空间，等到后期才会发现分配了很多空间实际上用不到。这时候就要想办法缩小虚拟机所占用的空间了。&lt;br&gt;
+根据我这次缩小空间的经历，我十分不推荐使用快照功能。因为这会让你虚拟机当前处在快照模式，与原来的文件关系不大（就是处理起来更麻烦了。）。&lt;br&gt;
+如果你像我一样只是用 vmware 来存放如企鹅，钉钉，腾讯会议，微信这种垃圾的话，那么可以参照我的方法。&lt;/p&gt;
+&lt;h1 id=&#34;缩小空间占用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#缩小空间占用&#34;&gt;#&lt;/a&gt; 缩小空间占用。&lt;/h1&gt;
+&lt;h2 id=&#34;0首先查看磁盘类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#0首先查看磁盘类型&#34;&gt;#&lt;/a&gt; 0. 首先查看磁盘类型&lt;/h2&gt;
+&lt;p&gt;使用文本编辑器打开虚拟机根目录下的 xxx.vmdk 文件，查看 # Extent description 下面的内容第三块是否为 SPARSE 。不是则需要进行转换。如下图：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s001.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s002.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s003.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s004.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s005.vmdk&#34;
+RW 4521984 SPARSE &#34;Windows 7 x64-cl1-s006.vmdk&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果你在创建虚拟机选择的是动态分配磁盘文件并拆分成多个的话这里就是 SPARSE。&lt;/p&gt;
+&lt;h2 id=&#34;1确保没有快照&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1确保没有快照&#34;&gt;#&lt;/a&gt; 1. 确保没有快照&lt;/h2&gt;
+&lt;p&gt;确保虚拟机内没有快照。虚拟机目录下只有一个 xxx.vmdk 以及从属的 s00x.vmdk。如果有快照没法处理，则可以执行克隆操作到其他盘进行处理。&lt;/p&gt;
+&lt;h2 id=&#34;2尽可能缩小虚拟机内部所占用的空间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2尽可能缩小虚拟机内部所占用的空间&#34;&gt;#&lt;/a&gt; 2. 尽可能缩小虚拟机内部所占用的空间&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考&lt;a href=&#34;https://blog.csdn.net/CoutCodes/article/details/104975783&#34;&gt;【Win10 C 盘压缩卷问题解答】：无法将卷压缩到超出任何不可移动的文件所在点&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;进入虚拟机，进行以下处理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关闭休眠功能 *&lt;/li&gt;
+&lt;li&gt;关闭虚拟内存并删除虚拟内存文件 *&lt;/li&gt;
+&lt;li&gt;虚拟机内进行空间整理，磁盘清理&lt;/li&gt;
+&lt;li&gt;处理其他文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意后面带星号的处理完成所有步骤后要重新打开 (建议)，不然可能会影响性能。&lt;/p&gt;
+&lt;p&gt;此时你需要确定你缩小后的 c 盘空间大小，这也决定着后面动态磁盘缩小的操作。我确定缩小后的空间为 22GiB。&lt;/p&gt;
+&lt;h2 id=&#34;3-重启到pe系统使用diskgenius缩小c盘空间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-重启到pe系统使用diskgenius缩小c盘空间&#34;&gt;#&lt;/a&gt; 3. 重启到 pe 系统使用 Diskgenius 缩小 c 盘空间。&lt;/h2&gt;
+&lt;h3 id=&#34;使用微pe制作iso文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用微pe制作iso文件&#34;&gt;#&lt;/a&gt; 使用微 pe 制作 iso 文件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;添加硬件cddvd设备使用创建的iso文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#添加硬件cddvd设备使用创建的iso文件&#34;&gt;#&lt;/a&gt; 添加硬件 CD/DVD 设备，使用创建的 iso 文件。&lt;/h3&gt;
+&lt;h3 id=&#34;vmware设置光驱启动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vmware设置光驱启动&#34;&gt;#&lt;/a&gt; &lt;a href=&#34;https://blog.csdn.net/syf442/article/details/5067832&#34;&gt;VMWare 设置光驱启动&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;4-减小vmware虚拟机虚拟磁盘大小&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-减小vmware虚拟机虚拟磁盘大小&#34;&gt;#&lt;/a&gt; 4. 减小 VMware 虚拟机虚拟磁盘大小&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此处内容来自：&lt;a href=&#34;https://blog.csdn.net/HayPinF/article/details/108252631&#34;&gt;减小 VMware 虚拟机虚拟磁盘大小&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在 VMware 里虚拟机的所有编号了的  &lt;code&gt;.*s001.*.vmdk&lt;/code&gt;  片段虚拟磁盘文件是虚拟化的虚拟机最大空间（Maximum Size)，就比如我的 Win7 虚拟机的 Maximum Size 是 40GiB（1GiB=1024MiB，1GB=1000MB），虚拟机生成了  &lt;code&gt;.*s001~s011.vmdk&lt;/code&gt;  共 11 个虚拟机磁盘文件 vmdk，该虚拟机的 &#34;Windows 7 x64-cl1.vmdk&#34; 中详实记录了这 11 个 vmdk 文件（从而进行各分片虚拟磁盘文件的按名索引）：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;# Extent description
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s001.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s002.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s003.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s004.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s005.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s006.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s007.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s008.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s009.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s010.vmdk&#34;
+RW 655360 SPARSE &#34;Windows 7 x64-cl1-s011.vmdk&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;vmdk 文件的 &#34;8323072&#34; 数字表示簇，2 簇 = 1KiB，则这 11 个 vmdk 文件对应了 ((10×8323072)/2/1024/1024)+(655360/2/1024/1024)=10×3.96875GiB+0.3125Gib=40GiB，刚好。&lt;/p&gt;
+&lt;p&gt;我们所要做的就是通过改变这里的文件个数从而达到缩小 vmdk 磁盘大小的目的。&lt;br&gt;
+已知 40GiB 对应的簇大小为 10×8323072+655360=83886080。即一个 G 的簇大小为 2097152 (/2=1048576)。&lt;br&gt;
+我们确定一下自己压缩后的大小。就比如我要压缩到 22G，得出簇的总大小为 2097152×22=46137344，这个数可以拆为五个 8323072 加上一个 46137344-(8323072×5)=4521984。即 (8323072×5)+4521984=46137344。&lt;br&gt;
+因此上面的文件就可以改成下面这样：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;# Extent description
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s001.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s002.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s003.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s004.vmdk&#34;
+RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s005.vmdk&#34;
+RW 4521984 SPARSE &#34;Windows 7 x64-cl1-s006.vmdk&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;记得备份 &#34;Windows 7 x64-cl1.vmdk&#34;，处理完成保存即可。&lt;/p&gt;
+&lt;h2 id=&#34;5重新启动虚拟机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5重新启动虚拟机&#34;&gt;#&lt;/a&gt; 5. 重新启动虚拟机&lt;/h2&gt;
+&lt;p&gt;此时你会发现虚拟机的磁盘大小已经变成 22G 了。教程结束。&lt;/p&gt;
+</content>
+        <category term="vmware" />
+        <category term="win7" />
+        <category term="capacity" />
+        <category term="shrink" />
+        <updated>2023-01-14T09:41:37.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/222828/</id>
+        <title>vmware安装好后配置centos网络</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/222828/"/>
+        <content type="html">&lt;h1 id=&#34;更改-ifcfg-ens33-文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#更改-ifcfg-ens33-文件&#34;&gt;#&lt;/a&gt; 更改 ifcfg-ens33 文件&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编辑配置文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /etc/sysconfig/network-scripts/ifcfg-ens33&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要添加 / 修改的地方&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;BOOTPROTO=static
+ONBOOT=yes
+IPADDR=192.168.xx.xx
+NETMASK=255.255.255.0
+GATEWAY=192.168.204.2
+DNS1=8.8.8.8
+DNS2=114.114.114.114&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;编辑-resolvconf-文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编辑-resolvconf-文件&#34;&gt;#&lt;/a&gt; 编辑 resolv.conf 文件&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /etc/resolv.conf&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;添加如下内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;# Generated by NetworkManager
+search localdomain
+nameserver 8.8.8.8&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;重启网卡&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#重启网卡&#34;&gt;#&lt;/a&gt; 重启网卡&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;service network restart&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="linux" />
+        <category term="centos" />
+        <category term="network" />
+        <category term="vmware" />
+        <updated>2022-09-19T14:28:28.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/124600/</id>
+        <title>【VMware】解决新版本的VMware虚拟机无法正常在旧版本的Windows上安装VMware Tools</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/124600/"/>
+        <content type="html">&lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
+&lt;p&gt;因为学习需要，要求安装 &lt;code&gt;Windows server 2008 R2&lt;/code&gt; 。安装时一切正常，但是到了安装 &lt;code&gt;VMware Tools&lt;/code&gt;  时，弹出了下列提示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/vmwarebug/20220920220101.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;其后&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其后&#34;&gt;#&lt;/a&gt; 其后&lt;/h1&gt;
+&lt;p&gt;我尝试百度搜索了解决办法，导致这种情况的大概解释为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原来，微软更新了驱动程序的签名算法，从 2019 年初开始，逐步弃用 SHA-1，改为 SHA-2。个人推测新版的 VMCI 驱动用的是 SHA-2 签名，而 &lt;code&gt;win7&lt;/code&gt;  不支持 SHA-2 签名，所以出现了这个问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;那么怎么办呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可以从 &lt;code&gt;Microsoft Update Catalog&lt;/code&gt;  下载 &lt;code&gt;KB4474419&lt;/code&gt;  和  &lt;code&gt;KB4490628&lt;/code&gt;  这两个补丁，然后安装到 &lt;code&gt;win7&lt;/code&gt;  虚拟机中。在没有成功安装 &lt;code&gt;VMware Tools&lt;/code&gt;  的情况下，传文件不太方便，可以用虚拟机里浏览器访问下载页面，然后直接在虚拟机里下载安装。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可是在 &lt;code&gt;winserver&lt;/code&gt;  虚拟机里很难进行操作更别说老旧的 IE 操作更不方便，而且 &lt;code&gt;windows server&lt;/code&gt;  的网络管理大家也都知道，会拦截所有地址。所以直到最后我也没法访问到微软的补丁界面。&lt;/p&gt;
+&lt;h1 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h1&gt;
+&lt;p&gt;我直接搜索了 &lt;code&gt;VMware Tools&lt;/code&gt; ，到其官网上找到了旧版本的 &lt;code&gt;Tools&lt;/code&gt;  镜像文件，随后直接对其进行一个挂载，这时直接弹出了自动运行窗口，进行一顿下一步下一步之后，成功将其安装到了虚拟机内。&lt;/p&gt;
+&lt;h1 id=&#34;旧版本下载地址&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#旧版本下载地址&#34;&gt;#&lt;/a&gt; 旧版本下载地址&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://packages.vmware.com/tools/releases/10.3.5/windows/&#34; title=&#34;点我去官网下载&#34;&gt;点我去官网下载&lt;/a&gt;&lt;br&gt;
+打开以后下载大小为 &lt;code&gt;114M&lt;/code&gt;  的映像文件，然后手动挂载到虚拟机上，便会自动运行。&lt;/p&gt;
+&lt;p&gt;转载需注明出处！&lt;/p&gt;
+</content>
+        <category term="vmware" />
+        <category term="bug" />
+        <updated>2022-08-25T04:46:00.000Z</updated>
+    </entry>
+</feed>

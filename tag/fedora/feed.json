@@ -1,0 +1,22 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MAXshiro's Blog • All posts by \"fedora\" tag",
+    "description": "Discover and Record the world.",
+    "home_page_url": "http://maxshiroi.top",
+    "items": [
+        {
+            "id": "http://maxshiroi.top/ug/100353/",
+            "url": "http://maxshiroi.top/ug/100353/",
+            "title": "dvwa安装指引",
+            "date_published": "2023-03-07T02:03:53.000Z",
+            "content_html": "<h1 id=\"启动nginx\"><a class=\"markdownIt-Anchor\" href=\"#启动nginx\">#</a> 启动 nginx</h1>\n<h2 id=\"service-nginx-startcd-varwwwhtmlvim-hellohtml\"><a class=\"markdownIt-Anchor\" href=\"#service-nginx-startcd-varwwwhtmlvim-hellohtml\">#</a> service nginx start<br>\ncd /var/www/html<br>\nvim hello.html</h2>\n<p>Helloworld!<br>\n// 访问虚拟机地址。</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">[root@fedora axro]# cd /usr/share/nginx/html/\n[root@fedora html]# git clone https://github.com/digininja/DVWA.git\n[root@fedora html]# cd DVWA/config\n[root@fedora config]# cp config.inc.php.dist config.inc.php\n[root@fedora config]# vi config.inc.php\nmysql -u root -p\ncreate database DVWA;<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>\n<p>mysql&gt; create database dvwa;<br>\nQuery OK, 1 row affected (0.00 sec)</p>\n<p>mysql&gt; create user dvwa@localhost identified by ‘p@ssw0rd’;<br>\nQuery OK, 0 rows affected (0.01 sec)</p>\n<p>mysql&gt; grant all on dvwa.* to dvwa@localhost;<br>\nQuery OK, 0 rows affected (0.01 sec)</p>\n<p>mysql&gt; flush privileges;<br>\nQuery OK, 0 rows affected (0.00 sec)</p>\n",
+            "tags": [
+                "linux",
+                "mysql",
+                "kali",
+                "dvwa",
+                "fedora"
+            ]
+        }
+    ]
+}

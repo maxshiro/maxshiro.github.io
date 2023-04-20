@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MAXshiro's Blog • All posts by \"passwd\" tag",
+    "description": "Discover and Record the world.",
+    "home_page_url": "http://maxshiroi.top",
+    "items": [
+        {
+            "id": "http://maxshiroi.top/ug/101622/",
+            "url": "http://maxshiroi.top/ug/101622/",
+            "title": "解决mysql第一次安装后改密码的各种问题",
+            "date_published": "2022-10-19T02:16:22.000Z",
+            "content_html": "<h1 id=\"如何重置mysql密码\"><a class=\"markdownIt-Anchor\" href=\"#如何重置mysql密码\">#</a> 如何重置 mysql 密码？</h1>\n<p>按照提示，alter user。</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<p><img src=\"/img/WebBackcreat1/20221019100609.png\" alt=\"\"><br>\n哈哈快乐报错。</p>\n<p>更改密码复杂度。</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">set global validate_password_policy=0;\nset global validate_password_length=1;<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span></span></code></pre>\n<p>提示：</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">ERROR 1193 (HY000): Unknown system variable 'validate_password_policy'<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<p>很快乐。</p>\n<p>那就先查看密码规范：</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">SHOW VARIABLES LIKE 'validate_password%';<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<p>提示：</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<p>套娃呢是吧。</p>\n<p>解决方法：<br>\n重置一个和随机密码差不多的就可以了：</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">ALTER USER 'root'@'localhost' IDENTIFIED BY 'qazWsx&gt;+&amp;3ed';<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<p>已经提示成功了：</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">mysql&gt; ALTER USER 'root'@'localhost' IDENTIFIED BY 'qazWsx&gt;+&amp;3ed';\nQuery OK, 0 rows affected (0.02 sec)<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span></span></code></pre>\n<p>更改密码复杂度：</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">set global validate_password.policy=0;\nset global validate_password.length=6;<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span></span></code></pre>\n<p>修改密码并退出：</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';\nexit<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span></span></code></pre>\n<p>然后就可以愉快重启登陆了：</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">systemctl restart mysqld\nmysql -u root -p<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span></span></code></pre>\n",
+            "tags": [
+                "linux",
+                "mysql",
+                "passwd"
+            ]
+        }
+    ]
+}

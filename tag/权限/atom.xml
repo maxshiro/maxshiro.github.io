@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog • Posts by &#34;权限&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2022-09-22T09:52:33.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="docker" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/ug/175233/</id>
+        <title>Linux入门学习0</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/175233/"/>
+        <content type="html">&lt;h1 id=&#34;linux系统目录结构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux系统目录结构&#34;&gt;#&lt;/a&gt; linux 系统目录结构&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 linux 中，所有都是以文件的形式存储和管理的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;bin&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bin&#34;&gt;#&lt;/a&gt; /bin&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Binary 存放经常使用的命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sbin&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sbin&#34;&gt;#&lt;/a&gt; /sbin&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;super Binary 超级用户命令存放的目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;home&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#home&#34;&gt;#&lt;/a&gt; /home&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;root&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#root&#34;&gt;#&lt;/a&gt; /root&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统管理员目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;etc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#etc&#34;&gt;#&lt;/a&gt; /etc&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;管理系统配置文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;usr&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#usr&#34;&gt;#&lt;/a&gt; /usr&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;类似于 windows 下 Programfiles 目录，&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;boot&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#boot&#34;&gt;#&lt;/a&gt; /boot&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;启动所使用的核心文件都会存放在这里。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;proc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#proc&#34;&gt;#&lt;/a&gt; /proc&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内存映射&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;srv&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#srv&#34;&gt;#&lt;/a&gt; /srv&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;services 的缩写，用于存放服务启动所需要的数据&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sys&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sys&#34;&gt;#&lt;/a&gt; /sys&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;tmp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tmp&#34;&gt;#&lt;/a&gt; /tmp&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;是 temporary (临时) 的缩写，存放临时 / 缓存文件，可当作回收站使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;dev&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#dev&#34;&gt;#&lt;/a&gt; /dev&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;device 的缩写，类似于 windows 的设备管理器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mnt&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mnt&#34;&gt;#&lt;/a&gt; /mnt&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;linux 用于挂载可移动设备（临时）的目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;opt&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#opt&#34;&gt;#&lt;/a&gt; /opt&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;主机额外安装的软件存放的目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;var&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#var&#34;&gt;#&lt;/a&gt; /var&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;存放经常被修改的目录或文件，比如日志（*.log）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;lib&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#lib&#34;&gt;#&lt;/a&gt; /lib&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;存放系统基本的动态链接库。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;权限数字意思详解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#权限数字意思详解&#34;&gt;#&lt;/a&gt; 权限数字意思详解&lt;/h1&gt;
+&lt;p&gt;我们首先打开控制台在任意位置输入 ll, 就能看到当前文件夹下所有类型的信息。我们只取其中的前十位来进行结束.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;dr-xr-xr-x.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第一位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一位&#34;&gt;#&lt;/a&gt; 第一位&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一位表示类型&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;d directory 表示目录&lt;/li&gt;
+&lt;li&gt;b block 块文件&lt;/li&gt;
+&lt;li&gt;c char 字符文件&lt;/li&gt;
+&lt;li&gt;- file 普通文件&lt;/li&gt;
+&lt;li&gt;l link 链接&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;后面九位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后面九位&#34;&gt;#&lt;/a&gt; 后面九位&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后面九位表示了文件的类型，对应的位置如果是 &lt;code&gt;-&lt;/code&gt;  则表示没有对应的权限.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+    &lt;tbody&gt;&lt;tr&gt;&lt;th&gt;
+        &lt;/th&gt;&lt;td colspan=&#34;3&#34;&gt;前三位&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;中间三位&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;后三位&lt;/td&gt;
+    
+    &lt;/tr&gt;&lt;tr align=&#34;center&#34;&gt;
+        &lt;td colspan=&#34;3&#34;&gt;创建者&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;同组用户&lt;/td&gt;
+        &lt;td colspan=&#34;3&#34;&gt;其他用户&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;r&lt;/td&gt;
+        &lt;td&gt;w&lt;/td&gt;
+        &lt;td&gt;x&lt;/td&gt;
+        &lt;td&gt;r&lt;/td&gt;
+        &lt;td&gt;w&lt;/td&gt;
+        &lt;td&gt;x&lt;/td&gt;
+        &lt;td&gt;r&lt;/td&gt;
+        &lt;td&gt;w&lt;/td&gt;
+        &lt;td&gt;x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;读&lt;/td&gt;
+        &lt;td&gt;写&lt;/td&gt;
+        &lt;td&gt;执行&lt;/td&gt;
+        &lt;td&gt;读&lt;/td&gt;
+        &lt;td&gt;写&lt;/td&gt;
+        &lt;td&gt;执行&lt;/td&gt;
+        &lt;td&gt;读&lt;/td&gt;
+        &lt;td&gt;写&lt;/td&gt;
+        &lt;td&gt;执行&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;下面来看一个实例:&lt;/p&gt;
+&lt;p&gt;如果一个文件的权限为 755, 则代表什么意思？&lt;/p&gt;
+&lt;p&gt;我们只需要把 755 按位转换为二进制，对应位为 0 则表示没有这个权限.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;7&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;111&lt;/td&gt;
+&lt;td&gt;101&lt;/td&gt;
+&lt;td&gt;101&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;用人的语言表述:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于创建者：可以读取，可以更改，可以执行.&lt;br&gt;
+ 对于同组人员：可以读取，不能更改，可以执行.&lt;br&gt;
+ 对于其他成员：可以读取，不能更改，可以执行.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="linux" />
+        <category term="目录" />
+        <category term="指令" />
+        <category term="权限" />
+        <updated>2022-09-22T09:52:33.000Z</updated>
+    </entry>
+</feed>

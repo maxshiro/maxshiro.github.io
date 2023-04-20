@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MAXshiro's Blog • All posts by \"聊天室\" tag",
+    "description": "Discover and Record the world.",
+    "home_page_url": "http://maxshiroi.top",
+    "items": [
+        {
+            "id": "http://maxshiroi.top/ug/212907/",
+            "url": "http://maxshiroi.top/ug/212907/",
+            "title": "Centos安装MatrixSynapseChat简易教程",
+            "date_published": "2022-08-28T13:29:07.000Z",
+            "content_html": "<h2 id=\"先安装前置\"><a class=\"markdownIt-Anchor\" href=\"#先安装前置\">#</a> 先安装前置</h2>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">yum install libtiff-devel libjpeg-devel libzip-devel freetype-devel libwebp-devel libxml2-devel libxslt-devel libpq-devel python3-virtualenv libffi-devel openssl-devel python3-devel\nyum groupinstall \"Development Tools\"<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span></span></code></pre>\n<h2 id=\"使用root账户接入您的centos找到合适的位置开始操作\"><a class=\"markdownIt-Anchor\" href=\"#使用root账户接入您的centos找到合适的位置开始操作\">#</a> 使用 root 账户接入您的 centos，找到合适的位置开始操作</h2>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">mkdir syn<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<h3 id=\"依次执行以下指令\"><a class=\"markdownIt-Anchor\" href=\"#依次执行以下指令\">#</a> 依次执行以下指令</h3>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">virtualenv -p python3 ./env &amp;&amp; source ./env/bin/activate\npython3 -m pip install --upgrade pip &amp;&amp; python3 -m pip install --upgrade setuptools &amp;&amp; python3 -m pip install psycopg2-binary\npython3 -m pip install matrix-synapse                         //安装synapse\npython3 -m pip install -U matrix-synapse                    //更新synapse<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span></span></code></pre>\n<h2 id=\"将下列指令拷贝到控制台执行自动生成homeserveryaml\"><a class=\"markdownIt-Anchor\" href=\"#将下列指令拷贝到控制台执行自动生成homeserveryaml\">#</a> 将下列指令拷贝到控制台执行，自动生成 homeserver.yaml</h2>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">python3 -m synapse.app.homeserver \\\n    --server-name im.axro.top \\\n    --config-path homeserver.yaml \\\n    --generate-config \\\n    --report-stats=no<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span><span></span></span></code></pre>\n<h2 id=\"编辑生成homeserveryaml\"><a class=\"markdownIt-Anchor\" href=\"#编辑生成homeserveryaml\">#</a> 编辑生成 <code>homeserver.yaml</code></h2>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">enable_registration: true\nsuppress_key_server_warning: true\nbind_addresses: ['::1', '0.0.0.0']<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span></span></code></pre>\n<h2 id=\"启动关闭服务器\"><a class=\"markdownIt-Anchor\" href=\"#启动关闭服务器\">#</a> 启动 / 关闭服务器</h2>\n<h4 id=\"注意要先进入虚拟python环境\"><a class=\"markdownIt-Anchor\" href=\"#注意要先进入虚拟python环境\">#</a> 注意要先进入虚拟 python 环境</h4>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">source ./env/bin/activate\n\nsynctl start\nsynctl stop<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span></span></code></pre>\n<h2 id=\"退出虚拟环境\"><a class=\"markdownIt-Anchor\" href=\"#退出虚拟环境\">#</a> 退出虚拟环境</h2>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">deactivate<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<h2 id=\"配置反代\"><a class=\"markdownIt-Anchor\" href=\"#配置反代\">#</a> 配置反代</h2>\n<p>进入宝塔面板新建静态网站，配置 ssl，配置反向代理地址为 <code>https://localhost:8008</code> , 保存即可.</p>\n",
+            "tags": [
+                "nextcloud",
+                "聊天室",
+                "python"
+            ]
+        }
+    ]
+}

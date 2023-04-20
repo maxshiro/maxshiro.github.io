@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog • Posts by &#34;歌声合成&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2022-08-28T13:07:24.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="docker" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/ug/210724/</id>
+        <title>【虚拟Vocal】 Synthesize V 初代整合</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/210724/"/>
+        <content type="html">&lt;h1 id=&#34;软件介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件介绍&#34;&gt;#&lt;/a&gt; 软件介绍&lt;/h1&gt;
+&lt;p&gt;Synthesizer V 是 Dreamtonics 开发的系列歌声合成软件，它结合了强大的歌声合成引擎和直观灵活的用户界面，只需绘制旋律并注入歌词，即可轻松创作原创歌曲。&lt;/p&gt;
+&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;当你想要摆脱 Vocaloid 软件的支配，想要试试其他同类型的软件。您肯定会搜到这个软件。但是很不幸，当您点开官网查看售价，显然单个声库加 pro 版软件 899 的价格让您打了退堂鼓。&lt;br&gt;
+  您只好把思路转向搜索 crack 版本软件。又很不幸，这个软件 crack 版的本体和声库都很难寻找。&lt;br&gt;
+  在这里恭喜您找到了这篇文章。可万幸中的不幸就是，我也没有这个软件的 V2 破解版。但是我找到了 V1 的破解版，在此提供给大家。&lt;/p&gt;
+&lt;h1 id=&#34;关于软件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#关于软件&#34;&gt;#&lt;/a&gt; 关于软件&lt;/h1&gt;
+&lt;p&gt;软件的获取来源是 GitHUB 用户 &lt;code&gt;CJLU&lt;/code&gt;  的 &lt;code&gt;Synthesizer-V-FE&lt;/code&gt; , 版本为 1.8.0，所有功能正常使用。链接地址：&lt;a href=&#34;https://github.com/CJLU-source/Synthesizer-V-FE&#34; title=&#34;给特何不&#34;&gt;给特何不&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;关于声库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#关于声库&#34;&gt;#&lt;/a&gt; 关于声库&lt;/h1&gt;
+&lt;p&gt;目前手头上只有这几个声库：&lt;/p&gt;
+&lt;h2 id=&#34;eng-英语&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#eng-英语&#34;&gt;#&lt;/a&gt; Eng (英语)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;爱莲娜芙缇 (女)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;zh-中文&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#zh-中文&#34;&gt;#&lt;/a&gt; Zh (中文)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;苍穹 (女)&lt;/li&gt;
+&lt;li&gt;赤羽 (女)&lt;/li&gt;
+&lt;li&gt;海伊 (女)&lt;/li&gt;
+&lt;li&gt;诗岸 (女)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;jp-日文&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#jp-日文&#34;&gt;#&lt;/a&gt; JP (日文)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;闇音レンリ (女)&lt;/li&gt;
+&lt;li&gt;玄武 (男)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;下载地址-包含全部内容&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载地址-包含全部内容&#34;&gt;#&lt;/a&gt; 下载地址 （包含全部内容）&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;特殊原因暂不提供 😦&lt;br&gt;
+(其实是文件丢了&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="Vocal" />
+        <category term="AI" />
+        <category term="歌声合成" />
+        <updated>2022-08-28T13:07:24.000Z</updated>
+    </entry>
+</feed>

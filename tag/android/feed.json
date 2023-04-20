@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MAXshiro's Blog • All posts by \"android\" tag",
+    "description": "Discover and Record the world.",
+    "home_page_url": "http://maxshiroi.top",
+    "items": [
+        {
+            "id": "http://maxshiroi.top/ug/205944/",
+            "url": "http://maxshiroi.top/ug/205944/",
+            "title": "Win11 安装 WSA 简易教程",
+            "date_published": "2022-08-28T12:59:44.000Z",
+            "content_html": "<blockquote>\n<p>微软终于在昨天上线了 WSA 的测试版本，此次只有美国地区上线了。因此如果你的 Win11 系统为美区的话，可以直接点击 <a href=\"https://www.microsoft.com/store/productId/9P3395VX91NR\" title=\"这个链接\">这个链接</a> 进行安装。如果非美区那就接着看步骤吧</p>\n</blockquote>\n<blockquote>\n<p>bug 还是有很多，首先是 WSA 无法调用 GPU, 这就导致很多 3d 游戏会很卡，实测明日方舟帧数不到 20 帧。然后安装 WSA 要启用 Hyper-V 即微软的虚拟机平台，打开这个会导致无法再安装和使用其他安卓模拟器。和市面上大多数安卓模拟器相比，微软这个 WSA 是 ARM 翻译运行的，安卓版本更高 (Android 11), 可以运行 ARM 程序。与系统集成度更好 (虽然目前还没有实现 WSL 那样的文件访问) 而模拟器大多都为 Android x86 项目改的，因此最高只能到 Android 9.</p>\n</blockquote>\n<blockquote>\n<p>如果你是想尝尝鲜，试试这个新功能那我还是推荐试一试。如果你主要想拿来打游戏，日常使用的话那还是更推荐安卓模拟器一些.</p>\n</blockquote>\n<h1 id=\"开启虚拟化\"><a class=\"markdownIt-Anchor\" href=\"#开启虚拟化\">#</a> 开启虚拟化</h1>\n<blockquote>\n<p>PS: 如果之前你有禁用过 Hyper-V 的话记得使用管理员权限打开 Powershell 然后通过这个指令这个指令重新打开，不记得有没有那就跳过:</p>\n</blockquote>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">bcdedit /set hypervisorlaunchtype auto<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<ol>\n<li>打开开始菜单，直接搜索控制面板，然后打开.</li>\n<li>找到  <code>程序和功能</code>  - <code>启用或关闭 Windows 功能</code>  并点击打开，会弹出一个窗口.</li>\n<li>在弹出窗口里面勾选  <code>Hyper-V</code> 、 <code>Windows 虚拟机监控程序平台</code> 、 <code>适用于 Linux 的 Windows 子系统</code> 、 <code>虚拟机平台</code>  这几项，然后点击确定。系统会自动查找更新并安装.</li>\n<li>等待重启过后就可以进行下一步了.</li>\n</ol>\n<h1 id=\"安装本体\"><a class=\"markdownIt-Anchor\" href=\"#安装本体\">#</a> 安装本体</h1>\n<ol>\n<li>首先复制上面那个链接.</li>\n<li><a href=\"https://store.rg-adguard.net/\" title=\"安装包抓包\">安装包抓包</a>，点开这个网址，将第一步复制的链接粘贴到搜索框，右边选择  <code>slow</code>  然后点对勾.</li>\n<li>找到最下面名为  <code>MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle</code>  的一项，注意大小为  <code>1.21GB</code>  , 直接点击进行一个下载.</li>\n<li>找到你下载的文件，然后右键  <code>开始按钮</code>  选择  <code>Windows 终端 (管理员)</code></li>\n<li>然后会打开 Powershell 窗口，在里面输入指令</li>\n</ol>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">add-appxpackage \"你下载文件的完整路径\" \n# example\nadd-appxpackage \"D:\\download\\MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle\"<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span></span></code></pre>\n<ol start=\"6\">\n<li>等他跑完以后就会在开始菜单里出现  <code>Windows Subsystem for Android™</code>  点击打开是下面这个界面就说明安装成功了.<br>\n<img src=\"/img/wsa/20220920220234.png\" alt=\"\"></li>\n</ol>\n<h1 id=\"安装apk\"><a class=\"markdownIt-Anchor\" href=\"#安装apk\">#</a> 安装 apk</h1>\n<ol>\n<li>点击文件后面的按钮会自动启动 WSA, 等打开后下面的 ip 地址会刷新。此时我们将开发人员模式打开.</li>\n<li>安装 ADB, 下载 <a href=\"https://nas.axro.top/index.php/s/frYxCHg7FfabNEY\" title=\"这个文件\">这个文件</a> 然后解压到任意目录，然后打开解压出来的文件夹，名称为  <code>platform-tools</code> .</li>\n<li>按住 <code>Shift</code>  键右击文件夹的空白处，选择 <code>显示更多选项</code>  - <code>在此处打开 Powershell 窗口(s)</code> , 然后在打开的窗口内依次输入以下指令:</li>\n</ol>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">adb connect 127.0.0.1:58526 #这个 127.0.0.1:58526 为你的开发人员选项那一栏里显示的地址.\n# 第一次可能会失败, 再输入一次就可以了.\nadb install -r xxx.apk\n# 这个指令为安装 apk, 将 xxx 替换为你要安装的 apk 文件名称.<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span></span></code></pre>\n<ol start=\"4\">\n<li>显示安装完成就会出现在你的开始菜单里，然后直接点击进行一个打开.</li>\n</ol>\n<h1 id=\"qa\"><a class=\"markdownIt-Anchor\" href=\"#qa\">#</a> Q&amp;A</h1>\n",
+            "tags": [
+                "Android",
+                "Hyper-V",
+                "WSA"
+            ]
+        }
+    ]
+}

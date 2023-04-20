@@ -1,1 +1,1220 @@
-<!-- build time:Fri Apr 14 2023 14:51:15 GMT+0800 (China Standard Time) --><!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="MAXshiro's Blog" href="http://maxshiroi.top/rss.xml"><link rel="alternate" type="application/atom+xml" title="MAXshiro's Blog" href="http://maxshiroi.top/atom.xml"><link rel="alternate" type="application/json" title="MAXshiro's Blog" href="http://maxshiroi.top/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.5"><meta name="keywords" content="Vocal,AI,歌声合成"><link rel="canonical" href="http://maxshiroi.top/ug/210724/"><title>【虚拟 Vocal】 Synthesize V 初代整合 | MAXshiro's Blog = A blog for learn.</title><meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"><link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">【虚拟 Vocal】 Synthesize V 初代整合</h1><div class="meta"><span class="item" title="创建时间：2022-08-28 21:07:24"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2022-08-28T21:07:24+08:00">2022-08-28</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>471</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>1 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">MAXshiro's Blog</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><img src="/img/synthesize/20220920215927.png"></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="http://maxshiroi.top/ug/210724/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.png"><meta itemprop="name" content="maxshiroi"><meta itemprop="description" content="A blog for learn., Discover and Record the world."></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="MAXshiro's Blog"></span><div class="body md" itemprop="articleBody"><h1 id="软件介绍"><a class="anchor" href="#软件介绍">#</a> 软件介绍</h1><p>Synthesizer V 是 Dreamtonics 开发的系列歌声合成软件，它结合了强大的歌声合成引擎和直观灵活的用户界面，只需绘制旋律并注入歌词，即可轻松创作原创歌曲。</p><h1 id="intro"><a class="anchor" href="#intro">#</a> Intro</h1><p>当你想要摆脱 Vocaloid 软件的支配，想要试试其他同类型的软件。您肯定会搜到这个软件。但是很不幸，当您点开官网查看售价，显然单个声库加 pro 版软件 899 的价格让您打了退堂鼓。<br>您只好把思路转向搜索 crack 版本软件。又很不幸，这个软件 crack 版的本体和声库都很难寻找。<br>在这里恭喜您找到了这篇文章。可万幸中的不幸就是，我也没有这个软件的 V2 破解版。但是我找到了 V1 的破解版，在此提供给大家。</p><h1 id="关于软件"><a class="anchor" href="#关于软件">#</a> 关于软件</h1><p>软件的获取来源是 GitHUB 用户 <code>CJLU</code> 的 <code>Synthesizer-V-FE</code> , 版本为 1.8.0，所有功能正常使用。链接地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NKTFUtc291cmNlL1N5bnRoZXNpemVyLVYtRkU=">给特何不</span></p><h1 id="关于声库"><a class="anchor" href="#关于声库">#</a> 关于声库</h1><p>目前手头上只有这几个声库：</p><h2 id="eng-英语"><a class="anchor" href="#eng-英语">#</a> Eng (英语)</h2><ul><li>爱莲娜芙缇 (女)</li></ul><h2 id="zh-中文"><a class="anchor" href="#zh-中文">#</a> Zh (中文)</h2><ul><li>苍穹 (女)</li><li>赤羽 (女)</li><li>海伊 (女)</li><li>诗岸 (女)</li></ul><h2 id="jp-日文"><a class="anchor" href="#jp-日文">#</a> JP (日文)</h2><ul><li>闇音レンリ (女)</li><li>玄武 (男)</li></ul><h1 id="下载地址-包含全部内容"><a class="anchor" href="#下载地址-包含全部内容">#</a> 下载地址 （包含全部内容）</h1><blockquote><p>特殊原因暂不提供 😦<br>(其实是文件丢了</p></blockquote><div class="tags"><a href="/tags/Vocal/" rel="tag"><i class="ic i-tag"></i> Vocal</a> <a href="/tags/AI/" rel="tag"><i class="ic i-tag"></i> AI</a> <a href="/tags/%E6%AD%8C%E5%A3%B0%E5%90%88%E6%88%90/" rel="tag"><i class="ic i-tag"></i> 歌声合成</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2022-09-23 15:53:04" itemprop="dateModified" datetime="2022-09-23T15:53:04+08:00">2022-09-23</time> </span><span id="ug/210724/" class="item leancloud_visitors" data-flag-title="【虚拟 Vocal】 Synthesize V 初代整合" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>maxshiroi <i class="ic i-at"><em>@</em></i>MAXshiro's Blog</li><li class="link"><strong>本文链接：</strong> <a href="http://maxshiroi.top/ug/210724/" title="【虚拟 Vocal】 Synthesize V 初代整合">http://maxshiroi.top/ug/210724/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/ug/205944/" itemprop="url" rel="prev" data-background-image="&#x2F;img&#x2F;wsa&#x2F;20220920220132.png" title="Win11 安装 WSA 简易教程"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i></span><h3>Win11 安装 WSA 简易教程</h3></a></div><div class="item right"><a href="/ug/211224/" itemprop="url" rel="next" data-background-image="&#x2F;img&#x2F;ns&#x2F;20220920215433.png" title="Switch模拟器的安装使用以及游戏文件获取和处理。"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i></span><h3>Switch模拟器的安装使用以及游戏文件获取和处理。</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">软件介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#intro"><span class="toc-number">2.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">关于软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%A3%B0%E5%BA%93"><span class="toc-number">4.</span> <span class="toc-text">关于声库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#eng-%E8%8B%B1%E8%AF%AD"><span class="toc-number">4.1.</span> <span class="toc-text">Eng (英语)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zh-%E4%B8%AD%E6%96%87"><span class="toc-number">4.2.</span> <span class="toc-text">Zh (中文)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jp-%E6%97%A5%E6%96%87"><span class="toc-number">4.3.</span> <span class="toc-text">JP (日文)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-%E5%8C%85%E5%90%AB%E5%85%A8%E9%83%A8%E5%86%85%E5%AE%B9"><span class="toc-number">5.</span> <span class="toc-text">下载地址 （包含全部内容）</span></a></li></ol></div><div class="related panel pjax" data-title="系列文章"></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="maxshiroi" data-src="/images/avatar.png"><p class="name" itemprop="name">maxshiroi</p><div class="description" itemprop="description">Discover and Record the world.</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">27</span> <span class="name">文章</span></a></div><div class="item tags"><a href="/tags/"><span class="count">80</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tYXhzaGlyb2Vy" title="https:&#x2F;&#x2F;twitter.com&#x2F;maxshiroer"><i class="ic i-twitter"></i></span> <a href="/about.html" title="&#x2F;about.html" class="item about"><i class="ic i-address-card"></i></a> <span class="exturl item email" data-url="bWFpbHRvOm1heHNoaXJvaUBvdXRsb29rLmNvbQ==" title="mailto:maxshiroi@outlook.com"><i class="ic i-envelope"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/about" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item"><a href="/flink" rel="section"><i class="ic i-link-circle"></i>好友</a></li><li class="item"><a href="/" rel="section"><i class="ic i-music"></i>etc.</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/ug/205944/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/ug/211224/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"></div><div class="status"><div class="copyright">&copy; 2020 – <span itemprop="copyrightYear">2023</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">maxshiroi @ MAXshiro's Blog</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">36k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">33 分钟</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"ug/210724/",favicon:{show:"ON Active.",hide:"Not Active."},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="/js/app.js?v=0.2.5"></script></body></html><!-- rebuild by hrmmi -->
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="【虚拟Vocal】 Synthesize V 初代整合, MAXshiro&#39;s Blog">
+    <meta name="description" content="# 软件介绍
+Synthesizer V 是 Dreamtonics 开发的系列歌声合成软件，它结合了强大的歌声合成引擎和直观灵活的用户界面，只需绘制旋律并注入歌词，即可轻松创作原创歌曲。
+# Intro
+当你想要摆脱 Vocaloid 软">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>【虚拟Vocal】 Synthesize V 初代整合 | MAXshiro&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">MAXshiro&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">MAXshiro&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Discover and Record the world.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/synthesize/20220920215927.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">【虚拟Vocal】 Synthesize V 初代整合</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Vocal/">
+                                <span class="chip bg-color">Vocal</span>
+                            </a>
+                        
+                            <a href="/tags/AI/">
+                                <span class="chip bg-color">AI</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%AD%8C%E5%A3%B0%E5%90%88%E6%88%90/">
+                                <span class="chip bg-color">歌声合成</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-08-28
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-04-19
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    340
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="软件介绍"><a class="markdownIt-Anchor" href="#软件介绍">#</a> 软件介绍</h1>
+<p>Synthesizer V 是 Dreamtonics 开发的系列歌声合成软件，它结合了强大的歌声合成引擎和直观灵活的用户界面，只需绘制旋律并注入歌词，即可轻松创作原创歌曲。</p>
+<h1 id="intro"><a class="markdownIt-Anchor" href="#intro">#</a> Intro</h1>
+<p>当你想要摆脱 Vocaloid 软件的支配，想要试试其他同类型的软件。您肯定会搜到这个软件。但是很不幸，当您点开官网查看售价，显然单个声库加 pro 版软件 899 的价格让您打了退堂鼓。<br>
+  您只好把思路转向搜索 crack 版本软件。又很不幸，这个软件 crack 版的本体和声库都很难寻找。<br>
+  在这里恭喜您找到了这篇文章。可万幸中的不幸就是，我也没有这个软件的 V2 破解版。但是我找到了 V1 的破解版，在此提供给大家。</p>
+<h1 id="关于软件"><a class="markdownIt-Anchor" href="#关于软件">#</a> 关于软件</h1>
+<p>软件的获取来源是 GitHUB 用户 <code>CJLU</code>  的 <code>Synthesizer-V-FE</code> , 版本为 1.8.0，所有功能正常使用。链接地址：<a target="_blank" rel="noopener" href="https://github.com/CJLU-source/Synthesizer-V-FE" title="给特何不">给特何不</a></p>
+<h1 id="关于声库"><a class="markdownIt-Anchor" href="#关于声库">#</a> 关于声库</h1>
+<p>目前手头上只有这几个声库：</p>
+<h2 id="eng-英语"><a class="markdownIt-Anchor" href="#eng-英语">#</a> Eng (英语)</h2>
+<ul>
+<li>爱莲娜芙缇 (女)</li>
+</ul>
+<h2 id="zh-中文"><a class="markdownIt-Anchor" href="#zh-中文">#</a> Zh (中文)</h2>
+<ul>
+<li>苍穹 (女)</li>
+<li>赤羽 (女)</li>
+<li>海伊 (女)</li>
+<li>诗岸 (女)</li>
+</ul>
+<h2 id="jp-日文"><a class="markdownIt-Anchor" href="#jp-日文">#</a> JP (日文)</h2>
+<ul>
+<li>闇音レンリ (女)</li>
+<li>玄武 (男)</li>
+</ul>
+<h1 id="下载地址-包含全部内容"><a class="markdownIt-Anchor" href="#下载地址-包含全部内容">#</a> 下载地址 （包含全部内容）</h1>
+<blockquote>
+<p>特殊原因暂不提供 😦<br>
+(其实是文件丢了</p>
+</blockquote>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">maxshiroi</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://maxshiroi.top/ug/210724/">http://maxshiroi.top/ug/210724/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">maxshiroi</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Vocal/">
+                                    <span class="chip bg-color">Vocal</span>
+                                </a>
+                            
+                                <a href="/tags/AI/">
+                                    <span class="chip bg-color">AI</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%AD%8C%E5%A3%B0%E5%90%88%E6%88%90/">
+                                    <span class="chip bg-color">歌声合成</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/ug/211224/">
+                    <div class="card-image">
+                        
+                        <img src="/img/ns/20220920215433.png" class="responsive-img" alt="Switch模拟器的安装使用以及游戏文件获取和处理。">
+                        
+                        <span class="card-title">Switch模拟器的安装使用以及游戏文件获取和处理。</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            maxshiroi
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/switch/">
+                        <span class="chip bg-color">switch</span>
+                    </a>
+                    
+                    <a href="/tags/animal-crossing/">
+                        <span class="chip bg-color">animal crossing</span>
+                    </a>
+                    
+                    <a href="/tags/Project-Diva/">
+                        <span class="chip bg-color">Project Diva</span>
+                    </a>
+                    
+                    <a href="/tags/Miku/">
+                        <span class="chip bg-color">Miku</span>
+                    </a>
+                    
+                    <a href="/tags/Mega39/">
+                        <span class="chip bg-color">Mega39</span>
+                    </a>
+                    
+                    <a href="/tags/emulater/">
+                        <span class="chip bg-color">emulater</span>
+                    </a>
+                    
+                    <a href="/tags/yuzu/">
+                        <span class="chip bg-color">yuzu</span>
+                    </a>
+                    
+                    <a href="/tags/ryujinx/">
+                        <span class="chip bg-color">ryujinx</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/ug/205944/">
+                    <div class="card-image">
+                        
+                        <img src="/img/wsa/20220920220132.png" class="responsive-img" alt="Win11 安装 WSA 简易教程">
+                        
+                        <span class="card-title">Win11 安装 WSA 简易教程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            maxshiroi
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Android/">
+                        <span class="chip bg-color">Android</span>
+                    </a>
+                    
+                    <a href="/tags/Hyper-V/">
+                        <span class="chip bg-color">Hyper-V</span>
+                    </a>
+                    
+                    <a href="/tags/WSA/">
+                        <span class="chip bg-color">WSA</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2023</span>
+            
+            <a href="/about" target="_blank">maxshiroi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/maxshiro/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:wangjianan0.0@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+        <script type="text/javascript" src="/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://maxshiroi.top"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog • Posts by &#34;nextcloud&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2022-08-28T13:29:07.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="docker" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/ug/212907/</id>
+        <title>Centos安装MatrixSynapseChat简易教程</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/212907/"/>
+        <content type="html">&lt;h2 id=&#34;先安装前置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#先安装前置&#34;&gt;#&lt;/a&gt; 先安装前置&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install libtiff-devel libjpeg-devel libzip-devel freetype-devel libwebp-devel libxml2-devel libxslt-devel libpq-devel python3-virtualenv libffi-devel openssl-devel python3-devel
+yum groupinstall &#34;Development Tools&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;#&lt;/a&gt; 使用 root 账户接入您的 centos，找到合适的位置开始操作&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir syn&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;依次执行以下指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#依次执行以下指令&#34;&gt;#&lt;/a&gt; 依次执行以下指令&lt;/h3&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;virtualenv -p python3 ./env &amp;amp;&amp;amp; source ./env/bin/activate
+python3 -m pip install --upgrade pip &amp;amp;&amp;amp; python3 -m pip install --upgrade setuptools &amp;amp;&amp;amp; python3 -m pip install psycopg2-binary
+python3 -m pip install matrix-synapse                         //安装synapse
+python3 -m pip install -U matrix-synapse                    //更新synapse&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;#&lt;/a&gt; 将下列指令拷贝到控制台执行，自动生成 homeserver.yaml&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;python3 -m synapse.app.homeserver \
+    --server-name im.axro.top \
+    --config-path homeserver.yaml \
+    --generate-config \
+    --report-stats=no&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;编辑生成homeserveryaml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编辑生成homeserveryaml&#34;&gt;#&lt;/a&gt; 编辑生成 &lt;code&gt;homeserver.yaml&lt;/code&gt;&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;enable_registration: true
+suppress_key_server_warning: true
+bind_addresses: [&#39;::1&#39;, &#39;0.0.0.0&#39;]&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;启动关闭服务器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启动关闭服务器&#34;&gt;#&lt;/a&gt; 启动 / 关闭服务器&lt;/h2&gt;
+&lt;h4 id=&#34;注意要先进入虚拟python环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注意要先进入虚拟python环境&#34;&gt;#&lt;/a&gt; 注意要先进入虚拟 python 环境&lt;/h4&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;source ./env/bin/activate
+
+synctl start
+synctl stop&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;退出虚拟环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#退出虚拟环境&#34;&gt;#&lt;/a&gt; 退出虚拟环境&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;deactivate&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;配置反代&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置反代&#34;&gt;#&lt;/a&gt; 配置反代&lt;/h2&gt;
+&lt;p&gt;进入宝塔面板新建静态网站，配置 ssl，配置反向代理地址为 &lt;code&gt;https://localhost:8008&lt;/code&gt; , 保存即可.&lt;/p&gt;
+</content>
+        <category term="nextcloud" />
+        <category term="聊天室" />
+        <category term="python" />
+        <updated>2022-08-28T13:29:07.000Z</updated>
+    </entry>
+</feed>

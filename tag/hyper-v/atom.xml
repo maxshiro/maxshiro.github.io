@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog • Posts by &#34;hyper-v&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2022-11-19T00:29:13.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="docker" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/ug/082913/</id>
+        <title>WSL2迁移以及空间回收。</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/082913/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;../img/wsl2move/20221119083153.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;如果你按照正常方式在设置里移动 wsl 的话就会发现报错，本篇文章向您介绍如何正确迁移以及回收空间。&lt;/p&gt;
+&lt;h1 id=&#34;移动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#移动&#34;&gt;#&lt;/a&gt; 移动&lt;/h1&gt;
+&lt;p&gt;在 Windows 的 PowerShell 中输入:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --help&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以看到关于这个命令的使用帮助说明：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;用法: wsl.exe [参数] [选项...] [命令行]
+ 
+用于运行 Linux 二进制文件的参数:
+ 
+    如果未提供命令行，wsl.exe 将启动默认的 shell。
+    --exec, -e &amp;lt;命令行&amp;gt;
+        执行指定的命令而不使用默认的 Linux shell。
+    --
+        按原样传递剩余的命令行。
+选项:
+    --distribution, -d &amp;lt;分发版&amp;gt;
+        运行指定的分发。
+    --user, -u &amp;lt;用户名&amp;gt;
+        以指定用户身份运行。
+用于管理适用于 Linux 的 Windows 子系统的参数:
+ 
+    --export &amp;lt;分发版&amp;gt; &amp;lt;文件名&amp;gt;
+        将分发导出到 tar 文件。
+        对于标准输出，文件名可以是 -。
+    --import &amp;lt;分发版&amp;gt; &amp;lt;安装位置&amp;gt; &amp;lt;文件名&amp;gt; [选项]
+        将指定的 tar 文件作为新分发进行导入。
+        对于标准输入，文件名可以是 -。
+        选项:
+            --version &amp;lt;版本&amp;gt;
+                指定用于新分发的版本。
+    --list, -l [选项]
+        列出分发。
+        选项:
+            --all
+                列出所有分发，包括当前正在
+                安装或卸载的分发。
+            --running
+                只列出当前正在运行的分发。
+            --quiet, -q
+                只显示分发名称。
+            --verbose, -v
+                显示有关所有分发的详细信息。
+    --set-default, -s &amp;lt;分发版&amp;gt;
+        将分发设置为默认值。
+    --set-default-version &amp;lt;版本&amp;gt;
+        更改新分发的默认安装版本。
+    --set-version &amp;lt;分发版&amp;gt; &amp;lt;版本&amp;gt;
+        更改指定分发的版本。
+    --shutdown
+        立即终止所有正在运行的分发和 WSL 2 轻型工具虚拟机。
+    --terminate, -t &amp;lt;分发版&amp;gt;
+        终止指定的分发。
+    --unregister &amp;lt;分发版&amp;gt;
+        注销分发。
+    --help
+        显示用法信息。&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里我们使用到 export 、unregister 和 import 几个选项就可以实现迁移。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;终止正在运行的分发或虚拟机：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --shutdown&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;查看已安装的 wsl 名称：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl.exe --list --all&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;适用于 Linux 的 Windows 子系统分发:
+Debian (默认)
+kali-linux
+Ubuntu&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;对需要迁移的分发或虚拟机导出（我要迁移 kali-linux）：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --export kali-linux D:\kali&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;卸载分发版或虚拟机（如果是要重装系统或换机器安装，这一步可以省略，但是要将上一步导出的文件保存好）&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --unregister kali-linux&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;导入新的分发版或虚拟机：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --import kali-linux D:\wsl\kali D:\kali&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;压缩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#压缩&#34;&gt;#&lt;/a&gt; 压缩&lt;/h1&gt;
+&lt;p&gt;等待导入后你会发现移动的其实是 vhdx 文件，那么就可以对这个文件进行回收空间。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;以管理员身份运行 cmd，输入 diskpart 命令按回车。&lt;/li&gt;
+&lt;li&gt;使用以下命令选择你的 userdata.vhdx&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;select vdisk file = &#34;D:\wsl\ext4.vhdx&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果提示&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;DiskPart successfully selected the virtual disk file.&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;就说明成功了。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;输入  &lt;code&gt;compact vdisk&lt;/code&gt;  来压缩。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;bug&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bug&#34;&gt;#&lt;/a&gt; bug&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;ERROR: Wsl/Service/CreateInstance/ERROR_FILE_NOT_FOUND&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;打开命令行，在命令行中输入&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl.exe --list --all
+wsl.exe --unregister xxx&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;摘抄&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#摘抄&#34;&gt;#&lt;/a&gt; 摘抄&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/zhys2007/article/details/110958577&#34;&gt;WSL2 迁移方法&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/y17854117512/article/details/119214442?spm=1001.2101.3001.6661.1&amp;amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-119214442-blog-110900591.pc_relevant_default&amp;amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-119214442-blog-110900591.pc_relevant_default&amp;amp;utm_relevant_index=1&#34;&gt;解决 Win10 子系统的 Ubuntu 被删除后，重新安装出现找不到系统路径&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="linux" />
+        <category term="wsl2" />
+        <category term="Hyper-v" />
+        <updated>2022-11-19T00:29:13.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/205944/</id>
+        <title>Win11 安装 WSA 简易教程</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/205944/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;微软终于在昨天上线了 WSA 的测试版本，此次只有美国地区上线了。因此如果你的 Win11 系统为美区的话，可以直接点击 &lt;a href=&#34;https://www.microsoft.com/store/productId/9P3395VX91NR&#34; title=&#34;这个链接&#34;&gt;这个链接&lt;/a&gt; 进行安装。如果非美区那就接着看步骤吧&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;bug 还是有很多，首先是 WSA 无法调用 GPU, 这就导致很多 3d 游戏会很卡，实测明日方舟帧数不到 20 帧。然后安装 WSA 要启用 Hyper-V 即微软的虚拟机平台，打开这个会导致无法再安装和使用其他安卓模拟器。和市面上大多数安卓模拟器相比，微软这个 WSA 是 ARM 翻译运行的，安卓版本更高 (Android 11), 可以运行 ARM 程序。与系统集成度更好 (虽然目前还没有实现 WSL 那样的文件访问) 而模拟器大多都为 Android x86 项目改的，因此最高只能到 Android 9.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你是想尝尝鲜，试试这个新功能那我还是推荐试一试。如果你主要想拿来打游戏，日常使用的话那还是更推荐安卓模拟器一些.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;开启虚拟化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#开启虚拟化&#34;&gt;#&lt;/a&gt; 开启虚拟化&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PS: 如果之前你有禁用过 Hyper-V 的话记得使用管理员权限打开 Powershell 然后通过这个指令这个指令重新打开，不记得有没有那就跳过:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;bcdedit /set hypervisorlaunchtype auto&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;打开开始菜单，直接搜索控制面板，然后打开.&lt;/li&gt;
+&lt;li&gt;找到  &lt;code&gt;程序和功能&lt;/code&gt;  - &lt;code&gt;启用或关闭 Windows 功能&lt;/code&gt;  并点击打开，会弹出一个窗口.&lt;/li&gt;
+&lt;li&gt;在弹出窗口里面勾选  &lt;code&gt;Hyper-V&lt;/code&gt; 、 &lt;code&gt;Windows 虚拟机监控程序平台&lt;/code&gt; 、 &lt;code&gt;适用于 Linux 的 Windows 子系统&lt;/code&gt; 、 &lt;code&gt;虚拟机平台&lt;/code&gt;  这几项，然后点击确定。系统会自动查找更新并安装.&lt;/li&gt;
+&lt;li&gt;等待重启过后就可以进行下一步了.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;安装本体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装本体&#34;&gt;#&lt;/a&gt; 安装本体&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;首先复制上面那个链接.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://store.rg-adguard.net/&#34; title=&#34;安装包抓包&#34;&gt;安装包抓包&lt;/a&gt;，点开这个网址，将第一步复制的链接粘贴到搜索框，右边选择  &lt;code&gt;slow&lt;/code&gt;  然后点对勾.&lt;/li&gt;
+&lt;li&gt;找到最下面名为  &lt;code&gt;MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle&lt;/code&gt;  的一项，注意大小为  &lt;code&gt;1.21GB&lt;/code&gt;  , 直接点击进行一个下载.&lt;/li&gt;
+&lt;li&gt;找到你下载的文件，然后右键  &lt;code&gt;开始按钮&lt;/code&gt;  选择  &lt;code&gt;Windows 终端 (管理员)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;然后会打开 Powershell 窗口，在里面输入指令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;add-appxpackage &#34;你下载文件的完整路径&#34; 
+# example
+add-appxpackage &#34;D:\download\MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;等他跑完以后就会在开始菜单里出现  &lt;code&gt;Windows Subsystem for Android™&lt;/code&gt;  点击打开是下面这个界面就说明安装成功了.&lt;br&gt;
+&lt;img src=&#34;/img/wsa/20220920220234.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;安装apk&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装apk&#34;&gt;#&lt;/a&gt; 安装 apk&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;点击文件后面的按钮会自动启动 WSA, 等打开后下面的 ip 地址会刷新。此时我们将开发人员模式打开.&lt;/li&gt;
+&lt;li&gt;安装 ADB, 下载 &lt;a href=&#34;https://nas.axro.top/index.php/s/frYxCHg7FfabNEY&#34; title=&#34;这个文件&#34;&gt;这个文件&lt;/a&gt; 然后解压到任意目录，然后打开解压出来的文件夹，名称为  &lt;code&gt;platform-tools&lt;/code&gt; .&lt;/li&gt;
+&lt;li&gt;按住 &lt;code&gt;Shift&lt;/code&gt;  键右击文件夹的空白处，选择 &lt;code&gt;显示更多选项&lt;/code&gt;  - &lt;code&gt;在此处打开 Powershell 窗口(s)&lt;/code&gt; , 然后在打开的窗口内依次输入以下指令:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;adb connect 127.0.0.1:58526 #这个 127.0.0.1:58526 为你的开发人员选项那一栏里显示的地址.
+# 第一次可能会失败, 再输入一次就可以了.
+adb install -r xxx.apk
+# 这个指令为安装 apk, 将 xxx 替换为你要安装的 apk 文件名称.&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;显示安装完成就会出现在你的开始菜单里，然后直接点击进行一个打开.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;qa&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#qa&#34;&gt;#&lt;/a&gt; Q&amp;amp;A&lt;/h1&gt;
+</content>
+        <category term="Android" />
+        <category term="Hyper-V" />
+        <category term="WSA" />
+        <updated>2022-08-28T12:59:44.000Z</updated>
+    </entry>
+</feed>

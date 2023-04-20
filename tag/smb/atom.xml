@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog • Posts by &#34;smb&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2022-08-28T13:15:02.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="docker" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/ug/211502/</id>
+        <title>解决linux下挂载其他linux硬盘的问题并创建smb局域网共享</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/211502/"/>
+        <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;之前用来当作小型服务器的笔记本终于被我给淘汰了。已经关机了好久。最近买了块 &lt;code&gt;SATA&lt;/code&gt;  硬盘盒，想要将这台笔记本内的数据备份出来并把硬盘用作其他用途。一切连接好后发现无法挂载，遂百度了一会查出了如下方法…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;故障复现&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#故障复现&#34;&gt;#&lt;/a&gt; 故障复现&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;连接 linux 系统，提示插入硬盘. &lt;code&gt;/dev&lt;/code&gt;  分区下出现硬盘编号&lt;/li&gt;
+&lt;li&gt;执行如下指令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /
+mkdir backup
+mount /dev/sdc/ /backup/&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;报错&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;mount: unknown filesystem type &#39;LVM2_member&#39;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;解决方法-debian系&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法-debian系&#34;&gt;#&lt;/a&gt; 解决方法 //Debian 系&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;执行如下指令安装 lvm2 并扫描查看以挂载的磁盘&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install lvm2
+sudo vgscan&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;发现如下字样后找到对应的 &lt;code&gt;xxx&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;Found volume group &#34;xxx&#34; using metadata type lvm2&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;设为活动状态并查看可挂载的分区&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo vgchange -ay xxx
+sudo lvs
+LV     VG   Attr   LSize  Origin Snap%  Move Log Copy%  Convert
+data        xxx             -wi-a-              34.19G      &lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;挂载对应分区&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo mount /dev/xxx/data/ /backup/&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;至此已经解决了问题，如果你还想把这块硬盘里的数据共享出去，比如共享给局域网内的 windows 主机，那就接着看…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;设置smb&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置smb&#34;&gt;#&lt;/a&gt; 设置 SMB&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;先更新一下&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装 Samba 服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install samba samba-common&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;配置共享目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// 新建目录
+sudo mkdir /home/db
+// 更改目录权限
+sudo chmod 777 /home/db/ -R&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;添加账户&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要注意添加的账户需要是系统内已存在的账户&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// 后面的pi为系统的用户名
+sudo smbpasswd -a pi&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入两次密码后创建成功&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;创建系统账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// -m参数为添加/home/username目录,username更改为你要创建的用户名.
+sudo useradd -m username
+// 更改账户密码
+sudo passwd username
+// 删除用户
+sudo userdel -r username
+// 更改登录zhanghu
+su -username&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;配置 samba&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// 建议先备份一下
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.bak
+// 编辑
+sudo vim /etc/samba/smb.conf&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在文件最后添加&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;[database] 
+    comment = 23333333  # 描述
+	path = /home/db/    # 目录
+	public = yes        # 是否允许guest用户访问
+	writable = yes      # 是否允许读写
+	workgroup = WORKGROUP  # 工作组&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;重启 samba 服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service smbd restart&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后在 windows 里面映射就行了&lt;/p&gt;
+&lt;h1 id=&#34;借鉴摘抄&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#借鉴摘抄&#34;&gt;#&lt;/a&gt; 借鉴 (摘抄)&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/mvp_Dawn/article/details/105847485&#34; title=&#34;ubuntu 20.04 安装配置Samba服务，Windows 和 linux协同工作&#34;&gt;ubuntu 20.04 安装配置 Samba 服务，Windows 和 linux 协同工作&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="linux" />
+        <category term="运维" />
+        <category term="smb" />
+        <updated>2022-08-28T13:15:02.000Z</updated>
+    </entry>
+</feed>

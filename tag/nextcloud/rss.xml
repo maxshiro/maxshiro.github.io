@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>MAXshiro&#39;s Blog • Posts by &#34;nextcloud&#34; tag</title>
+        <link>http://maxshiroi.top</link>
+        <description>Discover and Record the world.</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 28 Aug 2022 21:29:07 +0800</pubDate>
+        <lastBuildDate>Sun, 28 Aug 2022 21:29:07 +0800</lastBuildDate>
+        <category>nextcloud</category>
+        <category>聊天室</category>
+        <category>python</category>
+        <category>ctf</category>
+        <category>buuctf</category>
+        <category>antsword</category>
+        <category>linux</category>
+        <category>centos</category>
+        <category>web</category>
+        <category>nginx</category>
+        <category>mysql</category>
+        <category>wsa</category>
+        <category>vhd</category>
+        <category>vhdx</category>
+        <category>diskpart</category>
+        <category>arch</category>
+        <category>pacman</category>
+        <category>win</category>
+        <category>explorer.exe</category>
+        <category>autorefresh</category>
+        <category>network</category>
+        <category>vmware</category>
+        <category>kali</category>
+        <category>dvwa</category>
+        <category>fedora</category>
+        <category>helloworld</category>
+        <category>plugin</category>
+        <category>hexo</category>
+        <category>backup</category>
+        <category>guide</category>
+        <category>目录</category>
+        <category>指令</category>
+        <category>权限</category>
+        <category>media center</category>
+        <category>plex</category>
+        <category>emby</category>
+        <category>jellyfin</category>
+        <category>视频</category>
+        <category>音乐</category>
+        <category>运维</category>
+        <category>smb</category>
+        <category>passwd</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>树莓派</category>
+        <category>docker</category>
+        <category>openwrt</category>
+        <category>router</category>
+        <category>pic</category>
+        <category>img</category>
+        <category>api</category>
+        <category>random</category>
+        <category>wallpaper</category>
+        <category>短链</category>
+        <category>测试</category>
+        <category>Vocal</category>
+        <category>AI</category>
+        <category>歌声合成</category>
+        <category>transmission</category>
+        <category>torrent</category>
+        <category>下载器</category>
+        <category>nas</category>
+        <category>bug</category>
+        <category>win7</category>
+        <category>capacity</category>
+        <category>shrink</category>
+        <category>Android</category>
+        <category>Hyper-V</category>
+        <category>WSA</category>
+        <category>wsl2</category>
+        <category>Hyper-v</category>
+        <category>wsl</category>
+        <category>权限不足</category>
+        <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/212907/</guid>
+            <title>Centos安装MatrixSynapseChat简易教程</title>
+            <link>http://maxshiroi.top/ug/212907/</link>
+            <category>nextcloud</category>
+            <category>聊天室</category>
+            <category>python</category>
+            <pubDate>Sun, 28 Aug 2022 21:29:07 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;先安装前置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#先安装前置&#34;&gt;#&lt;/a&gt; 先安装前置&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install libtiff-devel libjpeg-devel libzip-devel freetype-devel libwebp-devel libxml2-devel libxslt-devel libpq-devel python3-virtualenv libffi-devel openssl-devel python3-devel
+yum groupinstall &#34;Development Tools&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;#&lt;/a&gt; 使用 root 账户接入您的 centos，找到合适的位置开始操作&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir syn&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;依次执行以下指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#依次执行以下指令&#34;&gt;#&lt;/a&gt; 依次执行以下指令&lt;/h3&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;virtualenv -p python3 ./env &amp;amp;&amp;amp; source ./env/bin/activate
+python3 -m pip install --upgrade pip &amp;amp;&amp;amp; python3 -m pip install --upgrade setuptools &amp;amp;&amp;amp; python3 -m pip install psycopg2-binary
+python3 -m pip install matrix-synapse                         //安装synapse
+python3 -m pip install -U matrix-synapse                    //更新synapse&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;#&lt;/a&gt; 将下列指令拷贝到控制台执行，自动生成 homeserver.yaml&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;python3 -m synapse.app.homeserver \
+    --server-name im.axro.top \
+    --config-path homeserver.yaml \
+    --generate-config \
+    --report-stats=no&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;编辑生成homeserveryaml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编辑生成homeserveryaml&#34;&gt;#&lt;/a&gt; 编辑生成 &lt;code&gt;homeserver.yaml&lt;/code&gt;&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;enable_registration: true
+suppress_key_server_warning: true
+bind_addresses: [&#39;::1&#39;, &#39;0.0.0.0&#39;]&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;启动关闭服务器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启动关闭服务器&#34;&gt;#&lt;/a&gt; 启动 / 关闭服务器&lt;/h2&gt;
+&lt;h4 id=&#34;注意要先进入虚拟python环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注意要先进入虚拟python环境&#34;&gt;#&lt;/a&gt; 注意要先进入虚拟 python 环境&lt;/h4&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;source ./env/bin/activate
+
+synctl start
+synctl stop&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;退出虚拟环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#退出虚拟环境&#34;&gt;#&lt;/a&gt; 退出虚拟环境&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;deactivate&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;配置反代&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置反代&#34;&gt;#&lt;/a&gt; 配置反代&lt;/h2&gt;
+&lt;p&gt;进入宝塔面板新建静态网站，配置 ssl，配置反向代理地址为 &lt;code&gt;https://localhost:8008&lt;/code&gt; , 保存即可.&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

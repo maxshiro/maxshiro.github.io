@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MAXshiro's Blog • All posts by \"歌声合成\" tag",
+    "description": "Discover and Record the world.",
+    "home_page_url": "http://maxshiroi.top",
+    "items": [
+        {
+            "id": "http://maxshiroi.top/ug/210724/",
+            "url": "http://maxshiroi.top/ug/210724/",
+            "title": "【虚拟Vocal】 Synthesize V 初代整合",
+            "date_published": "2022-08-28T13:07:24.000Z",
+            "content_html": "<h1 id=\"软件介绍\"><a class=\"markdownIt-Anchor\" href=\"#软件介绍\">#</a> 软件介绍</h1>\n<p>Synthesizer V 是 Dreamtonics 开发的系列歌声合成软件，它结合了强大的歌声合成引擎和直观灵活的用户界面，只需绘制旋律并注入歌词，即可轻松创作原创歌曲。</p>\n<h1 id=\"intro\"><a class=\"markdownIt-Anchor\" href=\"#intro\">#</a> Intro</h1>\n<p>当你想要摆脱 Vocaloid 软件的支配，想要试试其他同类型的软件。您肯定会搜到这个软件。但是很不幸，当您点开官网查看售价，显然单个声库加 pro 版软件 899 的价格让您打了退堂鼓。<br>\n  您只好把思路转向搜索 crack 版本软件。又很不幸，这个软件 crack 版的本体和声库都很难寻找。<br>\n  在这里恭喜您找到了这篇文章。可万幸中的不幸就是，我也没有这个软件的 V2 破解版。但是我找到了 V1 的破解版，在此提供给大家。</p>\n<h1 id=\"关于软件\"><a class=\"markdownIt-Anchor\" href=\"#关于软件\">#</a> 关于软件</h1>\n<p>软件的获取来源是 GitHUB 用户 <code>CJLU</code>  的 <code>Synthesizer-V-FE</code> , 版本为 1.8.0，所有功能正常使用。链接地址：<a href=\"https://github.com/CJLU-source/Synthesizer-V-FE\" title=\"给特何不\">给特何不</a></p>\n<h1 id=\"关于声库\"><a class=\"markdownIt-Anchor\" href=\"#关于声库\">#</a> 关于声库</h1>\n<p>目前手头上只有这几个声库：</p>\n<h2 id=\"eng-英语\"><a class=\"markdownIt-Anchor\" href=\"#eng-英语\">#</a> Eng (英语)</h2>\n<ul>\n<li>爱莲娜芙缇 (女)</li>\n</ul>\n<h2 id=\"zh-中文\"><a class=\"markdownIt-Anchor\" href=\"#zh-中文\">#</a> Zh (中文)</h2>\n<ul>\n<li>苍穹 (女)</li>\n<li>赤羽 (女)</li>\n<li>海伊 (女)</li>\n<li>诗岸 (女)</li>\n</ul>\n<h2 id=\"jp-日文\"><a class=\"markdownIt-Anchor\" href=\"#jp-日文\">#</a> JP (日文)</h2>\n<ul>\n<li>闇音レンリ (女)</li>\n<li>玄武 (男)</li>\n</ul>\n<h1 id=\"下载地址-包含全部内容\"><a class=\"markdownIt-Anchor\" href=\"#下载地址-包含全部内容\">#</a> 下载地址 （包含全部内容）</h1>\n<blockquote>\n<p>特殊原因暂不提供 😦<br>\n(其实是文件丢了</p>\n</blockquote>\n",
+            "tags": [
+                "Vocal",
+                "AI",
+                "歌声合成"
+            ]
+        }
+    ]
+}

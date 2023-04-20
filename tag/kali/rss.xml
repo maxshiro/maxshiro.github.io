@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>MAXshiro&#39;s Blog • Posts by &#34;kali&#34; tag</title>
+        <link>http://maxshiroi.top</link>
+        <description>Discover and Record the world.</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 07 Mar 2023 10:03:53 +0800</pubDate>
+        <lastBuildDate>Tue, 07 Mar 2023 10:03:53 +0800</lastBuildDate>
+        <category>nextcloud</category>
+        <category>聊天室</category>
+        <category>python</category>
+        <category>ctf</category>
+        <category>buuctf</category>
+        <category>antsword</category>
+        <category>linux</category>
+        <category>centos</category>
+        <category>web</category>
+        <category>nginx</category>
+        <category>mysql</category>
+        <category>wsa</category>
+        <category>vhd</category>
+        <category>vhdx</category>
+        <category>diskpart</category>
+        <category>arch</category>
+        <category>pacman</category>
+        <category>win</category>
+        <category>explorer.exe</category>
+        <category>autorefresh</category>
+        <category>network</category>
+        <category>vmware</category>
+        <category>kali</category>
+        <category>dvwa</category>
+        <category>fedora</category>
+        <category>helloworld</category>
+        <category>plugin</category>
+        <category>hexo</category>
+        <category>backup</category>
+        <category>guide</category>
+        <category>目录</category>
+        <category>指令</category>
+        <category>权限</category>
+        <category>media center</category>
+        <category>plex</category>
+        <category>emby</category>
+        <category>jellyfin</category>
+        <category>视频</category>
+        <category>音乐</category>
+        <category>运维</category>
+        <category>smb</category>
+        <category>passwd</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>树莓派</category>
+        <category>docker</category>
+        <category>openwrt</category>
+        <category>router</category>
+        <category>pic</category>
+        <category>img</category>
+        <category>api</category>
+        <category>random</category>
+        <category>wallpaper</category>
+        <category>短链</category>
+        <category>测试</category>
+        <category>Vocal</category>
+        <category>AI</category>
+        <category>歌声合成</category>
+        <category>transmission</category>
+        <category>torrent</category>
+        <category>下载器</category>
+        <category>nas</category>
+        <category>bug</category>
+        <category>win7</category>
+        <category>capacity</category>
+        <category>shrink</category>
+        <category>Android</category>
+        <category>Hyper-V</category>
+        <category>WSA</category>
+        <category>wsl2</category>
+        <category>Hyper-v</category>
+        <category>wsl</category>
+        <category>权限不足</category>
+        <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/100353/</guid>
+            <title>dvwa安装指引</title>
+            <link>http://maxshiroi.top/ug/100353/</link>
+            <category>linux</category>
+            <category>mysql</category>
+            <category>kali</category>
+            <category>dvwa</category>
+            <category>fedora</category>
+            <pubDate>Tue, 07 Mar 2023 10:03:53 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;启动nginx&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启动nginx&#34;&gt;#&lt;/a&gt; 启动 nginx&lt;/h1&gt;
+&lt;h2 id=&#34;service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;#&lt;/a&gt; service nginx start&lt;br&gt;
+cd /var/www/html&lt;br&gt;
+vim hello.html&lt;/h2&gt;
+&lt;p&gt;Helloworld!&lt;br&gt;
+// 访问虚拟机地址。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@fedora axro]# cd /usr/share/nginx/html/
+[root@fedora html]# git clone https://github.com/digininja/DVWA.git
+[root@fedora html]# cd DVWA/config
+[root@fedora config]# cp config.inc.php.dist config.inc.php
+[root@fedora config]# vi config.inc.php
+mysql -u root -p
+create database DVWA;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;mysql&amp;gt; create database dvwa;&lt;br&gt;
+Query OK, 1 row affected (0.00 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; create user dvwa@localhost identified by ‘p@ssw0rd’;&lt;br&gt;
+Query OK, 0 rows affected (0.01 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; grant all on dvwa.* to dvwa@localhost;&lt;br&gt;
+Query OK, 0 rows affected (0.01 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; flush privileges;&lt;br&gt;
+Query OK, 0 rows affected (0.00 sec)&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

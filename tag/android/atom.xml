@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog • Posts by &#34;android&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2022-08-28T12:59:44.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="docker" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/ug/205944/</id>
+        <title>Win11 安装 WSA 简易教程</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/205944/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;微软终于在昨天上线了 WSA 的测试版本，此次只有美国地区上线了。因此如果你的 Win11 系统为美区的话，可以直接点击 &lt;a href=&#34;https://www.microsoft.com/store/productId/9P3395VX91NR&#34; title=&#34;这个链接&#34;&gt;这个链接&lt;/a&gt; 进行安装。如果非美区那就接着看步骤吧&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;bug 还是有很多，首先是 WSA 无法调用 GPU, 这就导致很多 3d 游戏会很卡，实测明日方舟帧数不到 20 帧。然后安装 WSA 要启用 Hyper-V 即微软的虚拟机平台，打开这个会导致无法再安装和使用其他安卓模拟器。和市面上大多数安卓模拟器相比，微软这个 WSA 是 ARM 翻译运行的，安卓版本更高 (Android 11), 可以运行 ARM 程序。与系统集成度更好 (虽然目前还没有实现 WSL 那样的文件访问) 而模拟器大多都为 Android x86 项目改的，因此最高只能到 Android 9.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你是想尝尝鲜，试试这个新功能那我还是推荐试一试。如果你主要想拿来打游戏，日常使用的话那还是更推荐安卓模拟器一些.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;开启虚拟化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#开启虚拟化&#34;&gt;#&lt;/a&gt; 开启虚拟化&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PS: 如果之前你有禁用过 Hyper-V 的话记得使用管理员权限打开 Powershell 然后通过这个指令这个指令重新打开，不记得有没有那就跳过:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;bcdedit /set hypervisorlaunchtype auto&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;打开开始菜单，直接搜索控制面板，然后打开.&lt;/li&gt;
+&lt;li&gt;找到  &lt;code&gt;程序和功能&lt;/code&gt;  - &lt;code&gt;启用或关闭 Windows 功能&lt;/code&gt;  并点击打开，会弹出一个窗口.&lt;/li&gt;
+&lt;li&gt;在弹出窗口里面勾选  &lt;code&gt;Hyper-V&lt;/code&gt; 、 &lt;code&gt;Windows 虚拟机监控程序平台&lt;/code&gt; 、 &lt;code&gt;适用于 Linux 的 Windows 子系统&lt;/code&gt; 、 &lt;code&gt;虚拟机平台&lt;/code&gt;  这几项，然后点击确定。系统会自动查找更新并安装.&lt;/li&gt;
+&lt;li&gt;等待重启过后就可以进行下一步了.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;安装本体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装本体&#34;&gt;#&lt;/a&gt; 安装本体&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;首先复制上面那个链接.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://store.rg-adguard.net/&#34; title=&#34;安装包抓包&#34;&gt;安装包抓包&lt;/a&gt;，点开这个网址，将第一步复制的链接粘贴到搜索框，右边选择  &lt;code&gt;slow&lt;/code&gt;  然后点对勾.&lt;/li&gt;
+&lt;li&gt;找到最下面名为  &lt;code&gt;MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle&lt;/code&gt;  的一项，注意大小为  &lt;code&gt;1.21GB&lt;/code&gt;  , 直接点击进行一个下载.&lt;/li&gt;
+&lt;li&gt;找到你下载的文件，然后右键  &lt;code&gt;开始按钮&lt;/code&gt;  选择  &lt;code&gt;Windows 终端 (管理员)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;然后会打开 Powershell 窗口，在里面输入指令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;add-appxpackage &#34;你下载文件的完整路径&#34; 
+# example
+add-appxpackage &#34;D:\download\MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;等他跑完以后就会在开始菜单里出现  &lt;code&gt;Windows Subsystem for Android™&lt;/code&gt;  点击打开是下面这个界面就说明安装成功了.&lt;br&gt;
+&lt;img src=&#34;/img/wsa/20220920220234.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;安装apk&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装apk&#34;&gt;#&lt;/a&gt; 安装 apk&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;点击文件后面的按钮会自动启动 WSA, 等打开后下面的 ip 地址会刷新。此时我们将开发人员模式打开.&lt;/li&gt;
+&lt;li&gt;安装 ADB, 下载 &lt;a href=&#34;https://nas.axro.top/index.php/s/frYxCHg7FfabNEY&#34; title=&#34;这个文件&#34;&gt;这个文件&lt;/a&gt; 然后解压到任意目录，然后打开解压出来的文件夹，名称为  &lt;code&gt;platform-tools&lt;/code&gt; .&lt;/li&gt;
+&lt;li&gt;按住 &lt;code&gt;Shift&lt;/code&gt;  键右击文件夹的空白处，选择 &lt;code&gt;显示更多选项&lt;/code&gt;  - &lt;code&gt;在此处打开 Powershell 窗口(s)&lt;/code&gt; , 然后在打开的窗口内依次输入以下指令:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;adb connect 127.0.0.1:58526 #这个 127.0.0.1:58526 为你的开发人员选项那一栏里显示的地址.
+# 第一次可能会失败, 再输入一次就可以了.
+adb install -r xxx.apk
+# 这个指令为安装 apk, 将 xxx 替换为你要安装的 apk 文件名称.&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;显示安装完成就会出现在你的开始菜单里，然后直接点击进行一个打开.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;qa&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#qa&#34;&gt;#&lt;/a&gt; Q&amp;amp;A&lt;/h1&gt;
+</content>
+        <category term="Android" />
+        <category term="Hyper-V" />
+        <category term="WSA" />
+        <updated>2022-08-28T12:59:44.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro&#39;s Blog • Posts by &#34;diskpart&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2022-11-18T12:43:50.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="docker" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/ug/204350/</id>
+        <title>通过diskpart工具压缩userdata.vhdx来解决磁盘占用过多问题</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/204350/"/>
+        <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;当你安装了 WSA 后随着你的使用，你会发现占用的空间越来越大。即使你把不需要的安卓程序卸载了之后，却依然满满的霸占着你的 C 盘。你只能眼睁睁地看他慢慢变大却无能为力。当然本篇文章的目的就是帮你解决这个问题。&lt;/p&gt;
+&lt;h1 id=&#34;移动wsa到其他盘符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#移动wsa到其他盘符&#34;&gt;#&lt;/a&gt; 移动 WSA 到其他盘符&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你利用你聪明的头脑打开了百度并使用灵巧的双手在搜索框里输入 WSA 磁盘空间过大。很快你便看到了一种解决方式.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;打开设置 - 程序 - 已安装的程序，找到 WSA&lt;br&gt;
+&lt;img src=&#34;/img/Windowssubsystemforandroidcompression/20221118205416.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;点击后面三个点选择移动。&lt;br&gt;
+稍等一会就会帮你把 WSA 移动到对应的盘符了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;使用diskpart工具压缩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用diskpart工具压缩&#34;&gt;#&lt;/a&gt; 使用 diskpart 工具压缩&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;以管理员身份运行 cmd，输入 diskpart 命令按回车。&lt;/li&gt;
+&lt;li&gt;使用以下命令选择你的 userdata.vhdx&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;select vdisk file = &#34;D:\WpSystem\S-1-5-21-3846526574-1502088438-2560978845-1001\AppData\Local\Packages\MicrosoftCorporationII.WindowsSubsystemForAndroid_8wekyb3d8bbwe\LocalCache\userdata.vhdx&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果提示&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;DiskPart successfully selected the virtual disk file.&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;就说明成功了。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;输入  &lt;code&gt;compact vdisk&lt;/code&gt;  来压缩。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;DiskPart has encountered an error: The specified file is encrypted and the user does not have the ability to decrypt it.
+See the System Event Log for more information.&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个就说明你没有权限压缩这个文件。&lt;br&gt;
+为了解决这个问题我百度了一晚上，最后发现，只要你把这个文件复制走，就会提示&lt;br&gt;
+&lt;img src=&#34;/img/Windowssubsystemforandroidcompression/20221118210314.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+这里选择是，然后就会复制走。&lt;br&gt;
+这个时候你再看你复制的文件就会发现上面的小黄锁已经不见了。&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;重新选择 userdata.vhdx 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;select vdisk file = &#34;D:\userdata.vhdx&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;重新输入命令  &lt;code&gt;compact vdisk&lt;/code&gt;  进行压缩，如果出现下面的提示那就说明压缩成功了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;DISKPART&amp;gt; compact vdisk
+
+  100 percent completed
+
+DiskPart successfully compacted the virtual disk file.
+
+DISKPART&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;此时再看你复制出来的文件，就会发现大小缩小了很多，压缩成功了。&lt;br&gt;
+接着只需要剪切拷贝出来的文件，替换掉原来的文件就可以了。&lt;/p&gt;
+&lt;h1 id=&#34;成果&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#成果&#34;&gt;#&lt;/a&gt; 成果&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;压缩前：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Windowssubsystemforandroidcompression/20221118204548.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;压缩后：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Windowssubsystemforandroidcompression/20221118210939.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="wsa" />
+        <category term="vhd" />
+        <category term="vhdx" />
+        <category term="diskpart" />
+        <updated>2022-11-18T12:43:50.000Z</updated>
+    </entry>
+</feed>

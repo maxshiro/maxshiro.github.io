@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>MAXshiro&#39;s Blog • Posts by &#34;network&#34; tag</title>
+        <link>http://maxshiroi.top</link>
+        <description>Discover and Record the world.</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 19 Sep 2022 22:28:28 +0800</pubDate>
+        <lastBuildDate>Mon, 19 Sep 2022 22:28:28 +0800</lastBuildDate>
+        <category>nextcloud</category>
+        <category>聊天室</category>
+        <category>python</category>
+        <category>ctf</category>
+        <category>buuctf</category>
+        <category>antsword</category>
+        <category>linux</category>
+        <category>centos</category>
+        <category>web</category>
+        <category>nginx</category>
+        <category>mysql</category>
+        <category>wsa</category>
+        <category>vhd</category>
+        <category>vhdx</category>
+        <category>diskpart</category>
+        <category>arch</category>
+        <category>pacman</category>
+        <category>win</category>
+        <category>explorer.exe</category>
+        <category>autorefresh</category>
+        <category>network</category>
+        <category>vmware</category>
+        <category>kali</category>
+        <category>dvwa</category>
+        <category>fedora</category>
+        <category>helloworld</category>
+        <category>plugin</category>
+        <category>hexo</category>
+        <category>backup</category>
+        <category>guide</category>
+        <category>目录</category>
+        <category>指令</category>
+        <category>权限</category>
+        <category>media center</category>
+        <category>plex</category>
+        <category>emby</category>
+        <category>jellyfin</category>
+        <category>视频</category>
+        <category>音乐</category>
+        <category>运维</category>
+        <category>smb</category>
+        <category>passwd</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>树莓派</category>
+        <category>docker</category>
+        <category>openwrt</category>
+        <category>router</category>
+        <category>pic</category>
+        <category>img</category>
+        <category>api</category>
+        <category>random</category>
+        <category>wallpaper</category>
+        <category>短链</category>
+        <category>测试</category>
+        <category>Vocal</category>
+        <category>AI</category>
+        <category>歌声合成</category>
+        <category>transmission</category>
+        <category>torrent</category>
+        <category>下载器</category>
+        <category>nas</category>
+        <category>bug</category>
+        <category>win7</category>
+        <category>capacity</category>
+        <category>shrink</category>
+        <category>Android</category>
+        <category>Hyper-V</category>
+        <category>WSA</category>
+        <category>wsl2</category>
+        <category>Hyper-v</category>
+        <category>wsl</category>
+        <category>权限不足</category>
+        <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/222828/</guid>
+            <title>vmware安装好后配置centos网络</title>
+            <link>http://maxshiroi.top/ug/222828/</link>
+            <category>linux</category>
+            <category>centos</category>
+            <category>network</category>
+            <category>vmware</category>
+            <pubDate>Mon, 19 Sep 2022 22:28:28 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;更改-ifcfg-ens33-文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#更改-ifcfg-ens33-文件&#34;&gt;#&lt;/a&gt; 更改 ifcfg-ens33 文件&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编辑配置文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /etc/sysconfig/network-scripts/ifcfg-ens33&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要添加 / 修改的地方&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;BOOTPROTO=static
+ONBOOT=yes
+IPADDR=192.168.xx.xx
+NETMASK=255.255.255.0
+GATEWAY=192.168.204.2
+DNS1=8.8.8.8
+DNS2=114.114.114.114&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;编辑-resolvconf-文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编辑-resolvconf-文件&#34;&gt;#&lt;/a&gt; 编辑 resolv.conf 文件&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /etc/resolv.conf&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;添加如下内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;# Generated by NetworkManager
+search localdomain
+nameserver 8.8.8.8&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;重启网卡&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#重启网卡&#34;&gt;#&lt;/a&gt; 重启网卡&lt;/h1&gt;
+&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;service network restart&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

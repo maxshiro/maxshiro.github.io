@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>MAXshiro&#39;s Blog • Posts by &#34;短链&#34; tag</title>
+        <link>http://maxshiroi.top</link>
+        <description>Discover and Record the world.</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 21 Sep 2022 12:07:38 +0800</pubDate>
+        <lastBuildDate>Wed, 21 Sep 2022 12:07:38 +0800</lastBuildDate>
+        <category>nextcloud</category>
+        <category>聊天室</category>
+        <category>python</category>
+        <category>ctf</category>
+        <category>buuctf</category>
+        <category>antsword</category>
+        <category>linux</category>
+        <category>centos</category>
+        <category>web</category>
+        <category>nginx</category>
+        <category>mysql</category>
+        <category>wsa</category>
+        <category>vhd</category>
+        <category>vhdx</category>
+        <category>diskpart</category>
+        <category>arch</category>
+        <category>pacman</category>
+        <category>win</category>
+        <category>explorer.exe</category>
+        <category>autorefresh</category>
+        <category>network</category>
+        <category>vmware</category>
+        <category>kali</category>
+        <category>dvwa</category>
+        <category>fedora</category>
+        <category>helloworld</category>
+        <category>plugin</category>
+        <category>hexo</category>
+        <category>backup</category>
+        <category>guide</category>
+        <category>目录</category>
+        <category>指令</category>
+        <category>权限</category>
+        <category>media center</category>
+        <category>plex</category>
+        <category>emby</category>
+        <category>jellyfin</category>
+        <category>视频</category>
+        <category>音乐</category>
+        <category>运维</category>
+        <category>smb</category>
+        <category>passwd</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>树莓派</category>
+        <category>docker</category>
+        <category>openwrt</category>
+        <category>router</category>
+        <category>pic</category>
+        <category>img</category>
+        <category>api</category>
+        <category>random</category>
+        <category>wallpaper</category>
+        <category>短链</category>
+        <category>测试</category>
+        <category>Vocal</category>
+        <category>AI</category>
+        <category>歌声合成</category>
+        <category>transmission</category>
+        <category>torrent</category>
+        <category>下载器</category>
+        <category>nas</category>
+        <category>bug</category>
+        <category>win7</category>
+        <category>capacity</category>
+        <category>shrink</category>
+        <category>Android</category>
+        <category>Hyper-V</category>
+        <category>WSA</category>
+        <category>wsl2</category>
+        <category>Hyper-v</category>
+        <category>wsl</category>
+        <category>权限不足</category>
+        <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/ug/120738/</guid>
+            <title>shortcutforshoka</title>
+            <link>http://maxshiroi.top/ug/120738/</link>
+            <category>短链</category>
+            <category>测试</category>
+            <pubDate>Wed, 21 Sep 2022 12:07:38 +0800</pubDate>
+            <description><![CDATA[ &lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;java&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+...
+Scanner in = new Scanner (System.in);
+// 输入 Scan 之后，按下键盘 Alt + “/” 键，Eclipse 下自动补全。
+System.out.println (in.nextLine ());
+System.out.println (&#34;Hello&#34; + &#34;world.&#34;);&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;{% media audio %}
+- title: 列表 1
+  list:
+    - https://music.163.com/#/playlist?id=2943811283
+    - https://music.163.com/#/playlist?id=2297706586
+- title: 列表 2
+  list:
+    - https://music.163.com/#/playlist?id=2031842656
+{% endmedia %}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;原本用于日语汉字假名注音，但别的注音也可以。&lt;br&gt;
+为了兼容性，采用 markdown-it-ruby 的基本格式： &lt;ruby&gt;文字&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;注音&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt; ，并且为了兼容表格，将分隔符由 | 换成了 ^ 。&lt;br&gt;
+注音分隔基于 furigana-markdown-it 显示说明看这里&lt;/p&gt;
+&lt;p&gt;&lt;ruby&gt;取&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;と&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;り&lt;rt&gt;&lt;/rt&gt;返&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;かえ&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;す&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	取とり返かえす&lt;br&gt;
+&lt;ruby&gt;可愛&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;かわい&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	可愛かわいい犬いぬ&lt;br&gt;
+&lt;ruby&gt;可&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;か&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;愛&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;わい&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	可か愛わいい犬いぬ&lt;br&gt;
+&lt;ruby&gt;アクセラレータ&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;accelerator&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	アクセラレータ accelerator&lt;br&gt;
+&lt;ruby&gt;accelerator&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;アクセラレータ&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	accelerator アクセラレータ&lt;br&gt;
+&lt;ruby&gt;食&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;た&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;べる&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	食たべる&lt;br&gt;
+&lt;ruby&gt;食べる&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;たべる&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	食べるたべる&lt;br&gt;
+&lt;ruby&gt;あ&lt;rt&gt;●&lt;/rt&gt;い&lt;rt&gt;●&lt;/rt&gt;う&lt;rt&gt;●&lt;/rt&gt;え&lt;rt&gt;●&lt;/rt&gt;お&lt;rt&gt;●&lt;/rt&gt;&lt;/ruby&gt;	あ●い●う●え●お●&lt;br&gt;
+&lt;ruby&gt;あ&lt;rt&gt;❤&lt;/rt&gt;い&lt;rt&gt;❤&lt;/rt&gt;う&lt;rt&gt;❤&lt;/rt&gt;え&lt;rt&gt;❤&lt;/rt&gt;お&lt;rt&gt;❤&lt;/rt&gt;&lt;/ruby&gt;	あ❤い❤う❤え❤お❤&lt;br&gt;
+&lt;ruby&gt;常用账号&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;contact&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	常用账号 contact&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
