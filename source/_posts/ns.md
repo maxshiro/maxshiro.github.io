@@ -1,8 +1,8 @@
 ---
 title: Switch模拟器的安装使用以及游戏文件获取和处理。
 date: 2022-08-28 21:12:24
-sticky: true
-cover: img/ns/20220920215433.png
+top: true
+img: img/ns/20220920215433.png
 tags:
 - switch
 - animal crossing

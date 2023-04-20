@@ -1,7 +1,7 @@
 ---
 title: 解决mysql第一次安装后改密码的各种问题
 date: 2022-10-19 10:16:22
-cover: img/mysqlpasswd/20221019101821.png
+img: img/mysqlpasswd/20221019101821.png
 tags:
 - mysql
 - passwd

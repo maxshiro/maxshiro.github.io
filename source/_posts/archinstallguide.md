@@ -1,7 +1,9 @@
 ---
 title: Arch安装使用指导
 date: 2023-02-24 14:02:06
-cover: img/archinstallguide/20230321201108.png
+top: true
+cover: false
+img: img/archinstallguide/20230321201108.png
 tags:
 - linux
 - arch

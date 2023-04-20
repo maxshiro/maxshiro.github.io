@@ -1,7 +1,7 @@
 ---
 title: Linux入门学习0
 date: 2022-09-22 17:52:33
-hidden: true
+hide: true
 tags:
 - linux
 - 目录

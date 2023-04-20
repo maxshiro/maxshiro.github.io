@@ -1,5 +1,6 @@
 ---
 title: Hello World
+hide: true
 tags: 
 - helloworld
 ---

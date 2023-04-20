@@ -1,7 +1,7 @@
 ---
 title: 【VMware】解决新版本的VMware虚拟机无法正常在旧版本的Windows上安装VMware Tools
 date: 2022-08-25 12:46:00
-cover: img/vmwarebug/20220920220101.png
+img: img/vmwarebug/20220920220101.png
 tags: 
   - vmware
   - bug

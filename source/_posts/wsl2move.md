@@ -1,7 +1,7 @@
 ---
 title: WSL2迁移以及空间回收。
 date: 2022-11-19 08:29:13
-cover: img/wsl2move/20221119083140.png
+img: img/wsl2move/20221119083140.png
 tags:
 - wsl2
 - Hyper-v

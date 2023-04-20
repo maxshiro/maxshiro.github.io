@@ -1,8 +1,9 @@
 ---
 title: 部署完hexo后还应该准备哪些工作
 date: 2022-08-28 22:25:43
-sticky: true
-cover: img/hexoplugin/20220920213944.png
+top: false
+cover: false
+img: img/hexoplugin/20220920213944.png
 tags: 
 - plugin
 - hexo
