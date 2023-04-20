@@ -12,10 +12,12 @@ tags:
 # Intro
 上一回我们讲到了如何部署hexo到github上，并简单的向repo里推送了你的博客。这一回我们简单的来完善你的博客。
 # 0.主题配置
-> [Click Me](https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/display/ 'Click Me')
->
-> [matery](https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md 'matery')
-
+* old:
+[shoka](https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/display/ 'Click Me')
+[matery](https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md 'matery')
+* new
+[stellar](https://xaoxuu.com/wiki/stellar/#start 'stellar')
+[volantis](https://volantis.js.org/v6/getting-started/ 'volantis')
 
 # 1.备份Hexo源文件到 Backup 分支
 由于种种原因我们总会更改自己的工作环境或者一顿操作猛如虎，将自己博客的源文件一通收拾，然后就没有然后了。

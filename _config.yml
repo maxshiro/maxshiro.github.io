@@ -3,7 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: MAXshiro's Blog
+title: MAXshiro
+avatar: img/avatar.png
 subtitle: 'A blog for learn.'
 description: 'Discover and Record the world.'
 keywords:
@@ -102,8 +103,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: materym
-
+theme: stellar
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
