@@ -1,7 +1,7 @@
 ---
 title: 解决linux下挂载其他linux硬盘的问题并创建smb局域网共享
 date: 2022-08-28 21:15:02
-cover: img/linuxsmb/20220920214113.png
+cover: /img/linuxsmb/20220920214113.png
 tags:
 - linux
 - 运维

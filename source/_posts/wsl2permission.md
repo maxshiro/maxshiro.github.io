@@ -1,7 +1,7 @@
 ---
 title: 解决Windows直接访问WSL2路径并直接进行读写操作,权限不足的问题
 date: 2022-08-28 23:42:36
-cover: img/wsl2permission/20220920220343.png
+cover: /img/wsl2permission/20220920220343.png
 tags:
 - wsl
 - 权限不足

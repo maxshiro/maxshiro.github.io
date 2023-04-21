@@ -1,7 +1,7 @@
 ---
 title: Win11 安装 WSA 简易教程
 date: 2022-08-28 20:59:44
-cover: img/wsa/20220920220132.png
+cover: /img/wsa/20220920220132.png
 tags:
 - Android
 - Hyper-V

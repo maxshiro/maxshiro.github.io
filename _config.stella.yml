@@ -13,8 +13,8 @@ sidebar:
     title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   menu:
     post: '[btn.blog](/)'
+    wiki: '[btn.wiki](/wiki/)'
     more: '[更多](/more/)'
-    # friends: '[友链](/friends/)'
     # about: '[关于](/about/)'
   # Sidebar widgets
   widgets:
@@ -37,7 +37,10 @@ sidebar:
 
 ######## Index ########
 post-index: # 近期发布 分类 标签 归档 and ...
-  # '朋友文章': /friends/rss/
+  '说说': /timeline/
+  '友链': /friends/
+  '关于': /about/
+  
 
 
 ######## Main ########
@@ -235,9 +238,9 @@ tag_plugins:
     blobcat: https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/${name}.png
   # {% image %}
   image:
-    fancybox: # true, false
+    fancybox: true # true, false
     replace_original:  #把markdown格式的图片解析成图片标签
-      enable: false
+      enable: true
   # {% timeline %}
   timeline:
     max-height: 80vh

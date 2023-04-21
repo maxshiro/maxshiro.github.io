@@ -1,7 +1,7 @@
 ---
 title: 在Debian系linux上通过apt的方式安装plex媒体中心
 date: 2022-11-02 20:44:17
-cover: img/linuxplexguide/20221102204637.png
+cover: /img/linuxplexguide/20221102204637.png
 tags:
 - media center
 - plex

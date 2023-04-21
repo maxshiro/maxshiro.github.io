@@ -1,4 +1,5 @@
 ---
+# top: [num] # 是否置顶,[num]参数排序，越小越靠前。
 title: {{ title }}
 date: {{ date }}
 tags: 

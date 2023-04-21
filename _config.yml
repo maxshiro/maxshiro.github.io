@@ -45,15 +45,17 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight:
- enable: false
- line_number: false
- auto_detect: false
- tab_replace: ''
- wrap: true
- hljs: true
+# highlight:
+#   enable: true
+#   line_number: false
+#   auto_detect: false
+#   tab_replace: '    '
+#   wrap: false
+#   hljs: true
+    
+
 prismjs:
- enable: true
+ enable: false
  preprocess: true
  line_number: true
  tab_replace: ''
@@ -112,38 +114,38 @@ deploy:
   branch: main
 
 # Markdown renderer
-# markdown:
-#   render:
-#     html: true
-#     xhtmlOut: true
-#     breaks: true
-#     linkify: true
-#     typographer:
-#     quotes: '""'''
-#   plugins:
-#     - plugin:
-#         name: markdown-it-toc-and-anchor
-#         enable: true
-#         options: # 文章目录以及锚点应用的 class 名称，shoka 主题必须设置成这样
-#           tocClassName: 'toc'
-#           anchorClassName: 'anchor'
-#     - plugin:
-#         name: markdown-it-multimd-table
-#         enable: true
-#         options:
-#           multiline: true
-#           rowspan: true
-#           headerless: true
-#     - plugin:
-#         name: ./markdown-it-furigana
-#         enable: true
-#         options:
-#           fallbackParens: "()"
-#     - plugin:
-#         name: ./markdown-it-spoiler
-#         enable: true
-#         options:
-#           title: "你知道得太多了"
+markdown:
+  render:
+    html: true
+    xhtmlOut: true
+    breaks: true
+    linkify: true
+    typographer:
+    quotes: '""'''
+  plugins:
+    - plugin:
+        name: markdown-it-toc-and-anchor
+        enable: true
+        options: # 文章目录以及锚点应用的 class 名称，shoka 主题必须设置成这样
+          tocClassName: 'toc'
+          anchorClassName: 'anchor'
+    - plugin:
+        name: markdown-it-multimd-table
+        enable: true
+        options:
+          multiline: true
+          rowspan: true
+          headerless: true
+    - plugin:
+        name: ./markdown-it-furigana
+        enable: true
+        options:
+          fallbackParens: "()"
+    - plugin:
+        name: ./markdown-it-spoiler
+        enable: true
+        options:
+          title: "你知道得太多了"
 
 # minify:
 #   html:

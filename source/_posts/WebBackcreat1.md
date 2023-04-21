@@ -2,7 +2,7 @@
 title: 在centos中部署后端程序。
 date: 2022-10-16 21:19:32
 top: false
-cover: img/WebBackcreat1/20221016212408.png
+cover: /img/WebBackcreat1/20221016212408.png
 tags:
 - linux
 - centos

@@ -1,7 +1,13 @@
 ---
 title: Arch安装使用指导
 date: 2023-02-24 14:02:06
-cover: img/archinstallguide/20230321201108.png
+cover: /img/archinstallguide/20230321201108.png
+banner: arch,linux
+top: 1
+categories: [linux,arch]
+poster: # 海报（可选，全图封面卡片）
+  headline: Archlinux
+  caption: Arch安装使用指导
 tags:
 - linux
 - arch
@@ -13,7 +19,7 @@ tags:
 
 以下是检查网络设置和 SSH 连接的操作步骤：
 
-```zsh
+```bash bash
 # 检查系统启动方式
 ls /sys/firmware/efi/efivars
 
@@ -26,12 +32,13 @@ passwd
 # 查看 IP 地址
 ip addr
 ```
+
 # 使用ssh连接
 ```cmd cmd
 ssh -p 22 root@192.168.204.130
 ```
 # 分区挂载
-```zsh
+```bash bash
 # 查看已存在的硬盘
 lsblk
 # 使用cfdisk创建分区
@@ -59,7 +66,7 @@ mount /dev/nvme0n1p1 /mnt/boot/EFI
 
 
 # 安装
-```zsh
+```bash bash
 # 使用下面命令下载并安装系统
 pacstrap -i /mnt base base-devel vim linux linux-firmware
 # 生成 fstab 文件并检查
@@ -105,7 +112,7 @@ reboot
 
 
 # 安装后
-```bash
+```bash bash
 # 配置网络，再次联网
 # 输入nmtui 选择 “Activate a connection” 回车进入，选择你需要的网络，连接后back返回即可
 # 安装 openssh
@@ -133,7 +140,7 @@ vi /etc/passwd
 
 
 # 优化终端
-```zsh
+```bash bash
 # 安装zsh，高亮，补全
 sudo pacman -S zsh
 sudo pacman -S zsh-autosuggestions
@@ -187,7 +194,7 @@ sudo pacman -S neofetch
 
 
 # 安装桌面环境
-```zsh
+```bash
 # 安装xorg-server，xorg-xinit
 sudo pacman -S xorg-server xorg-xinit
 # 安装显卡驱动
@@ -207,7 +214,7 @@ ifconfig ens160 down/up
 
 
 ## vmware安装vmwaretools 实现窗口分辨率自适应。
-```zsh
+```bash
 # 安装
 sudo pacman -Sy gtkmm gtkmm3 net-tools open-vm-tools xf86-video-vmware xf86-input-vmmouse
 sudo systemctl enable vmtoolsd.service
@@ -218,7 +225,7 @@ sudo reboot
 [wiki.archlinuxcn.org](https://wiki.archlinuxcn.org/wiki/VMware/%E5%AE%89%E8%A3%85_Arch_Linux_%E4%B8%BA%E8%99%9A%E6%8B%9F%E6%9C%BA)
 这里不多赘述。
 ## 安装中文输入法
-```zsh
+```bash
 // 安装fcitx5
 sudo pacman -S fcitx5-im fcitx5-chinese-addons  fcitx5-rime fcitx5-configtool
 // 编辑配置文件
@@ -234,7 +241,7 @@ reboot
 ```
 
 ## 安装yay工具并安装linuxqq
-```zsh
+```bash
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si

@@ -1,7 +1,7 @@
 ---
 title: 使用 Hexo 程序部署博客到githubpage上
 date: 2022-04-17 13:35:37
-cover: img/hexoplugin/20220920213944.png
+cover: /img/hexoplugin/20220920213944.png
 tags: 
 - hexo
 - guide
