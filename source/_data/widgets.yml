@@ -16,9 +16,16 @@ search_docs:
   layout: search
   filter: /wiki/ # auto or 'path'
   placeholder: 文档搜索
-  
+
+welcome:
+  layout: markdown
+  title: 提示
+  content: |
+    欢迎！随便看看吧！
+
 ghrepo:
   layout: ghrepo
+
 related:
   layout: related
 
@@ -35,6 +42,7 @@ recent:
   rss: # /atom.xml # npm i hexo-generator-feed
   limit: 5 # Count of posts
 # TOC (valid only in layout:post/wiki)
+
 toc:
   layout: toc
   list_number: true
@@ -64,10 +72,10 @@ tagcloud:
 
 timeline:
   layout: timeline
-  title: 近期动态
-  api: # https://api.github.com/repos/xaoxuu/hexo-theme-stellar/issues
+  title: 主题近期动态
+  api: https://api.github.com/repos/xaoxuu/hexo-theme-stellar/releases?per_page=3
   user: # 默认显示所有人的数据，设置名称可过滤为仅显示某人的数据，多个名称用英文逗号隔开，不要加空格
   type: # 默认不用写，如果是友链朋友圈数据请写 fcircle
-  limit: # 默认通过 api 上增加 per_page 来设置，如果是友链朋友圈，可通过这个设置数量
+  limit: 3 # 默认通过 api 上增加 per_page 来设置，如果是友链朋友圈，可通过这个设置数量
 
 
