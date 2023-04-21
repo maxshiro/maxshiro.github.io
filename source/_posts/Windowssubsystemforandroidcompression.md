@@ -1,7 +1,7 @@
 ---
 title: 通过diskpart工具压缩userdata.vhdx来解决磁盘占用过多问题
 date: 2022-11-18 20:43:50
-img: img/Windowssubsystemforandroidcompression/20221118204548.png
+cover: img/Windowssubsystemforandroidcompression/20221118204548.png
 tags:
 - wsa
 - vhd

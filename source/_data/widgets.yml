@@ -37,14 +37,14 @@ recent:
 # TOC (valid only in layout:post/wiki)
 toc:
   layout: toc
-  list_number: false
+  list_number: true
   min_depth: 2
   max_depth: 5
   fallback: recent # Use a backup widget when toc does not exist.
 # github user info
 ghuser:
   layout: ghuser
-  username: github # your github login username
+  username: maxshiro # your github login username
   avatar: true # show avatar or not
   menu: true # show menu or not
 
@@ -69,3 +69,5 @@ timeline:
   user: # 默认显示所有人的数据，设置名称可过滤为仅显示某人的数据，多个名称用英文逗号隔开，不要加空格
   type: # 默认不用写，如果是友链朋友圈数据请写 fcircle
   limit: # 默认通过 api 上增加 per_page 来设置，如果是友链朋友圈，可通过这个设置数量
+
+

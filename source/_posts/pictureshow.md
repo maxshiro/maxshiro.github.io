@@ -2,7 +2,7 @@
 title: 随机图片API
 date: 2022-11-16 15:29:35
 top: false
-img: https://api.paugram.com/wallpaper
+cover: https://api.paugram.com/wallpaper
 tags:
 - pic
 - img

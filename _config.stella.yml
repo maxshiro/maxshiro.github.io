@@ -13,14 +13,14 @@ sidebar:
     title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   menu:
     post: '[btn.blog](/)'
-    wiki: '[btn.wiki](/wiki/)'
-    friends: '[友链](/friends/)'
-    about: '[关于](/about/)'
+    more: '[更多](/more/)'
+    # friends: '[友链](/friends/)'
+    # about: '[关于](/about/)'
   # Sidebar widgets
   widgets:
     #### 自动生成的页面 ####
     # 主页
-    home: search, recent, timeline # for home
+    home: search, recent, tagcloud, timeline, ghuser # for home
     # 博客索引页
     blog_index: search_blog, recent, timeline # for categories/tags/archives
     # 文档索引页
@@ -49,7 +49,7 @@ article:
   # 如果没有指定封面，是否根据 tags 作为关键词搜索封面图片？
   auto_cover: false # search from https://source.unsplash.com/
   # 如果没有指定横幅，是否根据 tags 作为关键词搜索横幅图片？
-  auto_banner: false # search from https://source.unsplash.com/
+  auto_banner: true # search from https://source.unsplash.com/
   # 如果没有指定 excerpt 和 description，将自动取多长的内容作为文章摘要？
   auto_excerpt: 200
   # 分类颜色
@@ -62,7 +62,8 @@ article:
   # 相关文章，需要安装插件 (for layout: post)
   # npm i hexo-related-popular-posts
   related_posts:
-    enable: false
+    enable: true
+    title: 您可能感兴趣的文章
     max_count: 5
 
 
@@ -72,6 +73,7 @@ search:
     field: all # post, page, all
     path: /search.json # 搜索文件存放位置
     content: true # 是否搜索内容
+    codeblock: true
 
 
 ######## Comments ########
@@ -175,18 +177,18 @@ comments:
 ######## Footer ########
 footer:
   social:
-    # github:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/>'
-    #   url: /
-    # music:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/3845874.svg"/>'
-    #   url: /
-    # unsplash:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/3616429.svg"/>'
-    #   url: /
-    # comments:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/>'
-    #   url: /about/#comments
+    github:
+      icon: '<img src="/assets/placeholder/social/08a41b181ce68.svg"/>'
+      url: https://github.com/maxshiro/
+    music:
+      icon: '<img src="/assets/placeholder/social/3845874.svg"/>'
+      url: https://github.com/maxshiro/
+    unsplash:
+      icon: '<img src="/assets/placeholder/social/3616429.svg"/>'
+      url: https://github.com/maxshiro/
+    comments:
+      icon: '<img src="/assets/placeholder/social/942ebbf1a4b91.svg"/>'
+      url: https://github.com/maxshiro/
   sitemap:
     # '博客':
     #   - '[近期](/)'

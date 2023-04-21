@@ -1,7 +1,7 @@
 ---
 title: 在你的 linux nas 上安装一个种子下载器吧！
 date: 2022-08-29 00:28:53
-img: img/transmission/20220920213753.png
+cover: img/transmission/20220920213753.png
 tags:
 - transmission
 - torrent

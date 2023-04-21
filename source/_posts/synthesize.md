@@ -1,7 +1,7 @@
 ---
 title: 【虚拟Vocal】 Synthesize V 初代整合
 date: 2022-08-28 21:07:24
-img: img/synthesize/20220920215927.png
+cover: img/synthesize/20220920215927.png
 tags:
 - Vocal
 - AI

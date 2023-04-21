@@ -2,7 +2,7 @@
 title: 在centos中部署后端程序。
 date: 2022-10-16 21:19:32
 top: false
-img: img/WebBackcreat1/20221016212408.png
+cover: img/WebBackcreat1/20221016212408.png
 tags:
 - linux
 - centos
@@ -152,6 +152,30 @@ wget https://www.php.net/distributions/php-8.2.5.tar.gz
 tar -zxvf php-8.2.5.tar.gz
 cd php-8.2.5
 ./configure --prefix=/usr/local/php8/ --with-config-file-path=/usr/local/php8/etc/ --with-apxs2=/usr/local/httpd/bin/apxs --enable-mbstring --with-curl -with-gd --enable-fpm --enable-mysqlnd --with-pdo-mysql=mysqlnd --with-mysqli=mysqlnd
+./configure \
+--prefix=/usr/local/php8 \
+--with-config-file-path=/usr/local/php8/etc \
+--with-apxs2=/usr/local/httpd/bin/apxs \
+--with-mysql-sock=/usr/local/mysql/mysql.sock \
+--with-mysqli \
+--with-zlib \
+--with-curl \
+--with-gd \
+--with-jpeg-dir \
+--with-png-dir \
+--with-freetype-dir \
+--with-openssl \
+--enable-mbstring \
+--enable-xml \
+--enable-session \
+--enable-ftp \
+--enable-pdo \
+--enable-tokenizer \
+--enable-mysqlnd \
+--enable-fpm \
+--with-pdo-mysql=mysqlnd \
+--with-mysqli=mysqlnd \
+--enable-zip
 make && make install
 
 
@@ -186,7 +210,7 @@ systemctl restart httpd
 cd /usr/local/httpd/htdocs/
 echo "<?php phpinfo(); ?>" > index.php
 ```
-
+![](/img/WebBackcreat1/20230421154601.png)
 # Mysql 的安装
 1. 先安装wget `yum install wget`。
 2. 下载并安装mysql。
