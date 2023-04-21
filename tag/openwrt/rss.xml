@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>MAXshiro&#39;s Blog • Posts by &#34;openwrt&#34; tag</title>
+        <title>MAXshiro • Posts by &#34;openwrt&#34; tag</title>
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
@@ -96,88 +96,69 @@
             <category>openwrt</category>
             <category>router</category>
             <pubDate>Tue, 26 Apr 2022 20:56:45 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;普通路由器往往受限于硬体性能而缺乏很多功能。但是其拥有多网口和无线功能的支持相对较强。为了能实现更多实用功能并且利用上已经吃灰了很久的树莓派，打算用树莓派来当作旁路由.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&#34;硬体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#硬体&#34;&gt;#&lt;/a&gt; 硬体&lt;/h1&gt;
-&lt;h2 id=&#34;路由&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#路由&#34;&gt;#&lt;/a&gt; 路由&lt;/h2&gt;
+&lt;h1 id=&#34;硬体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#硬体&#34;&gt;#&lt;/a&gt; 硬体&lt;/h1&gt;
+&lt;h2 id=&#34;路由&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由&#34;&gt;#&lt;/a&gt; 路由&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;我使用的是小米路由 3G (下面称为 &lt;code&gt;R3G&lt;/code&gt; ). 当时购买的是小米路由 4 版本，但是其缺乏很多功能。就比如说非常实用的 usb 接口。有了 usb 接口以后就可以愉快刷机了。所以我收到货就直接退货换了 R3G…&lt;/li&gt;
-&lt;li&gt;R3G 优点是有一个 usb3.0 的接口，所以可以直接拿它来挂载移动硬盘也是没问题的。还有 256M 的闪存。缺点是只有两个 RJ45LAN 口，一个 RJ45WAN 口足够家用。所以后来我又白嫖了我哥在外地买的一台 TPlink 五口交换机解决了网口不够的问题…&lt;/li&gt;
-&lt;li&gt;如果你和我一样拥有 R3G. 我建议刷写不死鸟 breed 搭配&lt;a href=&#34;https://opt.cn2qq.com/padavan/&#34; title=&#34;hiboyhiboyhiboy&#34;&gt; hiboyhiboyhiboy&lt;/a&gt; 的固件，来实现更多功能…&lt;/li&gt;
+&lt;li&gt;我使用的是小米路由 3G (下面称为 &lt;code&gt;R3G&lt;/code&gt; ). 当时购买的是小米路由 4 版本，但是其缺乏很多功能。就比如说非常实用的 usb 接口。有了 usb 接口以后就可以愉快刷机了。所以我收到货就直接退货换了 R3G...&lt;/li&gt;
+&lt;li&gt;R3G 优点是有一个 usb3.0 的接口，所以可以直接拿它来挂载移动硬盘也是没问题的。还有 256M 的闪存。缺点是只有两个 RJ45LAN 口，一个 RJ45WAN 口足够家用。所以后来我又白嫖了我哥在外地买的一台 TPlink 五口交换机解决了网口不够的问题...&lt;/li&gt;
+&lt;li&gt;如果你和我一样拥有 R3G. 我建议刷写不死鸟 breed 搭配&lt;a href=&#34;https://opt.cn2qq.com/padavan/&#34; title=&#34;hiboyhiboyhiboy&#34;&gt; hiboyhiboyhiboy&lt;/a&gt; 的固件，来实现更多功能...&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;树莓派&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#树莓派&#34;&gt;#&lt;/a&gt; 树莓派&lt;/h2&gt;
+&lt;h2 id=&#34;树莓派&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#树莓派&#34;&gt;#&lt;/a&gt; 树莓派&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;树莓派 4B 我购买的是 4G 内存版本。采用 5V3A,Type-C 供电接口，你甚至可以用一个充电宝和一根 Type-C 线来给树莓派供电。两个 MicroHDMI 接口支持 4K 视频输出。一个极为先进的 3.5mm 音频接口。四个 Type-A USB 接口，其中分为两个 usb2.0 协议，两个 USB3.0 协议。一个千兆 RJ45 网口。另外机器还自带 wifi 模块，就是别指望这个 wifi 信号有多好了…&lt;/li&gt;
-&lt;li&gt;我在购买时还一并购买了一张 32G 闪迪的 SD 卡，以及适用于 4B 的九层亚克力外壳。有一说一，这个外壳属实好看…&lt;/li&gt;
+&lt;li&gt;树莓派 4B 我购买的是 4G 内存版本。采用 5V3A,Type-C 供电接口，你甚至可以用一个充电宝和一根 Type-C 线来给树莓派供电。两个 MicroHDMI 接口支持 4K 视频输出。一个极为先进的 3.5mm 音频接口。四个 Type-A USB 接口，其中分为两个 usb2.0 协议，两个 USB3.0 协议。一个千兆 RJ45 网口。另外机器还自带 wifi 模块，就是别指望这个 wifi 信号有多好了...&lt;/li&gt;
+&lt;li&gt;我在购买时还一并购买了一张 32G 闪迪的 SD 卡，以及适用于 4B 的九层亚克力外壳。有一说一，这个外壳属实好看...&lt;/li&gt;
 &lt;li&gt;不过如果拿它刷 openwrt 只来当作路由器实在大材小用。所以我采用 OPENFANS 和&lt;a href=&#34;http://www.pifan.org.cn/&#34; title=&#34;树莓派爱好者基地&#34;&gt;树莓派爱好者基地&lt;/a&gt;联合编译的&lt;a href=&#34;https://github.com/openfans-community-offical/Debian-Pi-Aarch64&#34; title=&#34;Debian-Pi-Aarch64&#34;&gt; Debian-Pi-Aarch64&lt;/a&gt; 来使用&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;软体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软体&#34;&gt;#&lt;/a&gt; 软体&lt;/h1&gt;
-&lt;h2 id=&#34;准备&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#准备&#34;&gt;#&lt;/a&gt; 准备&lt;/h2&gt;
+&lt;h1 id=&#34;软体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软体&#34;&gt;#&lt;/a&gt; 软体&lt;/h1&gt;
+&lt;h2 id=&#34;准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备&#34;&gt;#&lt;/a&gt; 准备&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;从上方给出的链接下载&lt;a href=&#34;https://github.com/openfans-community-offical/Debian-Pi-Aarch64&#34; title=&#34;Debian-Pi-Aarch64&#34;&gt; Debian-Pi-Aarch64&lt;/a&gt;, 我这里使用的是没有图形界面的增强版，即 &lt;code&gt;2021-06-11-OPENFANS-Debian-Buster-Aarch64-ext4-v2021-2.0-U6-Release.img.xz&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;百度搜索 Rufus, 下载到本地&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;安装-debian-pi-aarch64&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装-debian-pi-aarch64&#34;&gt;#&lt;/a&gt; 安装 Debian-Pi-Aarch64&lt;/h2&gt;
+&lt;h2 id=&#34;安装-debian-pi-aarch64&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-debian-pi-aarch64&#34;&gt;#&lt;/a&gt; 安装 Debian-Pi-Aarch64&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;将 SD 卡接入读卡器连接电脑。注意提前备份 SD 卡的数据，接下来的操作会清除 SD 卡内的全部数据.&lt;/li&gt;
 &lt;li&gt;打开 Rufus 软体，在 &lt;code&gt;设备&lt;/code&gt; 一栏内选择你的 SD 卡，在 &lt;code&gt;引导类型选择&lt;/code&gt; 栏里面单击后面的 &lt;code&gt;选择&lt;/code&gt; 按钮，选择你下载的 xz 文件&lt;/li&gt;
-&lt;li&gt;单击下面的 &lt;code&gt;开始&lt;/code&gt; 按钮即可开始刷写。大概三四分钟后即可刷写成功。请耐心等待…&lt;/li&gt;
+&lt;li&gt;单击下面的 &lt;code&gt;开始&lt;/code&gt; 按钮即可开始刷写。大概三四分钟后即可刷写成功。请耐心等待...&lt;/li&gt;
 &lt;li&gt;刷写完成后在任务栏上将 SD 卡弹出，即可拔下读卡器。将 SD 卡插入树莓派里面即可.&lt;/li&gt;
 &lt;li&gt;将树莓派的 LAN 口与路由器的 LAN 口连接，为树莓派接入电源。此时树莓派会自行重启三次左右，以完成基本配置。此时可以喝杯咖啡等待三分钟左右.&lt;/li&gt;
-&lt;li&gt;电脑登入路由器控制页面，查找树莓派的 ip, 我这里查到的是 &lt;code&gt;192.168.0.90&lt;/code&gt; , 接下来的教程将以这个地址为准…&lt;/li&gt;
+&lt;li&gt;电脑登入路由器控制页面，查找树莓派的 ip, 我这里查到的是 &lt;code&gt;192.168.0.90&lt;/code&gt; , 接下来的教程将以这个地址为准...&lt;/li&gt;
 &lt;li&gt;如果您使用的是 Win10 系统，那么可以直接按下 &lt;code&gt;Windows徽标键&lt;/code&gt;  + &lt;code&gt;R&lt;/code&gt; , 输入 &lt;code&gt;CMD&lt;/code&gt;  指令单击回车来打开 &lt;code&gt;CMD&lt;/code&gt; , 使用 &lt;code&gt;SSH&lt;/code&gt;  的方式连入树莓派。当然你也可以使用其他第三方软件来实现.&lt;/li&gt;
 &lt;li&gt;使用 &lt;code&gt;ssh -p 22 pi@192.168.0.90&lt;/code&gt;  指令来接入树莓派，如果没有出错的话接下来会弹出提示，输入 &lt;code&gt;yes&lt;/code&gt;  并按下回车即可。当你看见 password 时，直接输入默认密码 &lt;code&gt;raspberry&lt;/code&gt; , 按下回车即可连入树莓派.&lt;/li&gt;
 &lt;li&gt;更新一下就可以正常使用了&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;配置-debian-pi-aarch64&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-debian-pi-aarch64&#34;&gt;#&lt;/a&gt; 配置 Debian-Pi-Aarch64&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;配置-debian-pi-aarch64&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置-debian-pi-aarch64&#34;&gt;#&lt;/a&gt; 配置 Debian-Pi-Aarch64&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;如果自己会配置那么这步可以跳过了&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;可以参考&lt;a href=&#34;https://gitee.com/openfans-community/Debian-Pi-Aarch64#3%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E&#34; title=&#34;这里&#34;&gt;这里&lt;/a&gt;来配置&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;切换账户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#切换账户&#34;&gt;#&lt;/a&gt; 切换账户&lt;/h3&gt;
+&lt;h3 id=&#34;切换账户&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#切换账户&#34;&gt;#&lt;/a&gt; 切换账户&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;su&lt;/code&gt;  或者 &lt;code&gt;sudo -i&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;更改账户的密码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#更改账户的密码&#34;&gt;#&lt;/a&gt; 更改账户的密码&lt;/h3&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// 使用下面指令来更改pi用户的密码
-// 重复输入两次即可
-sudo passwd pi
-
-// 使用这个指令来更改root账户的密码
-sudo passwd root&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;挂载smb硬盘&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#挂载smb硬盘&#34;&gt;#&lt;/a&gt; 挂载 smb 硬盘&lt;/h3&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /
-mkdir db
-mount -o username=xxx,password=xxx,dir_mode=0777,file_mode=0777 //192.168.0.15/database /db&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;安装-openwrt&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装-openwrt&#34;&gt;#&lt;/a&gt; 安装 Openwrt&lt;/h2&gt;
+&lt;h3 id=&#34;更改账户的密码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更改账户的密码&#34;&gt;#&lt;/a&gt; 更改账户的密码&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 使用下面指令来更改pi用户的密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 重复输入两次即可&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd pi&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 使用这个指令来更改root账户的密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;挂载smb硬盘&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#挂载smb硬盘&#34;&gt;#&lt;/a&gt; 挂载 smb 硬盘&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; /&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; db&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mount -o username=xxx,password=xxx,dir_mode=0777,file_mode=0777 //192.168.0.15/database /db&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;安装-openwrt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-openwrt&#34;&gt;#&lt;/a&gt; 安装 Openwrt&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在安装之前首先开启 docker 服务并设置开机自动启动&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;启用和运行 Docker 服务&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;// 开机自动启动Docker服务
-systemctl enable docker.service
-
-// 启动Docker服务
-systemctl start docker.service
-
-######
-
-// 停止Docker服务
-systemctl stop docker.service
-
-// 禁止Docker服务开机启动
-systemctl disable docker.service&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 开机自动启动Docker服务&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl &lt;span class=&#34;built_in&#34;&gt;enable&lt;/span&gt; docker.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 启动Docker服务&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl start docker.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;######&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 停止Docker服务&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl stop docker.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 禁止Docker服务开机启动&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl &lt;span class=&#34;built_in&#34;&gt;disable&lt;/span&gt; docker.service&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol&gt;
 &lt;li&gt;打开网卡混杂模式&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo ip link set eth0 promisc on&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo ip &lt;span class=&#34;built_in&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;set&lt;/span&gt; eth0 promisc on&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;创建网络&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 macnet &lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 macnet &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;使用 &lt;code&gt;sudo ifconfig&lt;/code&gt;  命令查看树莓派 &lt;code&gt;eth0&lt;/code&gt;  网卡的参数来更改&lt;br&gt;
  &lt;code&gt;--subnet&lt;/code&gt;  参数改为树莓派所处网段&lt;br&gt;
@@ -189,14 +170,14 @@ systemctl disable docker.service&lt;span aria-hidden=&#34;true&#34; class=&#34;l
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;拉取 Openwrt 镜像&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;docker pull registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest &lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker pull registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;执行 &lt;code&gt;docker images&lt;/code&gt;  命令查看现存镜像&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;创建并启动容器&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run --restart always --name openwrt -d --network macnet --privileged registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest /sbin/init &lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run --restart always --name openwrt -d --network macnet --privileged registry.cn-shanghai.aliyuncs.com/suling/openwrt:latest /sbin/init &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;--restart always&lt;/code&gt;  参数表示容器退出时始终重启，使服务尽量保持始终可用；&lt;br&gt;
  &lt;code&gt;--name openwrt&lt;/code&gt;  参数定义了容器的名称；&lt;br&gt;
@@ -215,31 +196,22 @@ systemctl disable docker.service&lt;span aria-hidden=&#34;true&#34; class=&#34;l
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;进入容器并修改相关参数&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;docker exec -it openwrt bash&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker &lt;span class=&#34;built_in&#34;&gt;exec&lt;/span&gt; -it openwrt bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;编辑 &lt;code&gt;OpenWrt&lt;/code&gt;  的网络配置文件：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;nano /etc/config/network&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;nano /etc/config/network&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;更改 LAN 口设置&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;config interface &#39;lan&#39;
-        option type &#39;bridge&#39;
-        option ifname &#39;eth0&#39;
-        option proto &#39;static&#39;
-        option ipaddr &#39;192.168.0.2&#39;
-        option netmask &#39;255.255.255.0&#39;
-        option ip6assign &#39;60&#39;
-        option gateway &#39;192.168.0.1&#39;
-        option broadcast &#39;192.168.0.255&#39;
-        option dns &#39;192.168.0.1&#39;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;config interface &lt;span class=&#34;string&#34;&gt;&#39;lan&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option &lt;span class=&#34;built_in&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&#39;bridge&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option ifname &lt;span class=&#34;string&#34;&gt;&#39;eth0&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option proto &lt;span class=&#34;string&#34;&gt;&#39;static&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option ipaddr &lt;span class=&#34;string&#34;&gt;&#39;192.168.0.2&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option netmask &lt;span class=&#34;string&#34;&gt;&#39;255.255.255.0&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option ip6assign &lt;span class=&#34;string&#34;&gt;&#39;60&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option gateway &lt;span class=&#34;string&#34;&gt;&#39;192.168.0.1&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option broadcast &lt;span class=&#34;string&#34;&gt;&#39;192.168.0.255&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        option dns &lt;span class=&#34;string&#34;&gt;&#39;192.168.0.1&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;option ipaddr&lt;/code&gt;  为 OpenWrt 的 IP 地址，可以根据自己喜好修改，我这里定义为了 &lt;code&gt;192.168.0.2&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;重启网络&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;/etc/init.d/network restart&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/etc/init.d/network restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;6&#34;&gt;
 &lt;li&gt;进入控制面板&lt;/li&gt;
 &lt;/ol&gt;
@@ -252,33 +224,22 @@ systemctl disable docker.service&lt;span aria-hidden=&#34;true&#34; class=&#34;l
 &lt;li&gt;关闭 DHCP 服务&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在 “网络 - 接口 - Lan - 修改” 界面中，勾选下方的 &#34;忽略此接口 (不在此接口提供 DHCP 服务)&#34;, 并 &#34;保存 &amp;amp; 应用&#34;.&lt;/p&gt;
+&lt;p&gt;在 &#34;网络 - 接口 - Lan - 修改&#34; 界面中，勾选下方的 &#34;忽略此接口 (不在此接口提供 DHCP 服务)&#34;, 并 &#34;保存 &amp;amp; 应用&#34;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;修复宿主机网络&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修复宿主机网络&#34;&gt;#&lt;/a&gt; 修复宿主机网络&lt;/h2&gt;
+&lt;h2 id=&#34;修复宿主机网络&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修复宿主机网络&#34;&gt;#&lt;/a&gt; 修复宿主机网络&lt;/h2&gt;
 &lt;p&gt;OpenWrt 容器运行后，宿主机内可能无法正常连接外部网络，需要修改宿主机的 &lt;code&gt;/etc/network/interfaces&lt;/code&gt;  文件以修复：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;备份并编辑文件&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;cp /etc/network/interfaces /etc/network/interfaces.bak # 备份文件
-nano /etc/network/interfaces # 编辑文件&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cp&lt;/span&gt; /etc/network/interfaces /etc/network/interfaces.bak &lt;span class=&#34;comment&#34;&gt;# 备份文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nano /etc/network/interfaces &lt;span class=&#34;comment&#34;&gt;# 编辑文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;向文件末尾添加&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;auto eth0
-iface eth0 inet manual
-
-auto macvlan
-iface macvlan inet static
-  address 192.168.0.90
-  netmask 255.255.255.0
-  gateway 192.168.0.1
-  dns-nameservers 192.168.0.1
-  pre-up ip link add macvlan link eth0 type macvlan mode bridge
-  post-down ip link del macvlan link eth0 type macvlan mode bridge&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;auto eth0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;iface eth0 inet manual&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;auto macvlan&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;iface macvlan inet static&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  address 192.168.0.90&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  netmask 255.255.255.0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  gateway 192.168.0.1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  dns-nameservers 192.168.0.1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  pre-up ip &lt;span class=&#34;built_in&#34;&gt;link&lt;/span&gt; add macvlan &lt;span class=&#34;built_in&#34;&gt;link&lt;/span&gt; eth0 &lt;span class=&#34;built_in&#34;&gt;type&lt;/span&gt; macvlan mode bridge&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  post-down ip &lt;span class=&#34;built_in&#34;&gt;link&lt;/span&gt; del macvlan &lt;span class=&#34;built_in&#34;&gt;link&lt;/span&gt; eth0 &lt;span class=&#34;built_in&#34;&gt;type&lt;/span&gt; macvlan mode bridge&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;修改后重启树莓派，之后树莓派的局域网 IP 地址将会固定为 &lt;code&gt;/etc/network/interfaces&lt;/code&gt;  文件中 &lt;code&gt;address&lt;/code&gt;  参数中的地址.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;鸣谢摘抄&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#鸣谢摘抄&#34;&gt;#&lt;/a&gt; 鸣谢 (摘抄)&lt;/h1&gt;
+&lt;h1 id=&#34;鸣谢摘抄&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#鸣谢摘抄&#34;&gt;#&lt;/a&gt; 鸣谢 (摘抄)&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://mlapp.cn/376.html&#34; title=&#34;在Docker 中运行 OpenWrt 旁路网关&#34;&gt;在 Docker 中运行 OpenWrt 旁路网关&lt;/a&gt;&lt;/p&gt;
  ]]></description>
         </item>

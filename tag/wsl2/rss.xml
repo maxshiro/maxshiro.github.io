@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>MAXshiro&#39;s Blog • Posts by &#34;wsl2&#34; tag</title>
+        <title>MAXshiro • Posts by &#34;wsl2&#34; tag</title>
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
@@ -95,100 +95,46 @@
             <category>wsl2</category>
             <category>Hyper-v</category>
             <pubDate>Sat, 19 Nov 2022 08:29:13 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;../img/wsl2move/20221119083153.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+            <description><![CDATA[ &lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;../img/wsl2move/20221119083153.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
+&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
 &lt;p&gt;如果你按照正常方式在设置里移动 wsl 的话就会发现报错，本篇文章向您介绍如何正确迁移以及回收空间。&lt;/p&gt;
-&lt;h1 id=&#34;移动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#移动&#34;&gt;#&lt;/a&gt; 移动&lt;/h1&gt;
+&lt;h1 id=&#34;移动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#移动&#34;&gt;#&lt;/a&gt; 移动&lt;/h1&gt;
 &lt;p&gt;在 Windows 的 PowerShell 中输入:&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --help&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --&lt;span class=&#34;built_in&#34;&gt;help&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;可以看到关于这个命令的使用帮助说明：&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;用法: wsl.exe [参数] [选项...] [命令行]
- 
-用于运行 Linux 二进制文件的参数:
- 
-    如果未提供命令行，wsl.exe 将启动默认的 shell。
-    --exec, -e &amp;lt;命令行&amp;gt;
-        执行指定的命令而不使用默认的 Linux shell。
-    --
-        按原样传递剩余的命令行。
-选项:
-    --distribution, -d &amp;lt;分发版&amp;gt;
-        运行指定的分发。
-    --user, -u &amp;lt;用户名&amp;gt;
-        以指定用户身份运行。
-用于管理适用于 Linux 的 Windows 子系统的参数:
- 
-    --export &amp;lt;分发版&amp;gt; &amp;lt;文件名&amp;gt;
-        将分发导出到 tar 文件。
-        对于标准输出，文件名可以是 -。
-    --import &amp;lt;分发版&amp;gt; &amp;lt;安装位置&amp;gt; &amp;lt;文件名&amp;gt; [选项]
-        将指定的 tar 文件作为新分发进行导入。
-        对于标准输入，文件名可以是 -。
-        选项:
-            --version &amp;lt;版本&amp;gt;
-                指定用于新分发的版本。
-    --list, -l [选项]
-        列出分发。
-        选项:
-            --all
-                列出所有分发，包括当前正在
-                安装或卸载的分发。
-            --running
-                只列出当前正在运行的分发。
-            --quiet, -q
-                只显示分发名称。
-            --verbose, -v
-                显示有关所有分发的详细信息。
-    --set-default, -s &amp;lt;分发版&amp;gt;
-        将分发设置为默认值。
-    --set-default-version &amp;lt;版本&amp;gt;
-        更改新分发的默认安装版本。
-    --set-version &amp;lt;分发版&amp;gt; &amp;lt;版本&amp;gt;
-        更改指定分发的版本。
-    --shutdown
-        立即终止所有正在运行的分发和 WSL 2 轻型工具虚拟机。
-    --terminate, -t &amp;lt;分发版&amp;gt;
-        终止指定的分发。
-    --unregister &amp;lt;分发版&amp;gt;
-        注销分发。
-    --help
-        显示用法信息。&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;用法: wsl.exe [参数] [选项...] [命令行]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;用于运行 Linux 二进制文件的参数:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    如果未提供命令行，wsl.exe 将启动默认的 shell。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --exec, -e &amp;lt;命令行&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        执行指定的命令而不使用默认的 Linux shell。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        按原样传递剩余的命令行。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;选项:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --distribution, -d &amp;lt;分发版&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        运行指定的分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --user, -u &amp;lt;用户名&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        以指定用户身份运行。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;用于管理适用于 Linux 的 Windows 子系统的参数:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --export &amp;lt;分发版&amp;gt; &amp;lt;文件名&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        将分发导出到 tar 文件。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        对于标准输出，文件名可以是 -。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --import &amp;lt;分发版&amp;gt; &amp;lt;安装位置&amp;gt; &amp;lt;文件名&amp;gt; [选项]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        将指定的 tar 文件作为新分发进行导入。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        对于标准输入，文件名可以是 -。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        选项:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            --version &amp;lt;版本&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                指定用于新分发的版本。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --list, -l [选项]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        列出分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        选项:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            --all&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                列出所有分发，包括当前正在&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                安装或卸载的分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            --running&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                只列出当前正在运行的分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            --quiet, -q&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                只显示分发名称。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            --verbose, -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                显示有关所有分发的详细信息。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --&lt;span class=&#34;built_in&#34;&gt;set&lt;/span&gt;-default, -s &amp;lt;分发版&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        将分发设置为默认值。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --&lt;span class=&#34;built_in&#34;&gt;set&lt;/span&gt;-default-version &amp;lt;版本&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        更改新分发的默认安装版本。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --&lt;span class=&#34;built_in&#34;&gt;set&lt;/span&gt;-version &amp;lt;分发版&amp;gt; &amp;lt;版本&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        更改指定分发的版本。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --shutdown&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        立即终止所有正在运行的分发和 WSL &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; 轻型工具虚拟机。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --terminate, -t &amp;lt;分发版&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        终止指定的分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --unregister &amp;lt;分发版&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        注销分发。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --&lt;span class=&#34;built_in&#34;&gt;help&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        显示用法信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;这里我们使用到 export 、unregister 和 import 几个选项就可以实现迁移。&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;终止正在运行的分发或虚拟机：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --shutdown&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;li&gt;终止正在运行的分发或虚拟机：&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --shutdown&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;查看已安装的 wsl 名称：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl.exe --list --all&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;适用于 Linux 的 Windows 子系统分发:
-Debian (默认)
-kali-linux
-Ubuntu&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;li&gt;查看已安装的 wsl 名称：&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl.exe --list --all&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;适用于 Linux 的 Windows 子系统分发:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Debian (默认)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;kali-linux&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Ubuntu&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;对需要迁移的分发或虚拟机导出（我要迁移 kali-linux）：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --export kali-linux D:\kali&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;li&gt;对需要迁移的分发或虚拟机导出（我要迁移 kali-linux）：&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --export kali-linux D:\kali&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;卸载分发版或虚拟机（如果是要重装系统或换机器安装，这一步可以省略，但是要将上一步导出的文件保存好）&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --unregister kali-linux&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;li&gt;卸载分发版或虚拟机（如果是要重装系统或换机器安装，这一步可以省略，但是要将上一步导出的文件保存好）&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --unregister kali-linux&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;导入新的分发版或虚拟机：&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --import kali-linux D:\wsl\kali D:\kali&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;li&gt;导入新的分发版或虚拟机：&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --import kali-linux D:\wsl\kali D:\kali&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;压缩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#压缩&#34;&gt;#&lt;/a&gt; 压缩&lt;/h1&gt;
+&lt;h1 id=&#34;压缩&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#压缩&#34;&gt;#&lt;/a&gt; 压缩&lt;/h1&gt;
 &lt;p&gt;等待导入后你会发现移动的其实是 vhdx 文件，那么就可以对这个文件进行回收空间。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;以管理员身份运行 cmd，输入 diskpart 命令按回车。&lt;/li&gt;
 &lt;li&gt;使用以下命令选择你的 userdata.vhdx&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;select vdisk file = &#34;D:\wsl\ext4.vhdx&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;select vdisk file = &#34;D:\wsl\ext4.vhdx&#34;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;如果提示&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;DiskPart successfully selected the virtual disk file.&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;DiskPart successfully selected the virtual disk file.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;就说明成功了。&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;输入  &lt;code&gt;compact vdisk&lt;/code&gt;  来压缩。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;bug&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bug&#34;&gt;#&lt;/a&gt; bug&lt;/h1&gt;
-&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;ERROR: Wsl/Service/CreateInstance/ERROR_FILE_NOT_FOUND&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;bug&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bug&#34;&gt;#&lt;/a&gt; bug&lt;/h1&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;ERROR: &lt;span class=&#34;title&#34;&gt;Wsl&lt;/span&gt;/&lt;span class=&#34;title&#34;&gt;Service&lt;/span&gt;/&lt;span class=&#34;title&#34;&gt;CreateInstance&lt;/span&gt;/&lt;span class=&#34;title&#34;&gt;ERROR_FILE_NOT_FOUND&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;打开命令行，在命令行中输入&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-cmd&#34; data-language=&#34;cmd&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl.exe --list --all
-wsl.exe --unregister xxx&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;摘抄&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#摘抄&#34;&gt;#&lt;/a&gt; 摘抄&lt;/h1&gt;
+&lt;figure class=&#34;highlight cmd&#34;&gt;&lt;figcaption&gt;&lt;span&gt;cmd&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl.exe --list --all&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wsl.exe --unregister xxx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;摘抄&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#摘抄&#34;&gt;#&lt;/a&gt; 摘抄&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/zhys2007/article/details/110958577&#34;&gt;WSL2 迁移方法&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/y17854117512/article/details/119214442?spm=1001.2101.3001.6661.1&amp;amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-119214442-blog-110900591.pc_relevant_default&amp;amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-119214442-blog-110900591.pc_relevant_default&amp;amp;utm_relevant_index=1&#34;&gt;解决 Win10 子系统的 Ubuntu 被删除后，重新安装出现找不到系统路径&lt;/a&gt;&lt;/p&gt;
  ]]></description>

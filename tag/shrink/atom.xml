@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://maxshiroi.top</id>
-    <title>MAXshiro&#39;s Blog • Posts by &#34;shrink&#34; tag</title>
+    <title>MAXshiro • Posts by &#34;shrink&#34; tag</title>
     <link href="http://maxshiroi.top" />
     <updated>2023-01-14T09:41:37.000Z</updated>
     <category term="nextcloud" />
@@ -91,19 +91,14 @@
         <content type="html">&lt;p&gt;通常在我们创建虚拟机时往往并不清楚需要多少空间，等到后期才会发现分配了很多空间实际上用不到。这时候就要想办法缩小虚拟机所占用的空间了。&lt;br&gt;
 根据我这次缩小空间的经历，我十分不推荐使用快照功能。因为这会让你虚拟机当前处在快照模式，与原来的文件关系不大（就是处理起来更麻烦了。）。&lt;br&gt;
 如果你像我一样只是用 vmware 来存放如企鹅，钉钉，腾讯会议，微信这种垃圾的话，那么可以参照我的方法。&lt;/p&gt;
-&lt;h1 id=&#34;缩小空间占用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#缩小空间占用&#34;&gt;#&lt;/a&gt; 缩小空间占用。&lt;/h1&gt;
-&lt;h2 id=&#34;0首先查看磁盘类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#0首先查看磁盘类型&#34;&gt;#&lt;/a&gt; 0. 首先查看磁盘类型&lt;/h2&gt;
+&lt;h1 id=&#34;缩小空间占用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缩小空间占用&#34;&gt;#&lt;/a&gt; 缩小空间占用。&lt;/h1&gt;
+&lt;h2 id=&#34;0首先查看磁盘类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0首先查看磁盘类型&#34;&gt;#&lt;/a&gt; 0. 首先查看磁盘类型&lt;/h2&gt;
 &lt;p&gt;使用文本编辑器打开虚拟机根目录下的 xxx.vmdk 文件，查看 # Extent description 下面的内容第三块是否为 SPARSE 。不是则需要进行转换。如下图：&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s001.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s002.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s003.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s004.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s005.vmdk&#34;
-RW 4521984 SPARSE &#34;Windows 7 x64-cl1-s006.vmdk&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s001.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s002.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s003.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s004.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s005.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 4521984 SPARSE &#34;Windows 7 x64-cl1-s006.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;如果你在创建虚拟机选择的是动态分配磁盘文件并拆分成多个的话这里就是 SPARSE。&lt;/p&gt;
-&lt;h2 id=&#34;1确保没有快照&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1确保没有快照&#34;&gt;#&lt;/a&gt; 1. 确保没有快照&lt;/h2&gt;
+&lt;h2 id=&#34;1确保没有快照&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1确保没有快照&#34;&gt;#&lt;/a&gt; 1. 确保没有快照&lt;/h2&gt;
 &lt;p&gt;确保虚拟机内没有快照。虚拟机目录下只有一个 xxx.vmdk 以及从属的 s00x.vmdk。如果有快照没法处理，则可以执行克隆操作到其他盘进行处理。&lt;/p&gt;
-&lt;h2 id=&#34;2尽可能缩小虚拟机内部所占用的空间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2尽可能缩小虚拟机内部所占用的空间&#34;&gt;#&lt;/a&gt; 2. 尽可能缩小虚拟机内部所占用的空间&lt;/h2&gt;
+&lt;h2 id=&#34;2尽可能缩小虚拟机内部所占用的空间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2尽可能缩小虚拟机内部所占用的空间&#34;&gt;#&lt;/a&gt; 2. 尽可能缩小虚拟机内部所占用的空间&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;参考&lt;a href=&#34;https://blog.csdn.net/CoutCodes/article/details/104975783&#34;&gt;【Win10 C 盘压缩卷问题解答】：无法将卷压缩到超出任何不可移动的文件所在点&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -116,44 +111,27 @@ RW 4521984 SPARSE &#34;Windows 7 x64-cl1-s006.vmdk&#34;&lt;span aria-hidden=&#34
 &lt;/ul&gt;
 &lt;p&gt;注意后面带星号的处理完成所有步骤后要重新打开 (建议)，不然可能会影响性能。&lt;/p&gt;
 &lt;p&gt;此时你需要确定你缩小后的 c 盘空间大小，这也决定着后面动态磁盘缩小的操作。我确定缩小后的空间为 22GiB。&lt;/p&gt;
-&lt;h2 id=&#34;3-重启到pe系统使用diskgenius缩小c盘空间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-重启到pe系统使用diskgenius缩小c盘空间&#34;&gt;#&lt;/a&gt; 3. 重启到 pe 系统使用 Diskgenius 缩小 c 盘空间。&lt;/h2&gt;
-&lt;h3 id=&#34;使用微pe制作iso文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用微pe制作iso文件&#34;&gt;#&lt;/a&gt; 使用微 pe 制作 iso 文件&lt;/h3&gt;
+&lt;h2 id=&#34;3-重启到pe系统使用diskgenius缩小c盘空间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-重启到pe系统使用diskgenius缩小c盘空间&#34;&gt;#&lt;/a&gt; 3. 重启到 pe 系统使用 Diskgenius 缩小 c 盘空间。&lt;/h2&gt;
+&lt;h3 id=&#34;使用微pe制作iso文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用微pe制作iso文件&#34;&gt;#&lt;/a&gt; 使用微 pe 制作 iso 文件&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;打开&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;添加硬件cddvd设备使用创建的iso文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#添加硬件cddvd设备使用创建的iso文件&#34;&gt;#&lt;/a&gt; 添加硬件 CD/DVD 设备，使用创建的 iso 文件。&lt;/h3&gt;
-&lt;h3 id=&#34;vmware设置光驱启动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vmware设置光驱启动&#34;&gt;#&lt;/a&gt; &lt;a href=&#34;https://blog.csdn.net/syf442/article/details/5067832&#34;&gt;VMWare 设置光驱启动&lt;/a&gt;&lt;/h3&gt;
-&lt;h2 id=&#34;4-减小vmware虚拟机虚拟磁盘大小&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-减小vmware虚拟机虚拟磁盘大小&#34;&gt;#&lt;/a&gt; 4. 减小 VMware 虚拟机虚拟磁盘大小&lt;/h2&gt;
+&lt;h3 id=&#34;添加硬件cddvd设备使用创建的iso文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#添加硬件cddvd设备使用创建的iso文件&#34;&gt;#&lt;/a&gt; 添加硬件 CD/DVD 设备，使用创建的 iso 文件。&lt;/h3&gt;
+&lt;h3 id=&#34;vmware设置光驱启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vmware设置光驱启动&#34;&gt;#&lt;/a&gt; &lt;a href=&#34;https://blog.csdn.net/syf442/article/details/5067832&#34;&gt;VMWare 设置光驱启动&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;4-减小vmware虚拟机虚拟磁盘大小&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-减小vmware虚拟机虚拟磁盘大小&#34;&gt;#&lt;/a&gt; 4. 减小 VMware 虚拟机虚拟磁盘大小&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;此处内容来自：&lt;a href=&#34;https://blog.csdn.net/HayPinF/article/details/108252631&#34;&gt;减小 VMware 虚拟机虚拟磁盘大小&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在 VMware 里虚拟机的所有编号了的  &lt;code&gt;.*s001.*.vmdk&lt;/code&gt;  片段虚拟磁盘文件是虚拟化的虚拟机最大空间（Maximum Size)，就比如我的 Win7 虚拟机的 Maximum Size 是 40GiB（1GiB=1024MiB，1GB=1000MB），虚拟机生成了  &lt;code&gt;.*s001~s011.vmdk&lt;/code&gt;  共 11 个虚拟机磁盘文件 vmdk，该虚拟机的 &#34;Windows 7 x64-cl1.vmdk&#34; 中详实记录了这 11 个 vmdk 文件（从而进行各分片虚拟磁盘文件的按名索引）：&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;# Extent description
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s001.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s002.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s003.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s004.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s005.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s006.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s007.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s008.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s009.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s010.vmdk&#34;
-RW 655360 SPARSE &#34;Windows 7 x64-cl1-s011.vmdk&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# Extent description&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s001.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s002.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s003.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s004.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s005.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s006.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s007.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s008.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s009.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s010.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 655360 SPARSE &#34;Windows 7 x64-cl1-s011.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;vmdk 文件的 &#34;8323072&#34; 数字表示簇，2 簇 = 1KiB，则这 11 个 vmdk 文件对应了 ((10×8323072)/2/1024/1024)+(655360/2/1024/1024)=10×3.96875GiB+0.3125Gib=40GiB，刚好。&lt;/p&gt;
 &lt;p&gt;我们所要做的就是通过改变这里的文件个数从而达到缩小 vmdk 磁盘大小的目的。&lt;br&gt;
 已知 40GiB 对应的簇大小为 10×8323072+655360=83886080。即一个 G 的簇大小为 2097152 (/2=1048576)。&lt;br&gt;
 我们确定一下自己压缩后的大小。就比如我要压缩到 22G，得出簇的总大小为 2097152×22=46137344，这个数可以拆为五个 8323072 加上一个 46137344-(8323072×5)=4521984。即 (8323072×5)+4521984=46137344。&lt;br&gt;
 因此上面的文件就可以改成下面这样：&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;# Extent description
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s001.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s002.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s003.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s004.vmdk&#34;
-RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s005.vmdk&#34;
-RW 4521984 SPARSE &#34;Windows 7 x64-cl1-s006.vmdk&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# Extent description&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s001.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s002.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s003.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s004.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 8323072 SPARSE &#34;Windows 7 x64-cl1-s005.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;RW 4521984 SPARSE &#34;Windows 7 x64-cl1-s006.vmdk&#34;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;记得备份 &#34;Windows 7 x64-cl1.vmdk&#34;，处理完成保存即可。&lt;/p&gt;
-&lt;h2 id=&#34;5重新启动虚拟机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5重新启动虚拟机&#34;&gt;#&lt;/a&gt; 5. 重新启动虚拟机&lt;/h2&gt;
+&lt;h2 id=&#34;5重新启动虚拟机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5重新启动虚拟机&#34;&gt;#&lt;/a&gt; 5. 重新启动虚拟机&lt;/h2&gt;
 &lt;p&gt;此时你会发现虚拟机的磁盘大小已经变成 22G 了。教程结束。&lt;/p&gt;
 </content>
         <category term="vmware" />

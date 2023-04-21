@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>MAXshiro&#39;s Blog • Posts by &#34;ai&#34; tag</title>
+        <title>MAXshiro • Posts by &#34;ai&#34; tag</title>
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
@@ -95,33 +95,33 @@
             <category>AI</category>
             <category>歌声合成</category>
             <pubDate>Sun, 28 Aug 2022 21:07:24 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;软件介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件介绍&#34;&gt;#&lt;/a&gt; 软件介绍&lt;/h1&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;软件介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件介绍&#34;&gt;#&lt;/a&gt; 软件介绍&lt;/h1&gt;
 &lt;p&gt;Synthesizer V 是 Dreamtonics 开发的系列歌声合成软件，它结合了强大的歌声合成引擎和直观灵活的用户界面，只需绘制旋律并注入歌词，即可轻松创作原创歌曲。&lt;/p&gt;
-&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
 &lt;p&gt;当你想要摆脱 Vocaloid 软件的支配，想要试试其他同类型的软件。您肯定会搜到这个软件。但是很不幸，当您点开官网查看售价，显然单个声库加 pro 版软件 899 的价格让您打了退堂鼓。&lt;br&gt;
   您只好把思路转向搜索 crack 版本软件。又很不幸，这个软件 crack 版的本体和声库都很难寻找。&lt;br&gt;
   在这里恭喜您找到了这篇文章。可万幸中的不幸就是，我也没有这个软件的 V2 破解版。但是我找到了 V1 的破解版，在此提供给大家。&lt;/p&gt;
-&lt;h1 id=&#34;关于软件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#关于软件&#34;&gt;#&lt;/a&gt; 关于软件&lt;/h1&gt;
+&lt;h1 id=&#34;关于软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关于软件&#34;&gt;#&lt;/a&gt; 关于软件&lt;/h1&gt;
 &lt;p&gt;软件的获取来源是 GitHUB 用户 &lt;code&gt;CJLU&lt;/code&gt;  的 &lt;code&gt;Synthesizer-V-FE&lt;/code&gt; , 版本为 1.8.0，所有功能正常使用。链接地址：&lt;a href=&#34;https://github.com/CJLU-source/Synthesizer-V-FE&#34; title=&#34;给特何不&#34;&gt;给特何不&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;关于声库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#关于声库&#34;&gt;#&lt;/a&gt; 关于声库&lt;/h1&gt;
+&lt;h1 id=&#34;关于声库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关于声库&#34;&gt;#&lt;/a&gt; 关于声库&lt;/h1&gt;
 &lt;p&gt;目前手头上只有这几个声库：&lt;/p&gt;
-&lt;h2 id=&#34;eng-英语&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#eng-英语&#34;&gt;#&lt;/a&gt; Eng (英语)&lt;/h2&gt;
+&lt;h2 id=&#34;eng-英语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#eng-英语&#34;&gt;#&lt;/a&gt; Eng (英语)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;爱莲娜芙缇 (女)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;zh-中文&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#zh-中文&#34;&gt;#&lt;/a&gt; Zh (中文)&lt;/h2&gt;
+&lt;h2 id=&#34;zh-中文&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zh-中文&#34;&gt;#&lt;/a&gt; Zh (中文)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;苍穹 (女)&lt;/li&gt;
 &lt;li&gt;赤羽 (女)&lt;/li&gt;
 &lt;li&gt;海伊 (女)&lt;/li&gt;
 &lt;li&gt;诗岸 (女)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;jp-日文&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#jp-日文&#34;&gt;#&lt;/a&gt; JP (日文)&lt;/h2&gt;
+&lt;h2 id=&#34;jp-日文&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jp-日文&#34;&gt;#&lt;/a&gt; JP (日文)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;闇音レンリ (女)&lt;/li&gt;
 &lt;li&gt;玄武 (男)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;下载地址-包含全部内容&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载地址-包含全部内容&#34;&gt;#&lt;/a&gt; 下载地址 （包含全部内容）&lt;/h1&gt;
+&lt;h1 id=&#34;下载地址-包含全部内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载地址-包含全部内容&#34;&gt;#&lt;/a&gt; 下载地址 （包含全部内容）&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;特殊原因暂不提供 😦&lt;br&gt;
 (其实是文件丢了&lt;/p&gt;

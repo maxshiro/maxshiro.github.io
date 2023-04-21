@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>MAXshiro&#39;s Blog • Posts by &#34;nextcloud&#34; tag</title>
+        <title>MAXshiro • Posts by &#34;nextcloud&#34; tag</title>
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
@@ -95,35 +95,22 @@
             <category>聊天室</category>
             <category>python</category>
             <pubDate>Sun, 28 Aug 2022 21:29:07 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;先安装前置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#先安装前置&#34;&gt;#&lt;/a&gt; 先安装前置&lt;/h2&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install libtiff-devel libjpeg-devel libzip-devel freetype-devel libwebp-devel libxml2-devel libxslt-devel libpq-devel python3-virtualenv libffi-devel openssl-devel python3-devel
-yum groupinstall &#34;Development Tools&#34;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;#&lt;/a&gt; 使用 root 账户接入您的 centos，找到合适的位置开始操作&lt;/h2&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir syn&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;依次执行以下指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#依次执行以下指令&#34;&gt;#&lt;/a&gt; 依次执行以下指令&lt;/h3&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;virtualenv -p python3 ./env &amp;amp;&amp;amp; source ./env/bin/activate
-python3 -m pip install --upgrade pip &amp;amp;&amp;amp; python3 -m pip install --upgrade setuptools &amp;amp;&amp;amp; python3 -m pip install psycopg2-binary
-python3 -m pip install matrix-synapse                         //安装synapse
-python3 -m pip install -U matrix-synapse                    //更新synapse&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;#&lt;/a&gt; 将下列指令拷贝到控制台执行，自动生成 homeserver.yaml&lt;/h2&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;python3 -m synapse.app.homeserver \
-    --server-name im.axro.top \
-    --config-path homeserver.yaml \
-    --generate-config \
-    --report-stats=no&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;编辑生成homeserveryaml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编辑生成homeserveryaml&#34;&gt;#&lt;/a&gt; 编辑生成 &lt;code&gt;homeserver.yaml&lt;/code&gt;&lt;/h2&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;enable_registration: true
-suppress_key_server_warning: true
-bind_addresses: [&#39;::1&#39;, &#39;0.0.0.0&#39;]&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;启动关闭服务器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启动关闭服务器&#34;&gt;#&lt;/a&gt; 启动 / 关闭服务器&lt;/h2&gt;
-&lt;h4 id=&#34;注意要先进入虚拟python环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注意要先进入虚拟python环境&#34;&gt;#&lt;/a&gt; 注意要先进入虚拟 python 环境&lt;/h4&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;source ./env/bin/activate
-
-synctl start
-synctl stop&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;退出虚拟环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#退出虚拟环境&#34;&gt;#&lt;/a&gt; 退出虚拟环境&lt;/h2&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;deactivate&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;配置反代&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置反代&#34;&gt;#&lt;/a&gt; 配置反代&lt;/h2&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;先安装前置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#先安装前置&#34;&gt;#&lt;/a&gt; 先安装前置&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install libtiff-devel libjpeg-devel libzip-devel freetype-devel libwebp-devel libxml2-devel libxslt-devel libpq-devel python3-virtualenv libffi-devel openssl-devel python3-devel&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yum groupinstall &lt;span class=&#34;string&#34;&gt;&#34;Development Tools&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用root账户接入您的centos找到合适的位置开始操作&#34;&gt;#&lt;/a&gt; 使用 root 账户接入您的 centos，找到合适的位置开始操作&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; syn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;依次执行以下指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#依次执行以下指令&#34;&gt;#&lt;/a&gt; 依次执行以下指令&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;virtualenv -p python3 ./env &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ./env/bin/activate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install --upgrade pip &amp;amp;&amp;amp; python3 -m pip install --upgrade setuptools &amp;amp;&amp;amp; python3 -m pip install psycopg2-binary&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install matrix-synapse                         //安装synapse&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;python3 -m pip install -U matrix-synapse                    //更新synapse&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#将下列指令拷贝到控制台执行自动生成homeserveryaml&#34;&gt;#&lt;/a&gt; 将下列指令拷贝到控制台执行，自动生成 homeserver.yaml&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;python3 -m synapse.app.homeserver \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --server-name im.axro.top \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --config-path homeserver.yaml \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --generate-config \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    --report-stats=no&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;编辑生成homeserveryaml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编辑生成homeserveryaml&#34;&gt;#&lt;/a&gt; 编辑生成 &lt;code&gt;homeserver.yaml&lt;/code&gt;&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;enable_registration: &lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;suppress_key_server_warning: &lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bind_addresses: [&lt;span class=&#34;string&#34;&gt;&#39;::1&#39;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&#39;0.0.0.0&#39;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;启动关闭服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动关闭服务器&#34;&gt;#&lt;/a&gt; 启动 / 关闭服务器&lt;/h2&gt;
+&lt;h4 id=&#34;注意要先进入虚拟python环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意要先进入虚拟python环境&#34;&gt;#&lt;/a&gt; 注意要先进入虚拟 python 环境&lt;/h4&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ./env/bin/activate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;synctl start&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;synctl stop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;退出虚拟环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#退出虚拟环境&#34;&gt;#&lt;/a&gt; 退出虚拟环境&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;deactivate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;配置反代&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置反代&#34;&gt;#&lt;/a&gt; 配置反代&lt;/h2&gt;
 &lt;p&gt;进入宝塔面板新建静态网站，配置 ssl，配置反向代理地址为 &lt;code&gt;https://localhost:8008&lt;/code&gt; , 保存即可.&lt;/p&gt;
  ]]></description>
         </item>

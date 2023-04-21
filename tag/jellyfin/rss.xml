@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>MAXshiro&#39;s Blog • Posts by &#34;jellyfin&#34; tag</title>
+        <title>MAXshiro • Posts by &#34;jellyfin&#34; tag</title>
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
@@ -98,59 +98,62 @@
             <category>视频</category>
             <category>音乐</category>
             <pubDate>Wed, 02 Nov 2022 20:44:17 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
-&lt;p&gt;plex 是一个包含订阅制的个人媒体中心，可以在你的智能设备：Phone / Android TV / Windows / MAC OS 等在线使用专用的客户端来浏览你存储在 nas 上的影片。&lt;br&gt;
-&lt;img src=&#34;/img/linuxplexguide/20221102204637.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-如果你付费订阅则会支持更多的功能如在线硬解码 / 使用 dashboard 来控制设备 / 使用 plexamp 来播放音乐。当然免费的功能已经足够我们使用。&lt;/p&gt;
-&lt;h1 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h1&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+&lt;p&gt;plex 是一个包含订阅制的个人媒体中心，可以在你的智能设备：Phone / Android TV / Windows / MAC OS 等在线使用专用的客户端来浏览你存储在 nas 上的影片。&lt;/p&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/linuxplexguide/20221102204637.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
+&lt;p&gt;如果你付费订阅则会支持更多的功能如在线硬解码 / 使用 dashboard 来控制设备 / 使用 plexamp 来播放音乐。当然免费的功能已经足够我们使用。&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;首先更新&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;安装 apt-transport-https 包&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;要将 Plex 包安装到树莓派上，需要添加官方的 Plex 包仓库。这个包允许 “apt” 包管理器通过 Plex 仓库使用的 “https” 协议来检索包。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install apt-transport-https&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt install apt-transport-https&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;把 Plex 仓库添加到 apt 源&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
-echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;echo&lt;/span&gt; deb https://downloads.plex.tv/repo/deb public main | sudo &lt;span class=&#34;built_in&#34;&gt;tee&lt;/span&gt; /etc/apt/sources.list.d/plexmediaserver.list&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;再次更新&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt update&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt update&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;一行命令安装 Plex&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install plexmediaserver&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;使用plex&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用plex&#34;&gt;#&lt;/a&gt; 使用 Plex&lt;/h1&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt install plexmediaserver&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;使用plex&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用plex&#34;&gt;#&lt;/a&gt; 使用 Plex&lt;/h1&gt;
 &lt;p&gt;打开  &lt;code&gt;Your IP:32400/web&lt;/code&gt;  来登录并配置你自己的 Plex 服务器&lt;/p&gt;
-&lt;h2 id=&#34;在安卓设备上安装plex和plexamp软件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#在安卓设备上安装plex和plexamp软件&#34;&gt;#&lt;/a&gt; 在安卓设备上安装 plex 和 plexamp 软件。&lt;/h2&gt;
+&lt;h2 id=&#34;在安卓设备上安装plex和plexamp软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在安卓设备上安装plex和plexamp软件&#34;&gt;#&lt;/a&gt; 在安卓设备上安装 plex 和 plexamp 软件。&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不保证时效性，若失效请自行查找。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;plex 软件开心版&lt;a href=&#34;https://apkmody.io/apps/plex&#34;&gt;点我下载&lt;/a&gt;&lt;br&gt;
-&lt;img src=&#34;/img/linuxplexguide/image.png.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;plexamp 软件开心版&lt;a href=&#34;https://forum.mobilism.me/viewtopic.php?f=1332&amp;amp;t=4970093&#34;&gt;点我下载&lt;/a&gt;&lt;br&gt;
-&lt;img src=&#34;/img/linuxplexguide/20221102210820.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;symfonium 这个没开心版，但是界面好看。&lt;br&gt;
-&lt;img src=&#34;/img/linuxplexguide/20221102210737.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;/img/linuxplexguide/20221102210803.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;plex 软件开心版&lt;a href=&#34;https://apkmody.io/apps/plex&#34;&gt;点我下载&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;安装wangyiyun插件来自动匹配音乐封面和歌词&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装wangyiyun插件来自动匹配音乐封面和歌词&#34;&gt;#&lt;/a&gt; 安装 Wangyiyun 插件来自动匹配音乐封面和歌词。&lt;/h2&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/linuxplexguide/image.png.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
+&lt;ul&gt;
+&lt;li&gt;plexamp 软件开心版&lt;a href=&#34;https://forum.mobilism.me/viewtopic.php?f=1332&amp;amp;t=4970093&#34;&gt;点我下载&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/linuxplexguide/20221102210820.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
+&lt;ul&gt;
+&lt;li&gt;symfonium 这个没开心版，但是界面好看。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/linuxplexguide/20221102210737.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt; 
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/linuxplexguide/20221102210803.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
+&lt;h2 id=&#34;安装wangyiyun插件来自动匹配音乐封面和歌词&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装wangyiyun插件来自动匹配音乐封面和歌词&#34;&gt;#&lt;/a&gt; 安装 Wangyiyun 插件来自动匹配音乐封面和歌词。&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;使用 git clone 下载。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo git clone https://github.com/timmy0209/WangYiYun.bundle.git /usr/lib/plexmediaserver/Resources/Plug-ins-f4cdfea9c/WangYiYun.bundle&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/timmy0209/WangYiYun.bundle.git /usr/lib/plexmediaserver/Resources/Plug-ins-f4cdfea9c/WangYiYun.bundle&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;重启 plex&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;systemctl restart plexmediaserver&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;systemctl restart plexmediaserver&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;直接在音乐源里勾选 wangyiyun 即可。&lt;/li&gt;
 &lt;/ol&gt;

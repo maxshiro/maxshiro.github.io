@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://maxshiroi.top</id>
-    <title>MAXshiro&#39;s Blog • Posts by &#34;bug&#34; tag</title>
+    <title>MAXshiro • Posts by &#34;bug&#34; tag</title>
     <link href="http://maxshiroi.top" />
     <updated>2022-08-25T04:46:00.000Z</updated>
     <category term="nextcloud" />
@@ -88,10 +88,10 @@
         <id>http://maxshiroi.top/ug/124600/</id>
         <title>【VMware】解决新版本的VMware虚拟机无法正常在旧版本的Windows上安装VMware Tools</title>
         <link rel="alternate" href="http://maxshiroi.top/ug/124600/"/>
-        <content type="html">&lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
+        <content type="html">&lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
 &lt;p&gt;因为学习需要，要求安装 &lt;code&gt;Windows server 2008 R2&lt;/code&gt; 。安装时一切正常，但是到了安装 &lt;code&gt;VMware Tools&lt;/code&gt;  时，弹出了下列提示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/vmwarebug/20220920220101.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;其后&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其后&#34;&gt;#&lt;/a&gt; 其后&lt;/h1&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/vmwarebug/20220920220101.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
+&lt;h1 id=&#34;其后&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其后&#34;&gt;#&lt;/a&gt; 其后&lt;/h1&gt;
 &lt;p&gt;我尝试百度搜索了解决办法，导致这种情况的大概解释为：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;原来，微软更新了驱动程序的签名算法，从 2019 年初开始，逐步弃用 SHA-1，改为 SHA-2。个人推测新版的 VMCI 驱动用的是 SHA-2 签名，而 &lt;code&gt;win7&lt;/code&gt;  不支持 SHA-2 签名，所以出现了这个问题。&lt;/p&gt;
@@ -101,9 +101,9 @@
 &lt;p&gt;可以从 &lt;code&gt;Microsoft Update Catalog&lt;/code&gt;  下载 &lt;code&gt;KB4474419&lt;/code&gt;  和  &lt;code&gt;KB4490628&lt;/code&gt;  这两个补丁，然后安装到 &lt;code&gt;win7&lt;/code&gt;  虚拟机中。在没有成功安装 &lt;code&gt;VMware Tools&lt;/code&gt;  的情况下，传文件不太方便，可以用虚拟机里浏览器访问下载页面，然后直接在虚拟机里下载安装。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;可是在 &lt;code&gt;winserver&lt;/code&gt;  虚拟机里很难进行操作更别说老旧的 IE 操作更不方便，而且 &lt;code&gt;windows server&lt;/code&gt;  的网络管理大家也都知道，会拦截所有地址。所以直到最后我也没法访问到微软的补丁界面。&lt;/p&gt;
-&lt;h1 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h1&gt;
+&lt;h1 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h1&gt;
 &lt;p&gt;我直接搜索了 &lt;code&gt;VMware Tools&lt;/code&gt; ，到其官网上找到了旧版本的 &lt;code&gt;Tools&lt;/code&gt;  镜像文件，随后直接对其进行一个挂载，这时直接弹出了自动运行窗口，进行一顿下一步下一步之后，成功将其安装到了虚拟机内。&lt;/p&gt;
-&lt;h1 id=&#34;旧版本下载地址&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#旧版本下载地址&#34;&gt;#&lt;/a&gt; 旧版本下载地址&lt;/h1&gt;
+&lt;h1 id=&#34;旧版本下载地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#旧版本下载地址&#34;&gt;#&lt;/a&gt; 旧版本下载地址&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://packages.vmware.com/tools/releases/10.3.5/windows/&#34; title=&#34;点我去官网下载&#34;&gt;点我去官网下载&lt;/a&gt;&lt;br&gt;
 打开以后下载大小为 &lt;code&gt;114M&lt;/code&gt;  的映像文件，然后手动挂载到虚拟机上，便会自动运行。&lt;/p&gt;
 &lt;p&gt;转载需注明出处！&lt;/p&gt;

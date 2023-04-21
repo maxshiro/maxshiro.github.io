@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://maxshiroi.top</id>
-    <title>MAXshiro&#39;s Blog • Posts by &#34;wsl&#34; tag</title>
+    <title>MAXshiro • Posts by &#34;wsl&#34; tag</title>
     <link href="http://maxshiroi.top" />
     <updated>2022-08-28T15:42:36.000Z</updated>
     <category term="nextcloud" />
@@ -88,12 +88,12 @@
         <id>http://maxshiroi.top/ug/234236/</id>
         <title>解决Windows直接访问WSL2路径并直接进行读写操作,权限不足的问题</title>
         <link rel="alternate" href="http://maxshiroi.top/ug/234236/"/>
-        <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
+        <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
 &lt;p&gt;初次安装 WSL Ubuntu 时，一般都会设置默认登录用户，当你通过 windows 访问该文件夹时，如果访问的 Ubuntu 目录的权限用户时你的默认用户，你可以对其进行修改。但是如果你访问的时 root 权限的用户，则会出现如权限不足，permission deny 报错。&lt;/p&gt;
-&lt;h1 id=&#34;solution&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#solution&#34;&gt;#&lt;/a&gt; Solution&lt;/h1&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;C:\Users\wangj\AppData\Local\Microsoft\WindowsApps\debian.exe config --default-user root&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;solution&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#solution&#34;&gt;#&lt;/a&gt; Solution&lt;/h1&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\wangj\AppData\Local\Microsoft\WindowsApps\debian.exe config --default-user root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;修改完成后，记得重启 wsl：&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-bash&#34; data-language=&#34;bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;wsl --shutdown&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl --shutdown&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;10s 后，在执行 wsl 命令，然后再次测试，看是否可行。&lt;/p&gt;
 </content>
         <category term="wsl" />

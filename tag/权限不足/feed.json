@@ -1,6 +1,6 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "MAXshiro's Blog • All posts by \"权限不足\" tag",
+    "title": "MAXshiro • All posts by \"权限不足\" tag",
     "description": "Discover and Record the world.",
     "home_page_url": "http://maxshiroi.top",
     "items": [
@@ -9,7 +9,7 @@
             "url": "http://maxshiroi.top/ug/234236/",
             "title": "解决Windows直接访问WSL2路径并直接进行读写操作,权限不足的问题",
             "date_published": "2022-08-28T15:42:36.000Z",
-            "content_html": "<h1 id=\"intro\"><a class=\"markdownIt-Anchor\" href=\"#intro\">#</a> Intro</h1>\n<p>初次安装 WSL Ubuntu 时，一般都会设置默认登录用户，当你通过 windows 访问该文件夹时，如果访问的 Ubuntu 目录的权限用户时你的默认用户，你可以对其进行修改。但是如果你访问的时 root 权限的用户，则会出现如权限不足，permission deny 报错。</p>\n<h1 id=\"solution\"><a class=\"markdownIt-Anchor\" href=\"#solution\">#</a> Solution</h1>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">C:\\Users\\wangj\\AppData\\Local\\Microsoft\\WindowsApps\\debian.exe config --default-user root<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<p>修改完成后，记得重启 wsl：</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">wsl --shutdown<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n<p>10s 后，在执行 wsl 命令，然后再次测试，看是否可行。</p>\n",
+            "content_html": "<h1 id=\"intro\"><a class=\"anchor\" href=\"#intro\">#</a> Intro</h1>\n<p>初次安装 WSL Ubuntu 时，一般都会设置默认登录用户，当你通过 windows 访问该文件夹时，如果访问的 Ubuntu 目录的权限用户时你的默认用户，你可以对其进行修改。但是如果你访问的时 root 权限的用户，则会出现如权限不足，permission deny 报错。</p>\n<h1 id=\"solution\"><a class=\"anchor\" href=\"#solution\">#</a> Solution</h1>\n<figure class=\"highlight bash\"><table><tbody><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">C:\\Users\\wangj\\AppData\\Local\\Microsoft\\WindowsApps\\debian.exe config --default-user root</span><br></pre></td></tr></tbody></table></figure>\n<p>修改完成后，记得重启 wsl：</p>\n<figure class=\"highlight bash\"><table><tbody><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">wsl --shutdown</span><br></pre></td></tr></tbody></table></figure>\n<p>10s 后，在执行 wsl 命令，然后再次测试，看是否可行。</p>\n",
             "tags": [
                 "wsl",
                 "权限不足",

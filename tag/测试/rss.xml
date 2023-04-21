@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>MAXshiro&#39;s Blog • Posts by &#34;测试&#34; tag</title>
+        <title>MAXshiro • Posts by &#34;测试&#34; tag</title>
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
@@ -94,34 +94,21 @@
             <category>短链</category>
             <category>测试</category>
             <pubDate>Wed, 21 Sep 2022 12:07:38 +0800</pubDate>
-            <description><![CDATA[ &lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;div class=&#34;caption&#34;&gt;&lt;span&gt;java&lt;/span&gt;&lt;/div&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
-...
-Scanner in = new Scanner (System.in);
-// 输入 Scan 之后，按下键盘 Alt + “/” 键，Eclipse 下自动补全。
-System.out.println (in.nextLine ());
-System.out.println (&#34;Hello&#34; + &#34;world.&#34;);&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;{% media audio %}
-- title: 列表 1
-  list:
-    - https://music.163.com/#/playlist?id=2943811283
-    - https://music.163.com/#/playlist?id=2297706586
-- title: 列表 2
-  list:
-    - https://music.163.com/#/playlist?id=2031842656
-{% endmedia %}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+            <description><![CDATA[ &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption&gt;&lt;span&gt;java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Scanner&lt;/span&gt; (System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 输入 Scan 之后，按下键盘 Alt + “/” 键，Eclipse 下自动补全。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println (in.nextLine ());&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println (&lt;span class=&#34;string&#34;&gt;&#34;Hello&#34;&lt;/span&gt; + &lt;span class=&#34;string&#34;&gt;&#34;world.&#34;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;{% media audio %}&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;- title: 列表 1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  list:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - https://music.163.com/#/playlist?id=2943811283&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - https://music.163.com/#/playlist?id=2297706586&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;- title: 列表 2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  list:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - https://music.163.com/#/playlist?id=2031842656&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;{% endmedia %}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;原本用于日语汉字假名注音，但别的注音也可以。&lt;br&gt;
-为了兼容性，采用 markdown-it-ruby 的基本格式： &lt;ruby&gt;文字&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;注音&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt; ，并且为了兼容表格，将分隔符由 | 换成了 ^ 。&lt;br&gt;
+为了兼容性，采用 markdown-it-ruby 的基本格式： &lt;ruby&gt;文字&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;注音&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt; ，并且为了兼容表格，将分隔符由 | 换成了 ^ 。&lt;br&gt;
 注音分隔基于 furigana-markdown-it 显示说明看这里&lt;/p&gt;
-&lt;p&gt;&lt;ruby&gt;取&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;と&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;り&lt;rt&gt;&lt;/rt&gt;返&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;かえ&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;す&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	取とり返かえす&lt;br&gt;
-&lt;ruby&gt;可愛&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;かわい&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	可愛かわいい犬いぬ&lt;br&gt;
-&lt;ruby&gt;可&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;か&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;愛&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;わい&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	可か愛わいい犬いぬ&lt;br&gt;
-&lt;ruby&gt;アクセラレータ&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;accelerator&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	アクセラレータ accelerator&lt;br&gt;
-&lt;ruby&gt;accelerator&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;アクセラレータ&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	accelerator アクセラレータ&lt;br&gt;
-&lt;ruby&gt;食&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;た&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;べる&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	食たべる&lt;br&gt;
-&lt;ruby&gt;食べる&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;たべる&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	食べるたべる&lt;br&gt;
+&lt;p&gt;&lt;ruby&gt;取&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;と&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; り&lt;rt&gt;&lt;/rt&gt;返&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;かえ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; す&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	取とり返かえす&lt;br&gt;
+&lt;ruby&gt;可愛&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;かわい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	可愛かわいい犬いぬ&lt;br&gt;
+&lt;ruby&gt;可&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;か&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; 愛&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;わい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	可か愛わいい犬いぬ&lt;br&gt;
+&lt;ruby&gt;アクセラレータ&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;accelerator&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	アクセラレータ accelerator&lt;br&gt;
+&lt;ruby&gt;accelerator&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;アクセラレータ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	accelerator アクセラレータ&lt;br&gt;
+&lt;ruby&gt;食&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;た&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; べる&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	食たべる&lt;br&gt;
+&lt;ruby&gt;食べる&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;たべる&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	食べるたべる&lt;br&gt;
 &lt;ruby&gt;あ&lt;rt&gt;●&lt;/rt&gt;い&lt;rt&gt;●&lt;/rt&gt;う&lt;rt&gt;●&lt;/rt&gt;え&lt;rt&gt;●&lt;/rt&gt;お&lt;rt&gt;●&lt;/rt&gt;&lt;/ruby&gt;	あ●い●う●え●お●&lt;br&gt;
 &lt;ruby&gt;あ&lt;rt&gt;❤&lt;/rt&gt;い&lt;rt&gt;❤&lt;/rt&gt;う&lt;rt&gt;❤&lt;/rt&gt;え&lt;rt&gt;❤&lt;/rt&gt;お&lt;rt&gt;❤&lt;/rt&gt;&lt;/ruby&gt;	あ❤い❤う❤え❤お❤&lt;br&gt;
-&lt;ruby&gt;常用账号&lt;rp&gt;【&lt;/rp&gt;&lt;rt&gt;contact&lt;/rt&gt;&lt;rp&gt;】&lt;/rp&gt;&lt;/ruby&gt;	常用账号 contact&lt;/p&gt;
+&lt;ruby&gt;常用账号&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;contact&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	常用账号 contact&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

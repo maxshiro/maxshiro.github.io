@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://maxshiroi.top</id>
-    <title>MAXshiro&#39;s Blog • Posts by &#34;autorefresh&#34; tag</title>
+    <title>MAXshiro • Posts by &#34;autorefresh&#34; tag</title>
     <link href="http://maxshiroi.top" />
     <updated>2022-09-20T08:46:58.000Z</updated>
     <category term="nextcloud" />
@@ -91,7 +91,7 @@
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;有时候在使用资源管理器新建文件的时候发现无法自动刷新，每次都需要手动刷新才会出现。这同样也导致了 chrome 在保存文件时会卡住一段时间。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&#34;solution&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#solution&#34;&gt;#&lt;/a&gt; Solution&lt;/h1&gt;
+&lt;h1 id=&#34;solution&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#solution&#34;&gt;#&lt;/a&gt; Solution&lt;/h1&gt;
 &lt;p&gt;其实解决方法很简单，关掉你映射的所有网络驱动器即可恢复。据说这是 windows 的一个 bug，取消掉网络驱动器映射便解决了这个问题。&lt;/p&gt;
 </content>
         <category term="win" />

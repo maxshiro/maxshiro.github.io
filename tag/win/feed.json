@@ -1,6 +1,6 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "MAXshiro's Blog • All posts by \"win\" tag",
+    "title": "MAXshiro • All posts by \"win\" tag",
     "description": "Discover and Record the world.",
     "home_page_url": "http://maxshiroi.top",
     "items": [
@@ -9,7 +9,7 @@
             "url": "http://maxshiroi.top/ug/164658/",
             "title": "解决windows资源管理器无法自动刷新等问题",
             "date_published": "2022-09-20T08:46:58.000Z",
-            "content_html": "<blockquote>\n<p>有时候在使用资源管理器新建文件的时候发现无法自动刷新，每次都需要手动刷新才会出现。这同样也导致了 chrome 在保存文件时会卡住一段时间。</p>\n</blockquote>\n<h1 id=\"solution\"><a class=\"markdownIt-Anchor\" href=\"#solution\">#</a> Solution</h1>\n<p>其实解决方法很简单，关掉你映射的所有网络驱动器即可恢复。据说这是 windows 的一个 bug，取消掉网络驱动器映射便解决了这个问题。</p>\n",
+            "content_html": "<blockquote>\n<p>有时候在使用资源管理器新建文件的时候发现无法自动刷新，每次都需要手动刷新才会出现。这同样也导致了 chrome 在保存文件时会卡住一段时间。</p>\n</blockquote>\n<h1 id=\"solution\"><a class=\"anchor\" href=\"#solution\">#</a> Solution</h1>\n<p>其实解决方法很简单，关掉你映射的所有网络驱动器即可恢复。据说这是 windows 的一个 bug，取消掉网络驱动器映射便解决了这个问题。</p>\n",
             "tags": [
                 "win",
                 "explorer.exe",
