@@ -20,13 +20,13 @@ sidebar:
   widgets:
     #### 自动生成的页面 ####
     # 主页
-    home: search, welcome, recent, timeline, tagcloud # for home
+    home: search, welcome, recent, tagcloud # for home
     # 博客索引页
-    blog_index: search_blog, recent, timeline # for categories/tags/archives
+    blog_index: search_blog, recent # for categories/tags/archives
     # 文档索引页
-    wiki_index: search_docs, recent, timeline # for wiki
+    wiki_index: search_docs, recent # for wiki
     # 其它（404）
-    others: search, recent, timeline # for 404 and ...
+    others: search, recent # for 404 and ...
     #### 手动创建的页面 ####
     # 文章内页
     post: search_blog, toc, ghrepo, ghissues # for pages using 'layout:post'
@@ -363,7 +363,7 @@ style:
     codeblock: 0.8125rem # 13px
   font-family:
     logo: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
-    body: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    body: 'LX, system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
     code: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
     codeblock: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
   text-align: left
