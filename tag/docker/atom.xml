@@ -3,7 +3,7 @@
     <id>http://maxshiroi.top</id>
     <title>MAXshiro • Posts by &#34;docker&#34; tag</title>
     <link href="http://maxshiroi.top" />
-    <updated>2022-04-26T12:56:45.000Z</updated>
+    <updated>2023-06-12T12:30:08.000Z</updated>
     <category term="nextcloud" />
     <category term="聊天室" />
     <category term="python" />
@@ -26,6 +26,9 @@
     <category term="autorefresh" />
     <category term="network" />
     <category term="vmware" />
+    <category term="docker" />
+    <category term="nessus" />
+    <category term="awvs" />
     <category term="kali" />
     <category term="dvwa" />
     <category term="fedora" />
@@ -34,6 +37,8 @@
     <category term="hexo" />
     <category term="backup" />
     <category term="guide" />
+    <category term="java" />
+    <category term="filestream" />
     <category term="目录" />
     <category term="指令" />
     <category term="权限" />
@@ -55,7 +60,6 @@
     <category term="yuzu" />
     <category term="ryujinx" />
     <category term="树莓派" />
-    <category term="docker" />
     <category term="openwrt" />
     <category term="router" />
     <category term="pic" />
@@ -72,6 +76,8 @@
     <category term="torrent" />
     <category term="下载器" />
     <category term="nas" />
+    <category term="ubuntu" />
+    <category term="mariadb" />
     <category term="bug" />
     <category term="win7" />
     <category term="capacity" />
@@ -84,6 +90,19 @@
     <category term="wsl" />
     <category term="权限不足" />
     <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/linux/docker/203008/</id>
+        <title>在docker中设置并安装AWVS和Nessus漏扫程序</title>
+        <link rel="alternate" href="http://maxshiroi.top/linux/docker/203008/"/>
+        <content type="html">&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/WJ_11_13/article/details/127426899&#34;&gt;https://blog.csdn.net/WJ_11_13/article/details/127426899&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://hub.docker.com/r/secfa/docker-awvs&#34;&gt;https://hub.docker.com/r/secfa/docker-awvs&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="linux" />
+        <category term="docker" />
+        <category term="nessus" />
+        <category term="awvs" />
+        <updated>2023-06-12T12:30:08.000Z</updated>
+    </entry>
     <entry>
         <id>http://maxshiroi.top/ug/205645/</id>
         <title>使用树莓派4B+Docker Openwrt实现旁路由</title>
@@ -234,8 +253,8 @@
 &lt;h1 id=&#34;鸣谢摘抄&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#鸣谢摘抄&#34;&gt;#&lt;/a&gt; 鸣谢 (摘抄)&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://mlapp.cn/376.html&#34; title=&#34;在Docker 中运行 OpenWrt 旁路网关&#34;&gt;在 Docker 中运行 OpenWrt 旁路网关&lt;/a&gt;&lt;/p&gt;
 </content>
-        <category term="树莓派" />
         <category term="docker" />
+        <category term="树莓派" />
         <category term="openwrt" />
         <category term="router" />
         <updated>2022-04-26T12:56:45.000Z</updated>

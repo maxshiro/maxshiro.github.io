@@ -26,6 +26,9 @@
     <category term="autorefresh" />
     <category term="network" />
     <category term="vmware" />
+    <category term="docker" />
+    <category term="nessus" />
+    <category term="awvs" />
     <category term="kali" />
     <category term="dvwa" />
     <category term="fedora" />
@@ -34,6 +37,8 @@
     <category term="hexo" />
     <category term="backup" />
     <category term="guide" />
+    <category term="java" />
+    <category term="filestream" />
     <category term="目录" />
     <category term="指令" />
     <category term="权限" />
@@ -55,7 +60,6 @@
     <category term="yuzu" />
     <category term="ryujinx" />
     <category term="树莓派" />
-    <category term="docker" />
     <category term="openwrt" />
     <category term="router" />
     <category term="pic" />
@@ -72,6 +76,8 @@
     <category term="torrent" />
     <category term="下载器" />
     <category term="nas" />
+    <category term="ubuntu" />
+    <category term="mariadb" />
     <category term="bug" />
     <category term="win7" />
     <category term="capacity" />

@@ -5,8 +5,8 @@
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 26 Apr 2022 20:56:45 +0800</pubDate>
-        <lastBuildDate>Tue, 26 Apr 2022 20:56:45 +0800</lastBuildDate>
+        <pubDate>Mon, 12 Jun 2023 20:30:08 +0800</pubDate>
+        <lastBuildDate>Mon, 12 Jun 2023 20:30:08 +0800</lastBuildDate>
         <category>nextcloud</category>
         <category>聊天室</category>
         <category>python</category>
@@ -29,6 +29,9 @@
         <category>autorefresh</category>
         <category>network</category>
         <category>vmware</category>
+        <category>docker</category>
+        <category>nessus</category>
+        <category>awvs</category>
         <category>kali</category>
         <category>dvwa</category>
         <category>fedora</category>
@@ -37,6 +40,8 @@
         <category>hexo</category>
         <category>backup</category>
         <category>guide</category>
+        <category>java</category>
+        <category>filestream</category>
         <category>目录</category>
         <category>指令</category>
         <category>权限</category>
@@ -58,7 +63,6 @@
         <category>yuzu</category>
         <category>ryujinx</category>
         <category>树莓派</category>
-        <category>docker</category>
         <category>openwrt</category>
         <category>router</category>
         <category>pic</category>
@@ -75,6 +79,8 @@
         <category>torrent</category>
         <category>下载器</category>
         <category>nas</category>
+        <category>ubuntu</category>
+        <category>mariadb</category>
         <category>bug</category>
         <category>win7</category>
         <category>capacity</category>
@@ -88,11 +94,24 @@
         <category>权限不足</category>
         <category>vscode</category>
         <item>
+            <guid isPermalink="true">http://maxshiroi.top/linux/docker/203008/</guid>
+            <title>在docker中设置并安装AWVS和Nessus漏扫程序</title>
+            <link>http://maxshiroi.top/linux/docker/203008/</link>
+            <category>linux</category>
+            <category>docker</category>
+            <category>nessus</category>
+            <category>awvs</category>
+            <pubDate>Mon, 12 Jun 2023 20:30:08 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/WJ_11_13/article/details/127426899&#34;&gt;https://blog.csdn.net/WJ_11_13/article/details/127426899&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://hub.docker.com/r/secfa/docker-awvs&#34;&gt;https://hub.docker.com/r/secfa/docker-awvs&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">http://maxshiroi.top/ug/205645/</guid>
             <title>使用树莓派4B+Docker Openwrt实现旁路由</title>
             <link>http://maxshiroi.top/ug/205645/</link>
-            <category>树莓派</category>
             <category>docker</category>
+            <category>树莓派</category>
             <category>openwrt</category>
             <category>router</category>
             <pubDate>Tue, 26 Apr 2022 20:56:45 +0800</pubDate>

@@ -29,6 +29,9 @@
         <category>autorefresh</category>
         <category>network</category>
         <category>vmware</category>
+        <category>docker</category>
+        <category>nessus</category>
+        <category>awvs</category>
         <category>kali</category>
         <category>dvwa</category>
         <category>fedora</category>
@@ -37,6 +40,8 @@
         <category>hexo</category>
         <category>backup</category>
         <category>guide</category>
+        <category>java</category>
+        <category>filestream</category>
         <category>目录</category>
         <category>指令</category>
         <category>权限</category>
@@ -58,7 +63,6 @@
         <category>yuzu</category>
         <category>ryujinx</category>
         <category>树莓派</category>
-        <category>docker</category>
         <category>openwrt</category>
         <category>router</category>
         <category>pic</category>
@@ -75,6 +79,8 @@
         <category>torrent</category>
         <category>下载器</category>
         <category>nas</category>
+        <category>ubuntu</category>
+        <category>mariadb</category>
         <category>bug</category>
         <category>win7</category>
         <category>capacity</category>
@@ -88,9 +94,9 @@
         <category>权限不足</category>
         <category>vscode</category>
         <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/140206/</guid>
+            <guid isPermalink="true">http://maxshiroi.top/linux/arch/140206/</guid>
             <title>Arch安装使用指导</title>
-            <link>http://maxshiroi.top/ug/140206/</link>
+            <link>http://maxshiroi.top/linux/arch/140206/</link>
             <category>linux</category>
             <category>arch</category>
             <category>pacman</category>

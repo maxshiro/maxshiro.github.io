@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro • Posts by &#34;docker&#34; category</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2023-06-12T12:30:08.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="docker" />
+    <category term="nessus" />
+    <category term="awvs" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="java" />
+    <category term="filestream" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="短链" />
+    <category term="测试" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="ubuntu" />
+    <category term="mariadb" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/linux/docker/203008/</id>
+        <title>在docker中设置并安装AWVS和Nessus漏扫程序</title>
+        <link rel="alternate" href="http://maxshiroi.top/linux/docker/203008/"/>
+        <content type="html">&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/WJ_11_13/article/details/127426899&#34;&gt;https://blog.csdn.net/WJ_11_13/article/details/127426899&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://hub.docker.com/r/secfa/docker-awvs&#34;&gt;https://hub.docker.com/r/secfa/docker-awvs&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="linux" />
+        <category term="docker" />
+        <category term="nessus" />
+        <category term="awvs" />
+        <updated>2023-06-12T12:30:08.000Z</updated>
+    </entry>
+</feed>
