@@ -1,6 +1,8 @@
 ---
 title: dvwa安装指引
 date: 2023-03-07 10:03:53
+categories: [linux, web]
+cover: 
 tags:
 - linux
 - kali
@@ -8,6 +10,7 @@ tags:
 - fedora
 - mysql
 ---
+## 多说无用，建议直接docker一步到位。
 # 启动nginx
 service nginx start
 cd /var/www/html
