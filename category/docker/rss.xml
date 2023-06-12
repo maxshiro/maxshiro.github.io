@@ -70,8 +70,6 @@
         <category>api</category>
         <category>random</category>
         <category>wallpaper</category>
-        <category>短链</category>
-        <category>测试</category>
         <category>Vocal</category>
         <category>AI</category>
         <category>歌声合成</category>
@@ -102,7 +100,34 @@
             <category>nessus</category>
             <category>awvs</category>
             <pubDate>Mon, 12 Jun 2023 20:30:08 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/WJ_11_13/article/details/127426899&#34;&gt;https://blog.csdn.net/WJ_11_13/article/details/127426899&lt;/a&gt;&lt;br&gt;
+            <description><![CDATA[ &lt;p&gt;&lt;strong&gt;注意在访问的时候一定要用 https 访问！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;awvs-crack-docker&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#awvs-crack-docker&#34;&gt;#&lt;/a&gt; Awvs Crack Docker&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker link:&lt;a href=&#34;https://hub.docker.com/r/secfa/docker-awvs&#34;&gt;secfa/docker-awvs&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Usage:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker pull secfa/docker-awvs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker run -it -d -p 13443:3443 --cap-add LINUX_IMMUTABLE secfa/docker-awvs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Then visit https://YOUR_IP:13443/&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;INFO:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;mailto:Username:admin@admin.com&#34;&gt;Username:admin@admin.com&lt;/a&gt;&lt;br&gt;
+password:Admin123&lt;br&gt;
+AWVS Version:230222085&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;nessus-crack&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nessus-crack&#34;&gt;#&lt;/a&gt; nessus crack&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;reference link:&lt;a href=&#34;https://blog.csdn.net/WJ_11_13/article/details/127426899&#34;&gt;nessus&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 下载并安装容器&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@LAPTOP-7O53L0P8:~&lt;span class=&#34;comment&#34;&gt;# docker run -itd --name=ramisec_nessus -p 8834:8834 ramisec/nessus&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bac3f67995bae798420e3335327b364a62db5f6bbf7b5e1b7b9ce309cd53b60d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 查看容器ID&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@LAPTOP-7O53L0P8:~&lt;span class=&#34;comment&#34;&gt;# docker ps&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS             PORTS                                         NAMES&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bac3f67995ba   ramisec/nessus      &lt;span class=&#34;string&#34;&gt;&#34;/nessus/run.sh start&#34;&lt;/span&gt;   21 seconds ago   Up 19 seconds      0.0.0.0:8834-&amp;gt;8834/tcp, :::8834-&amp;gt;8834/tcp     ramisec_nessus&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ed5ab230e247   secfa/docker-awvs   &lt;span class=&#34;string&#34;&gt;&#34;/bin/sh /awvs_start…&#34;&lt;/span&gt;   9 hours ago      Up About an hour   0.0.0.0:13443-&amp;gt;3443/tcp, :::13443-&amp;gt;3443/tcp   awvs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 进入容器内部进行破解更新&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@LAPTOP-7O53L0P8:~&lt;span class=&#34;comment&#34;&gt;# docker exec -it bac3f67995ba /bin/bash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@bac3f67995ba:/nessus&lt;span class=&#34;comment&#34;&gt;# ls&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;run.sh  start.sh  update.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@bac3f67995ba:/nessus&lt;span class=&#34;comment&#34;&gt;# ./update.sh // 这里省略输出&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改管理员密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@bac3f67995ba:/nessus&lt;span class=&#34;comment&#34;&gt;# cd /opt/nessus/sbin/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@bac3f67995ba:/opt/nessus/sbin&lt;span class=&#34;comment&#34;&gt;# ./nessuscli chpasswd admin&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;image&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#image&#34;&gt;#&lt;/a&gt; Image&lt;/h2&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/dockerinstallawvsnessus/2023-06-12-20-51-07.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/dockerinstallawvsnessus/2023-06-12-20-51-37.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&#34;reference&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#reference&#34;&gt;#&lt;/a&gt; Reference&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/WJ_11_13/article/details/127426899&#34;&gt;https://blog.csdn.net/WJ_11_13/article/details/127426899&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://hub.docker.com/r/secfa/docker-awvs&#34;&gt;https://hub.docker.com/r/secfa/docker-awvs&lt;/a&gt;&lt;/p&gt;
  ]]></description>
         </item>

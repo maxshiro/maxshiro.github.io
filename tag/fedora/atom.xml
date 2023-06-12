@@ -67,8 +67,6 @@
     <category term="api" />
     <category term="random" />
     <category term="wallpaper" />
-    <category term="短链" />
-    <category term="测试" />
     <category term="Vocal" />
     <category term="AI" />
     <category term="歌声合成" />
@@ -91,10 +89,11 @@
     <category term="权限不足" />
     <category term="vscode" />
     <entry>
-        <id>http://maxshiroi.top/ug/100353/</id>
+        <id>http://maxshiroi.top/linux/web/100353/</id>
         <title>dvwa安装指引</title>
-        <link rel="alternate" href="http://maxshiroi.top/ug/100353/"/>
-        <content type="html">&lt;h1 id=&#34;启动nginx&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动nginx&#34;&gt;#&lt;/a&gt; 启动 nginx&lt;/h1&gt;
+        <link rel="alternate" href="http://maxshiroi.top/linux/web/100353/"/>
+        <content type="html">&lt;h2 id=&#34;多说无用建议直接docker一步到位&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多说无用建议直接docker一步到位&#34;&gt;#&lt;/a&gt; 多说无用，建议直接 docker 一步到位。&lt;/h2&gt;
+&lt;h1 id=&#34;启动nginx&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动nginx&#34;&gt;#&lt;/a&gt; 启动 nginx&lt;/h1&gt;
 &lt;h2 id=&#34;service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;#&lt;/a&gt; service nginx start&lt;br&gt;
 cd /var/www/html&lt;br&gt;
 vim hello.html&lt;/h2&gt;

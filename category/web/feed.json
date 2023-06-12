@@ -1,0 +1,22 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MAXshiro • All posts by \"web\" category",
+    "description": "Discover and Record the world.",
+    "home_page_url": "http://maxshiroi.top",
+    "items": [
+        {
+            "id": "http://maxshiroi.top/linux/web/100353/",
+            "url": "http://maxshiroi.top/linux/web/100353/",
+            "title": "dvwa安装指引",
+            "date_published": "2023-03-07T02:03:53.000Z",
+            "content_html": "<h2 id=\"多说无用建议直接docker一步到位\"><a class=\"anchor\" href=\"#多说无用建议直接docker一步到位\">#</a> 多说无用，建议直接 docker 一步到位。</h2>\n<h1 id=\"启动nginx\"><a class=\"anchor\" href=\"#启动nginx\">#</a> 启动 nginx</h1>\n<h2 id=\"service-nginx-startcd-varwwwhtmlvim-hellohtml\"><a class=\"anchor\" href=\"#service-nginx-startcd-varwwwhtmlvim-hellohtml\">#</a> service nginx start<br>\ncd /var/www/html<br>\nvim hello.html</h2>\n<p>Helloworld!<br>\n// 访问虚拟机地址。</p>\n<figure class=\"highlight bash\"><table><tbody><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">[root@fedora axro]<span class=\"comment\"># cd /usr/share/nginx/html/</span></span><br><span class=\"line\">[root@fedora html]<span class=\"comment\"># git clone https://github.com/digininja/DVWA.git</span></span><br><span class=\"line\">[root@fedora html]<span class=\"comment\"># cd DVWA/config</span></span><br><span class=\"line\">[root@fedora config]<span class=\"comment\"># cp config.inc.php.dist config.inc.php</span></span><br><span class=\"line\">[root@fedora config]<span class=\"comment\"># vi config.inc.php</span></span><br><span class=\"line\">mysql -u root -p</span><br><span class=\"line\">create database DVWA;</span><br></pre></td></tr></tbody></table></figure>\n<p>mysql&gt; create database dvwa;<br>\nQuery OK, 1 row affected (0.00 sec)</p>\n<p>mysql&gt; create user dvwa@localhost identified by 'p@ssw0rd';<br>\nQuery OK, 0 rows affected (0.01 sec)</p>\n<p>mysql&gt; grant all on dvwa.* to dvwa@localhost;<br>\nQuery OK, 0 rows affected (0.01 sec)</p>\n<p>mysql&gt; flush privileges;<br>\nQuery OK, 0 rows affected (0.00 sec)</p>\n",
+            "tags": [
+                "linux",
+                "mysql",
+                "kali",
+                "dvwa",
+                "fedora"
+            ]
+        }
+    ]
+}

@@ -67,8 +67,6 @@
     <category term="api" />
     <category term="random" />
     <category term="wallpaper" />
-    <category term="短链" />
-    <category term="测试" />
     <category term="Vocal" />
     <category term="AI" />
     <category term="歌声合成" />
@@ -91,9 +89,9 @@
     <category term="权限不足" />
     <category term="vscode" />
     <entry>
-        <id>http://maxshiroi.top/ug/085248/</id>
+        <id>http://maxshiroi.top/linux/fileupload/085248/</id>
         <title>CTF：Upload-Labs-Linux</title>
-        <link rel="alternate" href="http://maxshiroi.top/ug/085248/"/>
+        <link rel="alternate" href="http://maxshiroi.top/linux/fileupload/085248/"/>
         <content type="html">&lt;h1 id=&#34;题目预览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目预览&#34;&gt;#&lt;/a&gt; 题目预览：&lt;/h1&gt;
 &lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/Upload-Labs-Linux/20221010085420.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
 &lt;h1 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h1&gt;

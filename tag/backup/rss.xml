@@ -70,8 +70,6 @@
         <category>api</category>
         <category>random</category>
         <category>wallpaper</category>
-        <category>短链</category>
-        <category>测试</category>
         <category>Vocal</category>
         <category>AI</category>
         <category>歌声合成</category>
@@ -226,6 +224,21 @@
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;等待网页更新。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h1 id=&#34;测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试&#34;&gt;#&lt;/a&gt; 测试&lt;/h1&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption&gt;&lt;span&gt;java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Scanner&lt;/span&gt; (System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 输入 Scan 之后，按下键盘 Alt + “/” 键，Eclipse 下自动补全。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println (in.nextLine ());&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println (&lt;span class=&#34;string&#34;&gt;&#34;Hello&#34;&lt;/span&gt; + &lt;span class=&#34;string&#34;&gt;&#34;world.&#34;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;原本用于日语汉字假名注音，但别的注音也可以。&lt;br&gt;
+为了兼容性，采用 markdown-it-ruby 的基本格式： &lt;ruby&gt;文字&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;注音&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt; ，并且为了兼容表格，将分隔符由 | 换成了 ^ 。&lt;br&gt;
+注音分隔基于 furigana-markdown-it 显示说明看这里&lt;/p&gt;
+&lt;p&gt;&lt;ruby&gt;取&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;と&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; り&lt;rt&gt;&lt;/rt&gt;返&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;かえ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; す&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	取とり返かえす&lt;br&gt;
+&lt;ruby&gt;可愛&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;かわい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	可愛かわいい犬いぬ&lt;br&gt;
+&lt;ruby&gt;可&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;か&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; 愛&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;わい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	可か愛わいい犬いぬ&lt;br&gt;
+&lt;ruby&gt;アクセラレータ&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;accelerator&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	アクセラレータ accelerator&lt;br&gt;
+&lt;ruby&gt;accelerator&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;アクセラレータ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	accelerator アクセラレータ&lt;br&gt;
+&lt;ruby&gt;食&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;た&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; べる&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	食たべる&lt;br&gt;
+&lt;ruby&gt;食べる&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;たべる&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	食べるたべる&lt;br&gt;
+&lt;ruby&gt;あ&lt;rt&gt;●&lt;/rt&gt;い&lt;rt&gt;●&lt;/rt&gt;う&lt;rt&gt;●&lt;/rt&gt;え&lt;rt&gt;●&lt;/rt&gt;お&lt;rt&gt;●&lt;/rt&gt;&lt;/ruby&gt;	あ●い●う●え●お●&lt;br&gt;
+&lt;ruby&gt;あ&lt;rt&gt;❤&lt;/rt&gt;い&lt;rt&gt;❤&lt;/rt&gt;う&lt;rt&gt;❤&lt;/rt&gt;え&lt;rt&gt;❤&lt;/rt&gt;お&lt;rt&gt;❤&lt;/rt&gt;&lt;/ruby&gt;	あ❤い❤う❤え❤お❤&lt;br&gt;
+&lt;ruby&gt;常用账号&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;contact&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	常用账号 contact&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

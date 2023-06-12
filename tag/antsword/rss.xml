@@ -70,8 +70,6 @@
         <category>api</category>
         <category>random</category>
         <category>wallpaper</category>
-        <category>短链</category>
-        <category>测试</category>
         <category>Vocal</category>
         <category>AI</category>
         <category>歌声合成</category>
@@ -94,9 +92,9 @@
         <category>权限不足</category>
         <category>vscode</category>
         <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/085248/</guid>
+            <guid isPermalink="true">http://maxshiroi.top/linux/fileupload/085248/</guid>
             <title>CTF：Upload-Labs-Linux</title>
-            <link>http://maxshiroi.top/ug/085248/</link>
+            <link>http://maxshiroi.top/linux/fileupload/085248/</link>
             <category>ctf</category>
             <category>buuctf</category>
             <category>antsword</category>

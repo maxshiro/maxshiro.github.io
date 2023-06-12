@@ -5,8 +5,8 @@
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 21 Apr 2023 20:01:28 +0800</pubDate>
-        <lastBuildDate>Fri, 21 Apr 2023 20:01:28 +0800</lastBuildDate>
+        <pubDate>Mon, 07 Mar 2022 10:03:53 +0800</pubDate>
+        <lastBuildDate>Mon, 07 Mar 2022 10:03:53 +0800</lastBuildDate>
         <category>nextcloud</category>
         <category>聊天室</category>
         <category>python</category>
@@ -70,8 +70,6 @@
         <category>api</category>
         <category>random</category>
         <category>wallpaper</category>
-        <category>短链</category>
-        <category>测试</category>
         <category>Vocal</category>
         <category>AI</category>
         <category>歌声合成</category>
@@ -94,11 +92,11 @@
         <category>权限不足</category>
         <category>vscode</category>
         <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/200128/</guid>
+            <guid isPermalink="true">http://maxshiroi.top/ug/100353/</guid>
             <title>Hello World</title>
-            <link>http://maxshiroi.top/ug/200128/</link>
+            <link>http://maxshiroi.top/ug/100353/</link>
             <category>helloworld</category>
-            <pubDate>Fri, 21 Apr 2023 20:01:28 +0800</pubDate>
+            <pubDate>Mon, 07 Mar 2022 10:03:53 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
 &lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;

@@ -67,8 +67,6 @@
     <category term="api" />
     <category term="random" />
     <category term="wallpaper" />
-    <category term="短链" />
-    <category term="测试" />
     <category term="Vocal" />
     <category term="AI" />
     <category term="歌声合成" />
@@ -92,7 +90,7 @@
     <category term="vscode" />
     <entry>
         <id>http://maxshiroi.top/ug/174137/</id>
-        <title>vmwarewin7shrink</title>
+        <title>手动回收VMware中Windows系虚拟机的磁盘占用</title>
         <link rel="alternate" href="http://maxshiroi.top/ug/174137/"/>
         <content type="html">&lt;p&gt;通常在我们创建虚拟机时往往并不清楚需要多少空间，等到后期才会发现分配了很多空间实际上用不到。这时候就要想办法缩小虚拟机所占用的空间了。&lt;br&gt;
 根据我这次缩小空间的经历，我十分不推荐使用快照功能。因为这会让你虚拟机当前处在快照模式，与原来的文件关系不大（就是处理起来更麻烦了。）。&lt;br&gt;

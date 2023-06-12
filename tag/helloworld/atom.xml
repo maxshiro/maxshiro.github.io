@@ -3,7 +3,7 @@
     <id>http://maxshiroi.top</id>
     <title>MAXshiro • Posts by &#34;helloworld&#34; tag</title>
     <link href="http://maxshiroi.top" />
-    <updated>2023-04-21T12:01:28.473Z</updated>
+    <updated>2022-03-07T02:03:53.000Z</updated>
     <category term="nextcloud" />
     <category term="聊天室" />
     <category term="python" />
@@ -67,8 +67,6 @@
     <category term="api" />
     <category term="random" />
     <category term="wallpaper" />
-    <category term="短链" />
-    <category term="测试" />
     <category term="Vocal" />
     <category term="AI" />
     <category term="歌声合成" />
@@ -91,9 +89,9 @@
     <category term="权限不足" />
     <category term="vscode" />
     <entry>
-        <id>http://maxshiroi.top/ug/200128/</id>
+        <id>http://maxshiroi.top/ug/100353/</id>
         <title>Hello World</title>
-        <link rel="alternate" href="http://maxshiroi.top/ug/200128/"/>
+        <link rel="alternate" href="http://maxshiroi.top/ug/100353/"/>
         <content type="html">&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
 &lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
@@ -110,6 +108,6 @@
 &lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/one-command-deployment.html&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="helloworld" />
-        <updated>2023-04-21T12:01:28.473Z</updated>
+        <updated>2022-03-07T02:03:53.000Z</updated>
     </entry>
 </feed>

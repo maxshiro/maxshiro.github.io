@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>MAXshiro • Posts by &#34;web&#34; category</title>
+        <link>http://maxshiroi.top</link>
+        <description>Discover and Record the world.</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 07 Mar 2023 10:03:53 +0800</pubDate>
+        <lastBuildDate>Tue, 07 Mar 2023 10:03:53 +0800</lastBuildDate>
+        <category>nextcloud</category>
+        <category>聊天室</category>
+        <category>python</category>
+        <category>ctf</category>
+        <category>buuctf</category>
+        <category>antsword</category>
+        <category>linux</category>
+        <category>centos</category>
+        <category>web</category>
+        <category>nginx</category>
+        <category>mysql</category>
+        <category>wsa</category>
+        <category>vhd</category>
+        <category>vhdx</category>
+        <category>diskpart</category>
+        <category>arch</category>
+        <category>pacman</category>
+        <category>win</category>
+        <category>explorer.exe</category>
+        <category>autorefresh</category>
+        <category>network</category>
+        <category>vmware</category>
+        <category>docker</category>
+        <category>nessus</category>
+        <category>awvs</category>
+        <category>kali</category>
+        <category>dvwa</category>
+        <category>fedora</category>
+        <category>helloworld</category>
+        <category>plugin</category>
+        <category>hexo</category>
+        <category>backup</category>
+        <category>guide</category>
+        <category>java</category>
+        <category>filestream</category>
+        <category>目录</category>
+        <category>指令</category>
+        <category>权限</category>
+        <category>media center</category>
+        <category>plex</category>
+        <category>emby</category>
+        <category>jellyfin</category>
+        <category>视频</category>
+        <category>音乐</category>
+        <category>运维</category>
+        <category>smb</category>
+        <category>passwd</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>树莓派</category>
+        <category>openwrt</category>
+        <category>router</category>
+        <category>pic</category>
+        <category>img</category>
+        <category>api</category>
+        <category>random</category>
+        <category>wallpaper</category>
+        <category>Vocal</category>
+        <category>AI</category>
+        <category>歌声合成</category>
+        <category>transmission</category>
+        <category>torrent</category>
+        <category>下载器</category>
+        <category>nas</category>
+        <category>ubuntu</category>
+        <category>mariadb</category>
+        <category>bug</category>
+        <category>win7</category>
+        <category>capacity</category>
+        <category>shrink</category>
+        <category>Android</category>
+        <category>Hyper-V</category>
+        <category>WSA</category>
+        <category>wsl2</category>
+        <category>Hyper-v</category>
+        <category>wsl</category>
+        <category>权限不足</category>
+        <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/linux/web/100353/</guid>
+            <title>dvwa安装指引</title>
+            <link>http://maxshiroi.top/linux/web/100353/</link>
+            <category>linux</category>
+            <category>mysql</category>
+            <category>kali</category>
+            <category>dvwa</category>
+            <category>fedora</category>
+            <pubDate>Tue, 07 Mar 2023 10:03:53 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;多说无用建议直接docker一步到位&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多说无用建议直接docker一步到位&#34;&gt;#&lt;/a&gt; 多说无用，建议直接 docker 一步到位。&lt;/h2&gt;
+&lt;h1 id=&#34;启动nginx&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动nginx&#34;&gt;#&lt;/a&gt; 启动 nginx&lt;/h1&gt;
+&lt;h2 id=&#34;service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;#&lt;/a&gt; service nginx start&lt;br&gt;
+cd /var/www/html&lt;br&gt;
+vim hello.html&lt;/h2&gt;
+&lt;p&gt;Helloworld!&lt;br&gt;
+// 访问虚拟机地址。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@fedora axro]&lt;span class=&#34;comment&#34;&gt;# cd /usr/share/nginx/html/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[root@fedora html]&lt;span class=&#34;comment&#34;&gt;# git clone https://github.com/digininja/DVWA.git&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[root@fedora html]&lt;span class=&#34;comment&#34;&gt;# cd DVWA/config&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[root@fedora config]&lt;span class=&#34;comment&#34;&gt;# cp config.inc.php.dist config.inc.php&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[root@fedora config]&lt;span class=&#34;comment&#34;&gt;# vi config.inc.php&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mysql -u root -p&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;create database DVWA;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;mysql&amp;gt; create database dvwa;&lt;br&gt;
+Query OK, 1 row affected (0.00 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; create user dvwa@localhost identified by &#39;p@ssw0rd&#39;;&lt;br&gt;
+Query OK, 0 rows affected (0.01 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; grant all on dvwa.* to dvwa@localhost;&lt;br&gt;
+Query OK, 0 rows affected (0.01 sec)&lt;/p&gt;
+&lt;p&gt;mysql&amp;gt; flush privileges;&lt;br&gt;
+Query OK, 0 rows affected (0.00 sec)&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

@@ -67,8 +67,6 @@
     <category term="api" />
     <category term="random" />
     <category term="wallpaper" />
-    <category term="短链" />
-    <category term="测试" />
     <category term="Vocal" />
     <category term="AI" />
     <category term="歌声合成" />
@@ -94,7 +92,34 @@
         <id>http://maxshiroi.top/linux/docker/203008/</id>
         <title>在docker中设置并安装AWVS和Nessus漏扫程序</title>
         <link rel="alternate" href="http://maxshiroi.top/linux/docker/203008/"/>
-        <content type="html">&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/WJ_11_13/article/details/127426899&#34;&gt;https://blog.csdn.net/WJ_11_13/article/details/127426899&lt;/a&gt;&lt;br&gt;
+        <content type="html">&lt;p&gt;&lt;strong&gt;注意在访问的时候一定要用 https 访问！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;awvs-crack-docker&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#awvs-crack-docker&#34;&gt;#&lt;/a&gt; Awvs Crack Docker&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker link:&lt;a href=&#34;https://hub.docker.com/r/secfa/docker-awvs&#34;&gt;secfa/docker-awvs&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Usage:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker pull secfa/docker-awvs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker run -it -d -p 13443:3443 --cap-add LINUX_IMMUTABLE secfa/docker-awvs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Then visit https://YOUR_IP:13443/&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;INFO:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;mailto:Username:admin@admin.com&#34;&gt;Username:admin@admin.com&lt;/a&gt;&lt;br&gt;
+password:Admin123&lt;br&gt;
+AWVS Version:230222085&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;nessus-crack&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nessus-crack&#34;&gt;#&lt;/a&gt; nessus crack&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;reference link:&lt;a href=&#34;https://blog.csdn.net/WJ_11_13/article/details/127426899&#34;&gt;nessus&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 下载并安装容器&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@LAPTOP-7O53L0P8:~&lt;span class=&#34;comment&#34;&gt;# docker run -itd --name=ramisec_nessus -p 8834:8834 ramisec/nessus&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bac3f67995bae798420e3335327b364a62db5f6bbf7b5e1b7b9ce309cd53b60d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 查看容器ID&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@LAPTOP-7O53L0P8:~&lt;span class=&#34;comment&#34;&gt;# docker ps&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS             PORTS                                         NAMES&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bac3f67995ba   ramisec/nessus      &lt;span class=&#34;string&#34;&gt;&#34;/nessus/run.sh start&#34;&lt;/span&gt;   21 seconds ago   Up 19 seconds      0.0.0.0:8834-&amp;gt;8834/tcp, :::8834-&amp;gt;8834/tcp     ramisec_nessus&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ed5ab230e247   secfa/docker-awvs   &lt;span class=&#34;string&#34;&gt;&#34;/bin/sh /awvs_start…&#34;&lt;/span&gt;   9 hours ago      Up About an hour   0.0.0.0:13443-&amp;gt;3443/tcp, :::13443-&amp;gt;3443/tcp   awvs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 进入容器内部进行破解更新&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@LAPTOP-7O53L0P8:~&lt;span class=&#34;comment&#34;&gt;# docker exec -it bac3f67995ba /bin/bash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@bac3f67995ba:/nessus&lt;span class=&#34;comment&#34;&gt;# ls&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;run.sh  start.sh  update.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@bac3f67995ba:/nessus&lt;span class=&#34;comment&#34;&gt;# ./update.sh // 这里省略输出&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 更改管理员密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@bac3f67995ba:/nessus&lt;span class=&#34;comment&#34;&gt;# cd /opt/nessus/sbin/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@bac3f67995ba:/opt/nessus/sbin&lt;span class=&#34;comment&#34;&gt;# ./nessuscli chpasswd admin&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;image&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#image&#34;&gt;#&lt;/a&gt; Image&lt;/h2&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/dockerinstallawvsnessus/2023-06-12-20-51-07.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/dockerinstallawvsnessus/2023-06-12-20-51-37.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&#34;reference&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#reference&#34;&gt;#&lt;/a&gt; Reference&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/WJ_11_13/article/details/127426899&#34;&gt;https://blog.csdn.net/WJ_11_13/article/details/127426899&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://hub.docker.com/r/secfa/docker-awvs&#34;&gt;https://hub.docker.com/r/secfa/docker-awvs&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="linux" />
@@ -220,32 +245,11 @@
         <updated>2023-05-09T12:17:44.000Z</updated>
     </entry>
     <entry>
-        <id>http://maxshiroi.top/ug/200128/</id>
-        <title>Hello World</title>
-        <link rel="alternate" href="http://maxshiroi.top/ug/200128/"/>
-        <content type="html">&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&#34;My New Post&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/writing.html&#34;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/server.html&#34;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/generating.html&#34;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/one-command-deployment.html&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
-</content>
-        <category term="helloworld" />
-        <updated>2023-04-21T12:01:28.473Z</updated>
-    </entry>
-    <entry>
-        <id>http://maxshiroi.top/ug/100353/</id>
+        <id>http://maxshiroi.top/linux/web/100353/</id>
         <title>dvwa安装指引</title>
-        <link rel="alternate" href="http://maxshiroi.top/ug/100353/"/>
-        <content type="html">&lt;h1 id=&#34;启动nginx&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动nginx&#34;&gt;#&lt;/a&gt; 启动 nginx&lt;/h1&gt;
+        <link rel="alternate" href="http://maxshiroi.top/linux/web/100353/"/>
+        <content type="html">&lt;h2 id=&#34;多说无用建议直接docker一步到位&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多说无用建议直接docker一步到位&#34;&gt;#&lt;/a&gt; 多说无用，建议直接 docker 一步到位。&lt;/h2&gt;
+&lt;h1 id=&#34;启动nginx&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动nginx&#34;&gt;#&lt;/a&gt; 启动 nginx&lt;/h1&gt;
 &lt;h2 id=&#34;service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#service-nginx-startcd-varwwwhtmlvim-hellohtml&#34;&gt;#&lt;/a&gt; service nginx start&lt;br&gt;
 cd /var/www/html&lt;br&gt;
 vim hello.html&lt;/h2&gt;
@@ -307,7 +311,7 @@ Query OK, 0 rows affected (0.00 sec)&lt;/p&gt;
     </entry>
     <entry>
         <id>http://maxshiroi.top/ug/174137/</id>
-        <title>vmwarewin7shrink</title>
+        <title>手动回收VMware中Windows系虚拟机的磁盘占用</title>
         <link rel="alternate" href="http://maxshiroi.top/ug/174137/"/>
         <content type="html">&lt;p&gt;通常在我们创建虚拟机时往往并不清楚需要多少空间，等到后期才会发现分配了很多空间实际上用不到。这时候就要想办法缩小虚拟机所占用的空间了。&lt;br&gt;
 根据我这次缩小空间的经历，我十分不推荐使用快照功能。因为这会让你虚拟机当前处在快照模式，与原来的文件关系不大（就是处理起来更麻烦了。）。&lt;br&gt;
@@ -1101,9 +1105,9 @@ Query OK, 0 rows affected (0.00 sec)&lt;/p&gt;
         <updated>2022-10-16T13:19:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://maxshiroi.top/ug/085248/</id>
+        <id>http://maxshiroi.top/linux/fileupload/085248/</id>
         <title>CTF：Upload-Labs-Linux</title>
-        <link rel="alternate" href="http://maxshiroi.top/ug/085248/"/>
+        <link rel="alternate" href="http://maxshiroi.top/linux/fileupload/085248/"/>
         <content type="html">&lt;h1 id=&#34;题目预览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目预览&#34;&gt;#&lt;/a&gt; 题目预览：&lt;/h1&gt;
 &lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/Upload-Labs-Linux/20221010085420.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
 &lt;h1 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h1&gt;
@@ -1341,30 +1345,6 @@ usermod -g GID 组名&lt;/p&gt;
         <updated>2022-09-22T09:52:33.000Z</updated>
     </entry>
     <entry>
-        <id>http://maxshiroi.top/ug/120738/</id>
-        <title>shortcutforshoka</title>
-        <link rel="alternate" href="http://maxshiroi.top/ug/120738/"/>
-        <content type="html">&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption&gt;&lt;span&gt;java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Scanner&lt;/span&gt; (System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 输入 Scan 之后，按下键盘 Alt + “/” 键，Eclipse 下自动补全。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println (in.nextLine ());&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println (&lt;span class=&#34;string&#34;&gt;&#34;Hello&#34;&lt;/span&gt; + &lt;span class=&#34;string&#34;&gt;&#34;world.&#34;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;{% media audio %}&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;- title: 列表 1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  list:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - https://music.163.com/#/playlist?id=2943811283&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - https://music.163.com/#/playlist?id=2297706586&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;- title: 列表 2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  list:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - https://music.163.com/#/playlist?id=2031842656&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;{% endmedia %}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;原本用于日语汉字假名注音，但别的注音也可以。&lt;br&gt;
-为了兼容性，采用 markdown-it-ruby 的基本格式： &lt;ruby&gt;文字&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;注音&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt; ，并且为了兼容表格，将分隔符由 | 换成了 ^ 。&lt;br&gt;
-注音分隔基于 furigana-markdown-it 显示说明看这里&lt;/p&gt;
-&lt;p&gt;&lt;ruby&gt;取&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;と&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; り&lt;rt&gt;&lt;/rt&gt;返&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;かえ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; す&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	取とり返かえす&lt;br&gt;
-&lt;ruby&gt;可愛&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;かわい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	可愛かわいい犬いぬ&lt;br&gt;
-&lt;ruby&gt;可&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;か&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; 愛&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;わい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	可か愛わいい犬いぬ&lt;br&gt;
-&lt;ruby&gt;アクセラレータ&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;accelerator&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	アクセラレータ accelerator&lt;br&gt;
-&lt;ruby&gt;accelerator&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;アクセラレータ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	accelerator アクセラレータ&lt;br&gt;
-&lt;ruby&gt;食&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;た&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; べる&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	食たべる&lt;br&gt;
-&lt;ruby&gt;食べる&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;たべる&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	食べるたべる&lt;br&gt;
-&lt;ruby&gt;あ&lt;rt&gt;●&lt;/rt&gt;い&lt;rt&gt;●&lt;/rt&gt;う&lt;rt&gt;●&lt;/rt&gt;え&lt;rt&gt;●&lt;/rt&gt;お&lt;rt&gt;●&lt;/rt&gt;&lt;/ruby&gt;	あ●い●う●え●お●&lt;br&gt;
-&lt;ruby&gt;あ&lt;rt&gt;❤&lt;/rt&gt;い&lt;rt&gt;❤&lt;/rt&gt;う&lt;rt&gt;❤&lt;/rt&gt;え&lt;rt&gt;❤&lt;/rt&gt;お&lt;rt&gt;❤&lt;/rt&gt;&lt;/ruby&gt;	あ❤い❤う❤え❤お❤&lt;br&gt;
-&lt;ruby&gt;常用账号&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;contact&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	常用账号 contact&lt;/p&gt;
-</content>
-        <category term="短链" />
-        <category term="测试" />
-        <updated>2022-09-21T04:07:38.000Z</updated>
-    </entry>
-    <entry>
         <id>http://maxshiroi.top/ug/164658/</id>
         <title>解决windows资源管理器无法自动刷新等问题</title>
         <link rel="alternate" href="http://maxshiroi.top/ug/164658/"/>
@@ -1594,6 +1574,21 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;等待网页更新。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h1 id=&#34;测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试&#34;&gt;#&lt;/a&gt; 测试&lt;/h1&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption&gt;&lt;span&gt;java&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Scanner&lt;/span&gt; (System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 输入 Scan 之后，按下键盘 Alt + “/” 键，Eclipse 下自动补全。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println (in.nextLine ());&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println (&lt;span class=&#34;string&#34;&gt;&#34;Hello&#34;&lt;/span&gt; + &lt;span class=&#34;string&#34;&gt;&#34;world.&#34;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;原本用于日语汉字假名注音，但别的注音也可以。&lt;br&gt;
+为了兼容性，采用 markdown-it-ruby 的基本格式： &lt;ruby&gt;文字&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;注音&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt; ，并且为了兼容表格，将分隔符由 | 换成了 ^ 。&lt;br&gt;
+注音分隔基于 furigana-markdown-it 显示说明看这里&lt;/p&gt;
+&lt;p&gt;&lt;ruby&gt;取&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;と&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; り&lt;rt&gt;&lt;/rt&gt;返&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;かえ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; す&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	取とり返かえす&lt;br&gt;
+&lt;ruby&gt;可愛&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;かわい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	可愛かわいい犬いぬ&lt;br&gt;
+&lt;ruby&gt;可&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;か&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; 愛&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;わい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; い&lt;rt&gt;&lt;/rt&gt;犬&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;いぬ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	可か愛わいい犬いぬ&lt;br&gt;
+&lt;ruby&gt;アクセラレータ&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;accelerator&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	アクセラレータ accelerator&lt;br&gt;
+&lt;ruby&gt;accelerator&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;アクセラレータ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	accelerator アクセラレータ&lt;br&gt;
+&lt;ruby&gt;食&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;た&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; べる&lt;rt&gt;&lt;/rt&gt;&lt;/ruby&gt;	食たべる&lt;br&gt;
+&lt;ruby&gt;食べる&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;たべる&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	食べるたべる&lt;br&gt;
+&lt;ruby&gt;あ&lt;rt&gt;●&lt;/rt&gt;い&lt;rt&gt;●&lt;/rt&gt;う&lt;rt&gt;●&lt;/rt&gt;え&lt;rt&gt;●&lt;/rt&gt;お&lt;rt&gt;●&lt;/rt&gt;&lt;/ruby&gt;	あ●い●う●え●お●&lt;br&gt;
+&lt;ruby&gt;あ&lt;rt&gt;❤&lt;/rt&gt;い&lt;rt&gt;❤&lt;/rt&gt;う&lt;rt&gt;❤&lt;/rt&gt;え&lt;rt&gt;❤&lt;/rt&gt;お&lt;rt&gt;❤&lt;/rt&gt;&lt;/ruby&gt;	あ❤い❤う❤え❤お❤&lt;br&gt;
+&lt;ruby&gt;常用账号&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;contact&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	常用账号 contact&lt;/p&gt;
 </content>
         <category term="plugin" />
         <category term="hexo" />
@@ -2332,5 +2327,27 @@ yuzu EA 版本还支持多人联机的功能，但是需要你使用梯子才可
         <category term="hexo" />
         <category term="guide" />
         <updated>2022-04-17T05:35:37.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://maxshiroi.top/ug/100353/</id>
+        <title>Hello World</title>
+        <link rel="alternate" href="http://maxshiroi.top/ug/100353/"/>
+        <content type="html">&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&#34;My New Post&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/writing.html&#34;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/server.html&#34;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/generating.html&#34;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/one-command-deployment.html&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="helloworld" />
+        <updated>2022-03-07T02:03:53.000Z</updated>
     </entry>
 </feed>

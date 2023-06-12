@@ -70,8 +70,6 @@
         <category>api</category>
         <category>random</category>
         <category>wallpaper</category>
-        <category>短链</category>
-        <category>测试</category>
         <category>Vocal</category>
         <category>AI</category>
         <category>歌声合成</category>
@@ -95,7 +93,7 @@
         <category>vscode</category>
         <item>
             <guid isPermalink="true">http://maxshiroi.top/ug/174137/</guid>
-            <title>vmwarewin7shrink</title>
+            <title>手动回收VMware中Windows系虚拟机的磁盘占用</title>
             <link>http://maxshiroi.top/ug/174137/</link>
             <category>vmware</category>
             <category>win7</category>
