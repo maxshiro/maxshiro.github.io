@@ -46,8 +46,8 @@ root@bac3f67995ba:/nessus# cd /opt/nessus/sbin/
 root@bac3f67995ba:/opt/nessus/sbin# ./nessuscli chpasswd admin
 ```
 ## Image
-![](img/dockerinstallawvsnessus/2023-06-12-20-51-07.png)
-![](img/dockerinstallawvsnessus/2023-06-12-20-51-37.png)
+![](/img/dockerinstallawvsnessus/2023-06-12-20-51-07.png)
+![](/img/dockerinstallawvsnessus/2023-06-12-20-51-37.png)
 # Reference
 https://blog.csdn.net/WJ_11_13/article/details/127426899
 https://hub.docker.com/r/secfa/docker-awvs

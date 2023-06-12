@@ -2,7 +2,7 @@
 title: dvwa安装指引
 date: 2023-03-07 10:03:53
 categories: [linux, web]
-cover: 
+cover: img/dvwaonlinux/2023-06-12-23-14-34.png
 tags:
 - linux
 - kali
