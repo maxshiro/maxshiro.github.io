@@ -81,7 +81,7 @@ search:
 
 ######## Comments ########
 comments:
-  service: # beaudar, utterances, giscus, twikoo, waline, artalk
+  service: giscus # beaudar, utterances, giscus, twikoo, waline, artalk
   # beaudar
   # https://beaudar.lipk.org/
   beaudar:
@@ -106,10 +106,10 @@ comments:
   # giscus
   # https://giscus.app/zh-CN
   giscus:
-    data-repo: xxx/xxx # [在此输入仓库]
-    data-repo-id: # [在此输入仓库 ID]
-    data-category: # [在此输入分类名]
-    data-category-id:
+    data-repo: maxshiro/shuoshuo
+    data-repo-id: R_kgDOJW5G7Q # [在此输入仓库 ID]
+    data-category: Announcements # [在此输入分类名]
+    data-category-id: DIC_kwDOJW5G7c4CXVrV
     data-mapping: pathname
     data-strict: 0
     data-reactions-enabled: 1
