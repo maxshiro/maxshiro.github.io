@@ -3,7 +3,7 @@ title: Arch安装使用指导
 date: 2023-02-24 14:02:06
 cover: /img/archinstallguide/20230321201108.png
 banner: arch,linux
-top: 1
+top: 10
 categories: [linux,arch]
 poster: # 海报（可选，全图封面卡片）
   headline: Archlinux

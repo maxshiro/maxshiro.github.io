@@ -4,6 +4,7 @@ db.json
 *.log
 node_modules/
 theme.bak/
+themes/stella.old
 public/
 .deploy*/
 _multiconfig.yml
