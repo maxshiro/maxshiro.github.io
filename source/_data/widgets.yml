@@ -23,6 +23,11 @@ welcome:
   content: |
     欢迎！随便看看吧！
 
+shuoshuo:
+  layout: timeline
+  title: 最近动态
+  api: https://api.github.com/repos/maxshiro/shuoshuo/issues?direction=asc&per_page=3
+
 ghrepo:
   layout: ghrepo
 

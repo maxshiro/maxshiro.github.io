@@ -1,14 +1,34 @@
 ---
-title: 关于我
 date: 2018-09-30 17:25:30
 menu_id: more
-post_list: true
-header: false 
+tabs_id: about
+post_list: false
+header: false
+type: "about"
+layout: "about"
 sidebar:
-    - search
     - ghuser
-    - tagcloud
+    - search
+    - recent
 ---
+{% about avatar:/img/avatar.png height:0px %}
+**一些中二的话...**
+{% navbar active:4 [文章](/) [项目](/wiki/) [友链](/friends/) [关于](/about/) %}
+{% endabout %}
+
+{% tabs active:1 align:center %}
+
+<!-- tab 图片 -->
+![](img/index/2023-06-20-22-35-57.png)
+
+<!-- tab 代码块 -->
+```swift
+let x = 123
+print("hello world")
+```
+
+{% endtabs %}
+
 # 个人介绍
 
 本人性别男, 现居住于河南省郑州市。个人研究方向软件编程，信息安全，网络运维。
