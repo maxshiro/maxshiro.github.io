@@ -29,10 +29,10 @@
     <category term="docker" />
     <category term="nessus" />
     <category term="awvs" />
+    <category term="helloworld" />
     <category term="kali" />
     <category term="dvwa" />
     <category term="fedora" />
-    <category term="helloworld" />
     <category term="plugin" />
     <category term="hexo" />
     <category term="backup" />
@@ -48,9 +48,9 @@
     <category term="jellyfin" />
     <category term="视频" />
     <category term="音乐" />
+    <category term="passwd" />
     <category term="运维" />
     <category term="smb" />
-    <category term="passwd" />
     <category term="switch" />
     <category term="animal crossing" />
     <category term="Project Diva" />
