@@ -4,8 +4,6 @@ db.json
 *.log
 node_modules/
 theme.bak/
-theme.bak/cactus
-theme.bak/cupertino
 themes/stella.old
 public/
 .deploy*/
