@@ -6,8 +6,9 @@ banner: arch,linux
 top: 10
 categories: [linux,arch]
 poster: # 海报（可选，全图封面卡片）
-  headline: Archlinux
-  caption: Arch安装使用指导
+  headline: 在VMware中安装Archlinux
+  caption: 的安装使用指导
+  color: white
 tags:
 - linux
 - arch

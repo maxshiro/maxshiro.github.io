@@ -36,11 +36,10 @@ sidebar:
     page: toc, search # for custom pages using 'layout:page'
 
 ######## Index ########
-post-index: # 近期发布 分类 标签 归档 and ...
+post-index:
   '说说': /timeline/
   '友链': /friends/
   '关于': /about/
-  
 
 
 ######## Main ########

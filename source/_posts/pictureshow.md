@@ -1,8 +1,13 @@
 ---
 title: 随机图片API
 date: 2022-11-16 15:29:35
-top: false
+top: 5
 cover: https://api.paugram.com/wallpaper
+banner: miku
+poster:
+    headline: 随机图片API测试
+    caption: 以及静态图片速度测试
+    color: black
 tags:
 - pic
 - img
