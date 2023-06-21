@@ -5,6 +5,7 @@ date: {{ date }}
 tags: 
 categories: []
 description: 
+comments: # 评论开关（true/false）
 cover: # 使用 Unsplash 搜索图片 workout,strava
 banner: # 文章页面顶部区域显示长长的横幅图片 or 使用 Unsplash 搜索图片 workout,strava
 poster: # 海报（可选，全图封面卡片）
