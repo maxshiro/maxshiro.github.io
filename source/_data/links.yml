@@ -1,19 +1,15 @@
 # 不要直接在这里写，要复制到 blog/source/_data/links.yml 位置
-'示例':
+'友链':
   - title: XAOXUU
     avatar: https://bu.dusays.com/2021/09/24/2f74810ceb3d3.png
     url: https://xaoxuu.com
     screenshot: https://bu.dusays.com/2022/10/23/63542895cfd29.png
     description:
-
-'大碴子':
   - title: 某水文牛马指定食槽
     avatar: /img/flink/20220923165653.png
     screenshot: /img/flink/20220923165653.png
     description: 时光流转，如同转个圈一样，又回到了这里。我只希望，同样的错误，不会再犯。
     url: https://www.naive514.top
-
-'殼中文王': 
   - title: 壳中呓语
     avatar: /img/flink/20220923183634.png
     screenshot: /img/flink/20220923183634.png

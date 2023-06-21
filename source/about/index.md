@@ -11,23 +11,8 @@ sidebar:
     - search
     - recent
 ---
-{% about avatar:/img/avatar.png height:0px %}
-**一些中二的话...**
-{% navbar active:4 [文章](/) [项目](/wiki/) [友链](/friends/) [关于](/about/) %}
-{% endabout %}
-
-{% tabs active:1 align:center %}
-
-<!-- tab 图片 -->
-![](img/index/2023-06-20-22-35-57.png)
-
-<!-- tab 代码块 -->
-```swift
-let x = 123
-print("hello world")
-```
-
-{% endtabs %}
+![](/img/index/2023-06-21-13-42-12.png)
+{% navbar active:2 [友链](/friends/) [关于](/about/) %}
 
 # 个人介绍
 

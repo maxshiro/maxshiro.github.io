@@ -5,15 +5,13 @@ post_list: false
 header: false
 type: "about"
 layout: "about"
+comment: false
 sidebar:
     - ghuser
     - search
     - recent
 ---
-{% about %}
-**一些中二的话...**
-{% navbar active:3 [文章](/) [项目](/wiki/) [友链](/friends/) [关于](/about/) %}
-{% endabout %}
-
+![](/img/index/2023-06-21-13-42-12.png)
+{% navbar active:1 [友链](/friends/) [关于](/about/) %}
 # 我的朋友
-{% sites 示例 %} {% sites 大碴子 %} {% sites 殼中文王 %}
+{% sites 友链 %}

@@ -14,19 +14,20 @@ sidebar:
   menu:
     post: '[btn.blog](/)'
     wiki: '[btn.wiki](/wiki/)'
+    note: '[笔记](/notes/)'
     more: '[更多](/about/)'
     # about: '[关于](/about/)'
   # Sidebar widgets
   widgets:
     #### 自动生成的页面 ####
     # 主页
-    home: search, welcome, recent, shuoshuo, tagcloud # for home
+    home: search, welcome, recent, shuoshuo # for home
     # 博客索引页
     blog_index: search_blog, recent, related # for categories/tags/archives
     # 文档索引页
     wiki_index: search_docs, recent # for wiki
     # 其它（404）
-    others: search, recent # for 404 and ...
+    others: search, welcome, recent, shuoshuo # for 404 and ...
     #### 手动创建的页面 ####
     # 文章内页
     post: search_blog, related, toc # for pages using 'layout:post'
@@ -111,7 +112,7 @@ comments:
     data-reactions-enabled: 1
     data-emit-metadata: 0
     data-input-position: top # top, bottom
-    data-theme: preferred_color_scheme
+    data-theme: light_high_contras
     data-lang: zh-CN
     data-loading: lazy
     crossorigin: anonymous
