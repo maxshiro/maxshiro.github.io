@@ -3,7 +3,7 @@
 
 <head>
   <meta name="generator" content="Hexo 6.3.0">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
   <meta charset="utf-8">
   
 
@@ -26,7 +26,7 @@
     <meta name="description" content="# Intro 上一回我们讲到了如何部署 hexo 到 github 上，并简单的向 repo 里推送了你的博客。这一回我们简单的来完善你的博客。 # 0. 主题配置  old: shoka matery new stellar volantis  # 1. 备份 Hexo 源文件到 Backup 分支 由于种种原因我们总会更改自己的工作环境或者一顿操作猛如虎，将自己博客的源文件一通收拾，然后就没">
 <meta property="og:type" content="article">
 <meta property="og:title" content="部署完hexo后还应该准备哪些工作">
-<meta property="og:url" content="http://maxshiroi.top/ug/222543/index.html">
+<meta property="og:url" content="http://maxshiroi.top/Hexo/222543/index.html">
 <meta property="og:site_name" content="MAXshiro">
 <meta property="og:description" content="# Intro 上一回我们讲到了如何部署 hexo 到 github 上，并简单的向 repo 里推送了你的博客。这一回我们简单的来完善你的博客。 # 0. 主题配置  old: shoka matery new stellar volantis  # 1. 备份 Hexo 源文件到 Backup 分支 由于种种原因我们总会更改自己的工作环境或者一顿操作猛如虎，将自己博客的源文件一通收拾，然后就没">
 <meta property="og:locale" content="zh_CN">
@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://maxshiroi.top/img/hexoplugin/20221116144428.png">
 <meta property="og:image" content="http://maxshiroi.top/img/hexoplugin/20221116144502.png">
 <meta property="article:published_time" content="2022-08-28T14:25:43.000Z">
-<meta property="article:modified_time" content="2023-06-12T15:24:05.084Z">
+<meta property="article:modified_time" content="2023-06-20T10:33:47.401Z">
 <meta property="article:author" content="maxshiroi">
 <meta property="article:tag" content="plugin">
 <meta property="article:tag" content="hexo">
@@ -83,7 +83,7 @@
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/img/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MAXshiro</div><div class="sub cap">A blog for learn.</div></a></div>
 
-<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/more/">更多</a></nav>
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item" href="/about/">更多</a></nav>
 </header>
 
 
@@ -91,11 +91,9 @@
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
+
+
 <widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">部署完hexo后还应该准备哪些工作</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAbackup%E5%88%86%E6%94%AF"><span class="toc-number">1.</span> <span class="toc-text"> 创建 backup 分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86backup%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2%E4%B8%BA%E9%BB%98%E8%AE%A4%E5%88%86%E6%94%AF"><span class="toc-number">2.</span> <span class="toc-text"> 将 backup 分支切换为默认分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86repo-clone%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="toc-number">3.</span> <span class="toc-text"> 将 repo clone 到本地</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99"><span class="toc-number">4.</span> <span class="toc-text"> 报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%98%E5%8E%9F"><span class="toc-number">5.</span> <span class="toc-text"> 还原</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%8C%87%E4%BB%A4"><span class="toc-number">6.</span> <span class="toc-text"> 安装指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8"><span class="toc-number">7.</span> <span class="toc-text"> 快速使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%80%A7"><span class="toc-number">8.</span> <span class="toc-text"> 特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-number">9.</span> <span class="toc-text"> 步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%9D%E6%8A%A4%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%86%85%E5%AE%B9"><span class="toc-number">10.</span> <span class="toc-text"> 保护博客源码内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8"><span class="toc-number">11.</span> <span class="toc-text"> 第一次使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87github-page"><span class="toc-number">12.</span> <span class="toc-text"> 通过 github page</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87vercelcom"><span class="toc-number">13.</span> <span class="toc-text"> 通过 vercel.com</span></a></li></ol></div></div></widget>
-
-
-
-
 </div>
 
 
@@ -107,7 +105,7 @@
 
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-08-28T14:25:43.000Z">2022-08-28</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Hexo/">Hexo</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-08-28T14:25:43.000Z">2022-08-28</time></div></div>
 
 <article class='md-text content post'>
 <h1 class="article-title"><span>部署完hexo后还应该准备哪些工作</span></h1>
@@ -253,6 +251,7 @@
 <ruby>常用账号<rp> (</rp><rt>contact</rt><rp>)</rp></ruby>	常用账号 contact</p>
 
 
+
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名 - 非商业性使用 - 相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div></section></div>
 
@@ -266,9 +265,23 @@
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="/ug/133537/" title="使用 Hexo 程序部署博客到githubpage上"><span class="title">使用 Hexo 程序部署博客到githubpage上</span></a><a class="item" href="/linux/arch/140206/" title="Arch安装使用指导"><span class="title">Arch安装使用指导</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="/ug/133537/" title="使用 Hexo 程序部署博客到githubpage上"><span class="title">使用 Hexo 程序部署博客到githubpage上</span></a></div></section></div>
 
 
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" data-repo="maxshiro/shuoshuo" data-repo-id="R_kgDOJW5G7Q" data-category="Announcements" data-category-id="DIC_kwDOJW5G7c4CXVrV" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light_high_contras" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
 
 
 
@@ -381,8 +394,8 @@
       }
     }
   };
-  stellar.version = '1.18.5';
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
   stellar.config = {
     date_suffix: {
       just: '刚刚',
@@ -431,6 +444,9 @@
   if ('false' == 'true') {
     stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
   }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
 </script>
 
 <!-- required -->
@@ -441,6 +457,34 @@
 
 
 <!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
 
 
 

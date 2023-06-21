@@ -29,10 +29,10 @@
     <category term="docker" />
     <category term="nessus" />
     <category term="awvs" />
-    <category term="helloworld" />
     <category term="kali" />
     <category term="dvwa" />
     <category term="fedora" />
+    <category term="helloworld" />
     <category term="plugin" />
     <category term="hexo" />
     <category term="backup" />
@@ -48,9 +48,9 @@
     <category term="jellyfin" />
     <category term="视频" />
     <category term="音乐" />
-    <category term="passwd" />
     <category term="运维" />
     <category term="smb" />
+    <category term="passwd" />
     <category term="switch" />
     <category term="animal crossing" />
     <category term="Project Diva" />
@@ -1446,9 +1446,9 @@ usermod -g GID 组名&lt;/p&gt;
         <updated>2022-08-28T15:42:36.000Z</updated>
     </entry>
     <entry>
-        <id>http://maxshiroi.top/ug/222543/</id>
+        <id>http://maxshiroi.top/Hexo/222543/</id>
         <title>部署完hexo后还应该准备哪些工作</title>
-        <link rel="alternate" href="http://maxshiroi.top/ug/222543/"/>
+        <link rel="alternate" href="http://maxshiroi.top/Hexo/222543/"/>
         <content type="html">&lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
 &lt;p&gt;上一回我们讲到了如何部署 hexo 到 github 上，并简单的向 repo 里推送了你的博客。这一回我们简单的来完善你的博客。&lt;/p&gt;
 &lt;h1 id=&#34;0主题配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0主题配置&#34;&gt;#&lt;/a&gt; 0. 主题配置&lt;/h1&gt;
