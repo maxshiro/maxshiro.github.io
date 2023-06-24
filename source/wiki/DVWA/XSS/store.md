@@ -60,6 +60,7 @@ if( isset( $_POST[ 'btnSign' ] ) ) {
 我们尝试在Name上构建Payload：
 ![](/img/store/2023-06-24-20-31-27.png)
 发现有字数限制。尝试打开检查看看源代码。
+
 右键name框选择检查。
 
 ![](/img/store/2023-06-24-20-32-55.png)
