@@ -20,16 +20,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>知识库 - MAXshiro</title>
+  <title>DVWA：存储型XSS - MAXshiro</title>
 
   
-    <meta name="description" content="Discover and Record the world.">
+    <meta name="description" content="# 什么是命令注入： 命令注入就是在需要输入数据的地方输入了恶意代码，而且系统并没有对其进行过滤或者其他处理导致恶意代码也被执行，最终导致数据泄露或者正常数据被破坏。 常用到的命令：（总结来说就是系统操作命令 DOS 命令都可以在此执行试试） ipconfig，net user（查看系统用户），dir（查看当前目录），find（查找包含指定字符的行），whoami（查看系统当前有效用户名）A&amp;am">
 <meta property="og:type" content="website">
-<meta property="og:title" content="知识库">
-<meta property="og:url" content="http://maxshiroi.top/wiki/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/index.html">
+<meta property="og:title" content="存储型XSS">
+<meta property="og:url" content="http://maxshiroi.top/wiki/DVWA/XSS/store.html">
 <meta property="og:site_name" content="MAXshiro">
-<meta property="og:description" content="Discover and Record the world.">
+<meta property="og:description" content="# 什么是命令注入： 命令注入就是在需要输入数据的地方输入了恶意代码，而且系统并没有对其进行过滤或者其他处理导致恶意代码也被执行，最终导致数据泄露或者正常数据被破坏。 常用到的命令：（总结来说就是系统操作命令 DOS 命令都可以在此执行试试） ipconfig，net user（查看系统用户），dir（查看当前目录），find（查找包含指定字符的行），whoami（查看系统当前有效用户名）A&amp;am">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-21T11:08:39.207Z">
+<meta property="article:modified_time" content="2023-06-21T11:08:39.207Z">
 <meta property="article:author" content="maxshiroi">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@maxshiroer">
@@ -64,42 +66,47 @@
   
 
 
+
+
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='wiki_index'>
+    <aside class='l_left' layout='wiki'>
     
 
   
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/img/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MAXshiro</div><div class="sub cap">A blog for learn.</div></a></div>
-
-<nav class="menu dis-select"><a class="nav-item" href="/">文章</a><a class="nav-item active" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item" href="/about/">更多</a></nav>
-</header>
 
 
-<div class="widgets">
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/" placeholder="文档搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
-<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span></div><div class="widget-body related-posts fs14"><a class="item title" href="/wiki/math/index.html"><span class="title"><strong>Stellar</strong><span class="dot"></span>这是分页标题</span></a></div></widget>
+<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/DVWA/index.html"><div class="main" ff="title">DVWA</div><div class="sub cap">Damn Vulnerable Web Application</div></a></div></widget>
+
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name"> </span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/index.html#start"><span class="toc-text">什么是DVWA？</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/how2install.html"><span class="toc-text">安装DVWA</span></a></div></div><div class="widget-header cap dis-select"><span class="name">命令注入（Command injection）</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/CI/index.html"><span class="toc-text">什么是命令注入？</span></a></div></div><div class="widget-header cap dis-select"><span class="name">跨站脚本攻击 XSS（Cross Site Scripting）</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/XSS/index.html"><span class="toc-text">什么是XSS？</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/DVWA/XSS/store.html"><span class="toc-text">存储型XSS</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5"><span class="toc-number">1.</span> <span class="toc-text"> 什么是命令注入：</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/XSS/DOM.html"><span class="toc-text">DOM类型XSS</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/XSS/reflaction.html"><span class="toc-text">反射型XSS</span></a></div></div><div class="widget-header cap dis-select"><span class="name">SQL注入 SQLI（SQL Injection）</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/sqli/index.html"><span class="toc-text">什么是SQL注入？</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/sqli/sqli.html"><span class="toc-text">SQL注入</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/sqli/sqlib.html"><span class="toc-text">SQL注入（Blind）盲注</span></a></div></div></widget>
 </div>
 
 
     </aside>
-    <div class='l_main list'>
+    <div class='l_main'>
       
-  
-
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/img/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MAXshiro</div><div class="sub cap">A blog for learn.</div></a></div></header>
-
-
 
       
 
   
-
-
   
 
-<div class="nav-wrap"><nav class="sub wiki cap"><a href="/wiki/">所有项目</a></a><a href="/wiki/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/index.html">博客主题</a></a><a class="active" href="/wiki/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/index.html">知识库</a></a></nav></div>
+
+  <article class='md-text content wiki'>
+  <h1 class="article-title"><span>存储型XSS</span></h1>
+  <h2 id="什么是命令注入"><a class="anchor" href="#什么是命令注入">#</a> 什么是命令注入：</h2>
+<p>命令注入就是在需要输入数据的地方输入了恶意代码，而且系统并没有对其进行过滤或者其他处理导致恶意代码也被执行，最终导致数据泄露或者正常数据被破坏。</p>
+<p>常用到的命令：（总结来说就是系统操作命令 DOS 命令都可以在此执行试试）</p>
+<p>ipconfig，net user（查看系统用户），dir（查看当前目录），find（查找包含指定字符的行），whoami（查看系统当前有效用户名）A&amp;B（简单的拼接，AB 之间无制约关系），A&amp;&amp;B（A 执行成功才会执行 B），A|B（A 的输出作为 B 的输入），A||B（A 执行失败，然后才会执行 B）</p>
+
+  
+  
+
+
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/DVWA/XSS/index.html">什么是XSS？</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/DVWA/XSS/DOM.html">DOM类型XSS</a></div></section></div>
 
   
 
@@ -107,8 +114,7 @@
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br />
-本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 主题 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 构建。</p>
 </div></footer>
 
       <div class='float-panel mobile-only blur' style='display:none'>
@@ -278,6 +284,34 @@
 
 
 <!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
 
 
 

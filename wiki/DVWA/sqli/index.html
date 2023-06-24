@@ -20,16 +20,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>友链 - MAXshiro</title>
+  <title>DVWA：什么是SQL注入？ - MAXshiro</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="友链">
-<meta property="og:url" content="http://maxshiroi.top/friends/rss/index.html">
+    <meta name="description" content="Discover and Record the world.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="什么是SQL注入？">
+<meta property="og:url" content="http://maxshiroi.top/wiki/DVWA/sqli/index.html">
 <meta property="og:site_name" content="MAXshiro">
+<meta property="og:description" content="Discover and Record the world.">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-19T03:12:22.000Z">
-<meta property="article:modified_time" content="2023-06-20T12:41:36.816Z">
+<meta property="article:published_time" content="2023-06-21T12:24:53.495Z">
+<meta property="article:modified_time" content="2023-06-21T12:24:53.495Z">
 <meta property="article:author" content="maxshiroi">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@maxshiroer">
@@ -64,65 +66,48 @@
   
 
 
+
+
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='page'>
+    <aside class='l_left' layout='wiki'>
     
 
   
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/img/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MAXshiro</div><div class="sub cap">A blog for learn.</div></a></div>
-
-<nav class="menu dis-select"><a class="nav-item" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item active" href="/about/">更多</a></nav>
-</header>
 
 
-<div class="widgets">
 
-
-<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span></div><div class="widget-body related-posts fs14"><a class="item title" href="/ug/152935/"><span class="title">随机图片API</span></a><a class="item title" href="/linux/arch/140206/"><span class="title">Arch安装使用指导</span></a><a class="item title" href="/Hexo/222543/"><span class="title">部署完hexo后还应该准备哪些工作</span></a><a class="item title" href="/linux/fileupload/085248/"><span class="title">CTF：Upload-Labs-Linux</span></a><a class="item title" href="/ug/100353/"><span class="title">Hello World</span></a></div></widget>
-
-
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
-</div>
+<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/DVWA/index.html"><div class="main" ff="title">DVWA</div><div class="sub cap">Damn Vulnerable Web Application</div></a></div></widget></div>
 
 
     </aside>
-    <div class='l_main'>
+    <div class='l_main list'>
       
+
+      
+
+  
   
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/img/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MAXshiro</div><div class="sub cap">A blog for learn.</div></a></div></header>
+
+  <article class='md-text content wiki'>
+  <h1 class="article-title"><span>什么是SQL注入？</span></h1>
+  
+  
+  
 
 
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/DVWA/XSS/reflaction.html">反射型XSS</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/DVWA/sqli/sqli.html">SQL注入</a></div></section></div>
 
-      
+  
 
-
-
-<div class="nav-wrap"><nav class="sub post cap"><a href="/">近期发布</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></nav></div>
-
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/friends/rss/index.html">友链</a></div></div>
-<article class="md-text content page"><h1 class="article-title"><span>友链</span></h1><div class="tag-plugin sites-wrap"><div class="group-body"></div></div> <div class="tag-plugin sites-wrap"><div class="group-body"></div></div> <div class="tag-plugin sites-wrap"><div class="group-body"></div></div></article>
-
-  <div class='related-wrap md-text reveal' id="comments">
-    <section class='header cmt-title cap theme'>
-      快来参与讨论吧
-    </section>
-    <section class='body cmt-body giscus'>
-      
-
-<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="giscus" data-repo="maxshiro/shuoshuo" data-repo-id="R_kgDOJW5G7Q" data-category="Announcements" data-category-id="DIC_kwDOJW5G7c4CXVrV" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light_high_contras" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
-
-    </section>
-  </div>
 
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br />
-本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 主题 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 构建。</p>
 </div></footer>
 
       <div class='float-panel mobile-only blur' style='display:none'>
