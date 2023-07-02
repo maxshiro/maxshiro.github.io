@@ -8,7 +8,7 @@ tags:
 - linux
 - awvs
 description:
-cover: img/dockerinstallawvsnessus/2023-06-12-20-33-23.png
+cover: /img/dockerinstallawvsnessus/2023-06-12-20-33-23.png
 ---
 **注意在访问的时候一定要用https访问！！！**
 # Awvs Crack Docker

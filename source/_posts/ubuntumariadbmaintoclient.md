@@ -7,7 +7,7 @@ tags:
 - ubuntu
 - mariadb
 description:
-cover: img/ubuntumariadbmaintoclient/2023-06-12-23-19-26.png
+cover: /img/ubuntumariadbmaintoclient/2023-06-12-23-19-26.png
 banner: mariadb,ubuntu
 ---
 本文将介绍如何在MariaDB中设置主从复制。主从复制是一种数据库复制技术，其中一个数据库服务器（称为“主服务器”）将其更改传递给一个或多个其他数据库服务器（称为“从服务器”）。主从复制可用于实现高可用性、负载均衡和数据备份等目的。
