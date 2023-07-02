@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>应急响应以及常用Windows命令工具分享 - MAXshiro</title>
+
+  
+    <meta name="description" content="# 应急响应 # 应急响应目的  哈哈，先拔网线，别关机，会损害现场。。   判断这次应急是否是被成功入侵的安全事件 阻断黑客攻击 找出攻击者的第一入口点，提取恶意样本 帮助客户梳理攻击者的攻击路线，提供漏洞修复方案  # 应急响应流程  事件判断: 判断是否是安全事件，何种安全事件，勒索、挖矿、断网、DDoS 等等. 临时处置: 给出客户临时处置建议，断网隔离，保护现场环境。 信息收集分析: 收">
+<meta property="og:type" content="article">
+<meta property="og:title" content="应急响应以及常用Windows命令工具分享">
+<meta property="og:url" content="http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/231746/index.html">
+<meta property="og:site_name" content="MAXshiro">
+<meta property="og:description" content="# 应急响应 # 应急响应目的  哈哈，先拔网线，别关机，会损害现场。。   判断这次应急是否是被成功入侵的安全事件 阻断黑客攻击 找出攻击者的第一入口点，提取恶意样本 帮助客户梳理攻击者的攻击路线，提供漏洞修复方案  # 应急响应流程  事件判断: 判断是否是安全事件，何种安全事件，勒索、挖矿、断网、DDoS 等等. 临时处置: 给出客户临时处置建议，断网隔离，保护现场环境。 信息收集分析: 收">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-02T15:17:46.000Z">
+<meta property="article:modified_time" content="2023-07-02T16:32:35.858Z">
+<meta property="article:author" content="maxshiroi">
+<meta property="article:tag" content="应急响应">
+<meta property="article:tag" content="hvv">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@maxshiroer">
+  
+  
+  
+  <meta name="keywords" content="应急响应,hvv">
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+  
+
+<div class="l_cover post"><div class="cover"><div class="lazy img bg" data-bg="https://source.unsplash.com/2000x400/?hvv,应急响应"></div></div></div>
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/img/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MAXshiro</div><div class="sub cap">A blog for learn.</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/about/">更多</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">应急响应以及常用Windows命令工具分享</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E7%9B%AE%E7%9A%84"><span class="toc-number">1.</span> <span class="toc-text"> 应急响应目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text"> 应急响应流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E6%80%A5%E5%89%8D%E6%B2%9F%E9%80%9A"><span class="toc-number">3.</span> <span class="toc-text"> 应急前沟通</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E6%9D%82%E8%B0%88"><span class="toc-number">4.</span> <span class="toc-text"> 应急响应杂谈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E8%80%85%E5%B8%B8%E5%88%A9%E7%94%A8%E7%9A%84web%E6%BC%8F%E6%B4%9E"><span class="toc-number">5.</span> <span class="toc-text"> 攻击者常利用的 web 漏洞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E8%80%85%E5%B8%B8%E5%88%A9%E7%94%A8%E7%9A%84%E7%BB%84%E4%BB%B6%E6%BC%8F%E6%B4%9E"><span class="toc-number">6.</span> <span class="toc-text"> 攻击者常利用的组件漏洞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E5%A4%84%E7%BD%AE%E6%80%9D%E8%B7%AF"><span class="toc-number">7.</span> <span class="toc-text"> 应急响应处置思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A4%96%E7%BD%91%E6%89%AB%E6%8F%8F%E6%A2%B3%E7%90%86%E6%95%B4%E4%B8%AA%E6%94%BB%E5%87%BB%E8%BF%87%E7%A8%8B"><span class="toc-number">7.1.</span> <span class="toc-text"> 1. 外网扫描（梳理整个攻击过程）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E5%9B%9E%E6%BA%AF%E6%94%BB%E5%87%BB%E8%80%85%E6%93%8D%E4%BD%9C"><span class="toc-number">7.2.</span> <span class="toc-text"> 2. 漏洞利用（回溯攻击者操作）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%BB%E6%9C%BA%E6%8E%A7%E5%88%B6%E7%A1%AE%E5%AE%9A%E6%94%BB%E5%87%BB%E8%80%85ip"><span class="toc-number">7.3.</span> <span class="toc-text"> 3. 主机控制（确定攻击者 IP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%A8%AA%E5%90%91%E6%B8%97%E9%80%8F%E6%89%BE%E5%88%B0webshell"><span class="toc-number">7.4.</span> <span class="toc-text"> 4. 横向渗透（找到 webshell）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E6%94%BB%E5%87%BB%E5%9C%BA%E6%99%AF%E4%B8%8B%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94"><span class="toc-number">8.</span> <span class="toc-text"> 实战攻击场景下应急响应</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#web%E6%94%BB%E5%87%BB%E4%BA%8B%E4%BB%B6"><span class="toc-number">8.1.</span> <span class="toc-text"> web 攻击事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E5%8A%AB%E6%8C%81"><span class="toc-number">8.2.</span> <span class="toc-text"> 链路劫持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4"><span class="toc-number">8.3.</span> <span class="toc-text"> 替换命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%AB%E6%8C%81%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93"><span class="toc-number">8.4.</span> <span class="toc-text"> 劫持动态链接库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rootkit"><span class="toc-number">8.5.</span> <span class="toc-text"> rootkit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1"><span class="toc-number">8.6.</span> <span class="toc-text"> 计划任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC"><span class="toc-number">8.7.</span> <span class="toc-text"> 远控木马</span></a></li></ol></li></ol></div></div></widget>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/">应急响应</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-07-02T15:17:46.000Z">2023-07-02</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>应急响应以及常用Windows命令工具分享</span></h1>
+<h1 id="应急响应"><a class="anchor" href="#应急响应">#</a> 应急响应</h1>
+<h2 id="应急响应目的"><a class="anchor" href="#应急响应目的">#</a> 应急响应目的</h2>
+<blockquote>
+<p>哈哈，先拔网线，别关机，会损害现场。。</p>
+</blockquote>
+<ol>
+<li>判断这次应急是否是被成功入侵的安全事件</li>
+<li>阻断黑客攻击</li>
+<li>找出攻击者的第一入口点，提取恶意样本</li>
+<li>帮助客户梳理攻击者的攻击路线，提供漏洞修复方案</li>
+</ol>
+<h2 id="应急响应流程"><a class="anchor" href="#应急响应流程">#</a> 应急响应流程</h2>
+<ul>
+<li><strong>事件判断:</strong> 判断是否是安全事件，何种安全事件，勒索、挖矿、断网、DDoS 等等.</li>
+<li><strong>临时处置:</strong> 给出客户临时处置建议，断网隔离，保护现场环境。</li>
+<li><strong>信息收集分析:</strong> 收集客户信息和中毒主机信息，包括样本，日志分析、进程分析、启动项分析、样本分析</li>
+<li><strong>清理处置:</strong> 直接杀掉进程，删除文件，打补丁，抑或是修复文件。</li>
+<li><strong>产出报告:</strong> 整理并输出完整的安全事件报告。</li>
+</ul>
+<h2 id="应急前沟通"><a class="anchor" href="#应急前沟通">#</a> 应急前沟通</h2>
+<ol>
+<li>现场现象是什么？如何发现的？</li>
+<li>依据是什么？</li>
+<li>什么时候发现的？</li>
+<li>目前是否有做物理隔离 (断网)?</li>
+<li>受害机器是哪个？</li>
+<li>受害服务有几台？(1 台 / N 台)</li>
+<li>最先发现是哪台？</li>
+<li>这台服务器对外有哪些服务？</li>
+<li>这台服务器与其他机器是否处于同一个内网？</li>
+<li>操作系统类型？是否有公网映射业务？远程管理方式？</li>
+<li>网络边界有没有流量监控设备？</li>
+<li>主机侧是否有 EDR 等安全设备？</li>
+</ol>
+<h2 id="应急响应杂谈"><a class="anchor" href="#应急响应杂谈">#</a> 应急响应杂谈</h2>
+<ul>
+<li>要点一：<strong>了解常见端口的攻击手法</strong></li>
+<li>要点二：<strong>不要相信客户说的话</strong></li>
+</ul>
+<h2 id="攻击者常利用的web漏洞"><a class="anchor" href="#攻击者常利用的web漏洞">#</a> 攻击者常利用的 web 漏洞</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">攻击平台</th>
+<th style="text-align:center">编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Weblogic</td>
+<td style="text-align:center">CVE-2017-3248, CVE-2017-10271, CVE-2018-2628, CVE-2018-2894</td>
+</tr>
+<tr>
+<td style="text-align:center">Drupal</td>
+<td style="text-align:center">CVE-2018-7600, CVE-2018-7602</td>
+</tr>
+<tr>
+<td style="text-align:center">Struts2</td>
+<td style="text-align:center">CVE-2017-5638, CVE-2017-9805, CVE-2018-11776</td>
+</tr>
+<tr>
+<td style="text-align:center">ThinkPHP</td>
+<td style="text-align:center">ThinkPHPv5 GetShell</td>
+</tr>
+<tr>
+<td style="text-align:center">Windows Server</td>
+<td style="text-align:center">弱口令爆破，CVE-2017-0143</td>
+</tr>
+<tr>
+<td style="text-align:center">PHPStudy</td>
+<td style="text-align:center">弱口令爆破</td>
+</tr>
+<tr>
+<td style="text-align:center">PHPMyAdmin</td>
+<td style="text-align:center">弱口令爆破</td>
+</tr>
+<tr>
+<td style="text-align:center">MySQL</td>
+<td style="text-align:center">弱口令爆破</td>
+</tr>
+<tr>
+<td style="text-align:center">Spring Data Commons</td>
+<td style="text-align:center">CVE-2018-1273</td>
+</tr>
+<tr>
+<td style="text-align:center">Tomcat</td>
+<td style="text-align:center">弱口令爆破，CVE-2017-12615</td>
+</tr>
+<tr>
+<td style="text-align:center">MsSQL</td>
+<td style="text-align:center">弱口令爆破</td>
+</tr>
+<tr>
+<td style="text-align:center">Jekins</td>
+<td style="text-align:center">CVE-2019-1003000</td>
+</tr>
+<tr>
+<td style="text-align:center">JBoss</td>
+<td style="text-align:center">CVE-2010-0738, CVE-2017-12149</td>
+</tr>
+</tbody>
+</table>
+<h2 id="攻击者常利用的组件漏洞"><a class="anchor" href="#攻击者常利用的组件漏洞">#</a> 攻击者常利用的组件漏洞</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">应用</th>
+<th style="text-align:center">漏洞名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Docker</td>
+<td style="text-align:center">Docker 未授权漏洞</td>
+</tr>
+<tr>
+<td style="text-align:center">Nexus Repository</td>
+<td style="text-align:center">Nexus Repository Manager 3 远程代码执行漏洞</td>
+</tr>
+<tr>
+<td style="text-align:center">ElasticSearch</td>
+<td style="text-align:center">ElasticSearch 未授权漏洞</td>
+</tr>
+<tr>
+<td style="text-align:center">Hadoop Yarn</td>
+<td style="text-align:center">Hadoop Yarn RESTAPI 未授权漏洞</td>
+</tr>
+<tr>
+<td style="text-align:center">Kubernetes</td>
+<td style="text-align:center">Kubernetes Api Server 未授权漏洞</td>
+</tr>
+<tr>
+<td style="text-align:center">Jenkins</td>
+<td style="text-align:center">Jenkins RCE (CVE-2019-1003000)</td>
+</tr>
+<tr>
+<td style="text-align:center">Spark</td>
+<td style="text-align:center">Spark RESTAPI 未授权漏洞</td>
+</tr>
+</tbody>
+</table>
+<h2 id="应急响应处置思路"><a class="anchor" href="#应急响应处置思路">#</a> 应急响应处置思路</h2>
+<blockquote>
+<p>应急响应反着来</p>
+</blockquote>
+<ul>
+<li><strong>据实分析</strong></li>
+<li><strong>合理猜测</strong></li>
+<li><strong>积极沟通</strong></li>
+</ul>
+<h3 id="1-外网扫描梳理整个攻击过程"><a class="anchor" href="#1-外网扫描梳理整个攻击过程">#</a> 1. 外网扫描（梳理整个攻击过程）</h3>
+<ul>
+<li>利用漏洞扫描器进行</li>
+<li>web 扫描</li>
+<li>Xray</li>
+<li>AWVS</li>
+<li>SQLMAP</li>
+<li>...</li>
+</ul>
+<h3 id="2-漏洞利用回溯攻击者操作"><a class="anchor" href="#2-漏洞利用回溯攻击者操作">#</a> 2. 漏洞利用（回溯攻击者操作）</h3>
+<p>通过一些高位的漏洞<br>
+ Shiro/struts2 等反序列命令执行..</p>
+<h3 id="3-主机控制确定攻击者ip"><a class="anchor" href="#3-主机控制确定攻击者ip">#</a> 3. 主机控制（确定攻击者 IP）</h3>
+<ul>
+<li>上传 webshell，反弹 shell，利用远程控制程序进行控制</li>
+<li>CS（CobaltStrike）</li>
+<li>Metasploit</li>
+</ul>
+<h3 id="4-横向渗透找到webshell"><a class="anchor" href="#4-横向渗透找到webshell">#</a> 4. 横向渗透（找到 webshell）</h3>
+<ul>
+<li>上传内网渗透工具，扫描内网，跳板攻击</li>
+<li>CS（CobaltStrike）</li>
+<li>Metasploit</li>
+</ul>
+<h2 id="实战攻击场景下应急响应"><a class="anchor" href="#实战攻击场景下应急响应">#</a> 实战攻击场景下应急响应</h2>
+<h3 id="web攻击事件"><a class="anchor" href="#web攻击事件">#</a> web 攻击事件</h3>
+<ul>
+<li><strong>相关表现:</strong> 页面被篡改、恶意推广、黑词黑页、webshell</li>
+<li><strong>相关危害:</strong> 导致搜索引擎告警、微信等 app 分享告警、首页敏感内容、拖库、内网沦陷等</li>
+<li><strong>排查要点:</strong> 能否多个环境下复现异常现象，确定相关资产是否存在，恶意文件是否确实存在于服务器上</li>
+<li><strong>操作要点:</strong> 备份文件，webshell 后门查杀；web 日志分析；web 中间件缓存处理；web 中间件配置检查；重启 web 中间件；服务器后门检查；</li>
+<li><strong>防护措施:</strong> 加固相关 web 应用，修改相关系统的所有用户密码</li>
+</ul>
+<h3 id="链路劫持"><a class="anchor" href="#链路劫持">#</a> 链路劫持</h3>
+<ul>
+<li><strong>相关表现:</strong> 区域性服务不可用或返回异常内容</li>
+<li><strong>相关危害:</strong> 导致搜索引擎告警、微信等 app 分享告警、首页敏感内容等</li>
+<li><strong>排查要点:</strong> 能否多个环境下复现异常现象，确定相关资产是否存在，恶意文件是否确实存在于服务器上</li>
+<li><strong>操作要点:</strong> 跨地区、运营商进行测试，确定受影响范围，在能复现的环境中判断是 DNS 劫持还是 HTTP 劫持 S</li>
+<li><strong>防护措施:</strong> 重要业务部署 https</li>
+</ul>
+<h3 id="替换命令"><a class="anchor" href="#替换命令">#</a> 替换命令</h3>
+<blockquote>
+<p>替换 ssh 或 rpm 包</p>
+</blockquote>
+<ul>
+<li><strong>相关表现:</strong> 无明显表现</li>
+<li><strong>相关危害:</strong> 将后门、木马持久化在系统中；窃取账号、密码等重要凭证</li>
+<li><strong>排查要点:</strong> 使用包管理自带的包校验功能验证文件完整性，分析恶意文件行为，确定影响面</li>
+<li><strong>操作要点:</strong> 使用静态链接的 busybox; 重新安装被替换的包</li>
+<li><strong>验证命令:</strong>
+<ul>
+<li><code>rpm 一Va</code></li>
+<li><code>dpkg --verify</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="劫持动态链接库"><a class="anchor" href="#劫持动态链接库">#</a> 劫持动态链接库</h3>
+<blockquote>
+<p>ld,so,preload</p>
+</blockquote>
+<ul>
+<li><strong>相关表现:</strong> 无明显表现</li>
+<li><strong>相关危害:</strong> 将后门、木马持久化在系统中；窃取账号、密码等重要凭证</li>
+<li><strong>排查要点:</strong> 检查 <code>/etc/ld.so.preload</code> ， <code>ld.so</code>  (如 <code>/lib/x86_64-linux-gnu/ld-2.27.so</code> )</li>
+<li><strong>操作要点:</strong> 使用静态链接的 busybox; 重启被注入恶意模块的进程，必要时直接重启系统</li>
+</ul>
+<h3 id="rootkit"><a class="anchor" href="#rootkit">#</a> rootkit</h3>
+<ul>
+<li><strong>相关表现:</strong> 无明显表现</li>
+<li><strong>相关危害:</strong> 将后门、木马持久化在系统中；隐藏文件、进程等信息</li>
+<li><strong>排查要点:</strong> 确定是否存在无法使用常规命令查看的文件、进程；</li>
+<li><strong>操作要点:</strong> 使用 tyton 内核态 rootkit 检测工具检测；检查 <code>/etc/modules</code>  是否有未知的内核模块</li>
+</ul>
+<h3 id="计划任务"><a class="anchor" href="#计划任务">#</a> 计划任务</h3>
+<ul>
+<li><strong>相关表现:</strong> 特定时间间隔触发木马、后门、网络链接、DNS 请求、篡改页面等行为</li>
+<li><strong>相关危害:</strong> 将后门、木马持久化在系统中，周期性篡改页面、拉取数据等</li>
+<li><strong>操作要点:</strong> 停止计划任务服务后再操作，注意辨别利用 \r 回车符的障眼法小技巧</li>
+<li><strong>排查要点:</strong> 判断是否存在周期性出现的异常现象，检查 <code>/var/spool/cron/crontabs/</code> ， <code>/etc/cron.*</code>  等常用计划任务配置文件</li>
+</ul>
+<h3 id="远控木马"><a class="anchor" href="#远控木马">#</a> 远控木马</h3>
+<ul>
+<li><strong>相关表现:</strong> 有持续或间断性的对外网络链接或 DNS 请求等通信行为</li>
+<li><strong>相关危害:</strong> 窃取系统资料、作为跳板进一步攻击内网其他机器</li>
+<li><strong>排查要点:</strong> 关注 tcp、udp、icmp 等一切网络行为，检查注册表、服务、开机目录、计划任务等一系列常见的持久化点</li>
+<li><strong>操作要点:</strong> 检查网络连接，以及 IDS 设备上的异常远控告警</li>
+</ul>
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名 - 非商业性使用 - 相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/">常用Windows应急响应整理</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/215254/">常用linux应急响应命令整理</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="/应急响应/002945/" title="常用Windows应急响应整理"><span class="title">常用Windows应急响应整理</span></a><a class="item" href="/应急响应/215254/" title="常用linux应急响应命令整理"><span class="title">常用linux应急响应命令整理</span></a></div></section></div>
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" data-repo="maxshiro/shuoshuo" data-repo-id="R_kgDOJW5G7Q" data-category="Announcements" data-category-id="DIC_kwDOJW5G7c4CXVrV" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light_high_contras" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 主题 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 构建。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

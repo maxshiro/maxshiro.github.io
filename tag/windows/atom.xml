@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro • Posts by &#34;windows&#34; tag</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2023-07-02T16:29:45.000Z</updated>
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="security" />
+    <category term="webshell" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="docker" />
+    <category term="nessus" />
+    <category term="awvs" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="helloworld" />
+    <category term="plugin" />
+    <category term="hexo" />
+    <category term="backup" />
+    <category term="guide" />
+    <category term="java" />
+    <category term="filestream" />
+    <category term="目录" />
+    <category term="指令" />
+    <category term="权限" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="应急响应" />
+    <category term="hvv" />
+    <category term="tools" />
+    <category term="busybox" />
+    <category term="ps" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="passwd" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="ubuntu" />
+    <category term="mariadb" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="windows" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/</id>
+        <title>常用Windows应急响应整理</title>
+        <link rel="alternate" href="http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/"/>
+        <content type="html">&lt;h1 id=&#34;windows相关&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#windows相关&#34;&gt;#&lt;/a&gt; Windows 相关&lt;/h1&gt;
+&lt;h2 id=&#34;常用程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用程序&#34;&gt;#&lt;/a&gt; 常用程序&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小心被病毒整蛊，记住下面命令：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;regedit&lt;/code&gt; ：注册表编辑器，用于管理 Windows 系统的注册表，可以查看、编辑和修改注册表中的配置信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Taskmgr&lt;/code&gt; ：任务管理器，用于查看和管理系统中运行的进程、服务和性能监控等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;msconfig&lt;/code&gt; ：系统配置实用程序，用于管理 Windows 启动时的启动项、服务和引导选项，可以进行系统启动项的配置和管理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;eventvwr.msc&lt;/code&gt; ：事件查看器，用于查看和分析系统和应用程序生成的事件日志，帮助诊断和解决系统问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;compmgmt.msc&lt;/code&gt; ：计算机管理控制台，提供了对计算机硬件、设备管理、本地用户和组管理、磁盘管理等的集中管理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;gpedit.msc&lt;/code&gt; ：组策略编辑器，用于管理 Windows 系统中的组策略，可以配置计算机和用户的策略设置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;taskschd.msc&lt;/code&gt; ：任务计划程序，用于创建和管理定时任务，可以设置计划运行的程序、脚本和操作等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;lusrmgr.msc&lt;/code&gt; ：本地用户和组管理器，用于管理本地计算机上的用户账户和用户组，可以创建、修改和删除用户账户和组。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;特别注意&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特别注意&#34;&gt;#&lt;/a&gt; 特别注意&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;获取本机用户列表&lt;br&gt;
+ &lt;code&gt;net user&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;管理员&lt;br&gt;
+ &lt;code&gt;net localgroup administrators&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当前会话&lt;br&gt;
+ &lt;code&gt;net session&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当前运行的服务&lt;br&gt;
+ &lt;code&gt;net start&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;远程连接&lt;br&gt;
+ &lt;code&gt;net use&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当前用户共享目录&lt;br&gt;
+ &lt;code&gt;net share&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最近打开文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;%UserProfile%\Recent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;%APPDATA%\Microsoft\Windows\Recent&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;查找文件中的字符串&lt;br&gt;
+ &lt;code&gt;findstr /m /i /s &#34;hello&#34; *.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;常用命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用命令&#34;&gt;#&lt;/a&gt; 常用命令&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这些命令可用于网络连接和进程管理，获取系统信息和补丁，以及计算文件的哈希值。你可以根据需要使用它们来进行系统管理、安全检查和文件验证。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;网络相关命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络相关命令&#34;&gt;#&lt;/a&gt; 网络相关命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;netstat -ano&lt;/code&gt; ：显示网络连接、监听端口和进程的详细信息，包括相关的进程 ID。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;系统信息命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统信息命令&#34;&gt;#&lt;/a&gt; 系统信息命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;systeminfo&lt;/code&gt; ：显示系统的详细信息，包括操作系统版本、补丁信息、硬件配置等。特别关注补丁信息，以确保系统的安全性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;进程管理命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程管理命令&#34;&gt;#&lt;/a&gt; 进程管理命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Wmic process&lt;/code&gt; ：用于查询和管理系统中的进程。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Wmic process where name=&#34;cmd.exe&#34; get processid,executablepath,name&lt;/code&gt; ：查询并显示名称为 &#34;cmd.exe&#34; 的进程的进程 ID、可执行路径和名称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Wmic process where processid=&#34;***&#34; get executablepath,name&lt;/code&gt; ：查询并显示指定进程 ID 的进程的可执行路径和名称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tasklist /m ***.dll&lt;/code&gt; ：显示指定 DLL 文件相关的进程列表。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;文件哈希计算命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件哈希计算命令&#34;&gt;#&lt;/a&gt; 文件哈希计算命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;certutil -hashfile %样本exe% MD5&lt;/code&gt; ：计算指定样本文件（例如样本 exe）的 MD5 哈希值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;敏感目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#敏感目录&#34;&gt;#&lt;/a&gt; 敏感目录&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这些敏感目录通常包含重要的系统文件、用户数据和应用程序配置文件。黑客或恶意软件可能会利用这些目录来隐藏恶意文件、执行攻击或获取敏感信息。因此，在网络安全中，对这些目录进行适当的保护和监控非常重要。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%WINDIR%&lt;/code&gt; ：Windows 系统目录，通常为  &lt;code&gt;C:\Windows&lt;/code&gt; 。该目录包含了操作系统的核心文件和系统配置文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%WINDIR%\system32\&lt;/code&gt; ：Windows 系统目录下的  &lt;code&gt;system32&lt;/code&gt;  子目录，通常为  &lt;code&gt;C:\Windows\system32&lt;/code&gt; 。该目录包含了许多系统和应用程序的关键文件和库文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%TEMP%&lt;/code&gt; ：当前用户的临时文件夹路径。通常为  &lt;code&gt;C:\Users\用户名\AppData\Local\Temp&lt;/code&gt; 。临时文件夹用于存储临时文件和缓存文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%LOCALAPPDATA%&lt;/code&gt; ：当前用户的本地应用数据文件夹路径。通常为  &lt;code&gt;C:\Users\用户名\AppData\Local&lt;/code&gt; 。该目录用于存储与用户相关的应用程序数据，如缓存文件、配置文件等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%APPDATA%&lt;/code&gt; ：当前用户的应用数据文件夹路径。通常为  &lt;code&gt;C:\Users\用户名\AppData\Roaming&lt;/code&gt; 。该目录用于存储应用程序的个人设置、配置文件和其他用户特定的数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h2&gt;
+&lt;h3 id=&#34;事件查看器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件查看器&#34;&gt;#&lt;/a&gt; 事件查看器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;eventvwr&lt;/code&gt; ：事件查看器，用于查看和分析系统和应用程序生成的事件日志。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;事件日志路径&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件日志路径&#34;&gt;#&lt;/a&gt; 事件日志路径&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%SystemRoot%System32WinevtLogsSystem.evtx&lt;/code&gt; ：系统日志文件路径，包含有关系统启动、关闭和其他系统级事件的信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%SystemRoot%System32WinevtLogsSecurity.evtx&lt;/code&gt; ：安全日志文件路径，包含有关安全相关事件的信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;系统启动关闭事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统启动关闭事件&#34;&gt;#&lt;/a&gt; 系统启动 / 关闭事件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;系统启动/关闭 12/13&lt;/code&gt; ：指示系统启动和关闭的事件计数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;事件日志服务启动关闭事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件日志服务启动关闭事件&#34;&gt;#&lt;/a&gt; 事件日志服务启动 / 关闭事件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;事件日志服务启动/关闭 6005/6006&lt;/code&gt; ：指示事件日志服务的启动和关闭事件计数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;常见事件id表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见事件id表&#34;&gt;#&lt;/a&gt; 常见事件 ID 表：&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;事件 ID&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1102&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;清理审计日志&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4624&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;账号成功登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4625&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;账号登录失败&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4768&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Kerberos 身份验证 (TGT 请求)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4769&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Kerberos 服务票证请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4776&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;NTLM 身份验证&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4672&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;授予特殊权限&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4720&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;创建用户&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4726&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;删除用户&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4728&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员添加到启用安全的全局组中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4729&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员从安全的全局组中移除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4732&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员添加到启用安全的本地组中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4733&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员从启用安全的本地组中移除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4756&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员添加到启用安全的通用组中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4757&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员从启用安全的通用组中移除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4719&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;系统审计策略修改&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;常见-logontype-值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见-logontype-值&#34;&gt;#&lt;/a&gt; 常见 LogonType 值&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;LogonType 值&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;交互式登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;网络登录（一般情况下就是永恒之蓝）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;批处理登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;服务登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;解锁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;网络远程登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;缓存的远程登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;远程交互式登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;...&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;...&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;应急工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急工具&#34;&gt;#&lt;/a&gt; 应急工具&lt;/h2&gt;
+&lt;p&gt;下面是一些应急工具的示例和相关信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PChunter&lt;/strong&gt;：Antirootkit 工具，用于检测和清除系统中的 rootkit（恶意软件）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Autoruns&lt;/strong&gt;：启动项管理工具，用于查看和管理系统启动时自动运行的程序、服务和驱动程序。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ProcessExplorer&lt;/strong&gt;：进程查看工具，提供了比任务管理器更详细和全面的进程信息，包括进程的资源使用、文件关联等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ProcessMonitor&lt;/strong&gt;：进程监控工具，用于实时监视和记录系统上的进程活动、文件系统活动和注册表活动。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;TCPView&lt;/strong&gt;：网络连接查看工具，显示当前系统上的网络连接和相关的进程信息，可用于监视和分析网络连接。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Microsoft Network Monitor&lt;/strong&gt;：网络监控工具，可用于捕获和分析网络数据包，提供详细的网络通信信息和相关的进程。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;D 盾&lt;/strong&gt;：Webshell 查杀工具，用于检测和清除 Web 服务器上的恶意 Webshell（恶意脚本）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Everything&lt;/strong&gt;：快速搜索工具，可以快速索引和搜索系统上的文件和文件夹。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BeaconEye&lt;/strong&gt;：针对 Cobalt Strike（一种渗透测试工具）的特征检测工具。可在 GitHub 上找到该工具，地址为: &lt;a href=&#34;https://github.com/CCob/BeaconEye&#34;&gt;CCob/BeaconEye&lt;/a&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;威胁情报样本分析平台&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#威胁情报样本分析平台&#34;&gt;#&lt;/a&gt; 威胁情报 / 样本分析平台：&lt;/h2&gt;
+&lt;p&gt;奇安信威胁情报中心&lt;br&gt;
+微步在线社区&lt;br&gt;
+ Virus total&lt;br&gt;
+IBMXFORCE&lt;/p&gt;
+&lt;h2 id=&#34;sysmonsystem-monitor在事件查看器中查看&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sysmonsystem-monitor在事件查看器中查看&#34;&gt;#&lt;/a&gt; Sysmon（System Monitor）（在事件查看器中查看）&lt;/h2&gt;
+&lt;p&gt;Sysmon 可以监控并记录操作系统内核级别的事件，包括进程创建、文件创建、网络连接、注册表操作、服务启动、驱动加载等等。这些事件的详细信息被记录在 Windows 事件日志中，可以通过事件查看器或其他日志分析工具进行检索和分析。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;事件 ID&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;进程创建&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;网络连接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;文件创建&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;记录 DNS 查询&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;内存取证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内存取证&#34;&gt;#&lt;/a&gt; 内存取证&lt;/h2&gt;
+&lt;p&gt;Dumplt / FTK imager / WinPMem&lt;/p&gt;
+&lt;h3 id=&#34;分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分析&#34;&gt;#&lt;/a&gt; 分析&lt;/h3&gt;
+&lt;p&gt;Volatility (github: volatilityfoundation/volatility)&lt;br&gt;
+ volatility -f [内存文件] --profile=[配置文件] &amp;lt; 插件 &amp;gt; # 不同版本有不同的配置文件&lt;/p&gt;
+&lt;h1 id=&#34;案例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例&#34;&gt;#&lt;/a&gt; 案例&lt;/h1&gt;
+</content>
+        <category term="应急响应" />
+        <category term="hvv" />
+        <category term="tools" />
+        <category term="windows" />
+        <updated>2023-07-02T16:29:45.000Z</updated>
+    </entry>
+</feed>

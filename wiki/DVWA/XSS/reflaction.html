@@ -23,15 +23,15 @@
   <title>DVWA：反射型XSS - MAXshiro</title>
 
   
-    <meta name="description" content="# 什么是命令注入： 命令注入就是在需要输入数据的地方输入了恶意代码，而且系统并没有对其进行过滤或者其他处理导致恶意代码也被执行，最终导致数据泄露或者正常数据被破坏。 常用到的命令：（总结来说就是系统操作命令 DOS 命令都可以在此执行试试） ipconfig，net user（查看系统用户），dir（查看当前目录），find（查找包含指定字符的行），whoami（查看系统当前有效用户名）A&amp;am">
+    <meta name="description" content="Discover and Record the world.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="反射型XSS">
 <meta property="og:url" content="http://maxshiroi.top/wiki/DVWA/XSS/reflaction.html">
 <meta property="og:site_name" content="MAXshiro">
-<meta property="og:description" content="# 什么是命令注入： 命令注入就是在需要输入数据的地方输入了恶意代码，而且系统并没有对其进行过滤或者其他处理导致恶意代码也被执行，最终导致数据泄露或者正常数据被破坏。 常用到的命令：（总结来说就是系统操作命令 DOS 命令都可以在此执行试试） ipconfig，net user（查看系统用户），dir（查看当前目录），find（查找包含指定字符的行），whoami（查看系统当前有效用户名）A&amp;am">
+<meta property="og:description" content="Discover and Record the world.">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-21T11:08:35.805Z">
-<meta property="article:modified_time" content="2023-06-21T11:08:35.805Z">
+<meta property="article:published_time" content="2023-06-27T07:17:20.738Z">
+<meta property="article:modified_time" content="2023-06-27T07:17:20.738Z">
 <meta property="article:author" content="maxshiroi">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@maxshiroer">
@@ -77,14 +77,11 @@
 
 
 
-<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/DVWA/index.html"><div class="main" ff="title">DVWA</div><div class="sub cap">Damn Vulnerable Web Application</div></a></div></widget>
-
-<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name"> </span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/index.html#start"><span class="toc-text">什么是DVWA？</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/how2install.html"><span class="toc-text">安装DVWA</span></a></div></div><div class="widget-header cap dis-select"><span class="name">命令注入（Command injection）</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/CI/index.html"><span class="toc-text">什么是命令注入？</span></a></div></div><div class="widget-header cap dis-select"><span class="name">跨站脚本攻击 XSS（Cross Site Scripting）</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/XSS/index.html"><span class="toc-text">什么是XSS？</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/XSS/store.html"><span class="toc-text">存储型XSS</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/XSS/DOM.html"><span class="toc-text">DOM类型XSS</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/DVWA/XSS/reflaction.html"><span class="toc-text">反射型XSS</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5"><span class="toc-number">1.</span> <span class="toc-text"> 什么是命令注入：</span></a></li></ol></div></div><div class="widget-header cap dis-select"><span class="name">SQL注入 SQLI（SQL Injection）</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/sqli/index.html"><span class="toc-text">什么是SQL注入？</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/sqli/sqli.html"><span class="toc-text">SQL注入</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/DVWA/sqli/sqlib.html"><span class="toc-text">SQL注入（Blind）盲注</span></a></div></div></widget>
-</div>
+<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/DVWA/index.html"><div class="main" ff="title">DVWA</div><div class="sub cap">Damn Vulnerable Web Application</div></a></div></widget></div>
 
 
     </aside>
-    <div class='l_main'>
+    <div class='l_main list'>
       
 
       
@@ -95,11 +92,7 @@
 
   <article class='md-text content wiki'>
   <h1 class="article-title"><span>反射型XSS</span></h1>
-  <h2 id="什么是命令注入"><a class="anchor" href="#什么是命令注入">#</a> 什么是命令注入：</h2>
-<p>命令注入就是在需要输入数据的地方输入了恶意代码，而且系统并没有对其进行过滤或者其他处理导致恶意代码也被执行，最终导致数据泄露或者正常数据被破坏。</p>
-<p>常用到的命令：（总结来说就是系统操作命令 DOS 命令都可以在此执行试试）</p>
-<p>ipconfig，net user（查看系统用户），dir（查看当前目录），find（查找包含指定字符的行），whoami（查看系统当前有效用户名）A&amp;B（简单的拼接，AB 之间无制约关系），A&amp;&amp;B（A 执行成功才会执行 B），A|B（A 的输出作为 B 的输入），A||B（A 执行失败，然后才会执行 B）</p>
-
+  
   
   
 

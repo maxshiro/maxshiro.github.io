@@ -5,8 +5,8 @@
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 12 Jun 2023 20:30:08 +0800</pubDate>
-        <lastBuildDate>Mon, 12 Jun 2023 20:30:08 +0800</lastBuildDate>
+        <pubDate>Mon, 03 Jul 2023 00:29:45 +0800</pubDate>
+        <lastBuildDate>Mon, 03 Jul 2023 00:29:45 +0800</lastBuildDate>
         <category>nextcloud</category>
         <category>聊天室</category>
         <category>python</category>
@@ -22,6 +22,8 @@
         <category>vhd</category>
         <category>vhdx</category>
         <category>diskpart</category>
+        <category>security</category>
+        <category>webshell</category>
         <category>arch</category>
         <category>pacman</category>
         <category>win</category>
@@ -51,6 +53,11 @@
         <category>jellyfin</category>
         <category>视频</category>
         <category>音乐</category>
+        <category>应急响应</category>
+        <category>hvv</category>
+        <category>tools</category>
+        <category>busybox</category>
+        <category>ps</category>
         <category>运维</category>
         <category>smb</category>
         <category>passwd</category>
@@ -83,6 +90,7 @@
         <category>win7</category>
         <category>capacity</category>
         <category>shrink</category>
+        <category>windows</category>
         <category>Android</category>
         <category>Hyper-V</category>
         <category>WSA</category>
@@ -91,6 +99,760 @@
         <category>wsl</category>
         <category>权限不足</category>
         <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/</guid>
+            <title>常用Windows应急响应整理</title>
+            <link>http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/</link>
+            <category>应急响应</category>
+            <category>hvv</category>
+            <category>tools</category>
+            <category>windows</category>
+            <pubDate>Mon, 03 Jul 2023 00:29:45 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;windows相关&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#windows相关&#34;&gt;#&lt;/a&gt; Windows 相关&lt;/h1&gt;
+&lt;h2 id=&#34;常用程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用程序&#34;&gt;#&lt;/a&gt; 常用程序&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小心被病毒整蛊，记住下面命令：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;regedit&lt;/code&gt; ：注册表编辑器，用于管理 Windows 系统的注册表，可以查看、编辑和修改注册表中的配置信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Taskmgr&lt;/code&gt; ：任务管理器，用于查看和管理系统中运行的进程、服务和性能监控等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;msconfig&lt;/code&gt; ：系统配置实用程序，用于管理 Windows 启动时的启动项、服务和引导选项，可以进行系统启动项的配置和管理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;eventvwr.msc&lt;/code&gt; ：事件查看器，用于查看和分析系统和应用程序生成的事件日志，帮助诊断和解决系统问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;compmgmt.msc&lt;/code&gt; ：计算机管理控制台，提供了对计算机硬件、设备管理、本地用户和组管理、磁盘管理等的集中管理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;gpedit.msc&lt;/code&gt; ：组策略编辑器，用于管理 Windows 系统中的组策略，可以配置计算机和用户的策略设置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;taskschd.msc&lt;/code&gt; ：任务计划程序，用于创建和管理定时任务，可以设置计划运行的程序、脚本和操作等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;lusrmgr.msc&lt;/code&gt; ：本地用户和组管理器，用于管理本地计算机上的用户账户和用户组，可以创建、修改和删除用户账户和组。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;特别注意&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特别注意&#34;&gt;#&lt;/a&gt; 特别注意&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;获取本机用户列表&lt;br&gt;
+ &lt;code&gt;net user&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;管理员&lt;br&gt;
+ &lt;code&gt;net localgroup administrators&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当前会话&lt;br&gt;
+ &lt;code&gt;net session&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当前运行的服务&lt;br&gt;
+ &lt;code&gt;net start&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;远程连接&lt;br&gt;
+ &lt;code&gt;net use&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当前用户共享目录&lt;br&gt;
+ &lt;code&gt;net share&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最近打开文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;%UserProfile%\Recent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;%APPDATA%\Microsoft\Windows\Recent&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;查找文件中的字符串&lt;br&gt;
+ &lt;code&gt;findstr /m /i /s &#34;hello&#34; *.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;常用命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用命令&#34;&gt;#&lt;/a&gt; 常用命令&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这些命令可用于网络连接和进程管理，获取系统信息和补丁，以及计算文件的哈希值。你可以根据需要使用它们来进行系统管理、安全检查和文件验证。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;网络相关命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络相关命令&#34;&gt;#&lt;/a&gt; 网络相关命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;netstat -ano&lt;/code&gt; ：显示网络连接、监听端口和进程的详细信息，包括相关的进程 ID。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;系统信息命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统信息命令&#34;&gt;#&lt;/a&gt; 系统信息命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;systeminfo&lt;/code&gt; ：显示系统的详细信息，包括操作系统版本、补丁信息、硬件配置等。特别关注补丁信息，以确保系统的安全性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;进程管理命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程管理命令&#34;&gt;#&lt;/a&gt; 进程管理命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Wmic process&lt;/code&gt; ：用于查询和管理系统中的进程。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Wmic process where name=&#34;cmd.exe&#34; get processid,executablepath,name&lt;/code&gt; ：查询并显示名称为 &#34;cmd.exe&#34; 的进程的进程 ID、可执行路径和名称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Wmic process where processid=&#34;***&#34; get executablepath,name&lt;/code&gt; ：查询并显示指定进程 ID 的进程的可执行路径和名称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tasklist /m ***.dll&lt;/code&gt; ：显示指定 DLL 文件相关的进程列表。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;文件哈希计算命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件哈希计算命令&#34;&gt;#&lt;/a&gt; 文件哈希计算命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;certutil -hashfile %样本exe% MD5&lt;/code&gt; ：计算指定样本文件（例如样本 exe）的 MD5 哈希值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;敏感目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#敏感目录&#34;&gt;#&lt;/a&gt; 敏感目录&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这些敏感目录通常包含重要的系统文件、用户数据和应用程序配置文件。黑客或恶意软件可能会利用这些目录来隐藏恶意文件、执行攻击或获取敏感信息。因此，在网络安全中，对这些目录进行适当的保护和监控非常重要。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%WINDIR%&lt;/code&gt; ：Windows 系统目录，通常为  &lt;code&gt;C:\Windows&lt;/code&gt; 。该目录包含了操作系统的核心文件和系统配置文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%WINDIR%\system32\&lt;/code&gt; ：Windows 系统目录下的  &lt;code&gt;system32&lt;/code&gt;  子目录，通常为  &lt;code&gt;C:\Windows\system32&lt;/code&gt; 。该目录包含了许多系统和应用程序的关键文件和库文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%TEMP%&lt;/code&gt; ：当前用户的临时文件夹路径。通常为  &lt;code&gt;C:\Users\用户名\AppData\Local\Temp&lt;/code&gt; 。临时文件夹用于存储临时文件和缓存文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%LOCALAPPDATA%&lt;/code&gt; ：当前用户的本地应用数据文件夹路径。通常为  &lt;code&gt;C:\Users\用户名\AppData\Local&lt;/code&gt; 。该目录用于存储与用户相关的应用程序数据，如缓存文件、配置文件等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%APPDATA%&lt;/code&gt; ：当前用户的应用数据文件夹路径。通常为  &lt;code&gt;C:\Users\用户名\AppData\Roaming&lt;/code&gt; 。该目录用于存储应用程序的个人设置、配置文件和其他用户特定的数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h2&gt;
+&lt;h3 id=&#34;事件查看器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件查看器&#34;&gt;#&lt;/a&gt; 事件查看器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;eventvwr&lt;/code&gt; ：事件查看器，用于查看和分析系统和应用程序生成的事件日志。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;事件日志路径&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件日志路径&#34;&gt;#&lt;/a&gt; 事件日志路径&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%SystemRoot%System32WinevtLogsSystem.evtx&lt;/code&gt; ：系统日志文件路径，包含有关系统启动、关闭和其他系统级事件的信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%SystemRoot%System32WinevtLogsSecurity.evtx&lt;/code&gt; ：安全日志文件路径，包含有关安全相关事件的信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;系统启动关闭事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统启动关闭事件&#34;&gt;#&lt;/a&gt; 系统启动 / 关闭事件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;系统启动/关闭 12/13&lt;/code&gt; ：指示系统启动和关闭的事件计数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;事件日志服务启动关闭事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件日志服务启动关闭事件&#34;&gt;#&lt;/a&gt; 事件日志服务启动 / 关闭事件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;事件日志服务启动/关闭 6005/6006&lt;/code&gt; ：指示事件日志服务的启动和关闭事件计数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;常见事件id表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见事件id表&#34;&gt;#&lt;/a&gt; 常见事件 ID 表：&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;事件 ID&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1102&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;清理审计日志&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4624&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;账号成功登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4625&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;账号登录失败&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4768&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Kerberos 身份验证 (TGT 请求)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4769&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Kerberos 服务票证请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4776&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;NTLM 身份验证&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4672&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;授予特殊权限&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4720&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;创建用户&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4726&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;删除用户&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4728&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员添加到启用安全的全局组中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4729&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员从安全的全局组中移除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4732&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员添加到启用安全的本地组中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4733&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员从启用安全的本地组中移除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4756&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员添加到启用安全的通用组中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4757&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将成员从启用安全的通用组中移除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4719&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;系统审计策略修改&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;常见-logontype-值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见-logontype-值&#34;&gt;#&lt;/a&gt; 常见 LogonType 值&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;LogonType 值&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;交互式登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;网络登录（一般情况下就是永恒之蓝）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;批处理登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;服务登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;解锁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;网络远程登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;缓存的远程登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;远程交互式登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;...&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;...&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;应急工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急工具&#34;&gt;#&lt;/a&gt; 应急工具&lt;/h2&gt;
+&lt;p&gt;下面是一些应急工具的示例和相关信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PChunter&lt;/strong&gt;：Antirootkit 工具，用于检测和清除系统中的 rootkit（恶意软件）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Autoruns&lt;/strong&gt;：启动项管理工具，用于查看和管理系统启动时自动运行的程序、服务和驱动程序。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ProcessExplorer&lt;/strong&gt;：进程查看工具，提供了比任务管理器更详细和全面的进程信息，包括进程的资源使用、文件关联等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ProcessMonitor&lt;/strong&gt;：进程监控工具，用于实时监视和记录系统上的进程活动、文件系统活动和注册表活动。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;TCPView&lt;/strong&gt;：网络连接查看工具，显示当前系统上的网络连接和相关的进程信息，可用于监视和分析网络连接。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Microsoft Network Monitor&lt;/strong&gt;：网络监控工具，可用于捕获和分析网络数据包，提供详细的网络通信信息和相关的进程。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;D 盾&lt;/strong&gt;：Webshell 查杀工具，用于检测和清除 Web 服务器上的恶意 Webshell（恶意脚本）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Everything&lt;/strong&gt;：快速搜索工具，可以快速索引和搜索系统上的文件和文件夹。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BeaconEye&lt;/strong&gt;：针对 Cobalt Strike（一种渗透测试工具）的特征检测工具。可在 GitHub 上找到该工具，地址为: &lt;a href=&#34;https://github.com/CCob/BeaconEye&#34;&gt;CCob/BeaconEye&lt;/a&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;威胁情报样本分析平台&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#威胁情报样本分析平台&#34;&gt;#&lt;/a&gt; 威胁情报 / 样本分析平台：&lt;/h2&gt;
+&lt;p&gt;奇安信威胁情报中心&lt;br&gt;
+微步在线社区&lt;br&gt;
+ Virus total&lt;br&gt;
+IBMXFORCE&lt;/p&gt;
+&lt;h2 id=&#34;sysmonsystem-monitor在事件查看器中查看&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sysmonsystem-monitor在事件查看器中查看&#34;&gt;#&lt;/a&gt; Sysmon（System Monitor）（在事件查看器中查看）&lt;/h2&gt;
+&lt;p&gt;Sysmon 可以监控并记录操作系统内核级别的事件，包括进程创建、文件创建、网络连接、注册表操作、服务启动、驱动加载等等。这些事件的详细信息被记录在 Windows 事件日志中，可以通过事件查看器或其他日志分析工具进行检索和分析。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;事件 ID&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;进程创建&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;网络连接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;文件创建&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;记录 DNS 查询&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;内存取证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内存取证&#34;&gt;#&lt;/a&gt; 内存取证&lt;/h2&gt;
+&lt;p&gt;Dumplt / FTK imager / WinPMem&lt;/p&gt;
+&lt;h3 id=&#34;分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分析&#34;&gt;#&lt;/a&gt; 分析&lt;/h3&gt;
+&lt;p&gt;Volatility (github: volatilityfoundation/volatility)&lt;br&gt;
+ volatility -f [内存文件] --profile=[配置文件] &amp;lt; 插件 &amp;gt; # 不同版本有不同的配置文件&lt;/p&gt;
+&lt;h1 id=&#34;案例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例&#34;&gt;#&lt;/a&gt; 案例&lt;/h1&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/231746/</guid>
+            <title>应急响应以及常用Windows命令工具分享</title>
+            <link>http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/231746/</link>
+            <category>应急响应</category>
+            <category>hvv</category>
+            <pubDate>Sun, 02 Jul 2023 23:17:46 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;应急响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急响应&#34;&gt;#&lt;/a&gt; 应急响应&lt;/h1&gt;
+&lt;h2 id=&#34;应急响应目的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急响应目的&#34;&gt;#&lt;/a&gt; 应急响应目的&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;哈哈，先拔网线，别关机，会损害现场。。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;判断这次应急是否是被成功入侵的安全事件&lt;/li&gt;
+&lt;li&gt;阻断黑客攻击&lt;/li&gt;
+&lt;li&gt;找出攻击者的第一入口点，提取恶意样本&lt;/li&gt;
+&lt;li&gt;帮助客户梳理攻击者的攻击路线，提供漏洞修复方案&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;应急响应流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急响应流程&#34;&gt;#&lt;/a&gt; 应急响应流程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;事件判断:&lt;/strong&gt; 判断是否是安全事件，何种安全事件，勒索、挖矿、断网、DDoS 等等.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;临时处置:&lt;/strong&gt; 给出客户临时处置建议，断网隔离，保护现场环境。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;信息收集分析:&lt;/strong&gt; 收集客户信息和中毒主机信息，包括样本，日志分析、进程分析、启动项分析、样本分析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;清理处置:&lt;/strong&gt; 直接杀掉进程，删除文件，打补丁，抑或是修复文件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;产出报告:&lt;/strong&gt; 整理并输出完整的安全事件报告。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;应急前沟通&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急前沟通&#34;&gt;#&lt;/a&gt; 应急前沟通&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;现场现象是什么？如何发现的？&lt;/li&gt;
+&lt;li&gt;依据是什么？&lt;/li&gt;
+&lt;li&gt;什么时候发现的？&lt;/li&gt;
+&lt;li&gt;目前是否有做物理隔离 (断网)?&lt;/li&gt;
+&lt;li&gt;受害机器是哪个？&lt;/li&gt;
+&lt;li&gt;受害服务有几台？(1 台 / N 台)&lt;/li&gt;
+&lt;li&gt;最先发现是哪台？&lt;/li&gt;
+&lt;li&gt;这台服务器对外有哪些服务？&lt;/li&gt;
+&lt;li&gt;这台服务器与其他机器是否处于同一个内网？&lt;/li&gt;
+&lt;li&gt;操作系统类型？是否有公网映射业务？远程管理方式？&lt;/li&gt;
+&lt;li&gt;网络边界有没有流量监控设备？&lt;/li&gt;
+&lt;li&gt;主机侧是否有 EDR 等安全设备？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;应急响应杂谈&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急响应杂谈&#34;&gt;#&lt;/a&gt; 应急响应杂谈&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;要点一：&lt;strong&gt;了解常见端口的攻击手法&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;要点二：&lt;strong&gt;不要相信客户说的话&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;攻击者常利用的web漏洞&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击者常利用的web漏洞&#34;&gt;#&lt;/a&gt; 攻击者常利用的 web 漏洞&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;攻击平台&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;编号&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Weblogic&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CVE-2017-3248, CVE-2017-10271, CVE-2018-2628, CVE-2018-2894&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Drupal&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CVE-2018-7600, CVE-2018-7602&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Struts2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CVE-2017-5638, CVE-2017-9805, CVE-2018-11776&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ThinkPHP&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ThinkPHPv5 GetShell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Windows Server&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;弱口令爆破，CVE-2017-0143&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;PHPStudy&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;弱口令爆破&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;PHPMyAdmin&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;弱口令爆破&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MySQL&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;弱口令爆破&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Spring Data Commons&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CVE-2018-1273&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Tomcat&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;弱口令爆破，CVE-2017-12615&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MsSQL&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;弱口令爆破&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Jekins&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CVE-2019-1003000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;JBoss&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CVE-2010-0738, CVE-2017-12149&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;攻击者常利用的组件漏洞&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击者常利用的组件漏洞&#34;&gt;#&lt;/a&gt; 攻击者常利用的组件漏洞&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;应用&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;漏洞名&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Docker&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Docker 未授权漏洞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Nexus Repository&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Nexus Repository Manager 3 远程代码执行漏洞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ElasticSearch&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ElasticSearch 未授权漏洞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Hadoop Yarn&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Hadoop Yarn RESTAPI 未授权漏洞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Kubernetes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Kubernetes Api Server 未授权漏洞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Jenkins&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Jenkins RCE (CVE-2019-1003000)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Spark&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Spark RESTAPI 未授权漏洞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;应急响应处置思路&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急响应处置思路&#34;&gt;#&lt;/a&gt; 应急响应处置思路&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;应急响应反着来&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;据实分析&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;合理猜测&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;积极沟通&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;1-外网扫描梳理整个攻击过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-外网扫描梳理整个攻击过程&#34;&gt;#&lt;/a&gt; 1. 外网扫描（梳理整个攻击过程）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;利用漏洞扫描器进行&lt;/li&gt;
+&lt;li&gt;web 扫描&lt;/li&gt;
+&lt;li&gt;Xray&lt;/li&gt;
+&lt;li&gt;AWVS&lt;/li&gt;
+&lt;li&gt;SQLMAP&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-漏洞利用回溯攻击者操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-漏洞利用回溯攻击者操作&#34;&gt;#&lt;/a&gt; 2. 漏洞利用（回溯攻击者操作）&lt;/h3&gt;
+&lt;p&gt;通过一些高位的漏洞&lt;br&gt;
+ Shiro/struts2 等反序列命令执行..&lt;/p&gt;
+&lt;h3 id=&#34;3-主机控制确定攻击者ip&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-主机控制确定攻击者ip&#34;&gt;#&lt;/a&gt; 3. 主机控制（确定攻击者 IP）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;上传 webshell，反弹 shell，利用远程控制程序进行控制&lt;/li&gt;
+&lt;li&gt;CS（CobaltStrike）&lt;/li&gt;
+&lt;li&gt;Metasploit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-横向渗透找到webshell&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-横向渗透找到webshell&#34;&gt;#&lt;/a&gt; 4. 横向渗透（找到 webshell）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;上传内网渗透工具，扫描内网，跳板攻击&lt;/li&gt;
+&lt;li&gt;CS（CobaltStrike）&lt;/li&gt;
+&lt;li&gt;Metasploit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实战攻击场景下应急响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实战攻击场景下应急响应&#34;&gt;#&lt;/a&gt; 实战攻击场景下应急响应&lt;/h2&gt;
+&lt;h3 id=&#34;web攻击事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web攻击事件&#34;&gt;#&lt;/a&gt; web 攻击事件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;相关表现:&lt;/strong&gt; 页面被篡改、恶意推广、黑词黑页、webshell&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;相关危害:&lt;/strong&gt; 导致搜索引擎告警、微信等 app 分享告警、首页敏感内容、拖库、内网沦陷等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;排查要点:&lt;/strong&gt; 能否多个环境下复现异常现象，确定相关资产是否存在，恶意文件是否确实存在于服务器上&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作要点:&lt;/strong&gt; 备份文件，webshell 后门查杀；web 日志分析；web 中间件缓存处理；web 中间件配置检查；重启 web 中间件；服务器后门检查；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;防护措施:&lt;/strong&gt; 加固相关 web 应用，修改相关系统的所有用户密码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;链路劫持&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#链路劫持&#34;&gt;#&lt;/a&gt; 链路劫持&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;相关表现:&lt;/strong&gt; 区域性服务不可用或返回异常内容&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;相关危害:&lt;/strong&gt; 导致搜索引擎告警、微信等 app 分享告警、首页敏感内容等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;排查要点:&lt;/strong&gt; 能否多个环境下复现异常现象，确定相关资产是否存在，恶意文件是否确实存在于服务器上&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作要点:&lt;/strong&gt; 跨地区、运营商进行测试，确定受影响范围，在能复现的环境中判断是 DNS 劫持还是 HTTP 劫持 S&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;防护措施:&lt;/strong&gt; 重要业务部署 https&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;替换命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#替换命令&#34;&gt;#&lt;/a&gt; 替换命令&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;替换 ssh 或 rpm 包&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;相关表现:&lt;/strong&gt; 无明显表现&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;相关危害:&lt;/strong&gt; 将后门、木马持久化在系统中；窃取账号、密码等重要凭证&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;排查要点:&lt;/strong&gt; 使用包管理自带的包校验功能验证文件完整性，分析恶意文件行为，确定影响面&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作要点:&lt;/strong&gt; 使用静态链接的 busybox; 重新安装被替换的包&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;验证命令:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rpm 一Va&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dpkg --verify&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;劫持动态链接库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#劫持动态链接库&#34;&gt;#&lt;/a&gt; 劫持动态链接库&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ld,so,preload&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;相关表现:&lt;/strong&gt; 无明显表现&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;相关危害:&lt;/strong&gt; 将后门、木马持久化在系统中；窃取账号、密码等重要凭证&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;排查要点:&lt;/strong&gt; 检查 &lt;code&gt;/etc/ld.so.preload&lt;/code&gt; ， &lt;code&gt;ld.so&lt;/code&gt;  (如 &lt;code&gt;/lib/x86_64-linux-gnu/ld-2.27.so&lt;/code&gt; )&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作要点:&lt;/strong&gt; 使用静态链接的 busybox; 重启被注入恶意模块的进程，必要时直接重启系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rootkit&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rootkit&#34;&gt;#&lt;/a&gt; rootkit&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;相关表现:&lt;/strong&gt; 无明显表现&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;相关危害:&lt;/strong&gt; 将后门、木马持久化在系统中；隐藏文件、进程等信息&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;排查要点:&lt;/strong&gt; 确定是否存在无法使用常规命令查看的文件、进程；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作要点:&lt;/strong&gt; 使用 tyton 内核态 rootkit 检测工具检测；检查 &lt;code&gt;/etc/modules&lt;/code&gt;  是否有未知的内核模块&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;计划任务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计划任务&#34;&gt;#&lt;/a&gt; 计划任务&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;相关表现:&lt;/strong&gt; 特定时间间隔触发木马、后门、网络链接、DNS 请求、篡改页面等行为&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;相关危害:&lt;/strong&gt; 将后门、木马持久化在系统中，周期性篡改页面、拉取数据等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作要点:&lt;/strong&gt; 停止计划任务服务后再操作，注意辨别利用 \r 回车符的障眼法小技巧&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;排查要点:&lt;/strong&gt; 判断是否存在周期性出现的异常现象，检查 &lt;code&gt;/var/spool/cron/crontabs/&lt;/code&gt; ， &lt;code&gt;/etc/cron.*&lt;/code&gt;  等常用计划任务配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;远控木马&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#远控木马&#34;&gt;#&lt;/a&gt; 远控木马&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;相关表现:&lt;/strong&gt; 有持续或间断性的对外网络链接或 DNS 请求等通信行为&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;相关危害:&lt;/strong&gt; 窃取系统资料、作为跳板进一步攻击内网其他机器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;排查要点:&lt;/strong&gt; 关注 tcp、udp、icmp 等一切网络行为，检查注册表、服务、开机目录、计划任务等一系列常见的持久化点&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作要点:&lt;/strong&gt; 检查网络连接，以及 IDS 设备上的异常远控告警&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/215254/</guid>
+            <title>常用linux应急响应命令整理</title>
+            <link>http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/215254/</link>
+            <category>linux</category>
+            <category>security</category>
+            <category>应急响应</category>
+            <category>hvv</category>
+            <category>tools</category>
+            <category>busybox</category>
+            <category>ps</category>
+            <pubDate>Sun, 02 Jul 2023 21:52:54 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;常用命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用命令&#34;&gt;#&lt;/a&gt; 常用命令&lt;/h2&gt;
+&lt;h3 id=&#34;ps-auxf&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ps-auxf&#34;&gt;#&lt;/a&gt; ps -auxf&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ps -auxf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于显示系统中当前运行的进程。 &lt;code&gt;-a&lt;/code&gt;  选项显示所有用户的进程， &lt;code&gt;-u&lt;/code&gt;  选项显示进程的详细信息， &lt;code&gt;-x&lt;/code&gt;  选项显示没有控制终端的进程， &lt;code&gt;-f&lt;/code&gt;  选项以全格式显示进程信息。&lt;/p&gt;
+&lt;h3 id=&#34;netstat-antlp-more&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#netstat-antlp-more&#34;&gt;#&lt;/a&gt; netstat -antlp | more&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;netstat -antlp | more&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于查看系统中的网络连接和监听端口。 &lt;code&gt;-a&lt;/code&gt;  选项显示所有连接和监听端口， &lt;code&gt;-n&lt;/code&gt;  选项以数字形式显示地址和端口， &lt;code&gt;-t&lt;/code&gt;  选项只显示 TCP 连接， &lt;code&gt;-l&lt;/code&gt;  选项只显示监听端口， &lt;code&gt;-p&lt;/code&gt;  选项显示与进程关联的端口， &lt;code&gt;| more&lt;/code&gt;  用于分页显示输出结果。&lt;/p&gt;
+&lt;h3 id=&#34;ls-alt-procpid号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ls-alt-procpid号&#34;&gt;#&lt;/a&gt; ls -alt /proc/pid 号&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ls -alt /proc/pid号&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于查看指定进程的详细信息。 &lt;code&gt;ls&lt;/code&gt;  命令用于列出文件和目录， &lt;code&gt;-a&lt;/code&gt;  选项显示所有文件和目录（包括隐藏文件）， &lt;code&gt;-l&lt;/code&gt;  选项以长格式显示详细信息， &lt;code&gt;-t&lt;/code&gt;  选项按修改时间排序， &lt;code&gt;/proc&lt;/code&gt;  是一个特殊目录，包含系统中运行的进程的信息， &lt;code&gt;pid号&lt;/code&gt; 是要查看的进程的进程 ID。&lt;/p&gt;
+&lt;h3 id=&#34;ls-alh-procpid&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ls-alh-procpid&#34;&gt;#&lt;/a&gt; ls -alh /proc/pid&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ls -alh /proc/pid&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于查看指定进程的详细信息。 &lt;code&gt;-a&lt;/code&gt;  选项显示所有文件和目录（包括隐藏文件）， &lt;code&gt;-l&lt;/code&gt;  选项以长格式显示详细信息， &lt;code&gt;-h&lt;/code&gt;  选项以人类可读的方式显示文件大小， &lt;code&gt;/proc&lt;/code&gt;  是一个特殊目录，包含系统中运行的进程的信息， &lt;code&gt;pid&lt;/code&gt;  是要查看的进程的进程 ID。&lt;/p&gt;
+&lt;h3 id=&#34;lsof-i端口号-p-u&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lsof-i端口号-p-u&#34;&gt;#&lt;/a&gt; lsof -i: 端口号 /-p/-u&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;lsof -i:端口号 /-p /-u&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于查看指定端口的相关进程或指定用户打开的文件。 &lt;code&gt;lsof&lt;/code&gt;  命令用于列出打开的文件， &lt;code&gt;-i:端口号&lt;/code&gt; 选项显示指定端口相关的进程， &lt;code&gt;/-p&lt;/code&gt;  选项显示指定进程打开的文件， &lt;code&gt;/-u&lt;/code&gt;  选项显示指定用户打开的文件。&lt;/p&gt;
+&lt;h3 id=&#34;挖矿病毒常利用手段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#挖矿病毒常利用手段&#34;&gt;#&lt;/a&gt; 挖矿病毒常利用手段&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chattr +i&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;lsattr&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;chattr +i&lt;/code&gt; ：此命令用于改变文件的属性。 &lt;code&gt;chattr&lt;/code&gt;  命令用于改变文件的扩展属性， &lt;code&gt;+i&lt;/code&gt;  选项设置文件为不可修改属性，防止文件被删除、重命名或修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;lsattr&lt;/code&gt; ：此命令用于显示文件的扩展属性。 &lt;code&gt;lsattr&lt;/code&gt;  命令用于&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;列出文件的扩展属性，包括文件的可修改性、不可修改性、是否加密等。&lt;/p&gt;
+&lt;h3 id=&#34;需要注意的几个目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#需要注意的几个目录&#34;&gt;#&lt;/a&gt; 需要注意的几个目录&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/etc/passwd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/etc/rc.local&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/root/.ssh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/tmp&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/etc/init.d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/etc/hosts&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此路径对应着系统启动时执行的脚本文件。 &lt;code&gt;/etc/rc.local&lt;/code&gt;  文件包含在系统启动过程中自动执行的命令，可以用于配置系统启动时需要运行的自定义脚本。&lt;/p&gt;
+&lt;h3 id=&#34;ls-alt-etcprofiledsh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ls-alt-etcprofiledsh&#34;&gt;#&lt;/a&gt; ls -alt /etc/profile.d/*.sh&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ls -alt /etc/profile.d/*.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于列出 &lt;code&gt;/etc/profile.d/&lt;/code&gt;  目录下以 &lt;code&gt;.sh&lt;/code&gt;  为后缀的脚本文件，并按照修改时间排序显示详细信息。 &lt;code&gt;ls&lt;/code&gt;  命令用于列出文件和目录， &lt;code&gt;-a&lt;/code&gt;  选项显示所有文件和目录（包括隐藏文件）， &lt;code&gt;-l&lt;/code&gt;  选项以长格式显示详细信息， &lt;code&gt;-t&lt;/code&gt;  选项按修改时间排序， &lt;code&gt;/etc/profile.d/*.sh&lt;/code&gt;  表示匹配 &lt;code&gt;/etc/profile.d/&lt;/code&gt;  目录下以 &lt;code&gt;.sh&lt;/code&gt;  为后缀的所有文件。&lt;/p&gt;
+&lt;h3 id=&#34;cat-etcpasswd-cut-f-1-d-xargs-l-crontab-l-u&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cat-etcpasswd-cut-f-1-d-xargs-l-crontab-l-u&#34;&gt;#&lt;/a&gt; cat /etc/passwd | cut -f 1 -d : | xargs -l {} crontab -l -u {}&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cat /etc/passwd | cut -f 1 -d : | xargs -l {} crontab -l -u {}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于查看系统中所有用户的定时任务。 &lt;code&gt;cat&lt;/code&gt;  命令用于显示文件内容， &lt;code&gt;/etc/passwd&lt;/code&gt;  是一个包含系统用户信息的文件， &lt;code&gt;cut&lt;/code&gt;  命令用于提取指定字段， &lt;code&gt;-f 1&lt;/code&gt;  选项指定提取第一个字段（用户名）， &lt;code&gt;-d :&lt;/code&gt;  选项指定字段的分隔符为冒号， &lt;code&gt;xargs&lt;/code&gt;  命令用于将前面的输出作为参数传递给后面的命令， &lt;code&gt;-l&lt;/code&gt;  选项表示逐行处理， &lt;code&gt;{}&lt;/code&gt;  表示参数的占位符， &lt;code&gt;crontab -l -u {}&lt;/code&gt;  用于查看指定用户的定时任务列表。&lt;/p&gt;
+&lt;h2 id=&#34;软件包校验&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件包校验&#34;&gt;#&lt;/a&gt; 软件包校验&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rpm -Va&lt;/code&gt; ：校验 RPM 软件包的完整性和一致性。如果输出中出现以下标记，表示不一致：s (size)、m (modify)、5 (MD5)、d (device)、l (link)、u (user)、g (group)、t (time)。特别需要注意的是 SM5 标记。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;dpkg -verify&lt;/code&gt; ：校验 Debian 软件包的完整性和一致性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件操作&#34;&gt;#&lt;/a&gt; 文件操作&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;stat&lt;/code&gt; ：显示文件或文件系统的详细信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;find / -mtime 0 -name *.*&lt;/code&gt; ：查找指定天数内更改过的文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;find / -ctime 0 -name *.*&lt;/code&gt; ：查找新增的文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;diff -c&lt;/code&gt; ：比较文件的差异并生成上下文格式的差异。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;查找隐藏进程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查找隐藏进程&#34;&gt;#&lt;/a&gt; 查找隐藏进程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;ps -ef | awk &#39;{print $2}&#39; | sort -n | uniq &amp;gt; ps.p
+ls /proc | sort -n | uniq &amp;gt; proc.p
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查找隐藏进程的命令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ssh-爆破&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ssh-爆破&#34;&gt;#&lt;/a&gt; SSH 爆破&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;last/lastb/lastlog&lt;/code&gt; ：查看登录记录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/var/log/secure&lt;/code&gt; ：安全日志文件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;awk &#39;/sshd.*Failed/{print $(NF -3)}&#39; /var/log/secure | sort | uniq -c | sort -nr&lt;/code&gt; ：查找每个 IP 登录失败的次数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每条记录的格式：时间 - 主机名 - 服务名称 - 是否成功 - 用户 - 地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo grep &#39;sshd.*Failed.*from &amp;lt;IP_ADDRESS&amp;gt;&#39; /var/log/secure | awk &#39;{print $1,$2,$3,$9,$11}&#39;&lt;/code&gt; ：查找特定 IP 失败的次数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo grep &#39;sshd.*Accepted.*from &amp;lt;IP_ADDRESS&amp;gt;&#39; /var/log/secure | awk &#39;{print $1,$2,$3,$9,$11}&#39;&lt;/code&gt; ：查找特定 IP 成功的次数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/var/log/cron&lt;/code&gt; ：定时任务日志文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/var/log/btmp&lt;/code&gt; ：登录失败日志文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/var/log/wtmp&lt;/code&gt; ：登录记录日志文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工具集&#34;&gt;#&lt;/a&gt; 工具集&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;busybox&lt;/code&gt; ：busybox 是一个包含多个常用 Linux 命令精简版本的工具集。它可以在嵌入式系统或资源受限的环境中使用，将多个命令集成到一个可执行文件中，以节省空间并提高效率。它可以作为替代系统中关键命令的解决方案，因为它是一个独立的可执行文件，不依赖于系统中的命令。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;./busybox netstat -antpl&lt;/code&gt; ：使用 busybox 的 netstat 命令显示网络连接和监听端口的信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;隐藏进程检测工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隐藏进程检测工具&#34;&gt;#&lt;/a&gt; 隐藏进程检测工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;unhide&lt;/code&gt; ：用于探测隐藏进程的工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rootkit-检测工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rootkit-检测工具&#34;&gt;#&lt;/a&gt; Rootkit 检测工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;chkrootkit -n&lt;/code&gt; ：用于探测 rootkit 的工具。 &lt;code&gt;-n&lt;/code&gt;  选项表示以非交互模式运行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rkhunter&lt;/code&gt; ：另一个用于探测 rootkit 的工具。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;恶意软件扫描工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#恶意软件扫描工具&#34;&gt;#&lt;/a&gt; 恶意软件扫描工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;clamav&lt;/code&gt; ：用于扫描和检测恶意软件的工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;webshell-查杀工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#webshell-查杀工具&#34;&gt;#&lt;/a&gt; Webshell 查杀工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;www.shellpub.com&lt;/code&gt; ：河马 webshell 查杀工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;内存马查杀工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内存马查杀工具&#34;&gt;#&lt;/a&gt; 内存马查杀工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;java-memshell-scanner&lt;/code&gt; ：用于查杀内存马（内存中的恶意代码）的工具。&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/linux/webshell/225933/</guid>
+            <title>在linux中安装Antsword</title>
+            <link>http://maxshiroi.top/linux/webshell/225933/</link>
+            <category>linux</category>
+            <category>web</category>
+            <category>security</category>
+            <category>webshell</category>
+            <pubDate>Sat, 01 Jul 2023 22:59:33 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/antoor/antSword.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; u+x ./antSword&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ./antSword&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wget https://ghproxy.com/https://github.com/AntSwordProject/AntSword-Loader/releases/download/4.0.3/AntSword-Loader-v4.0.3-linux-x64.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 这个wget推荐自己到下面的链接里找自己合适的loader。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;unzip AntSword-Loader-v4.0.3-linux-x64.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;./AntSword&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://maxshiroi.top/linux/docker/203008/</guid>
             <title>在docker中设置并安装AWVS和Nessus漏扫程序</title>

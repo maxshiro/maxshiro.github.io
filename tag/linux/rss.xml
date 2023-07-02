@@ -5,8 +5,8 @@
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 12 Jun 2023 20:30:08 +0800</pubDate>
-        <lastBuildDate>Mon, 12 Jun 2023 20:30:08 +0800</lastBuildDate>
+        <pubDate>Sun, 02 Jul 2023 21:52:54 +0800</pubDate>
+        <lastBuildDate>Sun, 02 Jul 2023 21:52:54 +0800</lastBuildDate>
         <category>nextcloud</category>
         <category>聊天室</category>
         <category>python</category>
@@ -22,6 +22,8 @@
         <category>vhd</category>
         <category>vhdx</category>
         <category>diskpart</category>
+        <category>security</category>
+        <category>webshell</category>
         <category>arch</category>
         <category>pacman</category>
         <category>win</category>
@@ -51,6 +53,11 @@
         <category>jellyfin</category>
         <category>视频</category>
         <category>音乐</category>
+        <category>应急响应</category>
+        <category>hvv</category>
+        <category>tools</category>
+        <category>busybox</category>
+        <category>ps</category>
         <category>运维</category>
         <category>smb</category>
         <category>passwd</category>
@@ -83,6 +90,7 @@
         <category>win7</category>
         <category>capacity</category>
         <category>shrink</category>
+        <category>windows</category>
         <category>Android</category>
         <category>Hyper-V</category>
         <category>WSA</category>
@@ -91,6 +99,168 @@
         <category>wsl</category>
         <category>权限不足</category>
         <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/215254/</guid>
+            <title>常用linux应急响应命令整理</title>
+            <link>http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/215254/</link>
+            <category>linux</category>
+            <category>security</category>
+            <category>应急响应</category>
+            <category>hvv</category>
+            <category>tools</category>
+            <category>busybox</category>
+            <category>ps</category>
+            <pubDate>Sun, 02 Jul 2023 21:52:54 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;常用命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用命令&#34;&gt;#&lt;/a&gt; 常用命令&lt;/h2&gt;
+&lt;h3 id=&#34;ps-auxf&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ps-auxf&#34;&gt;#&lt;/a&gt; ps -auxf&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ps -auxf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于显示系统中当前运行的进程。 &lt;code&gt;-a&lt;/code&gt;  选项显示所有用户的进程， &lt;code&gt;-u&lt;/code&gt;  选项显示进程的详细信息， &lt;code&gt;-x&lt;/code&gt;  选项显示没有控制终端的进程， &lt;code&gt;-f&lt;/code&gt;  选项以全格式显示进程信息。&lt;/p&gt;
+&lt;h3 id=&#34;netstat-antlp-more&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#netstat-antlp-more&#34;&gt;#&lt;/a&gt; netstat -antlp | more&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;netstat -antlp | more&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于查看系统中的网络连接和监听端口。 &lt;code&gt;-a&lt;/code&gt;  选项显示所有连接和监听端口， &lt;code&gt;-n&lt;/code&gt;  选项以数字形式显示地址和端口， &lt;code&gt;-t&lt;/code&gt;  选项只显示 TCP 连接， &lt;code&gt;-l&lt;/code&gt;  选项只显示监听端口， &lt;code&gt;-p&lt;/code&gt;  选项显示与进程关联的端口， &lt;code&gt;| more&lt;/code&gt;  用于分页显示输出结果。&lt;/p&gt;
+&lt;h3 id=&#34;ls-alt-procpid号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ls-alt-procpid号&#34;&gt;#&lt;/a&gt; ls -alt /proc/pid 号&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ls -alt /proc/pid号&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于查看指定进程的详细信息。 &lt;code&gt;ls&lt;/code&gt;  命令用于列出文件和目录， &lt;code&gt;-a&lt;/code&gt;  选项显示所有文件和目录（包括隐藏文件）， &lt;code&gt;-l&lt;/code&gt;  选项以长格式显示详细信息， &lt;code&gt;-t&lt;/code&gt;  选项按修改时间排序， &lt;code&gt;/proc&lt;/code&gt;  是一个特殊目录，包含系统中运行的进程的信息， &lt;code&gt;pid号&lt;/code&gt; 是要查看的进程的进程 ID。&lt;/p&gt;
+&lt;h3 id=&#34;ls-alh-procpid&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ls-alh-procpid&#34;&gt;#&lt;/a&gt; ls -alh /proc/pid&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ls -alh /proc/pid&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于查看指定进程的详细信息。 &lt;code&gt;-a&lt;/code&gt;  选项显示所有文件和目录（包括隐藏文件）， &lt;code&gt;-l&lt;/code&gt;  选项以长格式显示详细信息， &lt;code&gt;-h&lt;/code&gt;  选项以人类可读的方式显示文件大小， &lt;code&gt;/proc&lt;/code&gt;  是一个特殊目录，包含系统中运行的进程的信息， &lt;code&gt;pid&lt;/code&gt;  是要查看的进程的进程 ID。&lt;/p&gt;
+&lt;h3 id=&#34;lsof-i端口号-p-u&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lsof-i端口号-p-u&#34;&gt;#&lt;/a&gt; lsof -i: 端口号 /-p/-u&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;lsof -i:端口号 /-p /-u&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于查看指定端口的相关进程或指定用户打开的文件。 &lt;code&gt;lsof&lt;/code&gt;  命令用于列出打开的文件， &lt;code&gt;-i:端口号&lt;/code&gt; 选项显示指定端口相关的进程， &lt;code&gt;/-p&lt;/code&gt;  选项显示指定进程打开的文件， &lt;code&gt;/-u&lt;/code&gt;  选项显示指定用户打开的文件。&lt;/p&gt;
+&lt;h3 id=&#34;挖矿病毒常利用手段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#挖矿病毒常利用手段&#34;&gt;#&lt;/a&gt; 挖矿病毒常利用手段&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chattr +i&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;lsattr&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;chattr +i&lt;/code&gt; ：此命令用于改变文件的属性。 &lt;code&gt;chattr&lt;/code&gt;  命令用于改变文件的扩展属性， &lt;code&gt;+i&lt;/code&gt;  选项设置文件为不可修改属性，防止文件被删除、重命名或修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;lsattr&lt;/code&gt; ：此命令用于显示文件的扩展属性。 &lt;code&gt;lsattr&lt;/code&gt;  命令用于&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;列出文件的扩展属性，包括文件的可修改性、不可修改性、是否加密等。&lt;/p&gt;
+&lt;h3 id=&#34;需要注意的几个目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#需要注意的几个目录&#34;&gt;#&lt;/a&gt; 需要注意的几个目录&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/etc/passwd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/etc/rc.local&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/root/.ssh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/tmp&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/etc/init.d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/etc/hosts&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此路径对应着系统启动时执行的脚本文件。 &lt;code&gt;/etc/rc.local&lt;/code&gt;  文件包含在系统启动过程中自动执行的命令，可以用于配置系统启动时需要运行的自定义脚本。&lt;/p&gt;
+&lt;h3 id=&#34;ls-alt-etcprofiledsh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ls-alt-etcprofiledsh&#34;&gt;#&lt;/a&gt; ls -alt /etc/profile.d/*.sh&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ls -alt /etc/profile.d/*.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于列出 &lt;code&gt;/etc/profile.d/&lt;/code&gt;  目录下以 &lt;code&gt;.sh&lt;/code&gt;  为后缀的脚本文件，并按照修改时间排序显示详细信息。 &lt;code&gt;ls&lt;/code&gt;  命令用于列出文件和目录， &lt;code&gt;-a&lt;/code&gt;  选项显示所有文件和目录（包括隐藏文件）， &lt;code&gt;-l&lt;/code&gt;  选项以长格式显示详细信息， &lt;code&gt;-t&lt;/code&gt;  选项按修改时间排序， &lt;code&gt;/etc/profile.d/*.sh&lt;/code&gt;  表示匹配 &lt;code&gt;/etc/profile.d/&lt;/code&gt;  目录下以 &lt;code&gt;.sh&lt;/code&gt;  为后缀的所有文件。&lt;/p&gt;
+&lt;h3 id=&#34;cat-etcpasswd-cut-f-1-d-xargs-l-crontab-l-u&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cat-etcpasswd-cut-f-1-d-xargs-l-crontab-l-u&#34;&gt;#&lt;/a&gt; cat /etc/passwd | cut -f 1 -d : | xargs -l {} crontab -l -u {}&lt;/h3&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cat /etc/passwd | cut -f 1 -d : | xargs -l {} crontab -l -u {}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令用于查看系统中所有用户的定时任务。 &lt;code&gt;cat&lt;/code&gt;  命令用于显示文件内容， &lt;code&gt;/etc/passwd&lt;/code&gt;  是一个包含系统用户信息的文件， &lt;code&gt;cut&lt;/code&gt;  命令用于提取指定字段， &lt;code&gt;-f 1&lt;/code&gt;  选项指定提取第一个字段（用户名）， &lt;code&gt;-d :&lt;/code&gt;  选项指定字段的分隔符为冒号， &lt;code&gt;xargs&lt;/code&gt;  命令用于将前面的输出作为参数传递给后面的命令， &lt;code&gt;-l&lt;/code&gt;  选项表示逐行处理， &lt;code&gt;{}&lt;/code&gt;  表示参数的占位符， &lt;code&gt;crontab -l -u {}&lt;/code&gt;  用于查看指定用户的定时任务列表。&lt;/p&gt;
+&lt;h2 id=&#34;软件包校验&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件包校验&#34;&gt;#&lt;/a&gt; 软件包校验&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rpm -Va&lt;/code&gt; ：校验 RPM 软件包的完整性和一致性。如果输出中出现以下标记，表示不一致：s (size)、m (modify)、5 (MD5)、d (device)、l (link)、u (user)、g (group)、t (time)。特别需要注意的是 SM5 标记。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;dpkg -verify&lt;/code&gt; ：校验 Debian 软件包的完整性和一致性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件操作&#34;&gt;#&lt;/a&gt; 文件操作&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;stat&lt;/code&gt; ：显示文件或文件系统的详细信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;find / -mtime 0 -name *.*&lt;/code&gt; ：查找指定天数内更改过的文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;find / -ctime 0 -name *.*&lt;/code&gt; ：查找新增的文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;diff -c&lt;/code&gt; ：比较文件的差异并生成上下文格式的差异。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;查找隐藏进程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查找隐藏进程&#34;&gt;#&lt;/a&gt; 查找隐藏进程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;ps -ef | awk &#39;{print $2}&#39; | sort -n | uniq &amp;gt; ps.p
+ls /proc | sort -n | uniq &amp;gt; proc.p
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查找隐藏进程的命令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ssh-爆破&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ssh-爆破&#34;&gt;#&lt;/a&gt; SSH 爆破&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;last/lastb/lastlog&lt;/code&gt; ：查看登录记录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/var/log/secure&lt;/code&gt; ：安全日志文件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;awk &#39;/sshd.*Failed/{print $(NF -3)}&#39; /var/log/secure | sort | uniq -c | sort -nr&lt;/code&gt; ：查找每个 IP 登录失败的次数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每条记录的格式：时间 - 主机名 - 服务名称 - 是否成功 - 用户 - 地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo grep &#39;sshd.*Failed.*from &amp;lt;IP_ADDRESS&amp;gt;&#39; /var/log/secure | awk &#39;{print $1,$2,$3,$9,$11}&#39;&lt;/code&gt; ：查找特定 IP 失败的次数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo grep &#39;sshd.*Accepted.*from &amp;lt;IP_ADDRESS&amp;gt;&#39; /var/log/secure | awk &#39;{print $1,$2,$3,$9,$11}&#39;&lt;/code&gt; ：查找特定 IP 成功的次数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/var/log/cron&lt;/code&gt; ：定时任务日志文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/var/log/btmp&lt;/code&gt; ：登录失败日志文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/var/log/wtmp&lt;/code&gt; ：登录记录日志文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工具集&#34;&gt;#&lt;/a&gt; 工具集&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;busybox&lt;/code&gt; ：busybox 是一个包含多个常用 Linux 命令精简版本的工具集。它可以在嵌入式系统或资源受限的环境中使用，将多个命令集成到一个可执行文件中，以节省空间并提高效率。它可以作为替代系统中关键命令的解决方案，因为它是一个独立的可执行文件，不依赖于系统中的命令。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;./busybox netstat -antpl&lt;/code&gt; ：使用 busybox 的 netstat 命令显示网络连接和监听端口的信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;隐藏进程检测工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隐藏进程检测工具&#34;&gt;#&lt;/a&gt; 隐藏进程检测工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;unhide&lt;/code&gt; ：用于探测隐藏进程的工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rootkit-检测工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rootkit-检测工具&#34;&gt;#&lt;/a&gt; Rootkit 检测工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;chkrootkit -n&lt;/code&gt; ：用于探测 rootkit 的工具。 &lt;code&gt;-n&lt;/code&gt;  选项表示以非交互模式运行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rkhunter&lt;/code&gt; ：另一个用于探测 rootkit 的工具。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;恶意软件扫描工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#恶意软件扫描工具&#34;&gt;#&lt;/a&gt; 恶意软件扫描工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;clamav&lt;/code&gt; ：用于扫描和检测恶意软件的工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;webshell-查杀工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#webshell-查杀工具&#34;&gt;#&lt;/a&gt; Webshell 查杀工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;www.shellpub.com&lt;/code&gt; ：河马 webshell 查杀工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;内存马查杀工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内存马查杀工具&#34;&gt;#&lt;/a&gt; 内存马查杀工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;java-memshell-scanner&lt;/code&gt; ：用于查杀内存马（内存中的恶意代码）的工具。&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/linux/webshell/225933/</guid>
+            <title>在linux中安装Antsword</title>
+            <link>http://maxshiroi.top/linux/webshell/225933/</link>
+            <category>linux</category>
+            <category>web</category>
+            <category>security</category>
+            <category>webshell</category>
+            <pubDate>Sat, 01 Jul 2023 22:59:33 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/antoor/antSword.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; u+x ./antSword&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ./antSword&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wget https://ghproxy.com/https://github.com/AntSwordProject/AntSword-Loader/releases/download/4.0.3/AntSword-Loader-v4.0.3-linux-x64.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 这个wget推荐自己到下面的链接里找自己合适的loader。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;unzip AntSword-Loader-v4.0.3-linux-x64.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;./AntSword&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://maxshiroi.top/linux/docker/203008/</guid>
             <title>在docker中设置并安装AWVS和Nessus漏扫程序</title>

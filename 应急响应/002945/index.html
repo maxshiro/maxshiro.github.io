@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>常用Windows应急响应整理 - MAXshiro</title>
+
+  
+    <meta name="description" content="# Windows 相关 # 常用程序  小心被病毒整蛊，记住下面命令：    regedit ：注册表编辑器，用于管理 Windows 系统的注册表，可以查看、编辑和修改注册表中的配置信息。   Taskmgr ：任务管理器，用于查看和管理系统中运行的进程、服务和性能监控等。   msconfig ：系统配置实用程序，用于管理 Windows 启动时的启动项、服务和引导选项，可以进行系统启动项的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用Windows应急响应整理">
+<meta property="og:url" content="http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/index.html">
+<meta property="og:site_name" content="MAXshiro">
+<meta property="og:description" content="# Windows 相关 # 常用程序  小心被病毒整蛊，记住下面命令：    regedit ：注册表编辑器，用于管理 Windows 系统的注册表，可以查看、编辑和修改注册表中的配置信息。   Taskmgr ：任务管理器，用于查看和管理系统中运行的进程、服务和性能监控等。   msconfig ：系统配置实用程序，用于管理 Windows 启动时的启动项、服务和引导选项，可以进行系统启动项的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-02T16:29:45.000Z">
+<meta property="article:modified_time" content="2023-07-02T16:33:13.883Z">
+<meta property="article:author" content="maxshiroi">
+<meta property="article:tag" content="应急响应">
+<meta property="article:tag" content="hvv">
+<meta property="article:tag" content="tools">
+<meta property="article:tag" content="windows">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@maxshiroer">
+  
+  
+  
+  <meta name="keywords" content="应急响应,hvv,tools,windows">
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+  
+
+<div class="l_cover post"><div class="cover"><div class="lazy img bg" data-bg="https://source.unsplash.com/2000x400/?windows,tools,hvv,应急响应"></div></div></div>
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/img/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MAXshiro</div><div class="sub cap">A blog for learn.</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/about/">更多</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">常用Windows应急响应整理</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text"> 常用程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E5%88%AB%E6%B3%A8%E6%84%8F"><span class="toc-number">2.</span> <span class="toc-text"> 特别注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text"> 常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-number">3.1.</span> <span class="toc-text"> 网络相关命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E5%91%BD%E4%BB%A4"><span class="toc-number">3.2.</span> <span class="toc-text"> 系统信息命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="toc-number">3.3.</span> <span class="toc-text"> 进程管理命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%93%88%E5%B8%8C%E8%AE%A1%E7%AE%97%E5%91%BD%E4%BB%A4"><span class="toc-number">3.4.</span> <span class="toc-text"> 文件哈希计算命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%8F%E6%84%9F%E7%9B%AE%E5%BD%95"><span class="toc-number">4.</span> <span class="toc-text"> 敏感目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%BF%97"><span class="toc-number">5.</span> <span class="toc-text"> 日志</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E6%9F%A5%E7%9C%8B%E5%99%A8"><span class="toc-number">5.1.</span> <span class="toc-text"> 事件查看器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E6%97%A5%E5%BF%97%E8%B7%AF%E5%BE%84"><span class="toc-number">5.2.</span> <span class="toc-text"> 事件日志路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%AD%E4%BA%8B%E4%BB%B6"><span class="toc-number">5.3.</span> <span class="toc-text"> 系统启动 &#x2F; 关闭事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%AD%E4%BA%8B%E4%BB%B6"><span class="toc-number">5.4.</span> <span class="toc-text"> 事件日志服务启动 &#x2F; 关闭事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6id%E8%A1%A8"><span class="toc-number">5.5.</span> <span class="toc-text"> 常见事件 ID 表：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81-logontype-%E5%80%BC"><span class="toc-number">5.6.</span> <span class="toc-text"> 常见 LogonType 值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E6%80%A5%E5%B7%A5%E5%85%B7"><span class="toc-number">6.</span> <span class="toc-text"> 应急工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0"><span class="toc-number">7.</span> <span class="toc-text"> 威胁情报 &#x2F; 样本分析平台：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sysmonsystem-monitor%E5%9C%A8%E4%BA%8B%E4%BB%B6%E6%9F%A5%E7%9C%8B%E5%99%A8%E4%B8%AD%E6%9F%A5%E7%9C%8B"><span class="toc-number">8.</span> <span class="toc-text"> Sysmon（System Monitor）（在事件查看器中查看）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81"><span class="toc-number">9.</span> <span class="toc-text"> 内存取证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">9.1.</span> <span class="toc-text"> 分析</span></a></li></ol></li></ol></div></div></widget>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/">应急响应</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-07-02T16:29:45.000Z">2023-07-03</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>常用Windows应急响应整理</span></h1>
+<h1 id="windows相关"><a class="anchor" href="#windows相关">#</a> Windows 相关</h1>
+<h2 id="常用程序"><a class="anchor" href="#常用程序">#</a> 常用程序</h2>
+<blockquote>
+<p>小心被病毒整蛊，记住下面命令：</p>
+</blockquote>
+<ul>
+<li>
+<p><code>regedit</code> ：注册表编辑器，用于管理 Windows 系统的注册表，可以查看、编辑和修改注册表中的配置信息。</p>
+</li>
+<li>
+<p><code>Taskmgr</code> ：任务管理器，用于查看和管理系统中运行的进程、服务和性能监控等。</p>
+</li>
+<li>
+<p><code>msconfig</code> ：系统配置实用程序，用于管理 Windows 启动时的启动项、服务和引导选项，可以进行系统启动项的配置和管理。</p>
+</li>
+<li>
+<p><code>eventvwr.msc</code> ：事件查看器，用于查看和分析系统和应用程序生成的事件日志，帮助诊断和解决系统问题。</p>
+</li>
+<li>
+<p><code>compmgmt.msc</code> ：计算机管理控制台，提供了对计算机硬件、设备管理、本地用户和组管理、磁盘管理等的集中管理。</p>
+</li>
+<li>
+<p><code>gpedit.msc</code> ：组策略编辑器，用于管理 Windows 系统中的组策略，可以配置计算机和用户的策略设置。</p>
+</li>
+<li>
+<p><code>taskschd.msc</code> ：任务计划程序，用于创建和管理定时任务，可以设置计划运行的程序、脚本和操作等。</p>
+</li>
+<li>
+<p><code>lusrmgr.msc</code> ：本地用户和组管理器，用于管理本地计算机上的用户账户和用户组，可以创建、修改和删除用户账户和组。</p>
+</li>
+</ul>
+<h2 id="特别注意"><a class="anchor" href="#特别注意">#</a> 特别注意</h2>
+<ol>
+<li>
+<p>获取本机用户列表<br>
+ <code>net user</code></p>
+</li>
+<li>
+<p>管理员<br>
+ <code>net localgroup administrators</code></p>
+</li>
+<li>
+<p>当前会话<br>
+ <code>net session</code></p>
+</li>
+<li>
+<p>当前运行的服务<br>
+ <code>net start</code></p>
+</li>
+<li>
+<p>远程连接<br>
+ <code>net use</code></p>
+</li>
+<li>
+<p>当前用户共享目录<br>
+ <code>net share</code></p>
+</li>
+<li>
+<p>最近打开文件</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%UserProfile%\Recent</span><br><span class="line">%APPDATA%\Microsoft\Windows\Recent</span><br></pre></td></tr></tbody></table></figure>
+<ol start="8">
+<li>查找文件中的字符串<br>
+ <code>findstr /m /i /s "hello" *.txt</code></li>
+</ol>
+<h2 id="常用命令"><a class="anchor" href="#常用命令">#</a> 常用命令</h2>
+<blockquote>
+<p>这些命令可用于网络连接和进程管理，获取系统信息和补丁，以及计算文件的哈希值。你可以根据需要使用它们来进行系统管理、安全检查和文件验证。</p>
+</blockquote>
+<h3 id="网络相关命令"><a class="anchor" href="#网络相关命令">#</a> 网络相关命令</h3>
+<ul>
+<li><code>netstat -ano</code> ：显示网络连接、监听端口和进程的详细信息，包括相关的进程 ID。</li>
+</ul>
+<h3 id="系统信息命令"><a class="anchor" href="#系统信息命令">#</a> 系统信息命令</h3>
+<ul>
+<li><code>systeminfo</code> ：显示系统的详细信息，包括操作系统版本、补丁信息、硬件配置等。特别关注补丁信息，以确保系统的安全性。</li>
+</ul>
+<h3 id="进程管理命令"><a class="anchor" href="#进程管理命令">#</a> 进程管理命令</h3>
+<ul>
+<li>
+<p><code>Wmic process</code> ：用于查询和管理系统中的进程。</p>
+<ul>
+<li>
+<p><code>Wmic process where name="cmd.exe" get processid,executablepath,name</code> ：查询并显示名称为 "cmd.exe" 的进程的进程 ID、可执行路径和名称。</p>
+</li>
+<li>
+<p><code>Wmic process where processid="***" get executablepath,name</code> ：查询并显示指定进程 ID 的进程的可执行路径和名称。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>tasklist /m ***.dll</code> ：显示指定 DLL 文件相关的进程列表。</p>
+</li>
+</ul>
+<h3 id="文件哈希计算命令"><a class="anchor" href="#文件哈希计算命令">#</a> 文件哈希计算命令</h3>
+<ul>
+<li><code>certutil -hashfile %样本exe% MD5</code> ：计算指定样本文件（例如样本 exe）的 MD5 哈希值。</li>
+</ul>
+<h2 id="敏感目录"><a class="anchor" href="#敏感目录">#</a> 敏感目录</h2>
+<blockquote>
+<p>这些敏感目录通常包含重要的系统文件、用户数据和应用程序配置文件。黑客或恶意软件可能会利用这些目录来隐藏恶意文件、执行攻击或获取敏感信息。因此，在网络安全中，对这些目录进行适当的保护和监控非常重要。</p>
+</blockquote>
+<ul>
+<li>
+<p><code>%WINDIR%</code> ：Windows 系统目录，通常为  <code>C:\Windows</code> 。该目录包含了操作系统的核心文件和系统配置文件。</p>
+</li>
+<li>
+<p><code>%WINDIR%\system32\</code> ：Windows 系统目录下的  <code>system32</code>  子目录，通常为  <code>C:\Windows\system32</code> 。该目录包含了许多系统和应用程序的关键文件和库文件。</p>
+</li>
+<li>
+<p><code>%TEMP%</code> ：当前用户的临时文件夹路径。通常为  <code>C:\Users\用户名\AppData\Local\Temp</code> 。临时文件夹用于存储临时文件和缓存文件。</p>
+</li>
+<li>
+<p><code>%LOCALAPPDATA%</code> ：当前用户的本地应用数据文件夹路径。通常为  <code>C:\Users\用户名\AppData\Local</code> 。该目录用于存储与用户相关的应用程序数据，如缓存文件、配置文件等。</p>
+</li>
+<li>
+<p><code>%APPDATA%</code> ：当前用户的应用数据文件夹路径。通常为  <code>C:\Users\用户名\AppData\Roaming</code> 。该目录用于存储应用程序的个人设置、配置文件和其他用户特定的数据。</p>
+</li>
+</ul>
+<h2 id="日志"><a class="anchor" href="#日志">#</a> 日志</h2>
+<h3 id="事件查看器"><a class="anchor" href="#事件查看器">#</a> 事件查看器</h3>
+<ul>
+<li><code>eventvwr</code> ：事件查看器，用于查看和分析系统和应用程序生成的事件日志。</li>
+</ul>
+<h3 id="事件日志路径"><a class="anchor" href="#事件日志路径">#</a> 事件日志路径</h3>
+<ul>
+<li>
+<p><code>%SystemRoot%System32WinevtLogsSystem.evtx</code> ：系统日志文件路径，包含有关系统启动、关闭和其他系统级事件的信息。</p>
+</li>
+<li>
+<p><code>%SystemRoot%System32WinevtLogsSecurity.evtx</code> ：安全日志文件路径，包含有关安全相关事件的信息。</p>
+</li>
+</ul>
+<h3 id="系统启动关闭事件"><a class="anchor" href="#系统启动关闭事件">#</a> 系统启动 / 关闭事件</h3>
+<ul>
+<li><code>系统启动/关闭 12/13</code> ：指示系统启动和关闭的事件计数。</li>
+</ul>
+<h3 id="事件日志服务启动关闭事件"><a class="anchor" href="#事件日志服务启动关闭事件">#</a> 事件日志服务启动 / 关闭事件</h3>
+<ul>
+<li><code>事件日志服务启动/关闭 6005/6006</code> ：指示事件日志服务的启动和关闭事件计数。</li>
+</ul>
+<h3 id="常见事件id表"><a class="anchor" href="#常见事件id表">#</a> 常见事件 ID 表：</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">事件 ID</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1102</td>
+<td style="text-align:center">清理审计日志</td>
+</tr>
+<tr>
+<td style="text-align:center">4624</td>
+<td style="text-align:center">账号成功登录</td>
+</tr>
+<tr>
+<td style="text-align:center">4625</td>
+<td style="text-align:center">账号登录失败</td>
+</tr>
+<tr>
+<td style="text-align:center">4768</td>
+<td style="text-align:center">Kerberos 身份验证 (TGT 请求)</td>
+</tr>
+<tr>
+<td style="text-align:center">4769</td>
+<td style="text-align:center">Kerberos 服务票证请求</td>
+</tr>
+<tr>
+<td style="text-align:center">4776</td>
+<td style="text-align:center">NTLM 身份验证</td>
+</tr>
+<tr>
+<td style="text-align:center">4672</td>
+<td style="text-align:center">授予特殊权限</td>
+</tr>
+<tr>
+<td style="text-align:center">4720</td>
+<td style="text-align:center">创建用户</td>
+</tr>
+<tr>
+<td style="text-align:center">4726</td>
+<td style="text-align:center">删除用户</td>
+</tr>
+<tr>
+<td style="text-align:center">4728</td>
+<td style="text-align:center">将成员添加到启用安全的全局组中</td>
+</tr>
+<tr>
+<td style="text-align:center">4729</td>
+<td style="text-align:center">将成员从安全的全局组中移除</td>
+</tr>
+<tr>
+<td style="text-align:center">4732</td>
+<td style="text-align:center">将成员添加到启用安全的本地组中</td>
+</tr>
+<tr>
+<td style="text-align:center">4733</td>
+<td style="text-align:center">将成员从启用安全的本地组中移除</td>
+</tr>
+<tr>
+<td style="text-align:center">4756</td>
+<td style="text-align:center">将成员添加到启用安全的通用组中</td>
+</tr>
+<tr>
+<td style="text-align:center">4757</td>
+<td style="text-align:center">将成员从启用安全的通用组中移除</td>
+</tr>
+<tr>
+<td style="text-align:center">4719</td>
+<td style="text-align:center">系统审计策略修改</td>
+</tr>
+</tbody>
+</table>
+<h3 id="常见-logontype-值"><a class="anchor" href="#常见-logontype-值">#</a> 常见 LogonType 值</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">LogonType 值</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">交互式登录</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">网络登录（一般情况下就是永恒之蓝）</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">批处理登录</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">服务登录</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">解锁</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">网络远程登录</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">缓存的远程登录</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">远程交互式登录</td>
+</tr>
+<tr>
+<td style="text-align:center">...</td>
+<td style="text-align:center">...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="应急工具"><a class="anchor" href="#应急工具">#</a> 应急工具</h2>
+<p>下面是一些应急工具的示例和相关信息：</p>
+<ul>
+<li>
+<p><strong>PChunter</strong>：Antirootkit 工具，用于检测和清除系统中的 rootkit（恶意软件）。</p>
+</li>
+<li>
+<p><strong>Autoruns</strong>：启动项管理工具，用于查看和管理系统启动时自动运行的程序、服务和驱动程序。</p>
+</li>
+<li>
+<p><strong>ProcessExplorer</strong>：进程查看工具，提供了比任务管理器更详细和全面的进程信息，包括进程的资源使用、文件关联等。</p>
+</li>
+<li>
+<p><strong>ProcessMonitor</strong>：进程监控工具，用于实时监视和记录系统上的进程活动、文件系统活动和注册表活动。</p>
+</li>
+<li>
+<p><strong>TCPView</strong>：网络连接查看工具，显示当前系统上的网络连接和相关的进程信息，可用于监视和分析网络连接。</p>
+</li>
+<li>
+<p><strong>Microsoft Network Monitor</strong>：网络监控工具，可用于捕获和分析网络数据包，提供详细的网络通信信息和相关的进程。</p>
+</li>
+<li>
+<p><strong>D 盾</strong>：Webshell 查杀工具，用于检测和清除 Web 服务器上的恶意 Webshell（恶意脚本）。</p>
+</li>
+<li>
+<p><strong>Everything</strong>：快速搜索工具，可以快速索引和搜索系统上的文件和文件夹。</p>
+</li>
+<li>
+<p><strong>BeaconEye</strong>：针对 Cobalt Strike（一种渗透测试工具）的特征检测工具。可在 GitHub 上找到该工具，地址为: <a target="_blank" rel="noopener" href="https://github.com/CCob/BeaconEye">CCob/BeaconEye</a>。</p>
+</li>
+</ul>
+<h2 id="威胁情报样本分析平台"><a class="anchor" href="#威胁情报样本分析平台">#</a> 威胁情报 / 样本分析平台：</h2>
+<p>奇安信威胁情报中心<br>
+微步在线社区<br>
+ Virus total<br>
+IBMXFORCE</p>
+<h2 id="sysmonsystem-monitor在事件查看器中查看"><a class="anchor" href="#sysmonsystem-monitor在事件查看器中查看">#</a> Sysmon（System Monitor）（在事件查看器中查看）</h2>
+<p>Sysmon 可以监控并记录操作系统内核级别的事件，包括进程创建、文件创建、网络连接、注册表操作、服务启动、驱动加载等等。这些事件的详细信息被记录在 Windows 事件日志中，可以通过事件查看器或其他日志分析工具进行检索和分析。</p>
+<table>
+<thead>
+<tr>
+<th>事件 ID</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>进程创建</td>
+</tr>
+<tr>
+<td>3</td>
+<td>网络连接</td>
+</tr>
+<tr>
+<td>11</td>
+<td>文件创建</td>
+</tr>
+<tr>
+<td>22</td>
+<td>记录 DNS 查询</td>
+</tr>
+</tbody>
+</table>
+<h2 id="内存取证"><a class="anchor" href="#内存取证">#</a> 内存取证</h2>
+<p>Dumplt / FTK imager / WinPMem</p>
+<h3 id="分析"><a class="anchor" href="#分析">#</a> 分析</h3>
+<p>Volatility (github: volatilityfoundation/volatility)<br>
+ volatility -f [内存文件] --profile=[配置文件] &lt; 插件 &gt; # 不同版本有不同的配置文件</p>
+<h1 id="案例"><a class="anchor" href="#案例">#</a> 案例</h1>
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名 - 非商业性使用 - 相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/231746/">应急响应以及常用Windows命令工具分享</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="/应急响应/215254/" title="常用linux应急响应命令整理"><span class="title">常用linux应急响应命令整理</span></a><a class="item" href="/应急响应/231746/" title="应急响应以及常用Windows命令工具分享"><span class="title">应急响应以及常用Windows命令工具分享</span></a></div></section></div>
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" data-repo="maxshiro/shuoshuo" data-repo-id="R_kgDOJW5G7Q" data-category="Announcements" data-category-id="DIC_kwDOJW5G7c4CXVrV" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light_high_contras" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 主题 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 构建。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

@@ -5,8 +5,8 @@
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 16 Oct 2022 21:19:32 +0800</pubDate>
-        <lastBuildDate>Sun, 16 Oct 2022 21:19:32 +0800</lastBuildDate>
+        <pubDate>Sat, 01 Jul 2023 22:59:33 +0800</pubDate>
+        <lastBuildDate>Sat, 01 Jul 2023 22:59:33 +0800</lastBuildDate>
         <category>nextcloud</category>
         <category>聊天室</category>
         <category>python</category>
@@ -22,6 +22,8 @@
         <category>vhd</category>
         <category>vhdx</category>
         <category>diskpart</category>
+        <category>security</category>
+        <category>webshell</category>
         <category>arch</category>
         <category>pacman</category>
         <category>win</category>
@@ -51,6 +53,11 @@
         <category>jellyfin</category>
         <category>视频</category>
         <category>音乐</category>
+        <category>应急响应</category>
+        <category>hvv</category>
+        <category>tools</category>
+        <category>busybox</category>
+        <category>ps</category>
         <category>运维</category>
         <category>smb</category>
         <category>passwd</category>
@@ -83,6 +90,7 @@
         <category>win7</category>
         <category>capacity</category>
         <category>shrink</category>
+        <category>windows</category>
         <category>Android</category>
         <category>Hyper-V</category>
         <category>WSA</category>
@@ -91,6 +99,18 @@
         <category>wsl</category>
         <category>权限不足</category>
         <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/linux/webshell/225933/</guid>
+            <title>在linux中安装Antsword</title>
+            <link>http://maxshiroi.top/linux/webshell/225933/</link>
+            <category>linux</category>
+            <category>web</category>
+            <category>security</category>
+            <category>webshell</category>
+            <pubDate>Sat, 01 Jul 2023 22:59:33 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/antoor/antSword.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; u+x ./antSword&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ./antSword&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wget https://ghproxy.com/https://github.com/AntSwordProject/AntSword-Loader/releases/download/4.0.3/AntSword-Loader-v4.0.3-linux-x64.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 这个wget推荐自己到下面的链接里找自己合适的loader。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;unzip AntSword-Loader-v4.0.3-linux-x64.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;./AntSword&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://maxshiroi.top/ug/211932/</guid>
             <title>在centos中部署后端程序。</title>

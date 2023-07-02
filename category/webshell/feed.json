@@ -1,0 +1,21 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MAXshiro • All posts by \"webshell\" category",
+    "description": "Discover and Record the world.",
+    "home_page_url": "http://maxshiroi.top",
+    "items": [
+        {
+            "id": "http://maxshiroi.top/linux/webshell/225933/",
+            "url": "http://maxshiroi.top/linux/webshell/225933/",
+            "title": "在linux中安装Antsword",
+            "date_published": "2023-07-01T14:59:33.000Z",
+            "content_html": "<figure class=\"highlight bash\"><table><tbody><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">git <span class=\"built_in\">clone</span> https://github.com/antoor/antSword.git</span><br><span class=\"line\"><span class=\"built_in\">chmod</span> u+x ./antSword</span><br><span class=\"line\"><span class=\"built_in\">cd</span> ./antSword</span><br><span class=\"line\">wget https://ghproxy.com/https://github.com/AntSwordProject/AntSword-Loader/releases/download/4.0.3/AntSword-Loader-v4.0.3-linux-x64.zip</span><br><span class=\"line\"><span class=\"comment\"># 这个wget推荐自己到下面的链接里找自己合适的loader。</span></span><br><span class=\"line\">unzip AntSword-Loader-v4.0.3-linux-x64.zip</span><br><span class=\"line\">./AntSword</span><br></pre></td></tr></tbody></table></figure>\n",
+            "tags": [
+                "linux",
+                "web",
+                "security",
+                "webshell"
+            ]
+        }
+    ]
+}

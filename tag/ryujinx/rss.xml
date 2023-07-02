@@ -22,6 +22,8 @@
         <category>vhd</category>
         <category>vhdx</category>
         <category>diskpart</category>
+        <category>security</category>
+        <category>webshell</category>
         <category>arch</category>
         <category>pacman</category>
         <category>win</category>
@@ -51,6 +53,11 @@
         <category>jellyfin</category>
         <category>视频</category>
         <category>音乐</category>
+        <category>应急响应</category>
+        <category>hvv</category>
+        <category>tools</category>
+        <category>busybox</category>
+        <category>ps</category>
         <category>运维</category>
         <category>smb</category>
         <category>passwd</category>
@@ -83,6 +90,7 @@
         <category>win7</category>
         <category>capacity</category>
         <category>shrink</category>
+        <category>windows</category>
         <category>Android</category>
         <category>Hyper-V</category>
         <category>WSA</category>
