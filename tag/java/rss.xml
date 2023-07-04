@@ -18,19 +18,19 @@
         <category>web</category>
         <category>nginx</category>
         <category>mysql</category>
-        <category>security</category>
-        <category>webshell</category>
         <category>wsa</category>
         <category>vhd</category>
         <category>vhdx</category>
         <category>diskpart</category>
+        <category>security</category>
+        <category>webshell</category>
         <category>arch</category>
         <category>pacman</category>
-        <category>network</category>
-        <category>vmware</category>
         <category>win</category>
         <category>explorer.exe</category>
         <category>autorefresh</category>
+        <category>network</category>
+        <category>vmware</category>
         <category>docker</category>
         <category>nessus</category>
         <category>awvs</category>
