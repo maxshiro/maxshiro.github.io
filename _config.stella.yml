@@ -280,7 +280,7 @@ plugins:
   lazyload:
     enable: true # [hexo clean && hexo s] is required after changing this value.
     js: https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js
-    transition: blur # blur, fade
+    transition: fade # blur, fade
 
   # https://scrollrevealjs.org/api/reveal.html
   scrollreveal:

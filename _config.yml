@@ -5,8 +5,9 @@
 # Site
 title: MAXshiro
 avatar: /img/avatar.png
-subtitle: 'A blog for learn.'
+subtitle: 'Tell me what you thought.'
 description: 'Discover and Record the world.'
+favicon: /img/failure.ico
 keywords:
 author: maxshiroi
 language: zh-CN
