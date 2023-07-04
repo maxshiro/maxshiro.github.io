@@ -29,14 +29,13 @@ sidebar:
 
 - **姓名：** maxshiroi
 - **职业：** 渗透测试工程师
-- **教育背景：** [Hide context]
+- **教育背景：** 大专
 - **所在地：** 郑州
 
 # 联系方式
 
 - **邮箱：** <maxshiroi@outlook.com>
-- **微信：** maxshiroi 
-- **手机：** [Hide context]
+- **微信：** maxshiroi
 - **地址：** 河南省郑州市郑上路...
 
 # 获取我的简历
@@ -49,7 +48,7 @@ sidebar:
 
 - 熟悉常用渗透测试工具，包括 Burp Suite、SQLMap、Nmap 和 AWVS 、CS 等，对系统和应用程序进行安全评估和漏洞测试。
 
-- 具备护网经历，了解过IPS、IDS、WAF、蜜罐、防火墙、态势感知和流量分析等设备和技术。
+- 有护网经历，了解过IPS、IDS、WAF、蜜罐、防火墙、态势感知和流量分析等设备和技术。
 
 - 熟练掌握 Shell 弱类型编程，熟练掌握 C/C++、Python 强类型语言，熟悉 Java 面向对象编程。
 
@@ -70,14 +69,17 @@ sidebar:
 - 使用阿里ddns解析。
 
 **个人博客:**
-- 使用Hexo程序搭建静态博客
+- 使用Hexo程序搭建静态博客。
 - 使用Vercel加速网站。
 
 **运维经历:**
 - 在个人 VPS 中部署 VMware ESXI 并安装 Win10/Centos 虚拟机
 - 架设 Minecraft 服务器
 - 安装 LNMP 程序搭建 Wordpress 动态博客。
+- 搭建过Plex，Nextcloud等常见媒体服务器软件。
 
 # 意向岗位
 - 渗透测试工程师
+- 蓝队护网
+- 运维工程师
 - 全栈工程师
