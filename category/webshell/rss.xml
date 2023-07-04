@@ -18,19 +18,19 @@
         <category>web</category>
         <category>nginx</category>
         <category>mysql</category>
+        <category>security</category>
+        <category>webshell</category>
         <category>wsa</category>
         <category>vhd</category>
         <category>vhdx</category>
         <category>diskpart</category>
-        <category>security</category>
-        <category>webshell</category>
         <category>arch</category>
         <category>pacman</category>
+        <category>network</category>
+        <category>vmware</category>
         <category>win</category>
         <category>explorer.exe</category>
         <category>autorefresh</category>
-        <category>network</category>
-        <category>vmware</category>
         <category>docker</category>
         <category>nessus</category>
         <category>awvs</category>
@@ -108,7 +108,46 @@
             <category>security</category>
             <category>webshell</category>
             <pubDate>Sat, 01 Jul 2023 22:59:33 +0800</pubDate>
-            <description><![CDATA[ &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/antoor/antSword.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; u+x ./antSword&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ./antSword&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wget https://ghproxy.com/https://github.com/AntSwordProject/AntSword-Loader/releases/download/4.0.3/AntSword-Loader-v4.0.3-linux-x64.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 这个wget推荐自己到下面的链接里找自己合适的loader。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;unzip AntSword-Loader-v4.0.3-linux-x64.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;./AntSword&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h2&gt;
+&lt;p&gt;在网络安全领域，AntSword 是一款流行的渗透测试和漏洞利用框架，它为安全研究人员和渗透测试人员提供了一个功能强大的平台来评估和测试网络安全。通过使用 AntSword，您可以执行各种网络攻击和漏洞利用，并获得对目标系统的远程访问权限。&lt;/p&gt;
+&lt;h2 id=&#34;步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤&#34;&gt;#&lt;/a&gt; 步骤&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;快速&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/antoor/antSword.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; u+x ./antSword&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ./antSword&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wget https://ghproxy.com/https://github.com/AntSwordProject/AntSword-Loader/releases/download/4.0.3/AntSword-Loader-v4.0.3-linux-x64.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 这个wget推荐自己到下面的链接里找自己合适的loader。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;unzip AntSword-Loader-v4.0.3-linux-x64.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;./AntSword&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/antoor/antSword.git&lt;/code&gt; ：这行代码用于克隆名为 &#34;antSword&#34; 的 GitHub 仓库到当前目录。通过这个命令，您可以获取 AntSword 框架的源代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;chmod u+x ./antSword&lt;/code&gt; ：这行代码给  &lt;code&gt;antSword&lt;/code&gt;  文件添加了可执行权限。这是必要的，以便能够在后续的步骤中运行它。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cd ./antSword&lt;/code&gt; ：这行代码将当前工作目录更改为  &lt;code&gt;antSword&lt;/code&gt;  文件夹。在接下来的步骤中，我们将在该文件夹中执行其他命令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;wget https://ghproxy.com/https://github.com/AntSwordProject/AntSword-Loader/releases/download/4.0.3/AntSword-Loader-v4.0.3-linux-x64.zip&lt;/code&gt; ：这行代码使用 wget 命令从 GitHub 下载 AntSword-Loader 的适用于 Linux 系统的压缩包。AntSword-Loader 是 AntSword 框架的一个组件，它提供了一些额外的功能和扩展。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;unzip AntSword-Loader-v4.0.3-linux-x64.zip&lt;/code&gt; ：这行代码用于解压刚刚下载的 AntSword-Loader 压缩包。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;./AntSword&lt;/code&gt; ：这行代码启动 AntSword 应用程序，让您可以开始使用该框架。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;注意事项或建议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意事项或建议&#34;&gt;#&lt;/a&gt; 注意事项或建议&lt;/h2&gt;
+&lt;p&gt;在使用这段代码之前，请确保您的系统满足以下要求：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux 操作系统：该代码段适用于 Linux 系统。如果您使用的是其他操作系统，可能需要相应的修改。&lt;/li&gt;
+&lt;li&gt;权限：确保您对当前目录和文件具有适当的读写和执行权限。&lt;/li&gt;
+&lt;li&gt;依赖项：AntSword 可能依赖其他软件包或库。请根据官方文档或 GitHub 存储库提供的说明，安装和配置所有必需的依赖项。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;建议您在使用任何渗透测试工具时，遵循合法和道德的准则，并仅在合法的环境中进行测试。滥用这些工具可能会导致违法行为和对他人造成损害。&lt;/p&gt;
+&lt;h2 id=&#34;相关资源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关资源&#34;&gt;#&lt;/a&gt; 相关资源&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AntSword 官方文档：您可以在 AntSword 的官方文档中找到更多关于安装、配置和使用 AntSword 的信息。链接：&lt;a href=&#34;https://www.antsword.org/docs/&#34;&gt;https://www.antsword.org/docs/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AntSword GitHub 存储库：您可以在 AntSword 的 GitHub 存储库中找到源代码、问题跟踪和社区讨论。链接：&lt;a href=&#34;https://github.com/AntSwordProject/AntSword&#34;&gt;https://github.com/AntSwordProject/AntSword&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
  ]]></description>
         </item>
     </channel>

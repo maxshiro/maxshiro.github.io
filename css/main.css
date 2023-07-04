@@ -3910,7 +3910,7 @@ nav.menu a.nav-item:hover {
   bottom: 0;
   height: 2px;
   border-radius: 4px;
-  background: linear-gradient(to right, #04f3ff, #08ffc6, #ddf730, #ffbd19, #ff1fe0, #c418ff, #04f3ff);
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   background-size: 200%;
   animation: glow 10s linear infinite;
 }
