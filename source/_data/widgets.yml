@@ -19,9 +19,10 @@ search_docs:
 
 welcome:
   layout: markdown
-  title: 提示
+  title: 欢迎！
   content: |
-    欢迎！随便看看吧！
+    **新的一年，祝您：**
+    ![image](https://github.com/maxshiro/shuoshuo/assets/20143941/cb4dc48e-8659-47e2-9b68-fd4ad6029950)
 
 shuoshuo:
   layout: timeline
@@ -50,8 +51,8 @@ recent:
 
 toc:
   layout: toc
-  list_number: true
-  min_depth: 2
+  list_number: false
+  min_depth: 1
   max_depth: 5
   fallback: recent # Use a backup widget when toc does not exist.
 # github user info
@@ -66,7 +67,7 @@ tagcloud:
   title: 标签云
   # 标签云配置
   min_font: 12
-  max_font: 36
+  max_font: 24
   amount: 100
   orderby: name
   order: 1 # 1, sac 升序；-1, desc 降序

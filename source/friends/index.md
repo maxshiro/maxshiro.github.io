@@ -8,8 +8,7 @@ layout: "about"
 comments: false
 sidebar:
     - ghuser
-    - search
-    - recent
+    - shuoshuo
 ---
 ![](/img/index/2023-06-21-13-42-12.png)
 {% about align:center %}
