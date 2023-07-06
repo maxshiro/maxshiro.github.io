@@ -3,6 +3,7 @@
 title: {{ title }}
 date: {{ date }}
 tags: 
+hide: 
 categories: []
 description: 
 comments: # 评论开关（true/false）

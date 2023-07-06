@@ -25,9 +25,13 @@ yum install git-core # 坏习惯，请减少使用root用户
 git version 1.8.3.1
 ```
 ## 安装 node.js
-直接 yum 一把梭
+本来可以直接使用`apt，yum`这种工具一键安装的，但是显然安装的版本十分的stable，所以这里使用 nvm 工具来安装 nodejs 和 npm。
 ```bash
-yum install nodejs
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ./.bashrc
+nvm -v
+# 安装最新版node并更新一下npm
+nvm install node --latest-npm
 ```
 然后查看版本：
 ```bash
