@@ -42,23 +42,31 @@ tags:
 
 ---
 # 本地
-![](/img/pictureshow/20221116154554.png "女人")  
-![](/img/pictureshow/20221116154625.png "女人")  
-![](/img/pictureshow/20221116154652.png)  
-![](/img/pictureshow/20221116154713.png)  
-![](/img/pictureshow/20221116154721.png)  
-![](/img/pictureshow/20221116154729.png)  
-![](/img/pictureshow/20221116154737.png)  
-![](/img/pictureshow/20221116154746.png)  
-![](/img/pictureshow/20221116154914.png)  
-![](/img/pictureshow/20221116154922.png)  
-![](/img/pictureshow/20221116154928.png)  
-![](/img/pictureshow/20221116154935.png)  
-![](/img/pictureshow/20221116154945.png)  
-![](/img/pictureshow/20221116154953.png)  
-![](/img/pictureshow/20221116155005.png)  
-![](/img/pictureshow/20221116155015.png)  
-![](/img/pictureshow/20221116155023.png)  
-![](/img/pictureshow/20221116155031.png)  
+> 已经不是本地了，我把它换成了github图床233
+
+正好测试一下图片集合标签。。
+
+{% swiper effect:cards/coverflow %}
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208227.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208228.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208230.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208231.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208232.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208233.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208234.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208235.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208236.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208237.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208238.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208239.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208240.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208241.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208242.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208243.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208244.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208245.png)
+![](https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208246.png)
+{% endswiper %}
+
 {.gallery}
 
