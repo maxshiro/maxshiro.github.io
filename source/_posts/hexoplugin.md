@@ -76,7 +76,7 @@ npm uninstall hexo-generator-index
 # 然后安装修改过后的
 npm install hexo-generator-index-pin-top --save
 ```
-使用时只需要在front-matter中加入`top: true`即可让文章置顶。
+使用时只需要在`front-matter`中加入`top: true`即可让文章置顶。
 
 ## 隐藏文章
 ```bash
