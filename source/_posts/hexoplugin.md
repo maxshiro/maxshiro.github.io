@@ -67,15 +67,46 @@ git clone -b backup https://github.com/maxshiro/maxshiro.github.io.git
 cnpm install
 ```
 
-# 2. 博客加密
+# 安装一些提升体验的插件
+hexo原版的内容已经足够使用，但是某些功能非常的需要但是hexo却不自带，那么就可以通过安装插件的形式来添加这些功能。
+## 置顶文章
+```bash
+# 先卸载原本的index生成插件
+npm uninstall hexo-generator-index
+# 然后安装修改过后的
+npm install hexo-generator-index-pin-top --save
+```
+使用时只需要在front-matter中加入`top: true`即可让文章置顶。
+
+## 隐藏文章
+```bash
+# 使用如下命令安装插件
+npm install hexo-hide-posts --save
+```
+安装好后在`_config.yaml`文件中添加下面的内容：
+```_config.yaml bash
+# hexo-hide-posts
+hide_posts:
+  # 可以改成其他你喜欢的名字
+  filter: hide
+  # 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见
+  # 常见的位置有：index, tag, category, archive, sitemap, feed, etc.
+  # 留空则默认全部隐藏
+  public_generators: []
+  # 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录
+  noindex: true
+```
+最后同上，你只需要在`front-matter`中加上`hide: true`即可。
+
+## 博客加密
 * 有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。
 * 这在wordpress，emlog或其他博客系统中都很容易实现，然而hexo除外。:(
 * 为了解决这个问题，我们需要安装“ hexo-blog-encrypt”扩展。
-## 安装指令
+### 安装指令
 ```bash
 npm install hexo-blog-encrypt
 ```
-## 快速使用
+### 快速使用
 将 password 标签添加到您的 Front-matter 里，就像这样：
 ```bash
 ---
@@ -85,7 +116,7 @@ password: 233
 tags: xxx
 ---
 ```
-## 特性
+### 特性
 * 一旦你输入了正确的密码，它就会被存储在本地浏览器的localStorage中。按个按钮，密码将会被清空。若博客中有脚本，它将被正确地执行。
 * 支持按标签加密。
 * 所有的核心功能都是由原生的API所提供的。在Node.js中，我们使用Crypto。在浏览器中，我们使用Web Crypto API。
@@ -93,7 +124,10 @@ tags: xxx
 * 广泛地使用Promise来进行异步操作，从而确保线程不被杜塞。
 * 过时的浏览器将无法正常显示，因此，请升级您的浏览器。
 
-# 3. 博客加速
+## other
+如果你不想每次新建文章都要自己写的话，那么就修改`./scaffolds/post.md`文件。
+
+# 博客加速
 > 于2022年11月测试vercel.app已经被墙了，但是还可以通过自备域名的方式。
 
 使用Vercel加速Hexo博客访问速度。
@@ -156,6 +190,7 @@ git commit -m 'Backup'
 git push origin backup
 ```
 3. 等待网页更新。
+
 
 # 测试
 ```java java
