@@ -29,24 +29,21 @@
         <category>win</category>
         <category>explorer.exe</category>
         <category>autorefresh</category>
-        <category>network</category>
-        <category>vmware</category>
         <category>docker</category>
         <category>nessus</category>
         <category>awvs</category>
+        <category>network</category>
+        <category>vmware</category>
         <category>kali</category>
         <category>dvwa</category>
         <category>fedora</category>
-        <category>helloworld</category>
-        <category>plugin</category>
         <category>hexo</category>
-        <category>backup</category>
         <category>guide</category>
+        <category>plugin</category>
+        <category>backup</category>
+        <category>hvv</category>
         <category>java</category>
         <category>filestream</category>
-        <category>目录</category>
-        <category>指令</category>
-        <category>权限</category>
         <category>media center</category>
         <category>plex</category>
         <category>emby</category>
@@ -54,24 +51,11 @@
         <category>视频</category>
         <category>音乐</category>
         <category>应急响应</category>
-        <category>hvv</category>
         <category>tools</category>
         <category>busybox</category>
         <category>ps</category>
         <category>运维</category>
         <category>smb</category>
-        <category>passwd</category>
-        <category>switch</category>
-        <category>animal crossing</category>
-        <category>Project Diva</category>
-        <category>Miku</category>
-        <category>Mega39</category>
-        <category>emulater</category>
-        <category>yuzu</category>
-        <category>ryujinx</category>
-        <category>树莓派</category>
-        <category>openwrt</category>
-        <category>router</category>
         <category>pic</category>
         <category>img</category>
         <category>api</category>
@@ -80,6 +64,18 @@
         <category>Vocal</category>
         <category>AI</category>
         <category>歌声合成</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>passwd</category>
+        <category>树莓派</category>
+        <category>openwrt</category>
+        <category>router</category>
         <category>transmission</category>
         <category>torrent</category>
         <category>下载器</category>
@@ -87,10 +83,13 @@
         <category>ubuntu</category>
         <category>mariadb</category>
         <category>bug</category>
+        <category>windows</category>
+        <category>qq</category>
+        <category>sandbox</category>
+        <category>tencent</category>
         <category>win7</category>
         <category>capacity</category>
         <category>shrink</category>
-        <category>windows</category>
         <category>Android</category>
         <category>Hyper-V</category>
         <category>WSA</category>
@@ -123,8 +122,8 @@
 &lt;p&gt;查看是否安装成功：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]&lt;span class=&#34;comment&#34;&gt;# git --version&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git version 1.8.3.1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;安装-nodejs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-nodejs&#34;&gt;#&lt;/a&gt; 安装 node.js&lt;/h2&gt;
-&lt;p&gt;直接 yum 一把梭&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install nodejs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;本来可以直接使用 &lt;code&gt;apt，yum&lt;/code&gt;  这种工具一键安装的，但是显然安装的版本十分的 stable，所以这里使用 nvm 工具来安装 nodejs 和 npm。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ./.bashrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nvm -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装最新版node并更新一下npm&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nvm install node --latest-npm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;然后查看版本：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]&lt;span class=&#34;comment&#34;&gt;# node -v&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;v16.14.2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;顺便看看 npm 版本：&lt;/p&gt;

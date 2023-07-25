@@ -26,24 +26,21 @@
     <category term="win" />
     <category term="explorer.exe" />
     <category term="autorefresh" />
-    <category term="network" />
-    <category term="vmware" />
     <category term="docker" />
     <category term="nessus" />
     <category term="awvs" />
+    <category term="network" />
+    <category term="vmware" />
     <category term="kali" />
     <category term="dvwa" />
     <category term="fedora" />
-    <category term="helloworld" />
-    <category term="plugin" />
     <category term="hexo" />
-    <category term="backup" />
     <category term="guide" />
+    <category term="plugin" />
+    <category term="backup" />
+    <category term="hvv" />
     <category term="java" />
     <category term="filestream" />
-    <category term="目录" />
-    <category term="指令" />
-    <category term="权限" />
     <category term="media center" />
     <category term="plex" />
     <category term="emby" />
@@ -51,24 +48,11 @@
     <category term="视频" />
     <category term="音乐" />
     <category term="应急响应" />
-    <category term="hvv" />
     <category term="tools" />
     <category term="busybox" />
     <category term="ps" />
     <category term="运维" />
     <category term="smb" />
-    <category term="passwd" />
-    <category term="switch" />
-    <category term="animal crossing" />
-    <category term="Project Diva" />
-    <category term="Miku" />
-    <category term="Mega39" />
-    <category term="emulater" />
-    <category term="yuzu" />
-    <category term="ryujinx" />
-    <category term="树莓派" />
-    <category term="openwrt" />
-    <category term="router" />
     <category term="pic" />
     <category term="img" />
     <category term="api" />
@@ -77,6 +61,18 @@
     <category term="Vocal" />
     <category term="AI" />
     <category term="歌声合成" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="passwd" />
+    <category term="树莓派" />
+    <category term="openwrt" />
+    <category term="router" />
     <category term="transmission" />
     <category term="torrent" />
     <category term="下载器" />
@@ -84,10 +80,13 @@
     <category term="ubuntu" />
     <category term="mariadb" />
     <category term="bug" />
+    <category term="windows" />
+    <category term="qq" />
+    <category term="sandbox" />
+    <category term="tencent" />
     <category term="win7" />
     <category term="capacity" />
     <category term="shrink" />
-    <category term="windows" />
     <category term="Android" />
     <category term="Hyper-V" />
     <category term="WSA" />
@@ -152,18 +151,28 @@
 &lt;li&gt;安装依赖&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cnpm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&#34;2-博客加密&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-博客加密&#34;&gt;#&lt;/a&gt; 2. 博客加密&lt;/h1&gt;
+&lt;h1 id=&#34;安装一些提升体验的插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装一些提升体验的插件&#34;&gt;#&lt;/a&gt; 安装一些提升体验的插件&lt;/h1&gt;
+&lt;p&gt;hexo 原版的内容已经足够使用，但是某些功能非常的需要但是 hexo 却不自带，那么就可以通过安装插件的形式来添加这些功能。&lt;/p&gt;
+&lt;h2 id=&#34;置顶文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#置顶文章&#34;&gt;#&lt;/a&gt; 置顶文章&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 先卸载原本的index生成插件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm uninstall hexo-generator-index&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 然后安装修改过后的&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-generator-index-pin-top --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用时只需要在 &lt;code&gt;front-matter&lt;/code&gt;  中加入 &lt;code&gt;top: true&lt;/code&gt;  即可让文章置顶。&lt;/p&gt;
+&lt;h2 id=&#34;隐藏文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隐藏文章&#34;&gt;#&lt;/a&gt; 隐藏文章&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 使用如下命令安装插件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-hide-posts --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装好后在 &lt;code&gt;_config.yaml&lt;/code&gt;  文件中添加下面的内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# hexo-hide-posts&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hide_posts:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  # 可以改成其他你喜欢的名字&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  filter: hide&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  # 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  # 常见的位置有：index, tag, category, archive, sitemap, feed, etc.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  # 留空则默认全部隐藏&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  public_generators: []&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  # 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  noindex: true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;最后同上，你只需要在 &lt;code&gt;front-matter&lt;/code&gt;  中加上 &lt;code&gt;hide: true&lt;/code&gt;  即可。&lt;/p&gt;
+&lt;h2 id=&#34;博客加密&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#博客加密&#34;&gt;#&lt;/a&gt; 博客加密&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。&lt;/li&gt;
 &lt;li&gt;这在 wordpress，emlog 或其他博客系统中都很容易实现，然而 hexo 除外。😦&lt;/li&gt;
 &lt;li&gt;为了解决这个问题，我们需要安装 “hexo-blog-encrypt” 扩展。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;安装指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装指令&#34;&gt;#&lt;/a&gt; 安装指令&lt;/h2&gt;
+&lt;h3 id=&#34;安装指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装指令&#34;&gt;#&lt;/a&gt; 安装指令&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-blog-encrypt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;快速使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快速使用&#34;&gt;#&lt;/a&gt; 快速使用&lt;/h2&gt;
+&lt;h3 id=&#34;快速使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快速使用&#34;&gt;#&lt;/a&gt; 快速使用&lt;/h3&gt;
 &lt;p&gt;将 password 标签添加到您的 Front-matter 里，就像这样：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;title: xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;date&lt;/span&gt;: 2022-08-26 17:34:59&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;password: 233&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;tags: xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特性&#34;&gt;#&lt;/a&gt; 特性&lt;/h2&gt;
+&lt;h3 id=&#34;特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特性&#34;&gt;#&lt;/a&gt; 特性&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;一旦你输入了正确的密码，它就会被存储在本地浏览器的 localStorage 中。按个按钮，密码将会被清空。若博客中有脚本，它将被正确地执行。&lt;/li&gt;
 &lt;li&gt;支持按标签加密。&lt;/li&gt;
@@ -172,7 +181,9 @@
 &lt;li&gt;广泛地使用 Promise 来进行异步操作，从而确保线程不被杜塞。&lt;/li&gt;
 &lt;li&gt;过时的浏览器将无法正常显示，因此，请升级您的浏览器。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;3-博客加速&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-博客加速&#34;&gt;#&lt;/a&gt; 3. 博客加速&lt;/h1&gt;
+&lt;h2 id=&#34;other&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#other&#34;&gt;#&lt;/a&gt; other&lt;/h2&gt;
+&lt;p&gt;如果你不想每次新建文章都要自己写的话，那么就修改 &lt;code&gt;./scaffolds/post.md&lt;/code&gt;  文件。&lt;/p&gt;
+&lt;h1 id=&#34;博客加速&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#博客加速&#34;&gt;#&lt;/a&gt; 博客加速&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;于 2022 年 11 月测试 vercel.app 已经被墙了，但是还可以通过自备域名的方式。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -241,8 +252,8 @@
 &lt;ruby&gt;あ&lt;rt&gt;❤&lt;/rt&gt;い&lt;rt&gt;❤&lt;/rt&gt;う&lt;rt&gt;❤&lt;/rt&gt;え&lt;rt&gt;❤&lt;/rt&gt;お&lt;rt&gt;❤&lt;/rt&gt;&lt;/ruby&gt;	あ❤い❤う❤え❤お❤&lt;br&gt;
 &lt;ruby&gt;常用账号&lt;rp&gt; (&lt;/rp&gt;&lt;rt&gt;contact&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;	常用账号 contact&lt;/p&gt;
 </content>
-        <category term="plugin" />
         <category term="hexo" />
+        <category term="plugin" />
         <category term="backup" />
         <updated>2022-08-28T14:25:43.000Z</updated>
     </entry>

@@ -26,24 +26,21 @@
     <category term="win" />
     <category term="explorer.exe" />
     <category term="autorefresh" />
-    <category term="network" />
-    <category term="vmware" />
     <category term="docker" />
     <category term="nessus" />
     <category term="awvs" />
+    <category term="network" />
+    <category term="vmware" />
     <category term="kali" />
     <category term="dvwa" />
     <category term="fedora" />
-    <category term="helloworld" />
-    <category term="plugin" />
     <category term="hexo" />
-    <category term="backup" />
     <category term="guide" />
+    <category term="plugin" />
+    <category term="backup" />
+    <category term="hvv" />
     <category term="java" />
     <category term="filestream" />
-    <category term="目录" />
-    <category term="指令" />
-    <category term="权限" />
     <category term="media center" />
     <category term="plex" />
     <category term="emby" />
@@ -51,24 +48,11 @@
     <category term="视频" />
     <category term="音乐" />
     <category term="应急响应" />
-    <category term="hvv" />
     <category term="tools" />
     <category term="busybox" />
     <category term="ps" />
     <category term="运维" />
     <category term="smb" />
-    <category term="passwd" />
-    <category term="switch" />
-    <category term="animal crossing" />
-    <category term="Project Diva" />
-    <category term="Miku" />
-    <category term="Mega39" />
-    <category term="emulater" />
-    <category term="yuzu" />
-    <category term="ryujinx" />
-    <category term="树莓派" />
-    <category term="openwrt" />
-    <category term="router" />
     <category term="pic" />
     <category term="img" />
     <category term="api" />
@@ -77,6 +61,18 @@
     <category term="Vocal" />
     <category term="AI" />
     <category term="歌声合成" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="passwd" />
+    <category term="树莓派" />
+    <category term="openwrt" />
+    <category term="router" />
     <category term="transmission" />
     <category term="torrent" />
     <category term="下载器" />
@@ -84,10 +80,13 @@
     <category term="ubuntu" />
     <category term="mariadb" />
     <category term="bug" />
+    <category term="windows" />
+    <category term="qq" />
+    <category term="sandbox" />
+    <category term="tencent" />
     <category term="win7" />
     <category term="capacity" />
     <category term="shrink" />
-    <category term="windows" />
     <category term="Android" />
     <category term="Hyper-V" />
     <category term="WSA" />
@@ -123,30 +122,24 @@
 &lt;h2 id=&#34;eeedog&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#eeedog&#34;&gt;#&lt;/a&gt; eeedog&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这个有点复杂建议自己去看看&lt;br&gt;
-&lt;a href=&#34;https://www.eee.dog/tech/rand-pic-api.html&#34;&gt; eeedog&lt;/a&gt; 我随意放一个随机图床&lt;/p&gt;
+&lt;a href=&#34;https://www.eee.dog/tech/rand-pic-api.html&#34;&gt; eeedog&lt;/a&gt; 我随意放一个随机图床 s&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://api.yimian.xyz/img?type=imgbed&#34; alt=&#34;https://api.yimian.xyz/img?type=imgbed&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;image-meta&#34;&gt;&lt;span class=&#34;image-caption center&#34;&gt;https://api.yimian.xyz/img?type=imgbed&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p class=&#34;gallery&#34; data-height=&#34;480&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;本地&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地&#34;&gt;#&lt;/a&gt; 本地&lt;/h1&gt;
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154554.png&#34; alt=&#34;女人&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;image-meta&#34;&gt;&lt;span class=&#34;image-caption center&#34;&gt;女人&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154625.png&#34; alt=&#34;女人&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;image-meta&#34;&gt;&lt;span class=&#34;image-caption center&#34;&gt;女人&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154652.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154713.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154721.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154729.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154737.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154746.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154914.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154922.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154928.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154935.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154945.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154953.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116155005.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116155015.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116155023.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116155031.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
+&lt;blockquote&gt;
+&lt;p&gt;已经不是本地了，我把它换成了 github 图床 233&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;正好测试一下图片集合标签。。&lt;/p&gt;
+&lt;div class=&#34;tag-plugin gallery swiper&#34; id=&#34;swiper-api&#34;&gt;&lt;div class=&#34;swiper-wrapper&#34;&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208227.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208228.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208230.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208231.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208239.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208240.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;swiper-pagination&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-button-prev blur&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-button-next blur&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin gallery swiper&#34; id=&#34;swiper-api&#34;&gt;&lt;div class=&#34;swiper-wrapper&#34;&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208232.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208233.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208234.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208235.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208236.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208237.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208238.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;swiper-pagination&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-button-prev blur&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-button-next blur&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208241.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208242.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208243.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208244.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208245.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208246.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p class=&#34;gallery&#34;&gt;&lt;/p&gt;
 </content>
         <category term="pic" />

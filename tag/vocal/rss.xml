@@ -29,24 +29,21 @@
         <category>win</category>
         <category>explorer.exe</category>
         <category>autorefresh</category>
-        <category>network</category>
-        <category>vmware</category>
         <category>docker</category>
         <category>nessus</category>
         <category>awvs</category>
+        <category>network</category>
+        <category>vmware</category>
         <category>kali</category>
         <category>dvwa</category>
         <category>fedora</category>
-        <category>helloworld</category>
-        <category>plugin</category>
         <category>hexo</category>
-        <category>backup</category>
         <category>guide</category>
+        <category>plugin</category>
+        <category>backup</category>
+        <category>hvv</category>
         <category>java</category>
         <category>filestream</category>
-        <category>目录</category>
-        <category>指令</category>
-        <category>权限</category>
         <category>media center</category>
         <category>plex</category>
         <category>emby</category>
@@ -54,24 +51,11 @@
         <category>视频</category>
         <category>音乐</category>
         <category>应急响应</category>
-        <category>hvv</category>
         <category>tools</category>
         <category>busybox</category>
         <category>ps</category>
         <category>运维</category>
         <category>smb</category>
-        <category>passwd</category>
-        <category>switch</category>
-        <category>animal crossing</category>
-        <category>Project Diva</category>
-        <category>Miku</category>
-        <category>Mega39</category>
-        <category>emulater</category>
-        <category>yuzu</category>
-        <category>ryujinx</category>
-        <category>树莓派</category>
-        <category>openwrt</category>
-        <category>router</category>
         <category>pic</category>
         <category>img</category>
         <category>api</category>
@@ -80,6 +64,18 @@
         <category>Vocal</category>
         <category>AI</category>
         <category>歌声合成</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>passwd</category>
+        <category>树莓派</category>
+        <category>openwrt</category>
+        <category>router</category>
         <category>transmission</category>
         <category>torrent</category>
         <category>下载器</category>
@@ -87,10 +83,13 @@
         <category>ubuntu</category>
         <category>mariadb</category>
         <category>bug</category>
+        <category>windows</category>
+        <category>qq</category>
+        <category>sandbox</category>
+        <category>tencent</category>
         <category>win7</category>
         <category>capacity</category>
         <category>shrink</category>
-        <category>windows</category>
         <category>Android</category>
         <category>Hyper-V</category>
         <category>WSA</category>

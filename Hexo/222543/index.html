@@ -34,10 +34,10 @@
 <meta property="og:image" content="http://maxshiroi.top/img/hexoplugin/20221116144428.png">
 <meta property="og:image" content="http://maxshiroi.top/img/hexoplugin/20221116144502.png">
 <meta property="article:published_time" content="2022-08-28T14:25:43.000Z">
-<meta property="article:modified_time" content="2023-06-20T10:33:47.401Z">
+<meta property="article:modified_time" content="2023-07-06T17:22:45.202Z">
 <meta property="article:author" content="maxshiroi">
-<meta property="article:tag" content="plugin">
 <meta property="article:tag" content="hexo">
+<meta property="article:tag" content="plugin">
 <meta property="article:tag" content="backup">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://maxshiroi.top/img/hexoplugin/20221116141135.png">
@@ -45,7 +45,7 @@
   
   
   
-  <meta name="keywords" content="plugin,hexo,backup">
+  <meta name="keywords" content="hexo,plugin,backup">
 
   <!-- feed -->
   
@@ -74,7 +74,7 @@
 <body>
   
 
-<div class="l_cover post"><div class="cover"><div class="lazy img bg" data-bg="https://source.unsplash.com/2000x400/?backup,hexo,plugin"></div></div></div>
+<div class="l_cover post"><div class="cover"><div class="lazy img bg" data-bg="https://source.unsplash.com/2000x400/?backup,plugin,hexo"></div></div></div>
 
 
   <div class='l_body' id='start'>
@@ -95,7 +95,7 @@
 
 
 
-<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">部署完hexo后还应该准备哪些工作</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#intro"><span class="toc-text"> Intro</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-text"> 0. 主题配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E5%A4%87%E4%BB%BDhexo%E6%BA%90%E6%96%87%E4%BB%B6%E5%88%B0-backup-%E5%88%86%E6%94%AF"><span class="toc-text"> 1. 备份 Hexo 源文件到 Backup 分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAbackup%E5%88%86%E6%94%AF"><span class="toc-text"> 创建 backup 分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86backup%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2%E4%B8%BA%E9%BB%98%E8%AE%A4%E5%88%86%E6%94%AF"><span class="toc-text"> 将 backup 分支切换为默认分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86repo-clone%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="toc-text"> 将 repo clone 到本地</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99"><span class="toc-text"> 报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%98%E5%8E%9F"><span class="toc-text"> 还原</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86"><span class="toc-text"> 2. 博客加密</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%8C%87%E4%BB%A4"><span class="toc-text"> 安装指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8"><span class="toc-text"> 快速使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%80%A7"><span class="toc-text"> 特性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F"><span class="toc-text"> 3. 博客加速</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-text"> 步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%9D%E6%8A%A4%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%86%85%E5%AE%B9"><span class="toc-text"> 保护博客源码内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text"> 写作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8"><span class="toc-text"> 第一次使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87github-page"><span class="toc-text"> 通过 github page</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87vercelcom"><span class="toc-text"> 通过 vercel.com</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text"> 测试</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">部署完hexo后还应该准备哪些工作</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#intro"><span class="toc-text"> Intro</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-text"> 0. 主题配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E5%A4%87%E4%BB%BDhexo%E6%BA%90%E6%96%87%E4%BB%B6%E5%88%B0-backup-%E5%88%86%E6%94%AF"><span class="toc-text"> 1. 备份 Hexo 源文件到 Backup 分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAbackup%E5%88%86%E6%94%AF"><span class="toc-text"> 创建 backup 分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86backup%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2%E4%B8%BA%E9%BB%98%E8%AE%A4%E5%88%86%E6%94%AF"><span class="toc-text"> 将 backup 分支切换为默认分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86repo-clone%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="toc-text"> 将 repo clone 到本地</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99"><span class="toc-text"> 报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%98%E5%8E%9F"><span class="toc-text"> 还原</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E6%8F%90%E5%8D%87%E4%BD%93%E9%AA%8C%E7%9A%84%E6%8F%92%E4%BB%B6"><span class="toc-text"> 安装一些提升体验的插件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0"><span class="toc-text"> 置顶文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%90%E8%97%8F%E6%96%87%E7%AB%A0"><span class="toc-text"> 隐藏文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86"><span class="toc-text"> 博客加密</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%8C%87%E4%BB%A4"><span class="toc-text"> 安装指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8"><span class="toc-text"> 快速使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%80%A7"><span class="toc-text"> 特性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#other"><span class="toc-text"> other</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F"><span class="toc-text"> 博客加速</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-text"> 步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%9D%E6%8A%A4%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%86%85%E5%AE%B9"><span class="toc-text"> 保护博客源码内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text"> 写作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8"><span class="toc-text"> 第一次使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87github-page"><span class="toc-text"> 通过 github page</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87vercelcom"><span class="toc-text"> 通过 vercel.com</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text"> 测试</span></a></li></ol></div></div></widget>
 </div>
 
 
@@ -163,18 +163,28 @@
 <li>安装依赖</li>
 </ol>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></tbody></table></figure>
-<h1 id="2-博客加密"><a class="anchor" href="#2-博客加密">#</a> 2. 博客加密</h1>
+<h1 id="安装一些提升体验的插件"><a class="anchor" href="#安装一些提升体验的插件">#</a> 安装一些提升体验的插件</h1>
+<p>hexo 原版的内容已经足够使用，但是某些功能非常的需要但是 hexo 却不自带，那么就可以通过安装插件的形式来添加这些功能。</p>
+<h2 id="置顶文章"><a class="anchor" href="#置顶文章">#</a> 置顶文章</h2>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先卸载原本的index生成插件</span></span><br><span class="line">npm uninstall hexo-generator-index</span><br><span class="line"><span class="comment"># 然后安装修改过后的</span></span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></tbody></table></figure>
+<p>使用时只需要在 <code>front-matter</code>  中加入 <code>top: true</code>  即可让文章置顶。</p>
+<h2 id="隐藏文章"><a class="anchor" href="#隐藏文章">#</a> 隐藏文章</h2>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用如下命令安装插件</span></span><br><span class="line">npm install hexo-hide-posts --save</span><br></pre></td></tr></tbody></table></figure>
+<p>安装好后在 <code>_config.yaml</code>  文件中添加下面的内容：</p>
+<figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># hexo-hide-posts</span><br><span class="line">hide_posts:</span><br><span class="line">  # 可以改成其他你喜欢的名字</span><br><span class="line">  filter: hide</span><br><span class="line">  # 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span><br><span class="line">  # 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span><br><span class="line">  # 留空则默认全部隐藏</span><br><span class="line">  public_generators: []</span><br><span class="line">  # 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span><br><span class="line">  noindex: true</span><br></pre></td></tr></tbody></table></figure>
+<p>最后同上，你只需要在 <code>front-matter</code>  中加上 <code>hide: true</code>  即可。</p>
+<h2 id="博客加密"><a class="anchor" href="#博客加密">#</a> 博客加密</h2>
 <ul>
 <li>有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。</li>
 <li>这在 wordpress，emlog 或其他博客系统中都很容易实现，然而 hexo 除外。😦</li>
 <li>为了解决这个问题，我们需要安装 “hexo-blog-encrypt” 扩展。</li>
 </ul>
-<h2 id="安装指令"><a class="anchor" href="#安装指令">#</a> 安装指令</h2>
+<h3 id="安装指令"><a class="anchor" href="#安装指令">#</a> 安装指令</h3>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-blog-encrypt</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="快速使用"><a class="anchor" href="#快速使用">#</a> 快速使用</h2>
+<h3 id="快速使用"><a class="anchor" href="#快速使用">#</a> 快速使用</h3>
 <p>将 password 标签添加到您的 Front-matter 里，就像这样：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: xxx</span><br><span class="line"><span class="built_in">date</span>: 2022-08-26 17:34:59</span><br><span class="line">password: 233</span><br><span class="line">tags: xxx</span><br><span class="line">---</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="特性"><a class="anchor" href="#特性">#</a> 特性</h2>
+<h3 id="特性"><a class="anchor" href="#特性">#</a> 特性</h3>
 <ul>
 <li>一旦你输入了正确的密码，它就会被存储在本地浏览器的 localStorage 中。按个按钮，密码将会被清空。若博客中有脚本，它将被正确地执行。</li>
 <li>支持按标签加密。</li>
@@ -183,7 +193,9 @@
 <li>广泛地使用 Promise 来进行异步操作，从而确保线程不被杜塞。</li>
 <li>过时的浏览器将无法正常显示，因此，请升级您的浏览器。</li>
 </ul>
-<h1 id="3-博客加速"><a class="anchor" href="#3-博客加速">#</a> 3. 博客加速</h1>
+<h2 id="other"><a class="anchor" href="#other">#</a> other</h2>
+<p>如果你不想每次新建文章都要自己写的话，那么就修改 <code>./scaffolds/post.md</code>  文件。</p>
+<h1 id="博客加速"><a class="anchor" href="#博客加速">#</a> 博客加速</h1>
 <blockquote>
 <p>于 2022 年 11 月测试 vercel.app 已经被墙了，但是还可以通过自备域名的方式。</p>
 </blockquote>

@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>MAXshiro • Posts by &#34;sandbox&#34; tag</title>
+        <link>http://maxshiroi.top</link>
+        <description>Discover and Record the world.</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 25 Jul 2023 10:38:02 +0800</pubDate>
+        <lastBuildDate>Tue, 25 Jul 2023 10:38:02 +0800</lastBuildDate>
+        <category>nextcloud</category>
+        <category>聊天室</category>
+        <category>python</category>
+        <category>ctf</category>
+        <category>buuctf</category>
+        <category>antsword</category>
+        <category>linux</category>
+        <category>centos</category>
+        <category>web</category>
+        <category>nginx</category>
+        <category>mysql</category>
+        <category>wsa</category>
+        <category>vhd</category>
+        <category>vhdx</category>
+        <category>diskpart</category>
+        <category>security</category>
+        <category>webshell</category>
+        <category>arch</category>
+        <category>pacman</category>
+        <category>win</category>
+        <category>explorer.exe</category>
+        <category>autorefresh</category>
+        <category>docker</category>
+        <category>nessus</category>
+        <category>awvs</category>
+        <category>network</category>
+        <category>vmware</category>
+        <category>kali</category>
+        <category>dvwa</category>
+        <category>fedora</category>
+        <category>hexo</category>
+        <category>guide</category>
+        <category>plugin</category>
+        <category>backup</category>
+        <category>hvv</category>
+        <category>java</category>
+        <category>filestream</category>
+        <category>media center</category>
+        <category>plex</category>
+        <category>emby</category>
+        <category>jellyfin</category>
+        <category>视频</category>
+        <category>音乐</category>
+        <category>应急响应</category>
+        <category>tools</category>
+        <category>busybox</category>
+        <category>ps</category>
+        <category>运维</category>
+        <category>smb</category>
+        <category>pic</category>
+        <category>img</category>
+        <category>api</category>
+        <category>random</category>
+        <category>wallpaper</category>
+        <category>Vocal</category>
+        <category>AI</category>
+        <category>歌声合成</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>passwd</category>
+        <category>树莓派</category>
+        <category>openwrt</category>
+        <category>router</category>
+        <category>transmission</category>
+        <category>torrent</category>
+        <category>下载器</category>
+        <category>nas</category>
+        <category>ubuntu</category>
+        <category>mariadb</category>
+        <category>bug</category>
+        <category>windows</category>
+        <category>qq</category>
+        <category>sandbox</category>
+        <category>tencent</category>
+        <category>win7</category>
+        <category>capacity</category>
+        <category>shrink</category>
+        <category>Android</category>
+        <category>Hyper-V</category>
+        <category>WSA</category>
+        <category>wsl2</category>
+        <category>Hyper-v</category>
+        <category>wsl</category>
+        <category>权限不足</category>
+        <category>vscode</category>
+        <item>
+            <guid isPermalink="true">http://maxshiroi.top/Windwos/103802/</guid>
+            <title>使用Windows内置的沙盒功能来隔离常见的国产软件</title>
+            <link>http://maxshiroi.top/Windwos/103802/</link>
+            <category>windows</category>
+            <category>qq</category>
+            <category>sandbox</category>
+            <category>tencent</category>
+            <pubDate>Tue, 25 Jul 2023 10:38:02 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;使用本项目的目的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用本项目的目的&#34;&gt;#&lt;/a&gt; 使用本项目的目的&lt;/h1&gt;
+&lt;p&gt;腾讯系的软件众所周知在使用中会有个进程随着主进程的启动一同启动。这个程序会读取本地的浏览器浏览记录以及一些其他的个人隐私信息并上传到腾讯那边进行分析。具体他拿来做什么并不是很清楚，但是有一些猜测：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;反作弊相关&lt;/li&gt;
+&lt;li&gt;精确探测用户画像实现精准推送&lt;/li&gt;
+&lt;li&gt;与政府联合进行某些行动。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这些年大火一直在搞如何才能防止腾讯系软件对用户信息的收集。目前的方案有如下几种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 VMware/vbox 之类的虚拟机软件来安置这些毒瘤，缺点：占用空间和性能都很多，而且启动很麻烦。&lt;/li&gt;
+&lt;li&gt;使用 sandboxie 这类沙箱软件，缺点：没有 plus 版本会缺失很多功能。&lt;/li&gt;
+&lt;li&gt;使用另外的机器来安置这些软件，缺点：并不是所有人都那么 rich。&lt;/li&gt;
+&lt;li&gt;使用 windows 沙盒：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;windows 沙盒在正常使用的时候和普通机器并无太大区别，但是当你关闭 windows 沙盒之后里面的内容也会随之消失。本项目的目的就是在本地创建一个文件夹用来保存 windows 沙盒产生的一些文件，从而可以不用每次启动都需要重新安装这些软件。但并不能照顾到所有的文件因此还是会有一些缺陷。&lt;/p&gt;
+&lt;h1 id=&#34;注意&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意&#34;&gt;#&lt;/a&gt; 注意&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;本项目由 &lt;code&gt;empty-233/tencent-sandbox&lt;/code&gt;  克隆而来，为自己方便使用。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;tencent-sandbox&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tencent-sandbox&#34;&gt;#&lt;/a&gt; tencent-sandbox&lt;/h1&gt;
+&lt;p&gt;tencent-sandbox 是使用 &lt;a href=&#34;https://learn.microsoft.com/zh-cn/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview&#34;&gt;Windows sandbox&lt;/a&gt; 为腾讯全家桶创建沙盒的配置&lt;/p&gt;
+&lt;h1 id=&#34;chinaflavor-sandbox&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#chinaflavor-sandbox&#34;&gt;#&lt;/a&gt; Chinaflavor-sandbox&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/maxshiro/Chinaflavor-sandbox&#34;&gt;Chinaflavor-sandbox&lt;/a&gt; 是由 &lt;code&gt;tencent-sandbox&lt;/code&gt;  个人定制而来，添加了腾讯文档，腾讯会议以及钉钉。&lt;/p&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意事项&#34;&gt;#&lt;/a&gt; 注意事项&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Windows 10 不支持相对路径&lt;/strong&gt;，请把 &lt;strong&gt;Tencent.wsb&lt;/strong&gt; 中的路径替换成&lt;strong&gt;绝对路径&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;兼容性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#兼容性&#34;&gt;#&lt;/a&gt; 兼容性&lt;/h2&gt;
+&lt;p&gt;目前测试 &lt;strong&gt;微信&lt;/strong&gt; &lt;strong&gt;QQ&lt;/strong&gt; &lt;strong&gt;QQNT&lt;/strong&gt; &lt;strong&gt;TIM&lt;/strong&gt; &lt;strong&gt;企业微信&lt;/strong&gt; 正常使用，其他未测试&lt;/p&gt;
+&lt;p&gt;注: &lt;strong&gt;企业微信无法自动登录 (检查设备)，只能每次重新登录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;默认分配&lt;strong&gt; 2gb&lt;/strong&gt; 内存，有需要可以自行修改  &lt;code&gt;&amp;lt;MemoryInMB&amp;gt;2048&amp;lt;/MemoryInMB&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;使用教程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用教程&#34;&gt;#&lt;/a&gt; 使用教程&lt;/h2&gt;
+&lt;h3 id=&#34;如何启用windows沙盒&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何启用windows沙盒&#34;&gt;#&lt;/a&gt; 如何启用 windows 沙盒？&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;注意：请确保您的 Windows 系统在 Win10 以上，以及 Windows 沙盒功能不适用于 Windows 10/11 家庭版。您可以使用 &lt;code&gt;winver&lt;/code&gt;  命令来检查系统版本。&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;按下 &lt;code&gt;Win + R&lt;/code&gt;  键，打开 “运行” 对话框，然后输入 &lt;code&gt;control&lt;/code&gt;  并按 &lt;code&gt;Enter&lt;/code&gt;  键，这将打开控制面板。&lt;/li&gt;
+&lt;li&gt;在控制面板中，将查看到若干个选项类别。请找到并点击 “程序” 菜单。&lt;/li&gt;
+&lt;li&gt;在 “程序” 菜单下，您将看到一个名为 “启用或关闭 Windows 功能” 的链接。请点击它，这将打开一个名为 “Windows 功能” 的窗口。&lt;/li&gt;
+&lt;li&gt;在 “Windows 功能” 窗口中，您将看到一个列表，其中包含了可启用或禁用的 Windows 功能。请在列表中找到 “Windows 沙盒” 选项，并确保其复选框被勾选上。&lt;/li&gt;
+&lt;li&gt;在勾选了 “Windows 沙盒” 选项后，点击 “确定” 按钮。Windows 将开始应用更改，这可能需要一些时间。完成后，您将看到一个提示，要求您重启计算机，以使更改生效。请点击 “是”，让系统重启。&lt;/li&gt;
+&lt;li&gt;当您的计算机重新启动后，按下 &lt;code&gt;Win + S&lt;/code&gt;  键，打开 Windows 搜索功能。在搜索栏中输入 “Windows 沙盒”，然后点击出现的 “Windows 沙盒” 应用程序。&lt;/li&gt;
+&lt;li&gt;点击 “Windows 沙盒” 应用程序后，Windows 沙盒将开始初始化。稍等片刻，您将看到一个新的桌面环境弹出，类似于一个干净的 Windows 桌面。这表示 Windows 沙盒已经成功启动。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;clone本项目到任意目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#clone本项目到任意目录&#34;&gt;#&lt;/a&gt; Clone 本项目到任意目录&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/maxshiro/Chinaflavor-sandbox.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;创建空文件夹目录结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建空文件夹目录结构&#34;&gt;#&lt;/a&gt; 创建空文件夹目录结构&lt;/h3&gt;
+&lt;p&gt;双击根目录中的 &lt;code&gt;mkdir.bat&lt;/code&gt;  一键创建以下目录结构。&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;├───App&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───DingDing&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───Docs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───Meeting&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───QQ&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───QQNT&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───TIM&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───WeChat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   └───WXWork&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;├───Data&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───Common Files&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───Documents&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   ├───Tencent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   ├───WeChat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   └───WXWork&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───Roaming&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   ├───DingTalk&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   ├───Tencent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   ├───WeChat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   └───WXWork&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   └───SysWOW64&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;├───Desktop&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;└───Scripts&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;安装配置沙盒&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装配置沙盒&#34;&gt;#&lt;/a&gt; 安装配置沙盒&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在沙盒内正确安装需要的软件，正常安装 &lt;strong&gt;QQ/QQNT/Wechat/Dingtalk&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装完成之后复制沙盒内的  &lt;code&gt;C:\Windows\SysWOW64&lt;/code&gt;  目录下所有文件到 Clone 下来的  &lt;code&gt;Data\SysWOW64&lt;/code&gt;  目录内 (不然 qq 运行一段时间后会崩溃)，并关闭沙盒。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开 &lt;strong&gt;Tencent.wsb&lt;/strong&gt;，继续安装列出来的软件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;移动桌面快捷方式到任何位置，再移动回桌面 (否则快捷方式会消失)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;操作完成后就可以正常使用了，不确保账号数据会保留。&lt;/p&gt;
+&lt;h3 id=&#34;自定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自定义&#34;&gt;#&lt;/a&gt; 自定义&lt;/h3&gt;
+&lt;p&gt;如果你想要自定义添加的软件，可以参考我提供的思路：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;沙盒内正常安装你需要的软件到默认目录下（随便）, 然后复制这个目录的路径。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以到下面的几个目录内看看你装的软件是否创建了其他目录：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\WDAGUtilityAccount\Documents\&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\WDAGUtilityAccount\AppData\Roaming\&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Program Files (x86)\Common Files&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用任意文本编辑器打开 &lt;strong&gt;Tencent.wsb&lt;/strong&gt; 这个文件就能看到这个沙盒是如何工作的。（大概意思就是把配置过的目录映射到虚拟机里）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到对应的 &lt;code&gt;&amp;lt;!-- Common Files --&amp;gt;&lt;/code&gt; , &lt;code&gt;&amp;lt;!-- App --&amp;gt;&lt;/code&gt; , &lt;code&gt;&amp;lt;!-- Documents --&amp;gt;&lt;/code&gt; , &lt;code&gt;&amp;lt;!-- Common Files --&amp;gt;&lt;/code&gt; , &lt;code&gt;&amp;lt;!-- ProgramData --&amp;gt;&lt;/code&gt;  注释标签，在对应位是添加你要映射的目录：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 以钉钉为例：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;!-- App --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 在这个标签下添加这些内容&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;MappedFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;HostFolder&amp;gt;.\App\DingDing&amp;lt;/HostFolder&amp;gt; # HostFolder 本机位置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;SandboxFolder&amp;gt;C:\Program Files (x86)\DingDing&amp;lt;/SandboxFolder&amp;gt; # SandboxFolder 沙箱内位置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;ReadOnly&amp;gt;false&amp;lt;/ReadOnly&amp;gt; # ReadOnly 是否只读&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/MappedFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;!-- Roaming --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;MappedFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;HostFolder&amp;gt;.\Data\Roaming\DingTalk&amp;lt;/HostFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;SandboxFolder&amp;gt;C:\Users\WDAGUtilityAccount\AppData\Roaming\DingTalk&amp;lt;/SandboxFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;ReadOnly&amp;gt;false&amp;lt;/ReadOnly&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/MappedFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在主机 Data 目录下创建上面 HostFolder 编写的目录位置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关闭虚拟机，重新打开并再次正常安装（注意安装位置要和你自己上面填的目录保持一致），按照第一次的方式再次拷贝快捷方式并恢复。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其余的参考文件内的内容自行修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;挂载路径&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#挂载路径&#34;&gt;#&lt;/a&gt; 挂载路径&lt;/h2&gt;
+&lt;figure class=&#34;highlight text&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;桌面 -&amp;gt; Desktop&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Program Files (x86)\Common Files -&amp;gt; Data\Common Files&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\WDAGUtilityAccount\Documents\Tencent Files -&amp;gt; Data\Documents\Tencent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\WDAGUtilityAccount\Documents\WeChat Files -&amp;gt; Data\Documents\WeChat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\WDAGUtilityAccount\Documents\WXWork -&amp;gt; Data\Documents\WXWork&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;其余的请查看 Tencent.wsb 中的 MappedFolder&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

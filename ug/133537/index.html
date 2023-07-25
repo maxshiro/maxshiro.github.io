@@ -31,7 +31,7 @@
 <meta property="og:description" content="# 环境 Hexo 程序使用 node.js 程序编写，因此需要现在环境机上部署 node.js，git 只用来推送。  什么是 Node.js：一个运行 javascript (JS) 的环境。Hexo 是一个 javascript (JS) 语言的程序。一般 JS 运行在浏览器中，但是也有一种非浏览器环境也可以运行 JS。这个环境是 Node.js   什么是 Git：一个版本控制软件。Hex">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-17T05:35:37.000Z">
-<meta property="article:modified_time" content="2023-04-21T12:01:28.473Z">
+<meta property="article:modified_time" content="2023-07-06T16:55:21.713Z">
 <meta property="article:author" content="maxshiroi">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="guide">
@@ -123,8 +123,8 @@
 <p>查看是否安装成功：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># git --version</span></span><br><span class="line">git version 1.8.3.1</span><br></pre></td></tr></tbody></table></figure>
 <h2 id="安装-nodejs"><a class="anchor" href="#安装-nodejs">#</a> 安装 node.js</h2>
-<p>直接 yum 一把梭</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nodejs</span><br></pre></td></tr></tbody></table></figure>
+<p>本来可以直接使用 <code>apt，yum</code>  这种工具一键安装的，但是显然安装的版本十分的 stable，所以这里使用 nvm 工具来安装 nodejs 和 npm。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash</span><br><span class="line"><span class="built_in">source</span> ./.bashrc</span><br><span class="line">nvm -v</span><br><span class="line"><span class="comment"># 安装最新版node并更新一下npm</span></span><br><span class="line">nvm install node --latest-npm</span><br></pre></td></tr></tbody></table></figure>
 <p>然后查看版本：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># node -v</span></span><br><span class="line">v16.14.2</span><br></pre></td></tr></tbody></table></figure>
 <p>顺便看看 npm 版本：</p>
@@ -242,7 +242,7 @@
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/ug/205645/">使用树莓派4B+Docker Openwrt实现旁路由</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/ug/100353/">Hello World</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/ug/205645/">使用树莓派4B+Docker Openwrt实现旁路由</a></div><div class="item" id="next"></div></section></div>
 
 
 <div class="related-wrap reveal" id="related-posts">

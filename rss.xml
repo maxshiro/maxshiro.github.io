@@ -5,8 +5,8 @@
         <link>http://maxshiroi.top</link>
         <description>Discover and Record the world.</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 03 Jul 2023 00:29:45 +0800</pubDate>
-        <lastBuildDate>Mon, 03 Jul 2023 00:29:45 +0800</lastBuildDate>
+        <pubDate>Tue, 25 Jul 2023 10:38:02 +0800</pubDate>
+        <lastBuildDate>Tue, 25 Jul 2023 10:38:02 +0800</lastBuildDate>
         <category>nextcloud</category>
         <category>聊天室</category>
         <category>python</category>
@@ -29,24 +29,21 @@
         <category>win</category>
         <category>explorer.exe</category>
         <category>autorefresh</category>
-        <category>network</category>
-        <category>vmware</category>
         <category>docker</category>
         <category>nessus</category>
         <category>awvs</category>
+        <category>network</category>
+        <category>vmware</category>
         <category>kali</category>
         <category>dvwa</category>
         <category>fedora</category>
-        <category>helloworld</category>
-        <category>plugin</category>
         <category>hexo</category>
-        <category>backup</category>
         <category>guide</category>
+        <category>plugin</category>
+        <category>backup</category>
+        <category>hvv</category>
         <category>java</category>
         <category>filestream</category>
-        <category>目录</category>
-        <category>指令</category>
-        <category>权限</category>
         <category>media center</category>
         <category>plex</category>
         <category>emby</category>
@@ -54,24 +51,11 @@
         <category>视频</category>
         <category>音乐</category>
         <category>应急响应</category>
-        <category>hvv</category>
         <category>tools</category>
         <category>busybox</category>
         <category>ps</category>
         <category>运维</category>
         <category>smb</category>
-        <category>passwd</category>
-        <category>switch</category>
-        <category>animal crossing</category>
-        <category>Project Diva</category>
-        <category>Miku</category>
-        <category>Mega39</category>
-        <category>emulater</category>
-        <category>yuzu</category>
-        <category>ryujinx</category>
-        <category>树莓派</category>
-        <category>openwrt</category>
-        <category>router</category>
         <category>pic</category>
         <category>img</category>
         <category>api</category>
@@ -80,6 +64,18 @@
         <category>Vocal</category>
         <category>AI</category>
         <category>歌声合成</category>
+        <category>switch</category>
+        <category>animal crossing</category>
+        <category>Project Diva</category>
+        <category>Miku</category>
+        <category>Mega39</category>
+        <category>emulater</category>
+        <category>yuzu</category>
+        <category>ryujinx</category>
+        <category>passwd</category>
+        <category>树莓派</category>
+        <category>openwrt</category>
+        <category>router</category>
         <category>transmission</category>
         <category>torrent</category>
         <category>下载器</category>
@@ -87,10 +83,13 @@
         <category>ubuntu</category>
         <category>mariadb</category>
         <category>bug</category>
+        <category>windows</category>
+        <category>qq</category>
+        <category>sandbox</category>
+        <category>tencent</category>
         <category>win7</category>
         <category>capacity</category>
         <category>shrink</category>
-        <category>windows</category>
         <category>Android</category>
         <category>Hyper-V</category>
         <category>WSA</category>
@@ -100,11 +99,111 @@
         <category>权限不足</category>
         <category>vscode</category>
         <item>
+            <guid isPermalink="true">http://maxshiroi.top/Windwos/103802/</guid>
+            <title>使用Windows内置的沙盒功能来隔离常见的国产软件</title>
+            <link>http://maxshiroi.top/Windwos/103802/</link>
+            <category>windows</category>
+            <category>qq</category>
+            <category>sandbox</category>
+            <category>tencent</category>
+            <pubDate>Tue, 25 Jul 2023 10:38:02 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;使用本项目的目的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用本项目的目的&#34;&gt;#&lt;/a&gt; 使用本项目的目的&lt;/h1&gt;
+&lt;p&gt;腾讯系的软件众所周知在使用中会有个进程随着主进程的启动一同启动。这个程序会读取本地的浏览器浏览记录以及一些其他的个人隐私信息并上传到腾讯那边进行分析。具体他拿来做什么并不是很清楚，但是有一些猜测：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;反作弊相关&lt;/li&gt;
+&lt;li&gt;精确探测用户画像实现精准推送&lt;/li&gt;
+&lt;li&gt;与政府联合进行某些行动。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这些年大火一直在搞如何才能防止腾讯系软件对用户信息的收集。目前的方案有如下几种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 VMware/vbox 之类的虚拟机软件来安置这些毒瘤，缺点：占用空间和性能都很多，而且启动很麻烦。&lt;/li&gt;
+&lt;li&gt;使用 sandboxie 这类沙箱软件，缺点：没有 plus 版本会缺失很多功能。&lt;/li&gt;
+&lt;li&gt;使用另外的机器来安置这些软件，缺点：并不是所有人都那么 rich。&lt;/li&gt;
+&lt;li&gt;使用 windows 沙盒：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;windows 沙盒在正常使用的时候和普通机器并无太大区别，但是当你关闭 windows 沙盒之后里面的内容也会随之消失。本项目的目的就是在本地创建一个文件夹用来保存 windows 沙盒产生的一些文件，从而可以不用每次启动都需要重新安装这些软件。但并不能照顾到所有的文件因此还是会有一些缺陷。&lt;/p&gt;
+&lt;h1 id=&#34;注意&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意&#34;&gt;#&lt;/a&gt; 注意&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;本项目由 &lt;code&gt;empty-233/tencent-sandbox&lt;/code&gt;  克隆而来，为自己方便使用。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;tencent-sandbox&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tencent-sandbox&#34;&gt;#&lt;/a&gt; tencent-sandbox&lt;/h1&gt;
+&lt;p&gt;tencent-sandbox 是使用 &lt;a href=&#34;https://learn.microsoft.com/zh-cn/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview&#34;&gt;Windows sandbox&lt;/a&gt; 为腾讯全家桶创建沙盒的配置&lt;/p&gt;
+&lt;h1 id=&#34;chinaflavor-sandbox&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#chinaflavor-sandbox&#34;&gt;#&lt;/a&gt; Chinaflavor-sandbox&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/maxshiro/Chinaflavor-sandbox&#34;&gt;Chinaflavor-sandbox&lt;/a&gt; 是由 &lt;code&gt;tencent-sandbox&lt;/code&gt;  个人定制而来，添加了腾讯文档，腾讯会议以及钉钉。&lt;/p&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意事项&#34;&gt;#&lt;/a&gt; 注意事项&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Windows 10 不支持相对路径&lt;/strong&gt;，请把 &lt;strong&gt;Tencent.wsb&lt;/strong&gt; 中的路径替换成&lt;strong&gt;绝对路径&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;兼容性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#兼容性&#34;&gt;#&lt;/a&gt; 兼容性&lt;/h2&gt;
+&lt;p&gt;目前测试 &lt;strong&gt;微信&lt;/strong&gt; &lt;strong&gt;QQ&lt;/strong&gt; &lt;strong&gt;QQNT&lt;/strong&gt; &lt;strong&gt;TIM&lt;/strong&gt; &lt;strong&gt;企业微信&lt;/strong&gt; 正常使用，其他未测试&lt;/p&gt;
+&lt;p&gt;注: &lt;strong&gt;企业微信无法自动登录 (检查设备)，只能每次重新登录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;默认分配&lt;strong&gt; 2gb&lt;/strong&gt; 内存，有需要可以自行修改  &lt;code&gt;&amp;lt;MemoryInMB&amp;gt;2048&amp;lt;/MemoryInMB&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;使用教程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用教程&#34;&gt;#&lt;/a&gt; 使用教程&lt;/h2&gt;
+&lt;h3 id=&#34;如何启用windows沙盒&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何启用windows沙盒&#34;&gt;#&lt;/a&gt; 如何启用 windows 沙盒？&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;注意：请确保您的 Windows 系统在 Win10 以上，以及 Windows 沙盒功能不适用于 Windows 10/11 家庭版。您可以使用 &lt;code&gt;winver&lt;/code&gt;  命令来检查系统版本。&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;按下 &lt;code&gt;Win + R&lt;/code&gt;  键，打开 “运行” 对话框，然后输入 &lt;code&gt;control&lt;/code&gt;  并按 &lt;code&gt;Enter&lt;/code&gt;  键，这将打开控制面板。&lt;/li&gt;
+&lt;li&gt;在控制面板中，将查看到若干个选项类别。请找到并点击 “程序” 菜单。&lt;/li&gt;
+&lt;li&gt;在 “程序” 菜单下，您将看到一个名为 “启用或关闭 Windows 功能” 的链接。请点击它，这将打开一个名为 “Windows 功能” 的窗口。&lt;/li&gt;
+&lt;li&gt;在 “Windows 功能” 窗口中，您将看到一个列表，其中包含了可启用或禁用的 Windows 功能。请在列表中找到 “Windows 沙盒” 选项，并确保其复选框被勾选上。&lt;/li&gt;
+&lt;li&gt;在勾选了 “Windows 沙盒” 选项后，点击 “确定” 按钮。Windows 将开始应用更改，这可能需要一些时间。完成后，您将看到一个提示，要求您重启计算机，以使更改生效。请点击 “是”，让系统重启。&lt;/li&gt;
+&lt;li&gt;当您的计算机重新启动后，按下 &lt;code&gt;Win + S&lt;/code&gt;  键，打开 Windows 搜索功能。在搜索栏中输入 “Windows 沙盒”，然后点击出现的 “Windows 沙盒” 应用程序。&lt;/li&gt;
+&lt;li&gt;点击 “Windows 沙盒” 应用程序后，Windows 沙盒将开始初始化。稍等片刻，您将看到一个新的桌面环境弹出，类似于一个干净的 Windows 桌面。这表示 Windows 沙盒已经成功启动。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;clone本项目到任意目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#clone本项目到任意目录&#34;&gt;#&lt;/a&gt; Clone 本项目到任意目录&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/maxshiro/Chinaflavor-sandbox.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;创建空文件夹目录结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建空文件夹目录结构&#34;&gt;#&lt;/a&gt; 创建空文件夹目录结构&lt;/h3&gt;
+&lt;p&gt;双击根目录中的 &lt;code&gt;mkdir.bat&lt;/code&gt;  一键创建以下目录结构。&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;├───App&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───DingDing&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───Docs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───Meeting&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───QQ&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───QQNT&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───TIM&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───WeChat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   └───WXWork&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;├───Data&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───Common Files&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───Documents&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   ├───Tencent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   ├───WeChat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   └───WXWork&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   ├───Roaming&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   ├───DingTalk&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   ├───Tencent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   ├───WeChat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   │   └───WXWork&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;│   └───SysWOW64&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;├───Desktop&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;└───Scripts&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;安装配置沙盒&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装配置沙盒&#34;&gt;#&lt;/a&gt; 安装配置沙盒&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在沙盒内正确安装需要的软件，正常安装 &lt;strong&gt;QQ/QQNT/Wechat/Dingtalk&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装完成之后复制沙盒内的  &lt;code&gt;C:\Windows\SysWOW64&lt;/code&gt;  目录下所有文件到 Clone 下来的  &lt;code&gt;Data\SysWOW64&lt;/code&gt;  目录内 (不然 qq 运行一段时间后会崩溃)，并关闭沙盒。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开 &lt;strong&gt;Tencent.wsb&lt;/strong&gt;，继续安装列出来的软件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;移动桌面快捷方式到任何位置，再移动回桌面 (否则快捷方式会消失)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;操作完成后就可以正常使用了，不确保账号数据会保留。&lt;/p&gt;
+&lt;h3 id=&#34;自定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自定义&#34;&gt;#&lt;/a&gt; 自定义&lt;/h3&gt;
+&lt;p&gt;如果你想要自定义添加的软件，可以参考我提供的思路：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;沙盒内正常安装你需要的软件到默认目录下（随便）, 然后复制这个目录的路径。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以到下面的几个目录内看看你装的软件是否创建了其他目录：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\WDAGUtilityAccount\Documents\&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\WDAGUtilityAccount\AppData\Roaming\&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Program Files (x86)\Common Files&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用任意文本编辑器打开 &lt;strong&gt;Tencent.wsb&lt;/strong&gt; 这个文件就能看到这个沙盒是如何工作的。（大概意思就是把配置过的目录映射到虚拟机里）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到对应的 &lt;code&gt;&amp;lt;!-- Common Files --&amp;gt;&lt;/code&gt; , &lt;code&gt;&amp;lt;!-- App --&amp;gt;&lt;/code&gt; , &lt;code&gt;&amp;lt;!-- Documents --&amp;gt;&lt;/code&gt; , &lt;code&gt;&amp;lt;!-- Common Files --&amp;gt;&lt;/code&gt; , &lt;code&gt;&amp;lt;!-- ProgramData --&amp;gt;&lt;/code&gt;  注释标签，在对应位是添加你要映射的目录：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 以钉钉为例：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;!-- App --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 在这个标签下添加这些内容&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;MappedFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;HostFolder&amp;gt;.\App\DingDing&amp;lt;/HostFolder&amp;gt; # HostFolder 本机位置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;SandboxFolder&amp;gt;C:\Program Files (x86)\DingDing&amp;lt;/SandboxFolder&amp;gt; # SandboxFolder 沙箱内位置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;ReadOnly&amp;gt;false&amp;lt;/ReadOnly&amp;gt; # ReadOnly 是否只读&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/MappedFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;!-- Roaming --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;MappedFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;HostFolder&amp;gt;.\Data\Roaming\DingTalk&amp;lt;/HostFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;SandboxFolder&amp;gt;C:\Users\WDAGUtilityAccount\AppData\Roaming\DingTalk&amp;lt;/SandboxFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;lt;ReadOnly&amp;gt;false&amp;lt;/ReadOnly&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/MappedFolder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在主机 Data 目录下创建上面 HostFolder 编写的目录位置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关闭虚拟机，重新打开并再次正常安装（注意安装位置要和你自己上面填的目录保持一致），按照第一次的方式再次拷贝快捷方式并恢复。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其余的参考文件内的内容自行修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;挂载路径&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#挂载路径&#34;&gt;#&lt;/a&gt; 挂载路径&lt;/h2&gt;
+&lt;figure class=&#34;highlight text&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;桌面 -&amp;gt; Desktop&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Program Files (x86)\Common Files -&amp;gt; Data\Common Files&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\WDAGUtilityAccount\Documents\Tencent Files -&amp;gt; Data\Documents\Tencent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\WDAGUtilityAccount\Documents\WeChat Files -&amp;gt; Data\Documents\WeChat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;C:\Users\WDAGUtilityAccount\Documents\WXWork -&amp;gt; Data\Documents\WXWork&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;其余的请查看 Tencent.wsb 中的 MappedFolder&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/</guid>
             <title>常用Windows应急响应整理</title>
             <link>http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/</link>
-            <category>应急响应</category>
             <category>hvv</category>
+            <category>应急响应</category>
             <category>tools</category>
             <category>windows</category>
             <pubDate>Mon, 03 Jul 2023 00:29:45 +0800</pubDate>
@@ -446,10 +545,10 @@ IBMXFORCE&lt;/p&gt;
         </item>
         <item>
             <guid isPermalink="true">http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/231746/</guid>
-            <title>应急响应以及常用Windows命令工具分享</title>
+            <title>应急响应总结</title>
             <link>http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/231746/</link>
-            <category>应急响应</category>
             <category>hvv</category>
+            <category>应急响应</category>
             <pubDate>Sun, 02 Jul 2023 23:17:46 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;应急响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急响应&#34;&gt;#&lt;/a&gt; 应急响应&lt;/h1&gt;
 &lt;h2 id=&#34;应急响应目的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急响应目的&#34;&gt;#&lt;/a&gt; 应急响应目的&lt;/h2&gt;
@@ -697,8 +796,8 @@ IBMXFORCE&lt;/p&gt;
             <link>http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/215254/</link>
             <category>linux</category>
             <category>security</category>
-            <category>应急响应</category>
             <category>hvv</category>
+            <category>应急响应</category>
             <category>tools</category>
             <category>busybox</category>
             <category>ps</category>
@@ -1315,30 +1414,24 @@ Query OK, 0 rows affected (0.00 sec)&lt;/p&gt;
 &lt;h2 id=&#34;eeedog&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#eeedog&#34;&gt;#&lt;/a&gt; eeedog&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这个有点复杂建议自己去看看&lt;br&gt;
-&lt;a href=&#34;https://www.eee.dog/tech/rand-pic-api.html&#34;&gt; eeedog&lt;/a&gt; 我随意放一个随机图床&lt;/p&gt;
+&lt;a href=&#34;https://www.eee.dog/tech/rand-pic-api.html&#34;&gt; eeedog&lt;/a&gt; 我随意放一个随机图床 s&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://api.yimian.xyz/img?type=imgbed&#34; alt=&#34;https://api.yimian.xyz/img?type=imgbed&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;image-meta&#34;&gt;&lt;span class=&#34;image-caption center&#34;&gt;https://api.yimian.xyz/img?type=imgbed&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p class=&#34;gallery&#34; data-height=&#34;480&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;本地&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地&#34;&gt;#&lt;/a&gt; 本地&lt;/h1&gt;
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154554.png&#34; alt=&#34;女人&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;image-meta&#34;&gt;&lt;span class=&#34;image-caption center&#34;&gt;女人&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154625.png&#34; alt=&#34;女人&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;image-meta&#34;&gt;&lt;span class=&#34;image-caption center&#34;&gt;女人&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154652.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154713.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154721.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154729.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154737.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154746.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154914.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154922.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154928.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154935.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154945.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116154953.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116155005.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116155015.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116155023.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
-&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/pictureshow/20221116155031.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;  
+&lt;blockquote&gt;
+&lt;p&gt;已经不是本地了，我把它换成了 github 图床 233&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;正好测试一下图片集合标签。。&lt;/p&gt;
+&lt;div class=&#34;tag-plugin gallery swiper&#34; id=&#34;swiper-api&#34;&gt;&lt;div class=&#34;swiper-wrapper&#34;&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208227.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208228.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208230.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208231.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208239.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208240.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;swiper-pagination&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-button-prev blur&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-button-next blur&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin gallery swiper&#34; id=&#34;swiper-api&#34;&gt;&lt;div class=&#34;swiper-wrapper&#34;&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208232.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208233.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208234.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208235.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208236.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208237.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-slide&#34;&gt;&lt;img no-lazy=&#34;&#34; src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208238.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;swiper-pagination&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-button-prev blur&#34;&gt;&lt;/div&gt;&lt;div class=&#34;swiper-button-next blur&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208241.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208242.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208243.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208244.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208245.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/maxshiro/shuoshuo@main/img/202307070208246.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p class=&#34;gallery&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
@@ -1990,165 +2083,6 @@ usermod -g GID 组名&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/175233/</guid>
-            <title>Linux入门学习0</title>
-            <link>http://maxshiroi.top/ug/175233/</link>
-            <category>linux</category>
-            <category>目录</category>
-            <category>指令</category>
-            <category>权限</category>
-            <pubDate>Thu, 22 Sep 2022 17:52:33 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;linux系统目录结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#linux系统目录结构&#34;&gt;#&lt;/a&gt; linux 系统目录结构&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在 linux 中，所有都是以文件的形式存储和管理的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;bin&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bin&#34;&gt;#&lt;/a&gt; /bin&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Binary 存放经常使用的命令。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;sbin&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sbin&#34;&gt;#&lt;/a&gt; /sbin&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;super Binary 超级用户命令存放的目录。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;home&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#home&#34;&gt;#&lt;/a&gt; /home&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;用户目录&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;root&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#root&#34;&gt;#&lt;/a&gt; /root&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;系统管理员目录&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;etc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#etc&#34;&gt;#&lt;/a&gt; /etc&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;管理系统配置文件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;usr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#usr&#34;&gt;#&lt;/a&gt; /usr&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;类似于 windows 下 Programfiles 目录，&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;boot&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#boot&#34;&gt;#&lt;/a&gt; /boot&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;启动所使用的核心文件都会存放在这里。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;proc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#proc&#34;&gt;#&lt;/a&gt; /proc&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;内存映射&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;srv&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#srv&#34;&gt;#&lt;/a&gt; /srv&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;services 的缩写，用于存放服务启动所需要的数据&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;sys&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sys&#34;&gt;#&lt;/a&gt; /sys&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;系统文件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;tmp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tmp&#34;&gt;#&lt;/a&gt; /tmp&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;是 temporary (临时) 的缩写，存放临时 / 缓存文件，可当作回收站使用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;dev&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dev&#34;&gt;#&lt;/a&gt; /dev&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;device 的缩写，类似于 windows 的设备管理器。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;mnt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mnt&#34;&gt;#&lt;/a&gt; /mnt&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;linux 用于挂载可移动设备（临时）的目录。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;opt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#opt&#34;&gt;#&lt;/a&gt; /opt&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;主机额外安装的软件存放的目录&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;var&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#var&#34;&gt;#&lt;/a&gt; /var&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;存放经常被修改的目录或文件，比如日志（*.log）。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;lib&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lib&#34;&gt;#&lt;/a&gt; /lib&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;存放系统基本的动态链接库。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;权限数字意思详解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权限数字意思详解&#34;&gt;#&lt;/a&gt; 权限数字意思详解&lt;/h1&gt;
-&lt;p&gt;我们首先打开控制台在任意位置输入 ll, 就能看到当前文件夹下所有类型的信息。我们只取其中的前十位来进行结束.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;dr-xr-xr-x.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;第一位&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一位&#34;&gt;#&lt;/a&gt; 第一位&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;第一位表示类型&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;d directory 表示目录&lt;/li&gt;
-&lt;li&gt;b block 块文件&lt;/li&gt;
-&lt;li&gt;c char 字符文件&lt;/li&gt;
-&lt;li&gt;- file 普通文件&lt;/li&gt;
-&lt;li&gt;l link 链接&lt;/li&gt;
-&lt;li&gt;etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;后面九位&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后面九位&#34;&gt;#&lt;/a&gt; 后面九位&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;后面九位表示了文件的类型，对应的位置如果是 &lt;code&gt;-&lt;/code&gt;  则表示没有对应的权限.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;table&gt;
-    &lt;tbody&gt;&lt;tr&gt;&lt;th&gt;
-        &lt;/th&gt;&lt;td colspan=&#34;3&#34;&gt;前三位&lt;/td&gt;
-        &lt;td colspan=&#34;3&#34;&gt;中间三位&lt;/td&gt;
-        &lt;td colspan=&#34;3&#34;&gt;后三位&lt;/td&gt;
-    
-    &lt;/tr&gt;&lt;tr align=&#34;center&#34;&gt;
-        &lt;td colspan=&#34;3&#34;&gt;创建者&lt;/td&gt;
-        &lt;td colspan=&#34;3&#34;&gt;同组用户&lt;/td&gt;
-        &lt;td colspan=&#34;3&#34;&gt;其他用户&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr align=&#34;center&#34;&gt;
-        &lt;td&gt;r&lt;/td&gt;
-        &lt;td&gt;w&lt;/td&gt;
-        &lt;td&gt;x&lt;/td&gt;
-        &lt;td&gt;r&lt;/td&gt;
-        &lt;td&gt;w&lt;/td&gt;
-        &lt;td&gt;x&lt;/td&gt;
-        &lt;td&gt;r&lt;/td&gt;
-        &lt;td&gt;w&lt;/td&gt;
-        &lt;td&gt;x&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr align=&#34;center&#34;&gt;
-        &lt;td&gt;读&lt;/td&gt;
-        &lt;td&gt;写&lt;/td&gt;
-        &lt;td&gt;执行&lt;/td&gt;
-        &lt;td&gt;读&lt;/td&gt;
-        &lt;td&gt;写&lt;/td&gt;
-        &lt;td&gt;执行&lt;/td&gt;
-        &lt;td&gt;读&lt;/td&gt;
-        &lt;td&gt;写&lt;/td&gt;
-        &lt;td&gt;执行&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;下面来看一个实例:&lt;/p&gt;
-&lt;p&gt;如果一个文件的权限为 755, 则代表什么意思？&lt;/p&gt;
-&lt;p&gt;我们只需要把 755 按位转换为二进制，对应位为 0 则表示没有这个权限.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;7&lt;/th&gt;
-&lt;th&gt;5&lt;/th&gt;
-&lt;th&gt;5&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;111&lt;/td&gt;
-&lt;td&gt;101&lt;/td&gt;
-&lt;td&gt;101&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;用人的语言表述:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对于创建者：可以读取，可以更改，可以执行.&lt;br&gt;
- 对于同组人员：可以读取，不能更改，可以执行.&lt;br&gt;
- 对于其他成员：可以读取，不能更改，可以执行.&lt;/p&gt;
-&lt;/blockquote&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">http://maxshiroi.top/ug/164658/</guid>
             <title>解决windows资源管理器无法自动刷新等问题</title>
             <link>http://maxshiroi.top/ug/164658/</link>
@@ -2253,8 +2187,8 @@ usermod -g GID 组名&lt;/p&gt;
             <guid isPermalink="true">http://maxshiroi.top/Hexo/222543/</guid>
             <title>部署完hexo后还应该准备哪些工作</title>
             <link>http://maxshiroi.top/Hexo/222543/</link>
-            <category>plugin</category>
             <category>hexo</category>
+            <category>plugin</category>
             <category>backup</category>
             <pubDate>Sun, 28 Aug 2022 22:25:43 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;intro&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#intro&#34;&gt;#&lt;/a&gt; Intro&lt;/h1&gt;
@@ -2309,18 +2243,28 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;li&gt;安装依赖&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cnpm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&#34;2-博客加密&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-博客加密&#34;&gt;#&lt;/a&gt; 2. 博客加密&lt;/h1&gt;
+&lt;h1 id=&#34;安装一些提升体验的插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装一些提升体验的插件&#34;&gt;#&lt;/a&gt; 安装一些提升体验的插件&lt;/h1&gt;
+&lt;p&gt;hexo 原版的内容已经足够使用，但是某些功能非常的需要但是 hexo 却不自带，那么就可以通过安装插件的形式来添加这些功能。&lt;/p&gt;
+&lt;h2 id=&#34;置顶文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#置顶文章&#34;&gt;#&lt;/a&gt; 置顶文章&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 先卸载原本的index生成插件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm uninstall hexo-generator-index&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 然后安装修改过后的&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-generator-index-pin-top --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用时只需要在 &lt;code&gt;front-matter&lt;/code&gt;  中加入 &lt;code&gt;top: true&lt;/code&gt;  即可让文章置顶。&lt;/p&gt;
+&lt;h2 id=&#34;隐藏文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隐藏文章&#34;&gt;#&lt;/a&gt; 隐藏文章&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 使用如下命令安装插件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-hide-posts --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装好后在 &lt;code&gt;_config.yaml&lt;/code&gt;  文件中添加下面的内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;figcaption&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# hexo-hide-posts&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hide_posts:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  # 可以改成其他你喜欢的名字&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  filter: hide&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  # 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  # 常见的位置有：index, tag, category, archive, sitemap, feed, etc.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  # 留空则默认全部隐藏&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  public_generators: []&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  # 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  noindex: true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;最后同上，你只需要在 &lt;code&gt;front-matter&lt;/code&gt;  中加上 &lt;code&gt;hide: true&lt;/code&gt;  即可。&lt;/p&gt;
+&lt;h2 id=&#34;博客加密&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#博客加密&#34;&gt;#&lt;/a&gt; 博客加密&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。&lt;/li&gt;
 &lt;li&gt;这在 wordpress，emlog 或其他博客系统中都很容易实现，然而 hexo 除外。😦&lt;/li&gt;
 &lt;li&gt;为了解决这个问题，我们需要安装 “hexo-blog-encrypt” 扩展。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;安装指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装指令&#34;&gt;#&lt;/a&gt; 安装指令&lt;/h2&gt;
+&lt;h3 id=&#34;安装指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装指令&#34;&gt;#&lt;/a&gt; 安装指令&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-blog-encrypt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;快速使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快速使用&#34;&gt;#&lt;/a&gt; 快速使用&lt;/h2&gt;
+&lt;h3 id=&#34;快速使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快速使用&#34;&gt;#&lt;/a&gt; 快速使用&lt;/h3&gt;
 &lt;p&gt;将 password 标签添加到您的 Front-matter 里，就像这样：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;title: xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;date&lt;/span&gt;: 2022-08-26 17:34:59&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;password: 233&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;tags: xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特性&#34;&gt;#&lt;/a&gt; 特性&lt;/h2&gt;
+&lt;h3 id=&#34;特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特性&#34;&gt;#&lt;/a&gt; 特性&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;一旦你输入了正确的密码，它就会被存储在本地浏览器的 localStorage 中。按个按钮，密码将会被清空。若博客中有脚本，它将被正确地执行。&lt;/li&gt;
 &lt;li&gt;支持按标签加密。&lt;/li&gt;
@@ -2329,7 +2273,9 @@ usermod -g GID 组名&lt;/p&gt;
 &lt;li&gt;广泛地使用 Promise 来进行异步操作，从而确保线程不被杜塞。&lt;/li&gt;
 &lt;li&gt;过时的浏览器将无法正常显示，因此，请升级您的浏览器。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;3-博客加速&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-博客加速&#34;&gt;#&lt;/a&gt; 3. 博客加速&lt;/h1&gt;
+&lt;h2 id=&#34;other&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#other&#34;&gt;#&lt;/a&gt; other&lt;/h2&gt;
+&lt;p&gt;如果你不想每次新建文章都要自己写的话，那么就修改 &lt;code&gt;./scaffolds/post.md&lt;/code&gt;  文件。&lt;/p&gt;
+&lt;h1 id=&#34;博客加速&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#博客加速&#34;&gt;#&lt;/a&gt; 博客加速&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;于 2022 年 11 月测试 vercel.app 已经被墙了，但是还可以通过自备域名的方式。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -3019,8 +2965,8 @@ yuzu EA 版本还支持多人联机的功能，但是需要你使用梯子才可
 &lt;p&gt;查看是否安装成功：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]&lt;span class=&#34;comment&#34;&gt;# git --version&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git version 1.8.3.1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;安装-nodejs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-nodejs&#34;&gt;#&lt;/a&gt; 安装 node.js&lt;/h2&gt;
-&lt;p&gt;直接 yum 一把梭&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install nodejs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;本来可以直接使用 &lt;code&gt;apt，yum&lt;/code&gt;  这种工具一键安装的，但是显然安装的版本十分的 stable，所以这里使用 nvm 工具来安装 nodejs 和 npm。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ./.bashrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nvm -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装最新版node并更新一下npm&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nvm install node --latest-npm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;然后查看版本：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]&lt;span class=&#34;comment&#34;&gt;# node -v&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;v16.14.2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;顺便看看 npm 版本：&lt;/p&gt;
@@ -3130,28 +3076,6 @@ yuzu EA 版本还支持多人联机的功能，但是需要你使用梯子才可
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 清理之前生成的文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 生成静态网页&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 推送到github repo&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&#34;结语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结语&#34;&gt;#&lt;/a&gt; 结语&lt;/h1&gt;
 &lt;p&gt;此时你已经完成了 hexo 博客的基本配置。&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://maxshiroi.top/ug/100353/</guid>
-            <title>Hello World</title>
-            <link>http://maxshiroi.top/ug/100353/</link>
-            <category>helloworld</category>
-            <pubDate>Mon, 07 Mar 2022 10:03:53 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&#34;My New Post&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/writing.html&#34;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/server.html&#34;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/generating.html&#34;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/one-command-deployment.html&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

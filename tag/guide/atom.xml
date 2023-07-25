@@ -26,24 +26,21 @@
     <category term="win" />
     <category term="explorer.exe" />
     <category term="autorefresh" />
-    <category term="network" />
-    <category term="vmware" />
     <category term="docker" />
     <category term="nessus" />
     <category term="awvs" />
+    <category term="network" />
+    <category term="vmware" />
     <category term="kali" />
     <category term="dvwa" />
     <category term="fedora" />
-    <category term="helloworld" />
-    <category term="plugin" />
     <category term="hexo" />
-    <category term="backup" />
     <category term="guide" />
+    <category term="plugin" />
+    <category term="backup" />
+    <category term="hvv" />
     <category term="java" />
     <category term="filestream" />
-    <category term="目录" />
-    <category term="指令" />
-    <category term="权限" />
     <category term="media center" />
     <category term="plex" />
     <category term="emby" />
@@ -51,24 +48,11 @@
     <category term="视频" />
     <category term="音乐" />
     <category term="应急响应" />
-    <category term="hvv" />
     <category term="tools" />
     <category term="busybox" />
     <category term="ps" />
     <category term="运维" />
     <category term="smb" />
-    <category term="passwd" />
-    <category term="switch" />
-    <category term="animal crossing" />
-    <category term="Project Diva" />
-    <category term="Miku" />
-    <category term="Mega39" />
-    <category term="emulater" />
-    <category term="yuzu" />
-    <category term="ryujinx" />
-    <category term="树莓派" />
-    <category term="openwrt" />
-    <category term="router" />
     <category term="pic" />
     <category term="img" />
     <category term="api" />
@@ -77,6 +61,18 @@
     <category term="Vocal" />
     <category term="AI" />
     <category term="歌声合成" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="passwd" />
+    <category term="树莓派" />
+    <category term="openwrt" />
+    <category term="router" />
     <category term="transmission" />
     <category term="torrent" />
     <category term="下载器" />
@@ -84,10 +80,13 @@
     <category term="ubuntu" />
     <category term="mariadb" />
     <category term="bug" />
+    <category term="windows" />
+    <category term="qq" />
+    <category term="sandbox" />
+    <category term="tencent" />
     <category term="win7" />
     <category term="capacity" />
     <category term="shrink" />
-    <category term="windows" />
     <category term="Android" />
     <category term="Hyper-V" />
     <category term="WSA" />
@@ -117,8 +116,8 @@
 &lt;p&gt;查看是否安装成功：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]&lt;span class=&#34;comment&#34;&gt;# git --version&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git version 1.8.3.1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;安装-nodejs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-nodejs&#34;&gt;#&lt;/a&gt; 安装 node.js&lt;/h2&gt;
-&lt;p&gt;直接 yum 一把梭&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install nodejs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;本来可以直接使用 &lt;code&gt;apt，yum&lt;/code&gt;  这种工具一键安装的，但是显然安装的版本十分的 stable，所以这里使用 nvm 工具来安装 nodejs 和 npm。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ./.bashrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nvm -v&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装最新版node并更新一下npm&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nvm install node --latest-npm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;然后查看版本：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[root@localhost ~]&lt;span class=&#34;comment&#34;&gt;# node -v&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;v16.14.2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;顺便看看 npm 版本：&lt;/p&gt;

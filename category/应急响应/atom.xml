@@ -26,24 +26,21 @@
     <category term="win" />
     <category term="explorer.exe" />
     <category term="autorefresh" />
-    <category term="network" />
-    <category term="vmware" />
     <category term="docker" />
     <category term="nessus" />
     <category term="awvs" />
+    <category term="network" />
+    <category term="vmware" />
     <category term="kali" />
     <category term="dvwa" />
     <category term="fedora" />
-    <category term="helloworld" />
-    <category term="plugin" />
     <category term="hexo" />
-    <category term="backup" />
     <category term="guide" />
+    <category term="plugin" />
+    <category term="backup" />
+    <category term="hvv" />
     <category term="java" />
     <category term="filestream" />
-    <category term="目录" />
-    <category term="指令" />
-    <category term="权限" />
     <category term="media center" />
     <category term="plex" />
     <category term="emby" />
@@ -51,24 +48,11 @@
     <category term="视频" />
     <category term="音乐" />
     <category term="应急响应" />
-    <category term="hvv" />
     <category term="tools" />
     <category term="busybox" />
     <category term="ps" />
     <category term="运维" />
     <category term="smb" />
-    <category term="passwd" />
-    <category term="switch" />
-    <category term="animal crossing" />
-    <category term="Project Diva" />
-    <category term="Miku" />
-    <category term="Mega39" />
-    <category term="emulater" />
-    <category term="yuzu" />
-    <category term="ryujinx" />
-    <category term="树莓派" />
-    <category term="openwrt" />
-    <category term="router" />
     <category term="pic" />
     <category term="img" />
     <category term="api" />
@@ -77,6 +61,18 @@
     <category term="Vocal" />
     <category term="AI" />
     <category term="歌声合成" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="passwd" />
+    <category term="树莓派" />
+    <category term="openwrt" />
+    <category term="router" />
     <category term="transmission" />
     <category term="torrent" />
     <category term="下载器" />
@@ -84,10 +80,13 @@
     <category term="ubuntu" />
     <category term="mariadb" />
     <category term="bug" />
+    <category term="windows" />
+    <category term="qq" />
+    <category term="sandbox" />
+    <category term="tencent" />
     <category term="win7" />
     <category term="capacity" />
     <category term="shrink" />
-    <category term="windows" />
     <category term="Android" />
     <category term="Hyper-V" />
     <category term="WSA" />
@@ -435,15 +434,15 @@ IBMXFORCE&lt;/p&gt;
  volatility -f [内存文件] --profile=[配置文件] &amp;lt; 插件 &amp;gt; # 不同版本有不同的配置文件&lt;/p&gt;
 &lt;h1 id=&#34;案例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例&#34;&gt;#&lt;/a&gt; 案例&lt;/h1&gt;
 </content>
-        <category term="应急响应" />
         <category term="hvv" />
+        <category term="应急响应" />
         <category term="tools" />
         <category term="windows" />
         <updated>2023-07-02T16:29:45.000Z</updated>
     </entry>
     <entry>
         <id>http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/231746/</id>
-        <title>应急响应以及常用Windows命令工具分享</title>
+        <title>应急响应总结</title>
         <link rel="alternate" href="http://maxshiroi.top/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/231746/"/>
         <content type="html">&lt;h1 id=&#34;应急响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急响应&#34;&gt;#&lt;/a&gt; 应急响应&lt;/h1&gt;
 &lt;h2 id=&#34;应急响应目的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应急响应目的&#34;&gt;#&lt;/a&gt; 应急响应目的&lt;/h2&gt;
@@ -684,8 +683,8 @@ IBMXFORCE&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;操作要点:&lt;/strong&gt; 检查网络连接，以及 IDS 设备上的异常远控告警&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="应急响应" />
         <category term="hvv" />
+        <category term="应急响应" />
         <updated>2023-07-02T15:17:46.000Z</updated>
     </entry>
     <entry>
@@ -831,8 +830,8 @@ ls /proc | sort -n | uniq &amp;gt; proc.p
 </content>
         <category term="linux" />
         <category term="security" />
-        <category term="应急响应" />
         <category term="hvv" />
+        <category term="应急响应" />
         <category term="tools" />
         <category term="busybox" />
         <category term="ps" />

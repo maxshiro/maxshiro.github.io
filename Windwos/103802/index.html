@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>使用Windows内置的沙盒功能来隔离常见的国产软件 - MAXshiro</title>
+
+  
+    <meta name="description" content="# 使用本项目的目的 腾讯系的软件众所周知在使用中会有个进程随着主进程的启动一同启动。这个程序会读取本地的浏览器浏览记录以及一些其他的个人隐私信息并上传到腾讯那边进行分析。具体他拿来做什么并不是很清楚，但是有一些猜测：  反作弊相关 精确探测用户画像实现精准推送 与政府联合进行某些行动。  这些年大火一直在搞如何才能防止腾讯系软件对用户信息的收集。目前的方案有如下几种：  使用 VMware&#x2F;vb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Windows内置的沙盒功能来隔离常见的国产软件">
+<meta property="og:url" content="http://maxshiroi.top/Windwos/103802/index.html">
+<meta property="og:site_name" content="MAXshiro">
+<meta property="og:description" content="# 使用本项目的目的 腾讯系的软件众所周知在使用中会有个进程随着主进程的启动一同启动。这个程序会读取本地的浏览器浏览记录以及一些其他的个人隐私信息并上传到腾讯那边进行分析。具体他拿来做什么并不是很清楚，但是有一些猜测：  反作弊相关 精确探测用户画像实现精准推送 与政府联合进行某些行动。  这些年大火一直在搞如何才能防止腾讯系软件对用户信息的收集。目前的方案有如下几种：  使用 VMware&#x2F;vb">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-25T02:38:02.000Z">
+<meta property="article:modified_time" content="2023-07-25T03:06:52.571Z">
+<meta property="article:author" content="maxshiroi">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="qq">
+<meta property="article:tag" content="sandbox">
+<meta property="article:tag" content="tencent">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@maxshiroer">
+  
+  
+  
+  <meta name="keywords" content="windows,qq,sandbox,tencent">
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="/img/failure.ico">
+  
+
+  
+
+  
+
+
+  
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+  
+
+<div class="l_cover post"><div class="cover"><div class="lazy img bg" data-bg="https://source.unsplash.com/2000x400/?tencent,sandbox,qq,windows"></div></div></div>
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/img/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MAXshiro</div><div class="sub cap">Tell me what you thought.</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/about/">更多</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">使用Windows内置的沙盒功能来隔离常见的国产软件</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%9C%AC%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="toc-text"> 使用本项目的目的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-text"> 注意</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tencent-sandbox"><span class="toc-text"> tencent-sandbox</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chinaflavor-sandbox"><span class="toc-text"> Chinaflavor-sandbox</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text"> 注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-text"> 兼容性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-text"> 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8windows%E6%B2%99%E7%9B%92"><span class="toc-text"> 如何启用 windows 沙盒？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clone%E6%9C%AC%E9%A1%B9%E7%9B%AE%E5%88%B0%E4%BB%BB%E6%84%8F%E7%9B%AE%E5%BD%95"><span class="toc-text"> Clone 本项目到任意目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-text"> 创建空文件夹目录结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%B2%99%E7%9B%92"><span class="toc-text"> 安装配置沙盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="toc-text"> 自定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%82%E8%BD%BD%E8%B7%AF%E5%BE%84"><span class="toc-text"> 挂载路径</span></a></li></ol></li></ol></div></div></widget>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Windwos/">Windwos</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-07-25T02:38:02.000Z">2023-07-25</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>使用Windows内置的沙盒功能来隔离常见的国产软件</span></h1>
+<h1 id="使用本项目的目的"><a class="anchor" href="#使用本项目的目的">#</a> 使用本项目的目的</h1>
+<p>腾讯系的软件众所周知在使用中会有个进程随着主进程的启动一同启动。这个程序会读取本地的浏览器浏览记录以及一些其他的个人隐私信息并上传到腾讯那边进行分析。具体他拿来做什么并不是很清楚，但是有一些猜测：</p>
+<ol>
+<li>反作弊相关</li>
+<li>精确探测用户画像实现精准推送</li>
+<li>与政府联合进行某些行动。</li>
+</ol>
+<p>这些年大火一直在搞如何才能防止腾讯系软件对用户信息的收集。目前的方案有如下几种：</p>
+<ol>
+<li>使用 VMware/vbox 之类的虚拟机软件来安置这些毒瘤，缺点：占用空间和性能都很多，而且启动很麻烦。</li>
+<li>使用 sandboxie 这类沙箱软件，缺点：没有 plus 版本会缺失很多功能。</li>
+<li>使用另外的机器来安置这些软件，缺点：并不是所有人都那么 rich。</li>
+<li>使用 windows 沙盒：</li>
+</ol>
+<p>windows 沙盒在正常使用的时候和普通机器并无太大区别，但是当你关闭 windows 沙盒之后里面的内容也会随之消失。本项目的目的就是在本地创建一个文件夹用来保存 windows 沙盒产生的一些文件，从而可以不用每次启动都需要重新安装这些软件。但并不能照顾到所有的文件因此还是会有一些缺陷。</p>
+<h1 id="注意"><a class="anchor" href="#注意">#</a> 注意</h1>
+<p><strong>本项目由 <code>empty-233/tencent-sandbox</code>  克隆而来，为自己方便使用。</strong></p>
+<h1 id="tencent-sandbox"><a class="anchor" href="#tencent-sandbox">#</a> tencent-sandbox</h1>
+<p>tencent-sandbox 是使用 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview">Windows sandbox</a> 为腾讯全家桶创建沙盒的配置</p>
+<h1 id="chinaflavor-sandbox"><a class="anchor" href="#chinaflavor-sandbox">#</a> Chinaflavor-sandbox</h1>
+<p><a target="_blank" rel="noopener" href="https://github.com/maxshiro/Chinaflavor-sandbox">Chinaflavor-sandbox</a> 是由 <code>tencent-sandbox</code>  个人定制而来，添加了腾讯文档，腾讯会议以及钉钉。</p>
+<h2 id="注意事项"><a class="anchor" href="#注意事项">#</a> 注意事项</h2>
+<p><strong>Windows 10 不支持相对路径</strong>，请把 <strong>Tencent.wsb</strong> 中的路径替换成<strong>绝对路径</strong></p>
+<h2 id="兼容性"><a class="anchor" href="#兼容性">#</a> 兼容性</h2>
+<p>目前测试 <strong>微信</strong> <strong>QQ</strong> <strong>QQNT</strong> <strong>TIM</strong> <strong>企业微信</strong> 正常使用，其他未测试</p>
+<p>注: <strong>企业微信无法自动登录 (检查设备)，只能每次重新登录</strong></p>
+<p>默认分配<strong> 2gb</strong> 内存，有需要可以自行修改  <code>&lt;MemoryInMB&gt;2048&lt;/MemoryInMB&gt;</code></p>
+<h2 id="使用教程"><a class="anchor" href="#使用教程">#</a> 使用教程</h2>
+<h3 id="如何启用windows沙盒"><a class="anchor" href="#如何启用windows沙盒">#</a> 如何启用 windows 沙盒？</h3>
+<p><strong>注意：请确保您的 Windows 系统在 Win10 以上，以及 Windows 沙盒功能不适用于 Windows 10/11 家庭版。您可以使用 <code>winver</code>  命令来检查系统版本。</strong></p>
+<ol>
+<li>按下 <code>Win + R</code>  键，打开 “运行” 对话框，然后输入 <code>control</code>  并按 <code>Enter</code>  键，这将打开控制面板。</li>
+<li>在控制面板中，将查看到若干个选项类别。请找到并点击 “程序” 菜单。</li>
+<li>在 “程序” 菜单下，您将看到一个名为 “启用或关闭 Windows 功能” 的链接。请点击它，这将打开一个名为 “Windows 功能” 的窗口。</li>
+<li>在 “Windows 功能” 窗口中，您将看到一个列表，其中包含了可启用或禁用的 Windows 功能。请在列表中找到 “Windows 沙盒” 选项，并确保其复选框被勾选上。</li>
+<li>在勾选了 “Windows 沙盒” 选项后，点击 “确定” 按钮。Windows 将开始应用更改，这可能需要一些时间。完成后，您将看到一个提示，要求您重启计算机，以使更改生效。请点击 “是”，让系统重启。</li>
+<li>当您的计算机重新启动后，按下 <code>Win + S</code>  键，打开 Windows 搜索功能。在搜索栏中输入 “Windows 沙盒”，然后点击出现的 “Windows 沙盒” 应用程序。</li>
+<li>点击 “Windows 沙盒” 应用程序后，Windows 沙盒将开始初始化。稍等片刻，您将看到一个新的桌面环境弹出，类似于一个干净的 Windows 桌面。这表示 Windows 沙盒已经成功启动。</li>
+</ol>
+<h3 id="clone本项目到任意目录"><a class="anchor" href="#clone本项目到任意目录">#</a> Clone 本项目到任意目录</h3>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/maxshiro/Chinaflavor-sandbox.git</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="创建空文件夹目录结构"><a class="anchor" href="#创建空文件夹目录结构">#</a> 创建空文件夹目录结构</h3>
+<p>双击根目录中的 <code>mkdir.bat</code>  一键创建以下目录结构。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">├───App</span><br><span class="line">│   ├───DingDing</span><br><span class="line">│   ├───Docs</span><br><span class="line">│   ├───Meeting</span><br><span class="line">│   ├───QQ</span><br><span class="line">│   ├───QQNT</span><br><span class="line">│   ├───TIM</span><br><span class="line">│   ├───WeChat</span><br><span class="line">│   └───WXWork</span><br><span class="line">├───Data</span><br><span class="line">│   ├───Common Files</span><br><span class="line">│   ├───Documents</span><br><span class="line">│   │   ├───Tencent</span><br><span class="line">│   │   ├───WeChat</span><br><span class="line">│   │   └───WXWork</span><br><span class="line">│   ├───Roaming</span><br><span class="line">│   │   ├───DingTalk</span><br><span class="line">│   │   ├───Tencent</span><br><span class="line">│   │   ├───WeChat</span><br><span class="line">│   │   └───WXWork</span><br><span class="line">│   └───SysWOW64</span><br><span class="line">├───Desktop</span><br><span class="line">└───Scripts</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="安装配置沙盒"><a class="anchor" href="#安装配置沙盒">#</a> 安装配置沙盒</h3>
+<ol>
+<li>
+<p>在沙盒内正确安装需要的软件，正常安装 <strong>QQ/QQNT/Wechat/Dingtalk</strong>。</p>
+</li>
+<li>
+<p>安装完成之后复制沙盒内的  <code>C:\Windows\SysWOW64</code>  目录下所有文件到 Clone 下来的  <code>Data\SysWOW64</code>  目录内 (不然 qq 运行一段时间后会崩溃)，并关闭沙盒。</p>
+</li>
+<li>
+<p>打开 <strong>Tencent.wsb</strong>，继续安装列出来的软件。</p>
+</li>
+<li>
+<p>移动桌面快捷方式到任何位置，再移动回桌面 (否则快捷方式会消失)。</p>
+</li>
+</ol>
+<p>操作完成后就可以正常使用了，不确保账号数据会保留。</p>
+<h3 id="自定义"><a class="anchor" href="#自定义">#</a> 自定义</h3>
+<p>如果你想要自定义添加的软件，可以参考我提供的思路：</p>
+<ol>
+<li>
+<p>沙盒内正常安装你需要的软件到默认目录下（随便）, 然后复制这个目录的路径。</p>
+</li>
+<li>
+<p>可以到下面的几个目录内看看你装的软件是否创建了其他目录：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\WDAGUtilityAccount\Documents\</span><br><span class="line">C:\Users\WDAGUtilityAccount\AppData\Roaming\</span><br><span class="line">C:\Program Files (x86)\Common Files</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li>
+<p>使用任意文本编辑器打开 <strong>Tencent.wsb</strong> 这个文件就能看到这个沙盒是如何工作的。（大概意思就是把配置过的目录映射到虚拟机里）</p>
+</li>
+<li>
+<p>找到对应的 <code>&lt;!-- Common Files --&gt;</code> , <code>&lt;!-- App --&gt;</code> , <code>&lt;!-- Documents --&gt;</code> , <code>&lt;!-- Common Files --&gt;</code> , <code>&lt;!-- ProgramData --&gt;</code>  注释标签，在对应位是添加你要映射的目录：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 以钉钉为例：</span><br><span class="line">&lt;!-- App --&gt;</span><br><span class="line"># 在这个标签下添加这些内容</span><br><span class="line">&lt;MappedFolder&gt;</span><br><span class="line">	&lt;HostFolder&gt;.\App\DingDing&lt;/HostFolder&gt; # HostFolder 本机位置</span><br><span class="line">	&lt;SandboxFolder&gt;C:\Program Files (x86)\DingDing&lt;/SandboxFolder&gt; # SandboxFolder 沙箱内位置</span><br><span class="line">	&lt;ReadOnly&gt;false&lt;/ReadOnly&gt; # ReadOnly 是否只读</span><br><span class="line">&lt;/MappedFolder&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- Roaming --&gt;</span><br><span class="line">&lt;MappedFolder&gt;</span><br><span class="line">	&lt;HostFolder&gt;.\Data\Roaming\DingTalk&lt;/HostFolder&gt;</span><br><span class="line">	&lt;SandboxFolder&gt;C:\Users\WDAGUtilityAccount\AppData\Roaming\DingTalk&lt;/SandboxFolder&gt;</span><br><span class="line">	&lt;ReadOnly&gt;false&lt;/ReadOnly&gt;</span><br><span class="line">&lt;/MappedFolder&gt;</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li>
+<p>在主机 Data 目录下创建上面 HostFolder 编写的目录位置。</p>
+</li>
+<li>
+<p>关闭虚拟机，重新打开并再次正常安装（注意安装位置要和你自己上面填的目录保持一致），按照第一次的方式再次拷贝快捷方式并恢复。</p>
+</li>
+<li>
+<p>其余的参考文件内的内容自行修改。</p>
+</li>
+</ol>
+<h2 id="挂载路径"><a class="anchor" href="#挂载路径">#</a> 挂载路径</h2>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">桌面 -&gt; Desktop</span><br><span class="line">C:\Program Files (x86)\Common Files -&gt; Data\Common Files</span><br><span class="line">C:\Users\WDAGUtilityAccount\Documents\Tencent Files -&gt; Data\Documents\Tencent</span><br><span class="line">C:\Users\WDAGUtilityAccount\Documents\WeChat Files -&gt; Data\Documents\WeChat</span><br><span class="line">C:\Users\WDAGUtilityAccount\Documents\WXWork -&gt; Data\Documents\WXWork</span><br><span class="line"></span><br><span class="line">其余的请查看 Tencent.wsb 中的 MappedFolder</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名 - 非商业性使用 - 相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/">常用Windows应急响应整理</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="/应急响应/002945/" title="常用Windows应急响应整理"><span class="title">常用Windows应急响应整理</span></a></div></section></div>
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" data-repo="maxshiro/shuoshuo" data-repo-id="R_kgDOJW5G7Q" data-category="Announcements" data-category-id="DIC_kwDOJW5G7c4CXVrV" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light_high_contras" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 主题 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 构建。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"fade"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
