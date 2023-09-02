@@ -23,21 +23,23 @@
   <title>使用Windows内置的沙盒功能来隔离常见的国产软件 - MAXshiro</title>
 
   
-    <meta name="description" content="# 使用本项目的目的 腾讯系的软件众所周知在使用中会有个进程随着主进程的启动一同启动。这个程序会读取本地的浏览器浏览记录以及一些其他的个人隐私信息并上传到腾讯那边进行分析。具体他拿来做什么并不是很清楚，但是有一些猜测：  反作弊相关 精确探测用户画像实现精准推送 与政府联合进行某些行动。  这些年大火一直在搞如何才能防止腾讯系软件对用户信息的收集。目前的方案有如下几种：  使用 VMware&#x2F;vb">
+    <meta name="description" content="# 使用本项目的目的  腾讯系的软件众所周知在使用中会有个进程随着主进程的启动一同启动。这个程序会读取本地的浏览器浏览记录以及一些其他的个人隐私信息并上传到腾讯那边进行分析。具体他拿来做什么并不是很清楚，但是有一些猜测：  反作弊相关 精确探测用户画像实现精准推送 与政府联合进行某些行动。  这些年大火一直在搞如何才能防止腾讯系软件对用户信息的收集。目前的方案有如下几种：  使用 VMware&#x2F;v">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Windows内置的沙盒功能来隔离常见的国产软件">
 <meta property="og:url" content="http://maxshiroi.top/Windwos/103802/index.html">
 <meta property="og:site_name" content="MAXshiro">
-<meta property="og:description" content="# 使用本项目的目的 腾讯系的软件众所周知在使用中会有个进程随着主进程的启动一同启动。这个程序会读取本地的浏览器浏览记录以及一些其他的个人隐私信息并上传到腾讯那边进行分析。具体他拿来做什么并不是很清楚，但是有一些猜测：  反作弊相关 精确探测用户画像实现精准推送 与政府联合进行某些行动。  这些年大火一直在搞如何才能防止腾讯系软件对用户信息的收集。目前的方案有如下几种：  使用 VMware&#x2F;vb">
+<meta property="og:description" content="# 使用本项目的目的  腾讯系的软件众所周知在使用中会有个进程随着主进程的启动一同启动。这个程序会读取本地的浏览器浏览记录以及一些其他的个人隐私信息并上传到腾讯那边进行分析。具体他拿来做什么并不是很清楚，但是有一些猜测：  反作弊相关 精确探测用户画像实现精准推送 与政府联合进行某些行动。  这些年大火一直在搞如何才能防止腾讯系软件对用户信息的收集。目前的方案有如下几种：  使用 VMware&#x2F;v">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://maxshiroi.top/img/windowssandboxfortencent/2023-07-25-11-05-29.png">
 <meta property="article:published_time" content="2023-07-25T02:38:02.000Z">
-<meta property="article:modified_time" content="2023-07-25T03:06:52.571Z">
+<meta property="article:modified_time" content="2023-07-25T03:14:44.449Z">
 <meta property="article:author" content="maxshiroi">
 <meta property="article:tag" content="windows">
 <meta property="article:tag" content="qq">
 <meta property="article:tag" content="sandbox">
 <meta property="article:tag" content="tencent">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://maxshiroi.top/img/windowssandboxfortencent/2023-07-25-11-05-29.png">
 <meta name="twitter:creator" content="@maxshiroer">
   
   
@@ -109,6 +111,7 @@
 <article class='md-text content post'>
 <h1 class="article-title"><span>使用Windows内置的沙盒功能来隔离常见的国产软件</span></h1>
 <h1 id="使用本项目的目的"><a class="anchor" href="#使用本项目的目的">#</a> 使用本项目的目的</h1>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/img/windowssandboxfortencent/2023-07-25-11-05-29.png" fancybox="true"></div></div>
 <p>腾讯系的软件众所周知在使用中会有个进程随着主进程的启动一同启动。这个程序会读取本地的浏览器浏览记录以及一些其他的个人隐私信息并上传到腾讯那边进行分析。具体他拿来做什么并不是很清楚，但是有一些猜测：</p>
 <ol>
 <li>反作弊相关</li>
@@ -122,7 +125,8 @@
 <li>使用另外的机器来安置这些软件，缺点：并不是所有人都那么 rich。</li>
 <li>使用 windows 沙盒：</li>
 </ol>
-<p>windows 沙盒在正常使用的时候和普通机器并无太大区别，但是当你关闭 windows 沙盒之后里面的内容也会随之消失。本项目的目的就是在本地创建一个文件夹用来保存 windows 沙盒产生的一些文件，从而可以不用每次启动都需要重新安装这些软件。但并不能照顾到所有的文件因此还是会有一些缺陷。</p>
+<p>windows 沙盒在正常使用的时候和普通机器并无太大区别，但是当你关闭 windows 沙盒之后里面的内容也会随之消失。</p>
+<p>因此本项目的目的就是提供一种新的解决方案，在本地创建一个文件夹用来保存 windows 沙盒产生的一些文件，从而可以不用每次启动都需要重新安装这些软件。但并不能照顾到所有的文件，所以还是会有一些缺陷。</p>
 <h1 id="注意"><a class="anchor" href="#注意">#</a> 注意</h1>
 <p><strong>本项目由 <code>empty-233/tencent-sandbox</code>  克隆而来，为自己方便使用。</strong></p>
 <h1 id="tencent-sandbox"><a class="anchor" href="#tencent-sandbox">#</a> tencent-sandbox</h1>
@@ -205,7 +209,7 @@
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/">常用Windows应急响应整理</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/nextcloud/234118/">用家宽搭建Nextcloud-aio的一种方法</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/002945/">常用Windows应急响应整理</a></div></section></div>
 
 
 <div class="related-wrap reveal" id="related-posts">

@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://maxshiroi.top</id>
+    <title>MAXshiro • Posts by &#34;nextcloud&#34; category</title>
+    <link href="http://maxshiroi.top" />
+    <updated>2023-09-02T15:41:18.000Z</updated>
+    <category term="ctf" />
+    <category term="buuctf" />
+    <category term="antsword" />
+    <category term="nextcloud" />
+    <category term="聊天室" />
+    <category term="python" />
+    <category term="linux" />
+    <category term="centos" />
+    <category term="web" />
+    <category term="nginx" />
+    <category term="mysql" />
+    <category term="wsa" />
+    <category term="vhd" />
+    <category term="vhdx" />
+    <category term="diskpart" />
+    <category term="security" />
+    <category term="webshell" />
+    <category term="arch" />
+    <category term="pacman" />
+    <category term="network" />
+    <category term="vmware" />
+    <category term="win" />
+    <category term="explorer.exe" />
+    <category term="autorefresh" />
+    <category term="docker" />
+    <category term="nessus" />
+    <category term="awvs" />
+    <category term="kali" />
+    <category term="dvwa" />
+    <category term="fedora" />
+    <category term="hexo" />
+    <category term="guide" />
+    <category term="hvv" />
+    <category term="plugin" />
+    <category term="backup" />
+    <category term="java" />
+    <category term="filestream" />
+    <category term="media center" />
+    <category term="plex" />
+    <category term="emby" />
+    <category term="jellyfin" />
+    <category term="视频" />
+    <category term="音乐" />
+    <category term="应急响应" />
+    <category term="tools" />
+    <category term="busybox" />
+    <category term="ps" />
+    <category term="passwd" />
+    <category term="运维" />
+    <category term="smb" />
+    <category term="NPM" />
+    <category term="switch" />
+    <category term="animal crossing" />
+    <category term="Project Diva" />
+    <category term="Miku" />
+    <category term="Mega39" />
+    <category term="emulater" />
+    <category term="yuzu" />
+    <category term="ryujinx" />
+    <category term="树莓派" />
+    <category term="openwrt" />
+    <category term="router" />
+    <category term="pic" />
+    <category term="img" />
+    <category term="api" />
+    <category term="random" />
+    <category term="wallpaper" />
+    <category term="Vocal" />
+    <category term="AI" />
+    <category term="歌声合成" />
+    <category term="transmission" />
+    <category term="torrent" />
+    <category term="下载器" />
+    <category term="nas" />
+    <category term="ubuntu" />
+    <category term="mariadb" />
+    <category term="bug" />
+    <category term="win7" />
+    <category term="capacity" />
+    <category term="shrink" />
+    <category term="windows" />
+    <category term="qq" />
+    <category term="sandbox" />
+    <category term="tencent" />
+    <category term="Android" />
+    <category term="Hyper-V" />
+    <category term="WSA" />
+    <category term="wsl2" />
+    <category term="Hyper-v" />
+    <category term="wsl" />
+    <category term="权限不足" />
+    <category term="vscode" />
+    <entry>
+        <id>http://maxshiroi.top/nextcloud/234118/</id>
+        <title>用家宽搭建Nextcloud-aio的一种方法</title>
+        <link rel="alternate" href="http://maxshiroi.top/nextcloud/234118/"/>
+        <content type="html">&lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
+&lt;p&gt;出于学习目的对这玩意进行了一通研究，我的评价是如果你没有 80 和 443 端口那我建议你直接跳过或者重开，没必要那这玩意来搞生产。除非你出于学习目的。&lt;br&gt;
+如果你的公网地址可以访问 80 和 443 端口的话你可以参考这个教程：&lt;a href=&#34;https://blog.laoda.de/archives/docker-compose-install-nextcloud-aio/&#34;&gt;【好玩儿的 Docker 项目】Nextcloud All-in-One 全新搭建分享，拒绝繁琐配置，开箱即用！维护简单！&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;项目特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#项目特点&#34;&gt;#&lt;/a&gt; 项目特点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 docker 一键部署，用容器部署容器&lt;/li&gt;
+&lt;li&gt;更新简单&lt;/li&gt;
+&lt;li&gt;高性能后端&lt;/li&gt;
+&lt;li&gt;支持全局搜索&lt;/li&gt;
+&lt;li&gt;支持 Nextcloud Talk&lt;/li&gt;
+&lt;li&gt;支持 ClamAV（Nextcloud 的杀毒软件后端）&lt;/li&gt;
+&lt;li&gt;支持全套办公套件&lt;/li&gt;
+&lt;li&gt;支持备份（基于 BorgBackup）&lt;/li&gt;
+&lt;li&gt;省心省力&lt;/li&gt;
+&lt;li&gt;文档及其丰富（各种地方的搭建教程均有）（个屁）&lt;/li&gt;
+&lt;li&gt;……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目展示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#项目展示&#34;&gt;#&lt;/a&gt; 项目展示&lt;/h2&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-12-40.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-13-03.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-13-19.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&#34;本文引用链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本文引用链接&#34;&gt;#&lt;/a&gt; 本文引用链接&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/nextcloud/all-in-one&#34;&gt;GitHub 官方仓库&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://hub.docker.com/r/nextcloud/all-in-one&#34;&gt;官方 Docker 镜像&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/nextcloud/all-in-one/blob/main/reverse-proxy.md&#34;&gt;官方反代相关文档地址&lt;/a&gt;&amp;nbsp;（支持各种反代）&lt;br&gt;
+&lt;a href=&#34;https://blog.laoda.de/archives/docker-compose-install-nextcloud-aio/&#34;&gt;【好玩儿的 Docker 项目】Nextcloud All-in-One 全新搭建分享，拒绝繁琐配置，开箱即用！维护简单！&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/read/cv8513826/&#34;&gt;cloudflare 证书的导出（crt+key 格式）&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/av777707955/&#34;&gt;利用 cloudflare 免端口号访问家庭自建服务，可添加十条记录，去掉端口号！&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.misaka.rest/2023/01/16/cf-any-port/&#34;&gt;# 通过 Origin Rules 使 CloudFlare CDN 回源以使用任意的端口&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;搭建前置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搭建前置&#34;&gt;#&lt;/a&gt; 搭建前置&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;拥有一台性能足够的 linux 服务器&lt;/li&gt;
+&lt;li&gt;已经在路由器上配置好了 ddns 解析&lt;/li&gt;
+&lt;li&gt;创建好 cloudflare 账号&lt;/li&gt;
+&lt;li&gt;安装好 docker&lt;/li&gt;
+&lt;li&gt;安装好 NPM（Nginx Proxy Manager）（这里我教一下这个吧）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安装npm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装npm&#34;&gt;#&lt;/a&gt; 安装 NPM&lt;/h1&gt;
+&lt;h2 id=&#34;什么是npm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是npm&#34;&gt;#&lt;/a&gt; 什么是 NPM？&lt;/h2&gt;
+&lt;p&gt;NPM（Nginx proxy manager）是一个很简单的反向代理工具。&lt;/p&gt;
+&lt;p&gt;官网：&lt;a href=&#34;https://nginxproxymanager.com/&#34;&gt;https://nginxproxymanager.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;门槛极低，操作简单，不需要你掌握很复杂的 Nginx 配置知识，只需要几步就能很轻松完成反向代理的设置和 SSL 证书的部署。&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
+&lt;p&gt;创建目录：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 切换到root用户&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo -i&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 创建安装目录并进入&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; -p ~/data/docker/npm &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/data/docker/npm&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 编辑配置文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nvim docker-compose.yml&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;添加下面的内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;version:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&#39;3&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;services:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;app:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;image:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&#39;jc21/nginx-proxy-manager:latest&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;restart:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;unless-stopped&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;ports:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&#39;8880:80&#39;&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;# 这三行根据自己情况改，前面对应你本机地址，8881即为后面要访问的地址。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&#39;8881:81&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&#39;8443:443&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;volumes:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;./data:/data&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;./letsencrypt:/etc/letsencrypt&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker compose up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;放行端口：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;firewall-cmd --add-port=8880/tcp --permanent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;firewall-cmd --add-port=8881/tcp --permanent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;firewall-cmd --add-port=8443/tcp --permanent&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;之后就可以进入 &lt;code&gt;http://ip:8881&lt;/code&gt;  来访问了&lt;br&gt;
+默认的登录名和密码：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Email:    admin@example.com  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Password: changeme&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;更新&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更新&#34;&gt;#&lt;/a&gt; 更新&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/data/docker/npm  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker-compose down   &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cp&lt;/span&gt; -r ~/data/docker/npm ~/data/docker/npm.archive  &lt;span class=&#34;comment&#34;&gt;# 万事先备份，以防万一  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker-compose pull  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker-compose up -d    &lt;span class=&#34;comment&#34;&gt;# 请不要使用 docker-compose stop 来停止容器，因为这么做需要额外的时间等待容器停止；docker-compose up -d 直接升级容器时会自动停止并立刻重建新的容器，完全没有必要浪费那些时间。  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker image prune  &lt;span class=&#34;comment&#34;&gt;# prune 命令用来删除不再使用的 docker 对象。删除所有未被 tag 标记和未被容器使用的镜像&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;卸载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#卸载&#34;&gt;#&lt;/a&gt; 卸载&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/data/docker/npm &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker-compose down   &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; -rf ~/data/docker/npm  &lt;span class=&#34;comment&#34;&gt;# 完全删除映射到本地的数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;安装本体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装本体&#34;&gt;#&lt;/a&gt; 安装本体&lt;/h1&gt;
+&lt;p&gt;创建目录：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 切换到root用户&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo -i&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 创建安装目录并进入&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; -p ~/data/docker/naio &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/data/docker/naio&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 编辑配置文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nvim docker-compose.yml&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;添加如下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;version:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&#34;3.8&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;volumes:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;span class=&#34;attr&#34;&gt;nextcloud_aio_mastercontainer:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;attr&#34;&gt;name:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;nextcloud_aio_mastercontainer&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;services:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;span class=&#34;attr&#34;&gt;nextcloud:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;attr&#34;&gt;image:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;nextcloud/all-in-one:latest&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;attr&#34;&gt;restart:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;unless-stopped&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;attr&#34;&gt;container_name:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;nextcloud-aio-mastercontainer&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;attr&#34;&gt;volumes:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;nextcloud_aio_mastercontainer:/mnt/docker-aio-config&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/var/run/docker.sock:/var/run/docker.sock:ro&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;attr&#34;&gt;ports:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;8890&lt;/span&gt;&lt;span class=&#34;string&#34;&gt;:8080&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;# change the port on the left side if it&#39;s already in use on your host system.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;attr&#34;&gt;environment:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;APACHE_PORT=11000&lt;/span&gt;  &lt;span class=&#34;comment&#34;&gt;# change this port number if 11000 is already in use on your host system.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;APACHE_DISABLE_REWRITE_IP=1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;APACHE_IP_BINDING=0.0.0.0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#     - NEXTCLOUD_TRUSTED_DOMAINS=pan.gugu.ovh 31.22.109.18 # Your domain name + proxy host IP&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#     - TRUSTED_PROXIES=31.22.109.18 # proxy host IP&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker compose up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;放行端口：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;firewall-cmd --add-port=8890/tcp --permanent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;firewall-cmd --add-port=11000/tcp --permanent &lt;span class=&#34;comment&#34;&gt;# 请在你的路由器内创建端口映射把这个端口映射到公网。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;配置反代&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置反代&#34;&gt;#&lt;/a&gt; 配置反代&lt;/h1&gt;
+&lt;p&gt;打开 cloudflare，选择你添加好的域名，创建一条 CNAME 记录，指向你已经在路由器内配置好的 ddns 域名（这里使用的是 &lt;code&gt;nas.xxx.net&lt;/code&gt;  你要改成你自己的）：&lt;/p&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-13-52.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;点击保存。&lt;/p&gt;
+&lt;p&gt;打开你的 NPM 控制面板，选择上面的 &lt;code&gt;SSL Certificates&lt;/code&gt; ，点击 &lt;code&gt;Add SSL Certificate&lt;/code&gt; - &lt;code&gt;Custom&lt;/code&gt;  我们添加一个证书（原文这里用的是让老子加密，这里咱们可以试试 cloudflare 的免费证书，足足有&lt;strong&gt; 15&lt;/strong&gt; 年！！！）：&lt;/p&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-14-36.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;现在打开你的 cloudflare 控制面板，右边选择 SSL/TLS，我们先把这个改成灵活：&lt;/p&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-15-04.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;然后到侧边栏选择源服务器，创建一个泛域名证书，只用更改证书有效期，改成 15 年&lt;br&gt;
+新建一个 xxx.key 文件，把 key 里面的写进去。&lt;br&gt;
+新建一个 xxx.pem 文件，把另一串粘进去。&lt;br&gt;
+然后返回到你的 NPM 里面添加证书：&lt;/p&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-18-26.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;然后选择 Hosts-Proxy Hosts：&lt;/p&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-18-45.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Details 选项卡里：&lt;/p&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-19-02.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;SSL 选项卡里选择你创建的证书，剩下全部勾上：&lt;/p&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-19-17.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Advanced 选项卡里填入下面的内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;client_body_buffer_size 512k;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;proxy_read_timeout 86400s;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;client_max_body_size 0;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后保存&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IP 填写：&lt;/strong&gt;&lt;br&gt;
+如果 Nginx Proxy Manager 和 aio-nextcloud 在同一台服务器上，可以在终端输入：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ip addr show docker0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;root@nasdb:~/data/docker_data/naio&lt;span class=&#34;comment&#34;&gt;# ip addr show docker0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3: docker0: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc noqueue state UP group default&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;built_in&#34;&gt;link&lt;/span&gt;/ether 02:42:4a:&lt;span class=&#34;built_in&#34;&gt;dd&lt;/span&gt;:c1:14 brd ff:ff:ff:ff:ff:ff&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       valid_lft forever preferred_lft forever&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    inet6 fe80::42:4aff:fedd:c114/64 scope &lt;span class=&#34;built_in&#34;&gt;link&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       valid_lft forever preferred_lft forever&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;否则直接填&amp;nbsp; &lt;code&gt;aio-nextcloud&lt;/code&gt; &amp;nbsp;所在的服务器 IP 就行。&lt;/p&gt;
+&lt;h1 id=&#34;配置回源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置回源&#34;&gt;#&lt;/a&gt; 配置回源&lt;/h1&gt;
+&lt;p&gt;返回到 cloudflare，侧边栏里选择规则 - Origin Rules：&lt;/p&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-19-42.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;添加一条规则：&lt;/p&gt;
+&lt;div class=&#34;tag-plugin image&#34;&gt;&lt;div class=&#34;image-bg&#34;&gt;&lt;img src=&#34;/img/nextcloudaioinstalltry/2023-09-03-01-19-56.png&#34; fancybox=&#34;true&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;如果你看不到图：&lt;br&gt;
+当传入请求匹配时...&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;运算符&lt;/th&gt;
+&lt;th colspan=&#34;2&#34;&gt;值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;主机名&lt;/td&gt;
+&lt;td&gt;等于&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://nas.xxx.net&#34;&gt;nas.xxx.net&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;and&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;4&#34;&gt;and&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SSL/HTTPS&lt;/td&gt;
+&lt;td&gt;等于&lt;/td&gt;
+&lt;td colspan=&#34;2&#34;&gt;勾选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;目标端口：重写到 &lt;code&gt;11000&lt;/code&gt; &lt;br&gt;
+ 然后点部署&lt;/p&gt;
+&lt;h1 id=&#34;配置aio&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置aio&#34;&gt;#&lt;/a&gt; 配置 aio&lt;/h1&gt;
+&lt;p&gt;打开 &lt;code&gt;https://yourip:8890&lt;/code&gt;  然后记下密码点击下面的按钮。剩下的就和普通的没啥差别了。&lt;/p&gt;
+&lt;h1 id=&#34;卸载-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#卸载-2&#34;&gt;#&lt;/a&gt; 卸载&lt;/h1&gt;
+&lt;p&gt;和卸载 npm 一样。&lt;/p&gt;
+</content>
+        <category term="nextcloud" />
+        <category term="linux" />
+        <category term="docker" />
+        <category term="NPM" />
+        <updated>2023-09-02T15:41:18.000Z</updated>
+    </entry>
+</feed>
